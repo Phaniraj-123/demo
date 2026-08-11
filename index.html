@@ -1,246 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dr. Amrish Goyal | Ayurvedic Clinic</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Echo Herbs — Botanical Wellness</title>
+<meta name="description" content="Echo Herbs — thoughtfully crafted herbal wellness products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--g:#2d6a4f;--lg:#eaf7ef;--a:#5cb85c;--t:#123;}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;color:#243;background:#f7fbf8;overflow-x:hidden}
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 20px;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(12px);
-    z-index:999;
-}
-
-.logo{
-    font-weight:700;
-    font-size:1.2rem;
-    color:#2d6a4f;
-}
-
-nav ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
-}
-
-nav a{
-    text-decoration:none;
-    color:#222;
-}
-
-.hamburger{
-    display:none;
-    cursor:pointer;
-    width:32px;
-}
-
-.hamburger span{
-    display:block;
-    height:3px;
-    margin:6px 0;
-    background:#2d6a4f;
-    border-radius:10px;
-    transition:.35s;
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-    .hamburger{
-        display:block;
-    }
-
-    nav ul{
-        position:absolute;
-        top:72px;
-        left:0;
-        width:100%;
-        background:white;
-        flex-direction:column;
-        align-items:center;
-        gap:0;
-        overflow:hidden;
-        max-height:0;
-        transition:max-height .4s ease;
-        box-shadow:0 10px 30px rgba(0,0,0,.08);
-    }
-
-    nav ul.active{
-        max-height:400px;
-    }
-
-    nav li{
-        width:100%;
-        text-align:center;
-        border-bottom:1px solid #eee;
-    }
-
-    nav li a{
-        display:block;
-        padding:18px;
-    }
-
-    .hamburger.active span:nth-child(1){
-        transform:translateY(9px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(2){
-        opacity:0;
-    }
-
-    .hamburger.active span:nth-child(3){
-        transform:translateY(-9px) rotate(-45deg);
-    }
-}
-.hero{min-height:100vh;padding:90px 20px 50px;display:grid;grid-template-columns:1fr;align-items:center;gap:30px;background:linear-gradient(140deg,#d8f3dc,#fff)}
-.hero img{width:100%;max-width:380px;margin:auto;border-radius:24px;box-shadow:0 20px 40px rgba(0,0,0,.15);animation:float 4s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-10px)}}
-.hero h1{font-size:2.2rem;line-height:1.1;color:#173}
-.hero p{margin:18px 0}
-.btn{display:inline-block;background:var(--g);color:#fff;padding:14px 24px;border-radius:40px;text-decoration:none;font-weight:600}
-section{padding:70px 18px}
-.container{max-width:1180px;margin:auto}
-.grid2{display:grid;grid-template-columns:1fr;gap:28px}
-.card{background:#fff;border-radius:22px;padding:24px;box-shadow:0 15px 30px rgba(0,0,0,.08)}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;transition:.4s}
-.gallery img:hover{transform:scale(1.04)}
-h2{font-size:2rem;color:#184;margin-bottom:18px}
-iframe{width:100%;height:340px;border:0;border-radius:20px}
-footer{background:#173;color:#fff}
-.footer-grid{display:grid;grid-template-columns:1fr;gap:30px;padding:55px 18px;max-width:1180px;margin:auto}
-.footer-grid h3{margin-bottom:12px}
-.footer-grid ul{list-style:none}
-.footer-grid li{margin:8px 0;color:#dce}
-.copy{border-top:1px solid rgba(255,255,255,.15);padding:18px;text-align:center;color:#cfe}
-.reveal{opacity:0;transform:translateY(40px);transition:1s}
-.reveal.show{opacity:1;transform:none}
-.whatsapp{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;text-decoration:none;font-size:28px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
-@media(min-width:820px){
-.hero{grid-template-columns:1.1fr .9fr}
-.grid2{grid-template-columns:1fr 1fr}
-.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}
-.hero h1{font-size:3.6rem}
-}
+:root{--ink:#23352a;--muted:#667267;--cream:#f7f3e9;--paper:#fffdf8;--sage:#879d72;--deep:#3f593f;--line:#e5e1d5;--gold:#b28a4b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0}.announcement{background:var(--deep);color:#fff;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:.08em}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid var(--line);background:rgba(255,253,248,.96);position:sticky;top:0;z-index:20}.brand{font-family:"Playfair Display";font-size:28px;font-weight:700;letter-spacing:-.04em}.brand span{color:var(--sage)}.navlinks{display:flex;gap:28px;align-items:center}.navlinks a{color:var(--ink);text-decoration:none;font-size:14px}.navactions{display:flex;gap:10px;align-items:center}.iconbtn{background:none;width:42px;height:42px;border-radius:50%;font-size:20px;position:relative}.count{position:absolute;right:2px;top:1px;background:var(--deep);color:#fff;border-radius:50%;min-width:17px;height:17px;font-size:10px;display:grid;place-items:center}.hamb{display:none}.hero{min-height:640px;background:linear-gradient(90deg,rgba(35,53,42,.84),rgba(35,53,42,.25)),url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:center;color:#fff}.hero-inner{width:min(1180px,90%);margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;margin-bottom:18px}.hero h1{font-family:"Playfair Display";font-size:clamp(48px,7vw,88px);line-height:.94;max-width:720px;margin:0 0 24px}.hero p{max-width:530px;line-height:1.7;color:#f2f1ea}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:3px;font-weight:700;text-decoration:none;transition:.2s}.btn-dark{background:var(--deep);color:#fff}.btn-light{background:#fff;color:var(--ink)}.btn:hover{transform:translateY(-2px)}section{padding:82px 5%}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:36px}.section-head h2{font-family:"Playfair Display";font-size:42px;margin:0}.section-head p{color:var(--muted);max-width:520px;line-height:1.7;margin:0}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.cat{min-height:230px;border-radius:3px;padding:25px;display:flex;align-items:end;text-decoration:none;color:#fff;background-size:cover;background-position:center;position:relative;overflow:hidden}.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.62))}.cat div{position:relative;z-index:1}.cat h3{font-family:"Playfair Display";font-size:25px;margin:0 0 5px}.cat small{opacity:.85}.products{background:var(--cream)}.toolbar{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:26px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{padding:10px 15px;background:transparent;border:1px solid var(--line);border-radius:30px;color:var(--ink)}.filter.active,.filter:hover{background:var(--deep);color:#fff;border-color:var(--deep)}.search{padding:12px 15px;border:1px solid var(--line);background:#fff;border-radius:3px;width:230px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;position:relative;overflow:hidden}.pic{aspect-ratio:1/1.08;background:#ece8dc;overflow:hidden;position:relative}.pic img{width:100%;height:100%;object-fit:cover;transition:.5s}.card:hover .pic img{transform:scale(1.04)}.badge{position:absolute;left:12px;top:12px;background:#fff;padding:7px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.08em}.wish{position:absolute;right:10px;top:10px;background:#fff;width:38px;height:38px;border-radius:50%;font-size:18px}.info{padding:17px}.info small{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:10px}.info h3{font-family:"Playfair Display";font-size:20px;margin:7px 0}.price{font-weight:700}.buy{width:100%;margin-top:13px;background:var(--deep);color:#fff;padding:11px}.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story img{width:100%;height:540px;object-fit:cover}.story h2{font-family:"Playfair Display";font-size:52px;line-height:1;margin:10px 0 22px}.story p{color:var(--muted);line-height:1.9}.perks{background:var(--deep);color:#fff;display:grid;grid-template-columns:repeat(4,1fr);padding:28px 5%;gap:20px}.perk{text-align:center;padding:18px}.perk strong{display:block;margin-bottom:7px}.perk span{font-size:12px;color:#dbe2d7}.newsletter{text-align:center;background:#e8eee1}.newsletter h2{font-family:"Playfair Display";font-size:42px;margin:0 0 10px}.newsletter p{color:var(--muted)}.newsform{display:flex;max-width:500px;margin:25px auto 0}.newsform input{flex:1;padding:15px;border:1px solid var(--line)}footer{background:#203027;color:#dfe6dc;padding:55px 5% 25px}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px}.footgrid h4{color:#fff}.footgrid a{display:block;color:#bfc9bd;text-decoration:none;margin:10px 0;font-size:13px}.copyright{border-top:1px solid #3a4a40;margin-top:35px;padding-top:20px;font-size:12px;color:#9eaaa0}.drawer{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:50;visibility:hidden;opacity:0;transition:.25s}.drawer.open{visibility:visible;opacity:1}.cart{position:absolute;right:0;top:0;height:100%;width:min(430px,94vw);background:#fff;padding:25px;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}.drawer.open .cart{transform:none}.carthead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.carthead h2{font-family:"Playfair Display"}.cartitems{flex:1;overflow:auto;padding:15px 0}.cartitem{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cartitem img{width:72px;height:80px;object-fit:cover}.qty{display:flex;gap:7px;align-items:center;margin-top:7px}.qty button{width:26px;height:26px;background:var(--cream)}.remove{background:none;color:#9b5d54;font-size:12px}.summary{border-top:1px solid var(--line);padding-top:16px}.row{display:flex;justify-content:space-between;margin:10px 0}.checkout{width:100%;padding:15px;background:var(--deep);color:#fff;margin-top:10px}.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:60;display:none;place-items:center;padding:20px}.modal.show{display:grid}.modalbox{background:#fff;width:min(650px,100%);max-height:90vh;overflow:auto;padding:28px}.modalbox h2{font-family:"Playfair Display";margin-top:0}.close{float:right;background:none;font-size:25px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid input,.formgrid select{padding:13px;border:1px solid var(--line);width:100%}.full{grid-column:1/-1}.paynote{background:var(--cream);padding:12px;font-size:12px;color:var(--muted);margin:15px 0}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:var(--deep);color:#fff;padding:13px 18px;z-index:100;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:900px){.navlinks{display:none}.hamb{display:block}.grid{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr;gap:35px}.story img{height:390px}.perks{grid-template-columns:repeat(2,1fr)}.footgrid{grid-template-columns:1fr 1fr}.hero{min-height:570px}}@media(max-width:560px){.nav{height:68px;padding:0 4%}.brand{font-size:23px}.navactions{gap:0}.navactions .searchIcon{display:none}.hero{min-height:610px}.hero h1{font-size:52px}.section-head{display:block}.section-head h2{font-size:35px;margin-bottom:12px}section{padding:58px 4%}.categories{grid-template-columns:1fr 1fr;gap:10px}.cat{min-height:170px;padding:15px}.cat h3{font-size:19px}.toolbar{display:block}.search{width:100%;margin-top:12px}.grid{gap:10px}.info{padding:12px}.info h3{font-size:17px}.buy{font-size:12px}.pic{aspect-ratio:1/1.1}.story h2{font-size:40px}.perks{padding:15px 4%;gap:5px}.perk{padding:13px 5px}.footgrid{grid-template-columns:1fr 1fr;gap:15px}.footgrid>div:first-child{grid-column:1/-1}.newsform{display:block}.newsform input,.newsform button{width:100%;margin-top:7px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}}
 </style>
 </head>
 <body>
-<nav>
-    <div class="logo">Dr. Amrish Goyal</div>
-
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <ul id="navMenu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#visit">Visit</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="hero">
-<div>
-<h1>Traditional Ayurveda.<br>Modern Patient Care.</h1>
-<p><b>Dr. Amrish Goyal (BAMS)</b><br>Dedicated Ayurvedic consultation with a patient-first approach focused on wellness, lifestyle guidance, and holistic care.</p>
-<a class="btn" href="tel:9463994195">Book Appointment</a>
-</div>
-<div><img src="images/doctor-main.jpg" alt="Doctor"></div>
-</section>
-
-<section id="about" class="container reveal">
-<div class="grid2">
-<div class="card">
-<h2>About</h2>
-<p>Dr. Amrish Goyal is a qualified BAMS Ayurvedic physician serving the local community with consultations rooted in classical Ayurvedic principles. Every patient is treated with individual attention and care.</p><br>
-<p><b>Clinic Hours</b><br>10:00 AM – 7:00 PM</p>
-<p><b>Phone</b><br>9463994195</p>
-</div>
-<div class="gallery">
-<img src="images/doctor1.jpg"><img src="images/doctor2.jpg">
-<img src="images/doctor3.jpg"><img src="images/doctor4.jpg">
-</div>
-</div>
-</section>
-
-<section id="approach" class="container reveal">
-<div class="card">
-<h2>Our Approach</h2>
-<p>The clinic focuses on understanding each patient's overall health, lifestyle, and wellness goals before recommending personalized Ayurvedic guidance. The emphasis is on informed care, healthy routines, and long-term wellbeing.</p>
-</div>
-</section>
-
-<section id="visit" class="container reveal">
-<div class="grid2">
-<div class="card">
-<h2>Visit the Clinic</h2>
-<p><b>Address</b><br>48WR+RFP, Dhadda Lehna, Punjab</p><br>
-<a class="btn" href="https://maps.google.com/?q=48WR%2BRFP%20Dhadda%20Lehna%20Punjab">Open Maps</a>
-</div>
-<iframe src="https://maps.google.com/maps?q=48WR%2BRFP%20Dhadda%20Lehna%20Punjab&output=embed"></iframe>
-</div>
-</section>
-
-<footer id="contact">
-<div class="footer-grid">
-<div>
-<h3>Dr. Amrish Goyal</h3>
-<p>Providing Ayurvedic consultation with compassion, professionalism and a commitment to holistic healthcare.</p>
-</div>
-<div>
-<h3>Quick Links</h3>
-<ul><li>About</li><li>Approach</li><li>Location</li><li>Appointments</li></ul>
-</div>
-<div>
-<h3>Clinic Hours</h3>
-<ul><li>Monday – Saturday</li><li>10:00 AM – 7:00 PM</li><li>Sunday: Contact Clinic</li></ul>
-</div>
-<div>
-<h3>Contact</h3>
-<ul><li>📞 9463994195</li><li>📍 Dhadda Lehna, Punjab</li><li>Google Maps Available</li></ul>
-</div>
-</div>
-<div class="copy">© 2026 Dr. Amrish Goyal • BAMS Ayurvedic Clinic • All Rights Reserved.</div>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/919463994195">💬</a>
-
+<div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹999 · CRAFTED WITH BOTANICAL CARE</div>
+<header class="nav">
+<button class="iconbtn hamb" onclick="toggleMenu()">☰</button>
+<a class="brand" href="#">echo<span>herbs</span></a>
+<nav class="navlinks" id="navlinks"><a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#story">Our Story</a><a href="#contact">Contact</a></nav>
+<div class="navactions"><button class="iconbtn searchIcon" onclick="focusSearch()">⌕</button><button class="iconbtn" onclick="openCart()">🛍<span class="count" id="count">0</span></button></div>
+</header>
+<main>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">Rooted in nature · Made for everyday rituals</div><h1>Nature, made part of your ritual.</h1><p>Discover botanical self-care inspired by traditional wisdom and crafted for modern living.</p><a href="#shop" class="btn btn-light">Explore the collection →</a></div></section>
+<section id="collections"><div class="section-head"><h2>Shop by ritual</h2><p>Simple botanical essentials for hair, skin, body and everyday wellness.</p></div>
+<div class="categories">
+<a class="cat" href="#shop" onclick="setFilter('Hair Care')" style="background-image:url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=80')"><div><h3>Hair Care</h3><small>Botanical nourishment</small></div></a>
+<a class="cat" href="#shop" onclick="setFilter('Skin Care')" style="background-image:url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80')"><div><h3>Skin Care</h3><small>Gentle daily rituals</small></div></a>
+<a class="cat" href="#shop" onclick="setFilter('Body Care')" style="background-image:url('https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80')"><div><h3>Body Care</h3><small>Plant-powered care</small></div></a>
+<a class="cat" href="#shop" onclick="setFilter('Wellness')" style="background-image:url('https://images.unsplash.com/photo-1608571423539-e951aaf6a2f1?auto=format&fit=crop&w=900&q=80')"><div><h3>Wellness</h3><small>Rooted in tradition</small></div></a>
+</div></section>
+<section class="products" id="shop"><div class="section-head"><h2>Our essentials</h2><p>Frontend demo catalogue — replace product data and imagery with the brand's confirmed current catalogue before launch.</p></div>
+<div class="toolbar"><div class="filters"><button class="filter active" onclick="setFilter('All')">All</button><button class="filter" onclick="setFilter('Hair Care')">Hair</button><button class="filter" onclick="setFilter('Skin Care')">Skin</button><button class="filter" onclick="setFilter('Body Care')">Body</button><button class="filter" onclick="setFilter('Wellness')">Wellness</button></div><input id="search" class="search" placeholder="Search products…" oninput="render()"></div>
+<div class="grid" id="grid"></div></section>
+<section id="story"><div class="story"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85" alt="Botanical ingredients"><div><div class="eyebrow">The Echo Herbs philosophy</div><h2>Slow care. Honest ingredients.</h2><p>We believe a good ritual should feel uncomplicated. Botanical ingredients, thoughtful formulations and everyday habits come together in products designed to make self-care feel grounded and beautiful.</p><p>From the first touch to the last drop, every ritual begins with nature.</p><a class="btn btn-dark" href="#shop">Find your ritual</a></div></div></section>
+<div class="perks"><div class="perk">✦<strong>Botanical-first</strong><span>Inspired by plants and traditional rituals</span></div><div class="perk">◌<strong>Thoughtfully made</strong><span>Small-batch feel, modern presentation</span></div><div class="perk">♡<strong>Made for rituals</strong><span>Simple products for daily care</span></div><div class="perk">↺<strong>Easy shopping</strong><span>Cart, checkout and order flow included</span></div></div>
+<section class="newsletter" id="contact"><h2>Stay close to nature.</h2><p>Join the Echo Herbs journal for rituals, botanical stories and new launches.</p><form class="newsform" onsubmit="subscribe(event)"><input required type="email" placeholder="Your email address"><button class="btn btn-dark">Subscribe</button></form></section>
+</main>
+<footer><div class="footgrid"><div><div class="brand">echo<span>herbs</span></div><p>Botanical self-care, thoughtfully imagined.</p></div><div><h4>Shop</h4><a href="#shop">All products</a><a href="#shop">Hair Care</a><a href="#shop">Skin Care</a><a href="#shop">Body Care</a></div><div><h4>Help</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQs</a><a href="#">Privacy</a></div><div><h4>Follow</h4><a href="https://www.instagram.com/echoherbs/" target="_blank">Instagram</a><a href="#">WhatsApp</a><a href="#">Email us</a></div></div><div class="copyright">© 2026 Echo Herbs. Demo storefront — payments are simulated on the frontend.</div></footer>
+<div class="drawer" id="drawer" onclick="if(event.target===this)closeCart()"><aside class="cart"><div class="carthead"><h2>Your cart</h2><button class="close" onclick="closeCart()">×</button></div><div class="cartitems" id="cartitems"></div><div class="summary"><div class="row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><div class="row"><span>Shipping</span><strong id="shipping">₹0</strong></div><div class="row"><strong>Total</strong><strong id="total">₹0</strong></div><button class="checkout" onclick="checkout()">Proceed to checkout</button></div></aside></div>
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><h2>Checkout</h2><p>Complete the details below. This demo does not connect to a real payment gateway or backend.</p><form onsubmit="pay(event)"><div class="formgrid"><input required placeholder="Full name"><input required type="email" placeholder="Email"><input required placeholder="Phone"><input required placeholder="PIN code"><input required class="full" placeholder="Address"><select required class="full"><option value="">Payment method</option><option>UPI — demo</option><option>Card — demo</option><option>Cash on delivery — demo</option></select></div><div class="paynote">🔒 Frontend-only payment simulation. Connect Razorpay/Stripe and a backend before accepting live payments.</div><button class="checkout" type="submit">Pay <span id="payamount">₹0</span></button></form></div></div>
+<div class="toast" id="toast"></div>
 <script>
-const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.15});
-document.querySelectorAll('.reveal').forEach(x=>o.observe(x));
-
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-});
-
-// Close menu after clicking a link
-document.querySelectorAll("#navMenu a").forEach(link=>{
-    link.addEventListener("click",()=>{
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    });
-});
+const products=[
+{id:1,name:"Herbal Hair Oil",cat:"Hair Care",price:499,img:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80",tag:"Bestseller"},
+{id:2,name:"Botanical Face Serum",cat:"Skin Care",price:699,img:"https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80",tag:"New"},
+{id:3,name:"Herbal Body Oil",cat:"Body Care",price:549,img:"https://images.unsplash.com/photo-1601049676869-702ea24cfd58?auto=format&fit=crop&w=700&q=80",tag:"Popular"},
+{id:4,name:"Neem & Turmeric Soap",cat:"Skin Care",price:249,img:"https://images.unsplash.com/photo-1607006344380-b6775a0824ad?auto=format&fit=crop&w=700&q=80",tag:"Natural"},
+{id:5,name:"Amla Hair Powder",cat:"Hair Care",price:299,img:"https://images.unsplash.com/photo-1611073769788-9b1e8f3a0d4f?auto=format&fit=crop&w=700&q=80",tag:"Classic"},
+{id:6,name:"Rose Botanical Mist",cat:"Skin Care",price:399,img:"https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=700&q=80",tag:"Fresh"},
+{id:7,name:"Herbal Bath Powder",cat:"Body Care",price:349,img:"https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=700&q=80",tag:"Ritual"},
+{id:8,name:"Daily Wellness Blend",cat:"Wellness",price:449,img:"https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=700&q=80",tag:"Everyday"}
+];
+let filter="All",cart=JSON.parse(localStorage.getItem("echoCart")||"[]");
+const money=n=>"₹"+n.toLocaleString("en-IN");
+function render(){const q=document.getElementById("search").value.toLowerCase();const list=products.filter(p=>(filter==="All"||p.cat===filter)&&(!q||p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)));document.getElementById("grid").innerHTML=list.map(p=>`<article class="card"><div class="pic"><img loading="lazy" src="${p.img}" alt="${p.name}"><span class="badge">${p.tag}</span><button class="wish" onclick="wish(this)">♡</button></div><div class="info"><small>${p.cat}</small><h3>${p.name}</h3><div class="price">${money(p.price)}</div><button class="buy" onclick="add(${p.id})">Add to cart</button></div></article>`).join("")||"<p>No products found.</p>"}function setFilter(x){filter=x;document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.textContent.toLowerCase().includes(x.split(" ")[0].toLowerCase())||x==="All"&&b.textContent==="All"));render();location.hash="shop"}function add(id){const x=cart.find(i=>i.id===id);x?x.qty++:cart.push({id,qty:1});save();toast("Added to your cart");openCart()}function save(){localStorage.setItem("echoCart",JSON.stringify(cart));updateCart()}function updateCart(){document.getElementById("count").textContent=cart.reduce((a,b)=>a+b.qty,0);const el=document.getElementById("cartitems");if(!cart.length){el.innerHTML="<div style='text-align:center;padding:60px 10px;color:#667267'>Your cart is waiting for a little botanical goodness.</div>"}else el.innerHTML=cart.map(i=>{const p=products.find(x=>x.id===i.id);return `<div class="cartitem"><img src="${p.img}" alt=""><div><strong>${p.name}</strong><div style="color:#667267;font-size:12px">${money(p.price)}</div><div class="qty"><button onclick="change(${p.id},-1)">−</button>${i.qty}<button onclick="change(${p.id},1)">+</button></div></div><button class="remove" onclick="removeItem(${p.id})">Remove</button></div>`}).join("");const sub=cart.reduce((a,i)=>a+products.find(p=>p.id===i.id).price*i.qty,0),ship=sub?(sub>=999?0:79):0;document.getElementById("subtotal").textContent=money(sub);document.getElementById("shipping").textContent=ship?money(ship):"Free";document.getElementById("total").textContent=money(sub+ship);document.getElementById("payamount").textContent=money(sub+ship)}function change(id,n){const x=cart.find(i=>i.id===id);x.qty+=n;if(x.qty<1)cart=cart.filter(i=>i.id!==id);save()}function removeItem(id){cart=cart.filter(i=>i.id!==id);save()}function openCart(){document.getElementById("drawer").classList.add("open")}function closeCart(){document.getElementById("drawer").classList.remove("open")}function checkout(){if(!cart.length)return toast("Your cart is empty");closeCart();document.getElementById("modal").classList.add("show")}function closeModal(){document.getElementById("modal").classList.remove("show")}function pay(e){e.preventDefault();closeModal();cart=[];save();toast("Demo payment successful — order created locally")}function wish(b){b.textContent=b.textContent==="♡"?"♥":"♡";toast(b.textContent==="♥"?"Added to wishlist":"Removed from wishlist")}function toast(t){const x=document.getElementById("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2200)}function subscribe(e){e.preventDefault();e.target.reset();toast("You're on the list 🌿")}function focusSearch(){document.getElementById("search").focus();location.hash="shop"}function toggleMenu(){document.getElementById("navlinks").classList.toggle("mobile");document.getElementById("navlinks").style.cssText=document.getElementById("navlinks").classList.contains("mobile")?"display:flex;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e5e1d5":"display:none"}render();updateCart();
 </script>
 </body>
 </html>
