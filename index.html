@@ -39,7 +39,7 @@ header{position:sticky; top:0; z-index:50; background:rgba(246,250,247,.92); bac
 .nav-right{display:flex; align-items:center; gap:14px;}
 .cart-btn{position:relative; background:var(--forest); color:#fff; width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; border:none; font-size:1.1rem;}
 .cart-count{position:absolute; top:-4px; right:-4px; background:var(--amber); color:#fff; font-size:.68rem; font-weight:700; padding:1px 6px; border-radius:999px;}
-.menu-toggle{display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--forest);}
+.menu-toggle{display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--forest); margin-right: 4px;}
 
 /* HERO */
 .hero{background:linear-gradient(160deg,var(--forest),var(--green-dark) 70%); color:#fff; padding:56px 0 40px; position:relative; overflow:hidden;}
@@ -184,7 +184,6 @@ footer ul{list-style:none; display:flex; flex-direction:column; gap:8px;}
     <div class="nav-right">
       <a class="insta" href="https://instagram.com/perth_pharma" target="_blank" class="btn btn-ghost" style="padding:9px 14px;">📷 @perth_pharma</a>
       <button class="cart-btn" onclick="toggleDrawer(true)">🛒<span class="cart-count" id="cartCount">0</span></button>
-      <a class="cart-btn" style="margin-left: 20px;">👤</a>
       <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
     </div>
   </div>
