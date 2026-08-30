@@ -2,59 +2,529 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Echo Herbs — Botanical Wellness</title>
-<meta name="description" content="Echo Herbs — thoughtfully crafted herbal wellness products.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perth Pharma — Medicines, Injections &amp; Surgicals | Mumbra, Thane</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#23352a;--muted:#667267;--cream:#f7f3e9;--paper:#fffdf8;--sage:#879d72;--deep:#3f593f;--line:#e5e1d5;--gold:#b28a4b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0}.announcement{background:var(--deep);color:#fff;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:.08em}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid var(--line);background:rgba(255,253,248,.96);position:sticky;top:0;z-index:20}.brand{font-family:"Playfair Display";font-size:28px;font-weight:700;letter-spacing:-.04em}.brand span{color:var(--sage)}.navlinks{display:flex;gap:28px;align-items:center}.navlinks a{color:var(--ink);text-decoration:none;font-size:14px}.navactions{display:flex;gap:10px;align-items:center}.iconbtn{background:none;width:42px;height:42px;border-radius:50%;font-size:20px;position:relative}.count{position:absolute;right:2px;top:1px;background:var(--deep);color:#fff;border-radius:50%;min-width:17px;height:17px;font-size:10px;display:grid;place-items:center}.hamb{display:none}.hero{min-height:640px;background:linear-gradient(90deg,rgba(35,53,42,.84),rgba(35,53,42,.25)),url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:center;color:#fff}.hero-inner{width:min(1180px,90%);margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;margin-bottom:18px}.hero h1{font-family:"Playfair Display";font-size:clamp(48px,7vw,88px);line-height:.94;max-width:720px;margin:0 0 24px}.hero p{max-width:530px;line-height:1.7;color:#f2f1ea}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:3px;font-weight:700;text-decoration:none;transition:.2s}.btn-dark{background:var(--deep);color:#fff}.btn-light{background:#fff;color:var(--ink)}.btn:hover{transform:translateY(-2px)}section{padding:82px 5%}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:36px}.section-head h2{font-family:"Playfair Display";font-size:42px;margin:0}.section-head p{color:var(--muted);max-width:520px;line-height:1.7;margin:0}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.cat{min-height:230px;border-radius:3px;padding:25px;display:flex;align-items:end;text-decoration:none;color:#fff;background-size:cover;background-position:center;position:relative;overflow:hidden}.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.62))}.cat div{position:relative;z-index:1}.cat h3{font-family:"Playfair Display";font-size:25px;margin:0 0 5px}.cat small{opacity:.85}.products{background:var(--cream)}.toolbar{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:26px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{padding:10px 15px;background:transparent;border:1px solid var(--line);border-radius:30px;color:var(--ink)}.filter.active,.filter:hover{background:var(--deep);color:#fff;border-color:var(--deep)}.search{padding:12px 15px;border:1px solid var(--line);background:#fff;border-radius:3px;width:230px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{background:#fff;position:relative;overflow:hidden}.pic{aspect-ratio:1/1.08;background:#ece8dc;overflow:hidden;position:relative}.pic img{width:100%;height:100%;object-fit:cover;transition:.5s}.card:hover .pic img{transform:scale(1.04)}.badge{position:absolute;left:12px;top:12px;background:#fff;padding:7px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.08em}.wish{position:absolute;right:10px;top:10px;background:#fff;width:38px;height:38px;border-radius:50%;font-size:18px}.info{padding:17px}.info small{color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-size:10px}.info h3{font-family:"Playfair Display";font-size:20px;margin:7px 0}.price{font-weight:700}.buy{width:100%;margin-top:13px;background:var(--deep);color:#fff;padding:11px}.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story img{width:100%;height:540px;object-fit:cover}.story h2{font-family:"Playfair Display";font-size:52px;line-height:1;margin:10px 0 22px}.story p{color:var(--muted);line-height:1.9}.perks{background:var(--deep);color:#fff;display:grid;grid-template-columns:repeat(4,1fr);padding:28px 5%;gap:20px}.perk{text-align:center;padding:18px}.perk strong{display:block;margin-bottom:7px}.perk span{font-size:12px;color:#dbe2d7}.newsletter{text-align:center;background:#e8eee1}.newsletter h2{font-family:"Playfair Display";font-size:42px;margin:0 0 10px}.newsletter p{color:var(--muted)}.newsform{display:flex;max-width:500px;margin:25px auto 0}.newsform input{flex:1;padding:15px;border:1px solid var(--line)}footer{background:#203027;color:#dfe6dc;padding:55px 5% 25px}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px}.footgrid h4{color:#fff}.footgrid a{display:block;color:#bfc9bd;text-decoration:none;margin:10px 0;font-size:13px}.copyright{border-top:1px solid #3a4a40;margin-top:35px;padding-top:20px;font-size:12px;color:#9eaaa0}.drawer{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:50;visibility:hidden;opacity:0;transition:.25s}.drawer.open{visibility:visible;opacity:1}.cart{position:absolute;right:0;top:0;height:100%;width:min(430px,94vw);background:#fff;padding:25px;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}.drawer.open .cart{transform:none}.carthead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.carthead h2{font-family:"Playfair Display"}.cartitems{flex:1;overflow:auto;padding:15px 0}.cartitem{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cartitem img{width:72px;height:80px;object-fit:cover}.qty{display:flex;gap:7px;align-items:center;margin-top:7px}.qty button{width:26px;height:26px;background:var(--cream)}.remove{background:none;color:#9b5d54;font-size:12px}.summary{border-top:1px solid var(--line);padding-top:16px}.row{display:flex;justify-content:space-between;margin:10px 0}.checkout{width:100%;padding:15px;background:var(--deep);color:#fff;margin-top:10px}.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:60;display:none;place-items:center;padding:20px}.modal.show{display:grid}.modalbox{background:#fff;width:min(650px,100%);max-height:90vh;overflow:auto;padding:28px}.modalbox h2{font-family:"Playfair Display";margin-top:0}.close{float:right;background:none;font-size:25px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid input,.formgrid select{padding:13px;border:1px solid var(--line);width:100%}.full{grid-column:1/-1}.paynote{background:var(--cream);padding:12px;font-size:12px;color:var(--muted);margin:15px 0}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:var(--deep);color:#fff;padding:13px 18px;z-index:100;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:900px){.navlinks{display:none}.hamb{display:block}.grid{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr;gap:35px}.story img{height:390px}.perks{grid-template-columns:repeat(2,1fr)}.footgrid{grid-template-columns:1fr 1fr}.hero{min-height:570px}}@media(max-width:560px){.nav{height:68px;padding:0 4%}.brand{font-size:23px}.navactions{gap:0}.navactions .searchIcon{display:none}.hero{min-height:610px}.hero h1{font-size:52px}.section-head{display:block}.section-head h2{font-size:35px;margin-bottom:12px}section{padding:58px 4%}.categories{grid-template-columns:1fr 1fr;gap:10px}.cat{min-height:170px;padding:15px}.cat h3{font-size:19px}.toolbar{display:block}.search{width:100%;margin-top:12px}.grid{gap:10px}.info{padding:12px}.info h3{font-size:17px}.buy{font-size:12px}.pic{aspect-ratio:1/1.1}.story h2{font-size:40px}.perks{padding:15px 4%;gap:5px}.perk{padding:13px 5px}.footgrid{grid-template-columns:1fr 1fr;gap:15px}.footgrid>div:first-child{grid-column:1/-1}.newsform{display:block}.newsform input,.newsform button{width:100%;margin-top:7px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}}
+:root{
+  --forest:#113B29; --green:#1F7A4D; --green-dark:#175f3c; --mint:#B9EBCB; --mint-soft:#EAF7EF;
+  --paper:#F6FAF7; --white:#FFFFFF; --ink:#12241C; --muted:#527464; --amber:#B9762E; --amber-bg:#FBF0E2;
+  --line:#DCEBE2; --radius:14px; --shadow:0 10px 30px rgba(17,59,41,.08);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif; background:var(--paper); color:var(--ink); line-height:1.55;}
+h1,h2,h3,.brand,.pill,.btn{font-family:'Sora',sans-serif;}
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+.wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+section{padding:64px 0;}
+.eyebrow{font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--green-dark); font-weight:700;}
+h2.title{font-size:clamp(1.6rem,3vw,2.3rem); margin:8px 0 12px; color:var(--forest);}
+.sub{color:var(--muted); max-width:640px; margin-bottom:32px;}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border-radius:999px; font-weight:600; font-size:.92rem; border:none; cursor:pointer; transition:.2s transform,.2s box-shadow;}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--green); color:#fff; box-shadow:0 8px 20px rgba(31,122,77,.28);}
+.btn-primary:hover{background:var(--green-dark);}
+.btn-ghost{background:#fff; color:var(--forest); border:1.5px solid var(--line);}
+.btn-outline-white{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.5);}
+
+/* HEADER */
+header{position:sticky; top:0; z-index:50; background:rgba(246,250,247,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.25rem; color:var(--forest);}
+.brand .rx{width:34px; height:34px; border-radius:10px; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1rem;}
+.nav-links{display:flex; gap:26px; font-weight:600; font-size:.92rem; color:var(--forest);}
+.nav-right{display:flex; align-items:center; gap:14px;}
+.cart-btn{position:relative; background:var(--forest); color:#fff; width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; border:none; font-size:1.1rem;}
+.cart-count{position:absolute; top:-4px; right:-4px; background:var(--amber); color:#fff; font-size:.68rem; font-weight:700; padding:1px 6px; border-radius:999px;}
+.menu-toggle{display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--forest);}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--forest),var(--green-dark) 70%); color:#fff; padding:56px 0 40px; position:relative; overflow:hidden;}
+.hero::after{content:""; position:absolute; right:-120px; top:-120px; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle,rgba(185,235,203,.18),transparent 70%);}
+.hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center; position:relative;}
+.audience-pill{display:inline-flex; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:999px; padding:5px; gap:4px; margin-bottom:22px;}
+.audience-pill button{border:none; background:transparent; color:#dff2e6; font-family:'Sora',sans-serif; font-weight:700; font-size:.85rem; padding:10px 20px; border-radius:999px; cursor:pointer; transition:.25s;}
+.audience-pill button.active{background:#fff; color:var(--forest);}
+.audience-pill button:first-child.active{border-radius:999px 8px 8px 999px;}
+.audience-pill button:last-child.active{border-radius:8px 999px 999px 8px;}
+.hero h1{font-size:clamp(1.9rem,4vw,2.7rem); font-weight:800; line-height:1.15; margin-bottom:16px;}
+.hero p.lead{color:#dcefe3; max-width:520px; margin-bottom:26px; font-size:1.02rem;}
+.hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+.trust-row{display:flex; gap:22px; margin-top:34px; flex-wrap:wrap;}
+.trust-row div{font-size:.82rem; color:#cfe9db; display:flex; align-items:center; gap:8px;}
+.hero-card{background:#fff; border-radius:20px; padding:26px; color:var(--ink); box-shadow:var(--shadow);}
+.hero-card h3{color:var(--forest); font-size:1.05rem; margin-bottom:10px;}
+.hero-card ul{list-style:none; font-size:.9rem; color:var(--muted); display:flex; flex-direction:column; gap:9px;}
+.hero-card li::before{content:"✓"; color:var(--green); font-weight:800; margin-right:8px;}
+.hero-card .badge{display:inline-block; background:var(--mint-soft); color:var(--green-dark); font-weight:700; font-size:.72rem; padding:5px 10px; border-radius:8px; margin-top:16px;}
+[data-audience-view]{display:none;}
+body[data-mode="consumer"] [data-audience-view="consumer"]{display:block;}
+body[data-mode="business"] [data-audience-view="business"]{display:block;}
+
+/* COMPLIANCE STRIP */
+.strip{background:var(--forest); color:#eafaf0;}
+.strip .wrap{display:flex; gap:28px; flex-wrap:wrap; justify-content:space-between; padding:16px 24px; font-size:.82rem; align-items:center;}
+.strip span{display:flex; align-items:center; gap:8px; opacity:.92;}
+
+/* CATEGORY NAV */
+.cat-nav{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:38px;}
+.cat-chip{background:#fff; border:1.5px solid var(--line); border-radius:999px; padding:10px 20px; font-weight:600; font-size:.88rem; cursor:pointer; color:var(--forest);}
+.cat-chip.active{background:var(--green); color:#fff; border-color:var(--green);}
+
+/* PRODUCTS */
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:20px;}
+.card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:18px; display:flex; flex-direction:column; gap:8px; transition:.2s box-shadow,.2s transform;}
+.card:hover{box-shadow:var(--shadow); transform:translateY(-3px);}
+.card-top{display:flex; justify-content:space-between; align-items:flex-start;}
+.icon-box{width:50px; height:50px; border-radius:12px; background:var(--mint-soft); display:flex; align-items:center; justify-content:center; font-size:1.4rem;}
+.tag{font-size:.66rem; font-weight:700; padding:4px 9px; border-radius:999px; letter-spacing:.03em;}
+.tag.rx{background:var(--amber-bg); color:var(--amber);}
+.tag.otc{background:var(--mint-soft); color:var(--green-dark);}
+.card h4{font-size:1rem; color:var(--forest); margin-top:4px;}
+.card .desc{font-size:.82rem; color:var(--muted); flex:1;}
+.card-bottom{display:flex; justify-content:space-between; align-items:center; margin-top:6px;}
+.price{font-weight:700; color:var(--forest);}
+.add-btn{background:var(--green); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-size:.8rem; font-weight:700; cursor:pointer;}
+.add-btn:hover{background:var(--green-dark);}
+
+/* DELIVERY */
+.deliv-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+.deliv-card{background:#fff; border-radius:var(--radius); border:1px solid var(--line); padding:28px;}
+.deliv-card h3{color:var(--forest); margin-bottom:14px; font-size:1.15rem;}
+.steps{display:flex; flex-direction:column; gap:14px;}
+.step{display:flex; gap:12px; align-items:flex-start; font-size:.9rem; color:var(--muted);}
+.step b{color:var(--ink);}
+.step .num{background:var(--mint-soft); color:var(--green-dark); font-weight:800; width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.78rem; flex-shrink:0;}
+
+/* RX / CONSULT */
+.consult{background:var(--mint-soft); border-radius:20px; padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center;}
+.consult h3{color:var(--forest); font-size:1.3rem; margin-bottom:10px;}
+.consult p{color:var(--muted); font-size:.92rem; margin-bottom:16px;}
+.upload-box{background:#fff; border:2px dashed var(--green); border-radius:14px; padding:26px; text-align:center; font-size:.86rem; color:var(--muted);}
+.upload-box input{margin-top:12px;}
+
+/* BUSINESS FORM */
+.biz-grid{display:grid; grid-template-columns:1fr 1fr; gap:34px; align-items:start;}
+.biz-points{display:flex; flex-direction:column; gap:16px;}
+.biz-points div{display:flex; gap:12px; background:#fff; border:1px solid var(--line); padding:16px; border-radius:12px;}
+.biz-points .ic{font-size:1.3rem;}
+form.quote{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; display:flex; flex-direction:column; gap:12px;}
+form.quote input, form.quote textarea{padding:11px 13px; border:1.5px solid var(--line); border-radius:9px; font-family:inherit; font-size:.9rem;}
+form.quote textarea{resize:vertical; min-height:70px;}
+form.quote label{font-size:.8rem; font-weight:600; color:var(--forest); margin-bottom:-6px;}
+
+/* TESTIMONIALS */
+.test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+.test{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px; font-size:.88rem; color:var(--muted);}
+.test .stars{color:var(--amber); margin-bottom:10px;}
+.test .who{margin-top:12px; font-weight:700; color:var(--forest); font-size:.85rem;}
+
+/* FOOTER */
+footer{background:var(--forest); color:#cfe9db; padding:50px 0 24px; font-size:.88rem;}
+.foot-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:30px; margin-bottom:30px;}
+footer h5{color:#fff; margin-bottom:14px; font-size:.95rem;}
+footer ul{list-style:none; display:flex; flex-direction:column; gap:8px;}
+.disclaimer{border-top:1px solid rgba(255,255,255,.15); padding-top:18px; font-size:.76rem; color:#9fc7ae; line-height:1.6;}
+
+/* CART DRAWER */
+.overlay{position:fixed; inset:0; background:rgba(17,59,41,.45); opacity:0; pointer-events:none; transition:.25s; z-index:90;}
+.overlay.open{opacity:1; pointer-events:auto;}
+.drawer{position:fixed; top:0; right:-420px; width:390px; max-width:92vw; height:100%; background:#fff; z-index:95; box-shadow:-10px 0 30px rgba(0,0,0,.15); transition:.3s; display:flex; flex-direction:column;}
+.drawer.open{right:0;}
+.drawer-head{padding:20px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center;}
+.drawer-head b{color:var(--forest); font-size:1.05rem;}
+.drawer-body{flex:1; overflow-y:auto; padding:16px 20px;}
+.cart-item{display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid var(--line); font-size:.88rem;}
+.cart-item .name{font-weight:600; color:var(--ink);}
+.cart-item .qty{display:flex; align-items:center; gap:8px; margin-top:4px;}
+.cart-item .qty button{width:22px; height:22px; border-radius:6px; border:1px solid var(--line); background:#fff; cursor:pointer;}
+.drawer-foot{padding:18px 20px; border-top:1px solid var(--line);}
+.drawer-foot .total{display:flex; justify-content:space-between; font-weight:700; color:var(--forest); margin-bottom:14px;}
+.close-x{background:none; border:none; font-size:1.3rem; cursor:pointer; color:var(--muted);}
+.empty-note{color:var(--muted); font-size:.88rem; text-align:center; margin-top:40px;}
+
+/* CHECKOUT MODAL */
+.modal-bg{position:fixed; inset:0; background:rgba(17,59,41,.55); display:none; align-items:center; justify-content:center; z-index:120; padding:20px;}
+.modal-bg.open{display:flex;}
+.modal{background:#fff; border-radius:16px; padding:28px; max-width:440px; width:100%; max-height:90vh; overflow-y:auto;}
+.modal h3{color:var(--forest); margin-bottom:12px;}
+.modal p{font-size:.88rem; color:var(--muted); margin-bottom:14px;}
+.rx-warning{background:var(--amber-bg); color:var(--amber); font-size:.82rem; padding:12px 14px; border-radius:10px; margin-bottom:14px; font-weight:600;}
+
+@media(max-width:900px){
+  .hero-grid, .consult, .biz-grid{grid-template-columns:1fr;}
+  .deliv-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .test-grid{grid-template-columns:1fr;}
+}
+@media(max-width:720px){
+  .nav-links{position:fixed; top:64px; left:0; right:0; background:#fff; flex-direction:column; padding:18px 24px; gap:16px; border-bottom:1px solid var(--line); display:none;}
+  .nav-links.open{display:flex;}
+  .menu-toggle{display:block;}
+  .foot-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
-<body>
-<div class="announcement">FREE SHIPPING ON ORDERS ABOVE ₹999 · CRAFTED WITH BOTANICAL CARE</div>
-<header class="nav">
-<button class="iconbtn hamb" onclick="toggleMenu()">☰</button>
-<a class="brand" href="#">echo<span>herbs</span></a>
-<nav class="navlinks" id="navlinks"><a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#story">Our Story</a><a href="#contact">Contact</a></nav>
-<div class="navactions"><button class="iconbtn searchIcon" onclick="focusSearch()">⌕</button><button class="iconbtn" onclick="openCart()">🛍<span class="count" id="count">0</span></button></div>
+<body data-mode="consumer">
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="rx">℞</span>Perth Pharma</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#products">Medicines</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#business">Business Orders</a>
+      <a href="#consult">Prescription</a>
+      <a href="#footer">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="https://instagram.com/perth_pharma" target="_blank" class="btn btn-ghost" style="padding:9px 14px;">📷 @perth_pharma</a>
+      <button class="cart-btn" onclick="toggleDrawer(true)">🛒<span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
 </header>
-<main>
-<section class="hero"><div class="hero-inner"><div class="eyebrow">Rooted in nature · Made for everyday rituals</div><h1>Nature, made part of your ritual.</h1><p>Discover botanical self-care inspired by traditional wisdom and crafted for modern living.</p><a href="#shop" class="btn btn-light">Explore the collection →</a></div></section>
-<section id="collections"><div class="section-head"><h2>Shop by ritual</h2><p>Simple botanical essentials for hair, skin, body and everyday wellness.</p></div>
-<div class="categories">
-<a class="cat" href="#shop" onclick="setFilter('Hair Care')" style="background-image:url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=80')"><div><h3>Hair Care</h3><small>Botanical nourishment</small></div></a>
-<a class="cat" href="#shop" onclick="setFilter('Skin Care')" style="background-image:url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80')"><div><h3>Skin Care</h3><small>Gentle daily rituals</small></div></a>
-<a class="cat" href="#shop" onclick="setFilter('Body Care')" style="background-image:url('https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80')"><div><h3>Body Care</h3><small>Plant-powered care</small></div></a>
-<a class="cat" href="#shop" onclick="setFilter('Wellness')" style="background-image:url('https://images.unsplash.com/photo-1608571423539-e951aaf6a2f1?auto=format&fit=crop&w=900&q=80')"><div><h3>Wellness</h3><small>Rooted in tradition</small></div></a>
-</div></section>
-<section class="products" id="shop"><div class="section-head"><h2>Our essentials</h2><p>Frontend demo catalogue — replace product data and imagery with the brand's confirmed current catalogue before launch.</p></div>
-<div class="toolbar"><div class="filters"><button class="filter active" onclick="setFilter('All')">All</button><button class="filter" onclick="setFilter('Hair Care')">Hair</button><button class="filter" onclick="setFilter('Skin Care')">Skin</button><button class="filter" onclick="setFilter('Body Care')">Body</button><button class="filter" onclick="setFilter('Wellness')">Wellness</button></div><input id="search" class="search" placeholder="Search products…" oninput="render()"></div>
-<div class="grid" id="grid"></div></section>
-<section id="story"><div class="story"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85" alt="Botanical ingredients"><div><div class="eyebrow">The Echo Herbs philosophy</div><h2>Slow care. Honest ingredients.</h2><p>We believe a good ritual should feel uncomplicated. Botanical ingredients, thoughtful formulations and everyday habits come together in products designed to make self-care feel grounded and beautiful.</p><p>From the first touch to the last drop, every ritual begins with nature.</p><a class="btn btn-dark" href="#shop">Find your ritual</a></div></div></section>
-<div class="perks"><div class="perk">✦<strong>Botanical-first</strong><span>Inspired by plants and traditional rituals</span></div><div class="perk">◌<strong>Thoughtfully made</strong><span>Small-batch feel, modern presentation</span></div><div class="perk">♡<strong>Made for rituals</strong><span>Simple products for daily care</span></div><div class="perk">↺<strong>Easy shopping</strong><span>Cart, checkout and order flow included</span></div></div>
-<section class="newsletter" id="contact"><h2>Stay close to nature.</h2><p>Join the Echo Herbs journal for rituals, botanical stories and new launches.</p><form class="newsform" onsubmit="subscribe(event)"><input required type="email" placeholder="Your email address"><button class="btn btn-dark">Subscribe</button></form></section>
-</main>
-<footer><div class="footgrid"><div><div class="brand">echo<span>herbs</span></div><p>Botanical self-care, thoughtfully imagined.</p></div><div><h4>Shop</h4><a href="#shop">All products</a><a href="#shop">Hair Care</a><a href="#shop">Skin Care</a><a href="#shop">Body Care</a></div><div><h4>Help</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQs</a><a href="#">Privacy</a></div><div><h4>Follow</h4><a href="https://www.instagram.com/echoherbs/" target="_blank">Instagram</a><a href="#">WhatsApp</a><a href="#">Email us</a></div></div><div class="copyright">© 2026 Echo Herbs. Demo storefront — payments are simulated on the frontend.</div></footer>
-<div class="drawer" id="drawer" onclick="if(event.target===this)closeCart()"><aside class="cart"><div class="carthead"><h2>Your cart</h2><button class="close" onclick="closeCart()">×</button></div><div class="cartitems" id="cartitems"></div><div class="summary"><div class="row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div><div class="row"><span>Shipping</span><strong id="shipping">₹0</strong></div><div class="row"><strong>Total</strong><strong id="total">₹0</strong></div><button class="checkout" onclick="checkout()">Proceed to checkout</button></div></aside></div>
-<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><h2>Checkout</h2><p>Complete the details below. This demo does not connect to a real payment gateway or backend.</p><form onsubmit="pay(event)"><div class="formgrid"><input required placeholder="Full name"><input required type="email" placeholder="Email"><input required placeholder="Phone"><input required placeholder="PIN code"><input required class="full" placeholder="Address"><select required class="full"><option value="">Payment method</option><option>UPI — demo</option><option>Card — demo</option><option>Cash on delivery — demo</option></select></div><div class="paynote">🔒 Frontend-only payment simulation. Connect Razorpay/Stripe and a backend before accepting live payments.</div><button class="checkout" type="submit">Pay <span id="payamount">₹0</span></button></form></div></div>
-<div class="toast" id="toast"></div>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="audience-pill">
+        <button id="btnConsumer" class="active" onclick="setMode('consumer')">🏠 Shop for myself</button>
+        <button id="btnBusiness" onclick="setMode('business')">🏢 Order for my business</button>
+      </div>
+
+      <div data-audience-view="consumer">
+        <h1>Genuine medicines, delivered free across Mumbra &amp; Thane.</h1>
+        <p class="lead">Tablets, injections and surgical essentials from a licensed local pharmacy. Order online, upload your prescription where needed, and get it delivered to your door — no delivery charge.</p>
+        <div class="hero-ctas">
+          <a href="#products" class="btn btn-primary">Browse Medicines</a>
+          <a href="#consult" class="btn btn-outline-white">Upload Prescription</a>
+        </div>
+      </div>
+
+      <div data-audience-view="business">
+        <h1>Bulk pharmaceutical supply, shipped anywhere in India.</h1>
+        <p class="lead">Clinics, hospitals, retail chemists and medical stores can order tablets, injections and surgical supplies in bulk with GST invoicing and pan-India courier shipping.</p>
+        <div class="hero-ctas">
+          <a href="#business" class="btn btn-primary">Request a Bulk Quote</a>
+          <a href="#products" class="btn btn-outline-white">View Catalogue</a>
+        </div>
+      </div>
+
+      <div class="trust-row">
+        <div>✅ Licensed pharmacy</div>
+        <div>👨‍⚕️ Pharmacist verified</div>
+        <div>🚚 Free local delivery</div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div data-audience-view="consumer">
+        <h3>Home delivery in Mumbra &amp; Thane</h3>
+        <ul>
+          <li>Free delivery, no minimum order</li>
+          <li>Same-day dispatch on confirmed orders</li>
+          <li>Prescription checked by our pharmacist before Rx items ship</li>
+          <li>Cash on delivery available</li>
+        </ul>
+        <span class="badge">Delivering to 400612 &amp; nearby pincodes</span>
+      </div>
+      <div data-audience-view="business">
+        <h3>Business &amp; wholesale orders</h3>
+        <ul>
+          <li>GST invoice on every order</li>
+          <li>Courier shipping to all Indian states</li>
+          <li>Bulk pricing on tablets, injections &amp; surgicals</li>
+          <li>Dedicated order support for repeat buyers</li>
+        </ul>
+        <span class="badge">Trade &amp; drug license required at checkout</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span>🪪 Drug License: MH-THN-20B/21B-DEMO-0417 (sample, display only)</span>
+    <span>👨‍⚕️ Registered Pharmacist: R. Kulkarni (RPh)</span>
+    <span>📍 C-20, Noori Bella Vista, Rashid Compound, Mumbra, Thane – 400612</span>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <p class="eyebrow">Catalogue</p>
+    <h2 class="title">Tablets, injections &amp; surgical essentials</h2>
+    <p class="sub">Items marked <b style="color:var(--amber)">Rx</b> are prescription-only and require pharmacist verification before dispatch. OTC items ship directly.</p>
+    <div class="cat-nav">
+      <button class="cat-chip active" data-cat="all" onclick="filterCat('all',this)">All Products</button>
+      <button class="cat-chip" data-cat="tablet" onclick="filterCat('tablet',this)">💊 Tablets</button>
+      <button class="cat-chip" data-cat="injection" onclick="filterCat('injection',this)">💉 Injections</button>
+      <button class="cat-chip" data-cat="surgical" onclick="filterCat('surgical',this)">🩹 Surgicals</button>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section id="delivery" style="background:#fff;">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2 class="title">Two ways we deliver</h2>
+    <div class="deliv-grid">
+      <div class="deliv-card">
+        <h3>🏠 Local home delivery — Mumbra &amp; Thane</h3>
+        <div class="steps">
+          <div class="step"><span class="num">1</span><div><b>Add items to cart</b><br>Choose OTC items freely, or Rx items with your prescription ready.</div></div>
+          <div class="step"><span class="num">2</span><div><b>Pharmacist review</b><br>Our registered pharmacist verifies any prescription items.</div></div>
+          <div class="step"><span class="num">3</span><div><b>Free delivery to your door</b><br>Delivered within Mumbra &amp; Thane (400612 and nearby) at no extra cost.</div></div>
+        </div>
+      </div>
+      <div class="deliv-card">
+        <h3>🇮🇳 Business shipping — Pan India</h3>
+        <div class="steps">
+          <div class="step"><span class="num">1</span><div><b>Submit a bulk quote request</b><br>Share your business/drug license and required quantities.</div></div>
+          <div class="step"><span class="num">2</span><div><b>Verification &amp; GST invoice</b><br>We confirm your license details and generate a GST invoice.</div></div>
+          <div class="step"><span class="num">3</span><div><b>Courier dispatch anywhere in India</b><br>Tracked shipping to clinics, stores and hospitals nationwide.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="consult">
+  <div class="wrap">
+    <div class="consult">
+      <div>
+        <p class="eyebrow">Prescription needed?</p>
+        <h3>Upload your prescription for Rx items</h3>
+        <p>For Schedule H medicines and injections, our registered pharmacist reviews every prescription before the order is confirmed. This keeps every delivery safe and compliant.</p>
+        <a href="#footer" class="btn btn-primary">Talk to our Pharmacist</a>
+      </div>
+      <div class="upload-box">
+        📄 Drag &amp; drop your prescription here, or
+        <div><input type="file" disabled></div>
+        <small>(Demo only — upload disabled on this preview site)</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="business" style="background:#fff;">
+  <div class="wrap biz-grid">
+    <div>
+      <p class="eyebrow">For businesses</p>
+      <h2 class="title">Wholesale &amp; institutional orders</h2>
+      <p class="sub">We supply retail chemists, clinics, nursing homes and hospitals across India with tablets, injections and surgical consumables.</p>
+      <div class="biz-points">
+        <div><span class="ic">🧾</span><div><b>GST billing on every order</b><br><span style="color:var(--muted); font-size:.85rem;">Proper invoicing for your books and audits.</span></div></div>
+        <div><span class="ic">📦</span><div><b>Pan-India courier shipping</b><br><span style="color:var(--muted); font-size:.85rem;">Tracked delivery to any state, with bulk packaging.</span></div></div>
+        <div><span class="ic">🪪</span><div><b>License verification required</b><br><span style="color:var(--muted); font-size:.85rem;">Valid drug/trade license needed for scheduled items.</span></div></div>
+      </div>
+    </div>
+    <form class="quote" onsubmit="submitQuote(event)">
+      <label>Business Name</label>
+      <input type="text" required placeholder="e.g. Sunrise Medical Store">
+      <label>Contact Person &amp; Phone</label>
+      <input type="text" required placeholder="Name — 10-digit mobile">
+      <label>Drug / Trade License No.</label>
+      <input type="text" required placeholder="License number">
+      <label>Products &amp; Quantity Required</label>
+      <textarea required placeholder="e.g. Paracetamol 650mg x 500 strips, Surgical gloves x 200 boxes"></textarea>
+      <label>Delivery State/City</label>
+      <input type="text" required placeholder="e.g. Pune, Maharashtra">
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Request Bulk Quote</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Trusted locally</p>
+    <h2 class="title">What our customers say</h2>
+    <div class="test-grid">
+      <div class="test"><div class="stars">★★★★★</div>Ordered BP tablets in the evening, delivered free the same day. Very reliable for regular medicines.<div class="who">— Resident, Mumbra</div></div>
+      <div class="test"><div class="stars">★★★★★</div>We source surgical gloves and syringes for our clinic every month — GST invoice and delivery are always on time.<div class="who">— Clinic Owner, Nashik</div></div>
+      <div class="test"><div class="stars">★★★★☆</div>Pharmacist called to confirm my prescription before shipping the injection — felt safe ordering online.<div class="who">— Customer, Thane</div></div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>Perth Pharma</h5>
+        <p style="color:#bcdfc9; font-size:.85rem; line-height:1.7;">C-20, Noori Bella Vista,<br>Behind Vijay Sales, Rashid Compound,<br>Mumbra, Thane – 400612, India</p>
+        <p style="margin-top:12px;"><a href="https://instagram.com/perth_pharma" target="_blank" style="color:#fff; font-weight:700;">📷 @perth_pharma</a></p>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul><li><a href="#products">Tablets</a></li><li><a href="#products">Injections</a></li><li><a href="#products">Surgicals</a></li><li><a href="#consult">Upload Prescription</a></li></ul>
+      </div>
+      <div>
+        <h5>Business</h5>
+        <ul><li><a href="#business">Bulk Orders</a></li><li><a href="#business">GST Invoicing</a></li><li><a href="#delivery">Pan-India Shipping</a></li></ul>
+      </div>
+      <div>
+        <h5>Compliance</h5>
+        <ul><li>Drug License: MH-THN-20B/21B-DEMO-0417</li><li>Pharmacist: R. Kulkarni (RPh)</li><li>Rx items require valid prescription</li></ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This is a demo website built for design purposes. All product listings, prices, license numbers and pharmacist details are placeholders and not real regulatory information. A real pharmacy must display its actual drug license, registered pharmacist, and verify prescriptions for Schedule H/H1/X medicines before dispatch, per Indian pharmacy regulations.
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="toggleDrawer(false)"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head"><b>Your Cart</b><button class="close-x" onclick="toggleDrawer(false)">✕</button></div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <button class="btn btn-primary" style="width:100%; justify-content:center;" onclick="openCheckout()">Checkout</button>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <h3 id="modalTitle">Confirm Order</h3>
+    <div id="modalRxWarning"></div>
+    <p id="modalText">Review your order details below.</p>
+    <button class="btn btn-primary" style="width:100%; justify-content:center;" onclick="placeOrder()">Place Order (Demo)</button>
+    <button class="btn btn-ghost" style="width:100%; justify-content:center; margin-top:10px;" onclick="closeCheckout()">Cancel</button>
+  </div>
+</div>
+
 <script>
-const products=[
-{id:1,name:"Herbal Hair Oil",cat:"Hair Care",price:499,img:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80",tag:"Bestseller"},
-{id:2,name:"Botanical Face Serum",cat:"Skin Care",price:699,img:"https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80",tag:"New"},
-{id:3,name:"Herbal Body Oil",cat:"Body Care",price:549,img:"https://images.unsplash.com/photo-1601049676869-702ea24cfd58?auto=format&fit=crop&w=700&q=80",tag:"Popular"},
-{id:4,name:"Neem & Turmeric Soap",cat:"Skin Care",price:249,img:"https://images.unsplash.com/photo-1607006344380-b6775a0824ad?auto=format&fit=crop&w=700&q=80",tag:"Natural"},
-{id:5,name:"Amla Hair Powder",cat:"Hair Care",price:299,img:"https://images.unsplash.com/photo-1611073769788-9b1e8f3a0d4f?auto=format&fit=crop&w=700&q=80",tag:"Classic"},
-{id:6,name:"Rose Botanical Mist",cat:"Skin Care",price:399,img:"https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=700&q=80",tag:"Fresh"},
-{id:7,name:"Herbal Bath Powder",cat:"Body Care",price:349,img:"https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=700&q=80",tag:"Ritual"},
-{id:8,name:"Daily Wellness Blend",cat:"Wellness",price:449,img:"https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=700&q=80",tag:"Everyday"}
+const products = [
+  {id:1,name:"Paracetamol 650mg",cat:"tablet",price:25,rx:false,icon:"💊",desc:"Strip of 15 tablets — fever & pain relief."},
+  {id:2,name:"Azithromycin 500mg",cat:"tablet",price:95,rx:true,icon:"💊",desc:"Strip of 3 tablets — antibiotic."},
+  {id:3,name:"Metformin 500mg",cat:"tablet",price:40,rx:true,icon:"💊",desc:"Strip of 10 — for blood sugar control."},
+  {id:4,name:"Amoxicillin 500mg",cat:"tablet",price:85,rx:true,icon:"💊",desc:"Strip of 10 capsules — antibiotic."},
+  {id:5,name:"Pantoprazole 40mg",cat:"tablet",price:60,rx:true,icon:"💊",desc:"Strip of 10 — acidity & gastric relief."},
+  {id:6,name:"Cetirizine 10mg",cat:"tablet",price:18,rx:false,icon:"💊",desc:"Strip of 10 — allergy relief."},
+  {id:7,name:"Vitamin D3 60K",cat:"tablet",price:32,rx:false,icon:"💊",desc:"Single sachet — weekly vitamin D supplement."},
+  {id:8,name:"Daily Multivitamin",cat:"tablet",price:150,rx:false,icon:"💊",desc:"Bottle of 30 tablets — daily nutrition support."},
+  {id:9,name:"Insulin Glargine Inj.",cat:"injection",price:420,rx:true,icon:"💉",desc:"3ml pen — long-acting insulin."},
+  {id:10,name:"Diclofenac Injection",cat:"injection",price:22,rx:true,icon:"💉",desc:"3ml ampoule — pain & inflammation relief."},
+  {id:11,name:"Vitamin B12 Injection",cat:"injection",price:35,rx:true,icon:"💉",desc:"1ml ampoule — nutritional supplement."},
+  {id:12,name:"Tetanus Toxoid Inj.",cat:"injection",price:45,rx:true,icon:"💉",desc:"0.5ml — tetanus prevention vaccine."},
+  {id:13,name:"Dexamethasone Inj.",cat:"injection",price:28,rx:true,icon:"💉",desc:"2ml ampoule — anti-inflammatory."},
+  {id:14,name:"Disposable Syringes (10pk)",cat:"surgical",price:60,rx:false,icon:"🩹",desc:"5ml sterile syringes, pack of 10."},
+  {id:15,name:"Surgical Gloves (Box)",cat:"surgical",price:180,rx:false,icon:"🩹",desc:"Box of 100 — latex examination gloves."},
+  {id:16,name:"N95 Masks (Pack of 5)",cat:"surgical",price:150,rx:false,icon:"🩹",desc:"5-layer protective face masks."},
+  {id:17,name:"Digital Thermometer",cat:"surgical",price:120,rx:false,icon:"🩹",desc:"Fast, accurate digital reading."},
+  {id:18,name:"Digital BP Monitor",cat:"surgical",price:1450,rx:false,icon:"🩹",desc:"Automatic arm-cuff blood pressure monitor."},
+  {id:19,name:"Glucometer + Strips",cat:"surgical",price:990,rx:false,icon:"🩹",desc:"Blood glucose monitor with 25 test strips."},
+  {id:20,name:"First Aid Dressing Kit",cat:"surgical",price:210,rx:false,icon:"🩹",desc:"Bandages, antiseptic & dressing essentials."}
 ];
-let filter="All",cart=JSON.parse(localStorage.getItem("echoCart")||"[]");
-const money=n=>"₹"+n.toLocaleString("en-IN");
-function render(){const q=document.getElementById("search").value.toLowerCase();const list=products.filter(p=>(filter==="All"||p.cat===filter)&&(!q||p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)));document.getElementById("grid").innerHTML=list.map(p=>`<article class="card"><div class="pic"><img loading="lazy" src="${p.img}" alt="${p.name}"><span class="badge">${p.tag}</span><button class="wish" onclick="wish(this)">♡</button></div><div class="info"><small>${p.cat}</small><h3>${p.name}</h3><div class="price">${money(p.price)}</div><button class="buy" onclick="add(${p.id})">Add to cart</button></div></article>`).join("")||"<p>No products found.</p>"}function setFilter(x){filter=x;document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.textContent.toLowerCase().includes(x.split(" ")[0].toLowerCase())||x==="All"&&b.textContent==="All"));render();location.hash="shop"}function add(id){const x=cart.find(i=>i.id===id);x?x.qty++:cart.push({id,qty:1});save();toast("Added to your cart");openCart()}function save(){localStorage.setItem("echoCart",JSON.stringify(cart));updateCart()}function updateCart(){document.getElementById("count").textContent=cart.reduce((a,b)=>a+b.qty,0);const el=document.getElementById("cartitems");if(!cart.length){el.innerHTML="<div style='text-align:center;padding:60px 10px;color:#667267'>Your cart is waiting for a little botanical goodness.</div>"}else el.innerHTML=cart.map(i=>{const p=products.find(x=>x.id===i.id);return `<div class="cartitem"><img src="${p.img}" alt=""><div><strong>${p.name}</strong><div style="color:#667267;font-size:12px">${money(p.price)}</div><div class="qty"><button onclick="change(${p.id},-1)">−</button>${i.qty}<button onclick="change(${p.id},1)">+</button></div></div><button class="remove" onclick="removeItem(${p.id})">Remove</button></div>`}).join("");const sub=cart.reduce((a,i)=>a+products.find(p=>p.id===i.id).price*i.qty,0),ship=sub?(sub>=999?0:79):0;document.getElementById("subtotal").textContent=money(sub);document.getElementById("shipping").textContent=ship?money(ship):"Free";document.getElementById("total").textContent=money(sub+ship);document.getElementById("payamount").textContent=money(sub+ship)}function change(id,n){const x=cart.find(i=>i.id===id);x.qty+=n;if(x.qty<1)cart=cart.filter(i=>i.id!==id);save()}function removeItem(id){cart=cart.filter(i=>i.id!==id);save()}function openCart(){document.getElementById("drawer").classList.add("open")}function closeCart(){document.getElementById("drawer").classList.remove("open")}function checkout(){if(!cart.length)return toast("Your cart is empty");closeCart();document.getElementById("modal").classList.add("show")}function closeModal(){document.getElementById("modal").classList.remove("show")}function pay(e){e.preventDefault();closeModal();cart=[];save();toast("Demo payment successful — order created locally")}function wish(b){b.textContent=b.textContent==="♡"?"♥":"♡";toast(b.textContent==="♥"?"Added to wishlist":"Removed from wishlist")}function toast(t){const x=document.getElementById("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2200)}function subscribe(e){e.preventDefault();e.target.reset();toast("You're on the list 🌿")}function focusSearch(){document.getElementById("search").focus();location.hash="shop"}function toggleMenu(){document.getElementById("navlinks").classList.toggle("mobile");document.getElementById("navlinks").style.cssText=document.getElementById("navlinks").classList.contains("mobile")?"display:flex;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e5e1d5":"display:none"}render();updateCart();
+
+let cart = {};
+
+function renderProducts(cat){
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = '';
+  products.filter(p => cat==='all' || p.cat===cat).forEach(p=>{
+    const card = document.createElement('div');
+    card.className='card';
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="icon-box">${p.icon}</div>
+        <span class="tag ${p.rx?'rx':'otc'}">${p.rx?'Rx Required':'OTC'}</span>
+      </div>
+      <h4>${p.name}</h4>
+      <p class="desc">${p.desc}</p>
+      <div class="card-bottom">
+        <span class="price">₹${p.price}</span>
+        <button class="add-btn" onclick="addToCart(${p.id})">Add to Cart</button>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+function filterCat(cat, el){
+  document.querySelectorAll('.cat-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  renderProducts(cat);
+}
+
+function setMode(mode){
+  document.body.setAttribute('data-mode', mode);
+  document.getElementById('btnConsumer').classList.toggle('active', mode==='consumer');
+  document.getElementById('btnBusiness').classList.toggle('active', mode==='business');
+}
+
+function addToCart(id){
+  cart[id] = (cart[id]||0) + 1;
+  updateCartUI();
+  toggleDrawer(true);
+}
+function changeQty(id, delta){
+  cart[id] = (cart[id]||0) + delta;
+  if(cart[id] <= 0) delete cart[id];
+  updateCartUI();
+}
+function updateCartUI(){
+  const body = document.getElementById('drawerBody');
+  const ids = Object.keys(cart);
+  let count=0, total=0;
+  if(ids.length===0){
+    body.innerHTML = '<p class="empty-note">Your cart is empty. Browse medicines to add items.</p>';
+  } else {
+    body.innerHTML = ids.map(id=>{
+      const p = products.find(x=>x.id==id);
+      const qty = cart[id];
+      count += qty; total += qty*p.price;
+      return `<div class="cart-item">
+        <div>
+          <div class="name">${p.name} ${p.rx?'<span class="tag rx" style="margin-left:6px;">Rx</span>':''}</div>
+          <div class="qty">
+            <button onclick="changeQty(${id},-1)">−</button> ${qty} <button onclick="changeQty(${id},1)">+</button>
+          </div>
+        </div>
+        <div>₹${qty*p.price}</div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('cartCount').innerText = count;
+  document.getElementById('cartTotal').innerText = '₹'+total;
+}
+
+function toggleDrawer(open){
+  document.getElementById('drawer').classList.toggle('open', open);
+  document.getElementById('overlay').classList.toggle('open', open);
+}
+
+function openCheckout(){
+  if(Object.keys(cart).length===0) return;
+  const hasRx = Object.keys(cart).some(id => products.find(p=>p.id==id).rx);
+  const warnBox = document.getElementById('modalRxWarning');
+  warnBox.innerHTML = hasRx ? `<div class="rx-warning">⚠️ Your cart contains prescription (Rx) items. Our pharmacist will verify your uploaded prescription before this order is dispatched.</div>` : '';
+  document.getElementById('modalText').innerText = hasRx
+    ? "Please make sure you've uploaded a valid prescription in the Prescription section. Orders are confirmed only after pharmacist review."
+    : "All items in your cart are over-the-counter and ready to ship. Free delivery applies within Mumbra & Thane.";
+  document.getElementById('modalBg').classList.add('open');
+}
+function closeCheckout(){ document.getElementById('modalBg').classList.remove('open'); }
+function placeOrder(){
+  closeCheckout();
+  toggleDrawer(false);
+  cart = {};
+  updateCartUI();
+  alert('Demo order placed! In a live version, this would confirm your order and (for Rx items) notify our pharmacist for verification.');
+}
+function submitQuote(e){
+  e.preventDefault();
+  alert('Demo request sent! In a live version, our business team would verify your license and reply with a bulk quote.');
+  e.target.reset();
+}
+
+renderProducts('all');
+updateCartUI();
 </script>
 </body>
 </html>
