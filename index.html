@@ -197,7 +197,7 @@ header{
 .t-card{background:var(--ivory);padding:36px 30px;border-top:2px solid var(--gold);}
 .t-card p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#3a2a22;margin-bottom:20px;}
 .t-who{display:flex;align-items:center;gap:12px;}
-.t-who img{width:44px;height:44px;border-radius:50%;object-fit:cover;}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--plum);color:var(--ivory);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;flex-shrink:0;}
 .t-who b{display:block;font-size:14px;}
 .t-who span{font-size:12px;color:#8a7a6f;}
 
@@ -304,8 +304,8 @@ footer{background:var(--plum-deep);color:#cbb9ac;padding:70px 0 20px;}
       </div>
     </div>
     <div class="hero-visual">
-      <img class="im1" src="https://picsum.photos/seed/shengai-hero1/700/900" alt="Model in festive saree">
-      <img class="im2" src="https://picsum.photos/seed/shengai-hero2/500/500" alt="Close up of embroidery detail">
+      <img class="im1" id="heroImg1" alt="Festive saree silhouette illustration">
+      <img class="im2" id="heroImg2" alt="Lehenga silhouette illustration">
     </div>
   </div>
 </section>
@@ -318,8 +318,8 @@ footer{background:var(--plum-deep);color:#cbb9ac;padding:70px 0 20px;}
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-imgs">
-      <img class="a1" src="https://picsum.photos/seed/shengai-about1/600/750" alt="Tailoring studio at the academy">
-      <img class="a2" src="https://picsum.photos/seed/shengai-about2/400/400" alt="Hand embroidery close up">
+      <img class="a1" id="aboutImg1" alt="Kurti silhouette illustration">
+      <img class="a2" id="aboutImg2" alt="Fusion wear silhouette illustration">
     </div>
     <div class="about-copy">
       <div class="tag">Since 2019</div>
@@ -342,12 +342,7 @@ footer{background:var(--plum-deep);color:#cbb9ac;padding:70px 0 20px;}
       <h2>Find Your Silhouette</h2>
       <p>From nine-yard drapes to tailored fusion wear — every category is designed and finished in our own studio.</p>
     </div>
-    <div class="cat-grid">
-      <div class="cat-card"><img src="https://picsum.photos/seed/cat-sarees/400/500" alt="Sarees"><div class="cat-overlay"><span>24 styles</span><h3>Sarees</h3></div></div>
-      <div class="cat-card"><img src="https://picsum.photos/seed/cat-lehenga/400/500" alt="Lehengas"><div class="cat-overlay"><span>18 styles</span><h3>Lehengas</h3></div></div>
-      <div class="cat-card"><img src="https://picsum.photos/seed/cat-kurti/400/500" alt="Kurtis"><div class="cat-overlay"><span>30 styles</span><h3>Kurti Sets</h3></div></div>
-      <div class="cat-card"><img src="https://picsum.photos/seed/cat-fusion/400/500" alt="Fusion wear"><div class="cat-overlay"><span>15 styles</span><h3>Indo-Fusion</h3></div></div>
-    </div>
+    <div class="cat-grid" id="catGrid"></div>
   </div>
 </section>
 
@@ -406,15 +401,15 @@ footer{background:var(--plum-deep);color:#cbb9ac;padding:70px 0 20px;}
     <div class="t-grid">
       <div class="t-card">
         <p>"The saree I ordered looked exactly like the Instagram reel — the pallu embroidery is even better in person."</p>
-        <div class="t-who"><img src="https://picsum.photos/seed/review1/100/100" alt=""><div><b>Ananya R.</b><span>Bengaluru</span></div></div>
+        <div class="t-who"><span class="avatar">AR</span><div><b>Ananya R.</b><span>Bengaluru</span></div></div>
       </div>
       <div class="t-card">
         <p>"Took the bridal couture course and now three of my own designs are being sold on their site. Full circle moment."</p>
-        <div class="t-who"><img src="https://picsum.photos/seed/review2/100/100" alt=""><div><b>Meher K.</b><span>Hyderabad</span></div></div>
+        <div class="t-who"><span class="avatar">MK</span><div><b>Meher K.</b><span>Hyderabad</span></div></div>
       </div>
       <div class="t-card">
         <p>"Fast shipping, beautiful packaging, and the fusion jacket fits like it was tailored for me. Ordering again."</p>
-        <div class="t-who"><img src="https://picsum.photos/seed/review3/100/100" alt=""><div><b>Priya S.</b><span>Chennai</span></div></div>
+        <div class="t-who"><span class="avatar">PS</span><div><b>Priya S.</b><span>Chennai</span></div></div>
       </div>
     </div>
   </div>
@@ -512,15 +507,51 @@ const products = [
   {id:20,name:"Oxidised Jhumka Earrings",cat:"Accessory",price:599,old:null,img:"prod20"},
 ];
 
+/* ---- Garment illustration generator (on-brand SVG art per category, no stock photos) ---- */
+const garmentPalette = ['#3a1c2b','#4a2136','#2c1420','#5a2a3c','#3d1e2e'];
+const garmentIcons = {
+  Saree: (fg)=>`<path d="M100 40 C70 60 60 120 78 190 C60 220 55 300 90 380 L100 380 C90 300 85 220 105 195 C130 240 150 320 140 380 L165 380 C172 300 150 220 130 185 C150 130 140 65 100 40 Z" fill="${fg}" opacity="0.9"/><path d="M78 190 C110 210 130 210 130 185" stroke="${fg}" stroke-width="2" fill="none" opacity="0.5"/><path d="M85 240 C110 255 122 255 122 235" stroke="${fg}" stroke-width="2" fill="none" opacity="0.4"/>`,
+  Lehenga: (fg)=>`<path d="M100 40 a26 26 0 1 0 0.1 0 Z" fill="${fg}"/><path d="M76 92 L60 380 L140 380 L124 92 Z" fill="${fg}" opacity="0.92"/><path d="M64 340 Q100 320 136 340" stroke="${fg}" stroke-width="3" fill="none" opacity="0.55"/><path d="M68 300 Q100 285 132 300" stroke="${fg}" stroke-width="2" fill="none" opacity="0.4"/>`,
+  Kurti: (fg)=>`<path d="M100 40 a24 24 0 1 0 0.1 0Z" fill="${fg}"/><path d="M78 88 L58 150 L74 158 L82 130 L80 300 L120 300 L118 130 L126 158 L142 150 L122 88 Z" fill="${fg}" opacity="0.92"/>`,
+  Fusion: (fg)=>`<path d="M100 40 a22 22 0 1 0 0.1 0Z" fill="${fg}"/><path d="M72 86 L52 140 L68 150 L78 122 L64 260 L96 320 L100 260 L112 320 L138 258 L124 122 L134 150 L150 140 L128 86 Z" fill="${fg}" opacity="0.92"/><path d="M64 260 L100 260" stroke="${fg}" stroke-width="2" opacity="0.4"/>`,
+  Accessory: (fg)=>`<circle cx="100" cy="130" r="46" fill="none" stroke="${fg}" stroke-width="6"/><circle cx="100" cy="130" r="8" fill="${fg}"/><path d="M60 172 Q100 260 140 172" stroke="${fg}" stroke-width="6" fill="none"/><circle cx="100" cy="260" r="10" fill="${fg}"/>`
+};
+function garmentSVG(cat, idx, label){
+  const bg = '#f3e9da';
+  const fg = garmentPalette[idx % garmentPalette.length];
+  const icon = (garmentIcons[cat]||garmentIcons.Kurti)(fg);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="500" height="650">
+    <rect width="200" height="400" fill="${bg}"/>
+    <rect x="10" y="10" width="180" height="380" fill="none" stroke="${fg}" stroke-width="1" opacity="0.35"/>
+    <g>${icon}</g>
+    <text x="100" y="360" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="${fg}" opacity="0.75">${label}</text>
+  </svg>`;
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+
+const catList = [
+  {cat:'Saree', name:'Sarees', count:'24 styles'},
+  {cat:'Lehenga', name:'Lehengas', count:'18 styles'},
+  {cat:'Kurti', name:'Kurti Sets', count:'30 styles'},
+  {cat:'Fusion', name:'Indo-Fusion', count:'15 styles'}
+];
+const catGrid = document.getElementById('catGrid');
+catList.forEach((c,i)=>{
+  const div = document.createElement('div');
+  div.className='cat-card';
+  div.innerHTML = `<img src="${garmentSVG(c.cat, i*3, c.name)}" alt="${c.name}"><div class="cat-overlay"><span>${c.count}</span><h3>${c.name}</h3></div>`;
+  catGrid.appendChild(div);
+});
+
 const grid = document.getElementById('productGrid');
 function renderProducts(filter='all'){
   grid.innerHTML='';
-  products.filter(p=>filter==='all'||p.cat===filter).forEach(p=>{
+  products.filter(p=>filter==='all'||p.cat===filter).forEach((p,i)=>{
     const card = document.createElement('div');
     card.className='product-card';
     card.innerHTML = `
       <div class="pc-img">
-        <img src="https://picsum.photos/seed/${p.img}/500/650" alt="${p.name}">
+        <img src="${garmentSVG(p.cat, p.id, p.cat)}" alt="${p.name} — ${p.cat}">
         ${p.old ? '<span class="pc-badge">Sale</span>' : ''}
         <button class="pc-add" onclick="addToCart(${p.id})">Add to Bag</button>
       </div>
@@ -544,12 +575,20 @@ document.getElementById('filters').addEventListener('click', e=>{
   renderProducts(e.target.dataset.filter);
 });
 
-/* ---------- Instagram Grid (12 tiles) ---------- */
+/* ---------- Hero & About illustrations ---------- */
+document.getElementById('heroImg1').src = garmentSVG('Saree', 1, 'Saree');
+document.getElementById('heroImg2').src = garmentSVG('Lehenga', 2, 'Lehenga');
+document.getElementById('aboutImg1').src = garmentSVG('Kurti', 3, 'Kurti');
+document.getElementById('aboutImg2').src = garmentSVG('Fusion', 4, 'Fusion');
+
+/* ---------- Instagram Grid (12 tiles, rotating through categories) ---------- */
 const igGrid = document.getElementById('igGrid');
+const igCats = ['Saree','Lehenga','Kurti','Fusion','Accessory'];
 for(let i=1;i<=12;i++){
+  const cat = igCats[i % igCats.length];
   const div = document.createElement('div');
   div.className='ig-item';
-  div.innerHTML = `<img src="https://picsum.photos/seed/ig${i}/300/300" alt="Instagram post ${i}">`;
+  div.innerHTML = `<img src="${garmentSVG(cat, i, cat)}" alt="${cat} post">`;
   igGrid.appendChild(div);
 }
 
@@ -575,7 +614,7 @@ function updateCart(){
   } else {
     itemsEl.innerHTML = cart.map(c=>`
       <div class="cart-item">
-        <img src="https://picsum.photos/seed/${c.img}/150/190" alt="${c.name}">
+        <img src="${garmentSVG(c.cat, c.id, c.cat)}" alt="${c.name} — ${c.cat}">
         <div class="ci-info">
           <h5>${c.name}</h5>
           <span>Qty: ${c.qty} &nbsp;·&nbsp; ₹${(c.price*c.qty).toLocaleString('en-IN')}</span><br>
