@@ -3,671 +3,876 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shengai Fashion Academy — Wear Your Story</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Sugandh — Hand-Poured Candles</title>
 <style>
-:root{
-  --plum:#2c1420;
-  --plum-deep:#1a0c13;
-  --ivory:#f6efe4;
-  --ivory-soft:#efe4d3;
-  --gold:#c8a24d;
-  --gold-soft:#e3cfa0;
-  --blush:#d9a9a0;
-  --ink:#221410;
-  --line: rgba(200,162,77,0.35);
-  --maxw: 1240px;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--ivory);
-  color:var(--ink);
-  font-family:'Jost',sans-serif;
-  font-weight:300;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;}
-a{color:inherit;text-decoration:none;}
-img{max-width:100%;display:block;}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
-.btn{
-  display:inline-block;
-  padding:14px 34px;
-  border:1px solid var(--ink);
-  font-size:14px;
-  letter-spacing:0.5px;
-  background:transparent;
-  cursor:pointer;
-  transition:background .35s ease, color .35s ease;
-  font-family:'Jost',sans-serif;
-}
-.btn:hover{background:var(--ink);color:var(--ivory);}
-.btn-light{border-color:var(--ivory);color:var(--ivory);}
-.btn-light:hover{background:var(--ivory);color:var(--plum-deep);}
-.btn-gold{border-color:var(--gold);}
-.btn-gold:hover{background:var(--gold);color:var(--plum-deep);}
-.section-head{max-width:560px;margin-bottom:46px;}
-.section-head .tag{font-size:14px;color:var(--gold);font-style:italic;font-family:'Cormorant Garamond',serif;}
-.section-head h2{font-size:clamp(32px,4vw,46px);font-weight:500;margin-top:6px;}
-.section-head p{margin-top:14px;color:#5a463d;max-width:46ch;}
+  :root{
+    --ink:#15100d;
+    --ink-2:#1e1712;
+    --wax:#f4ead9;
+    --amber:#e2a44c;
+    --amber-deep:#b9752a;
+    --plum:#5a3346;
+    --plum-soft:#8a5a6e;
+    --line:rgba(226,164,76,.25);
+    --serif:'Canela','Playfair Display', 'Times New Roman', serif;
+    --sans:'Jost', 'Helvetica Neue', Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--wax);
+    font-family:var(--sans);
+    font-weight:300;
+    letter-spacing:.01em;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  button{font-family:var(--sans);}
+  ::selection{background:var(--amber);color:var(--ink);}
 
-/* ---- Announcement Bar ---- */
-.announce{
-  background:var(--plum-deep);
-  color:var(--ivory-soft);
-  text-align:center;
-  font-size:13px;
-  letter-spacing:1px;
-  padding:9px 0;
-}
-.announce span{opacity:.85;}
+  /* subtle grain */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size:3px 3px;
+    pointer-events:none;
+    z-index:9999;
+    mix-blend-mode:overlay;
+  }
 
-/* ---- Header ---- */
-header{
-  position:sticky;top:0;z-index:500;
-  background:rgba(246,239,228,0.92);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:var(--maxw);margin:0 auto;}
-.logo{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:1px;font-weight:600;}
-.logo em{font-style:italic;color:var(--gold);}
-.nav-links{display:flex;gap:36px;font-size:14.5px;}
-.nav-links a{position:relative;padding-bottom:4px;}
-.nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s ease;}
-.nav-links a:hover::after{width:100%;}
-.nav-right{display:flex;align-items:center;gap:20px;}
-.icon-btn{background:none;border:none;cursor:pointer;font-size:19px;color:var(--ink);position:relative;}
-.cart-count{position:absolute;top:-8px;right:-10px;background:var(--plum);color:var(--ivory);font-size:10px;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.menu-toggle{display:none;background:none;border:none;font-size:24px;cursor:pointer;}
+  /* ===== NAV ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:500;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 5vw;
+    transition:background .4s ease, padding .4s ease, backdrop-filter .4s ease;
+  }
+  header.scrolled{
+    background:rgba(21,16,13,.86);
+    backdrop-filter:blur(10px);
+    padding:14px 5vw;
+    border-bottom:1px solid var(--line);
+  }
+  .logo{
+    font-family:var(--serif);
+    font-size:1.5rem;
+    letter-spacing:.04em;
+    display:flex; align-items:center; gap:10px;
+  }
+  .logo .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--amber);
+    box-shadow:0 0 10px 3px rgba(226,164,76,.7);
+    animation:flicker 3s infinite ease-in-out;
+  }
+  nav ul{
+    list-style:none; display:flex; gap:38px; margin:0; padding:0;
+  }
+  nav a{
+    font-size:.82rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    opacity:.85;
+    position:relative;
+    padding-bottom:4px;
+  }
+  nav a::after{
+    content:"";position:absolute; left:0; bottom:0; width:0; height:1px;
+    background:var(--amber); transition:width .35s ease;
+  }
+  nav a:hover::after{width:100%;}
+  .nav-cta{
+    border:1px solid var(--line);
+    padding:9px 20px;
+    border-radius:999px;
+    font-size:.78rem;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    transition:background .3s, border-color .3s;
+    background:transparent;
+    color:var(--wax);
+    cursor:pointer;
+    display:flex; align-items:center; gap:8px;
+  }
+  .nav-cta:hover{background:var(--amber); color:var(--ink); border-color:var(--amber);}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:600; background:none; border:none; padding:0;}
+  .burger span{width:24px; height:1px; background:var(--wax); display:block;}
 
-/* ---- Hero ---- */
-.hero{
-  min-height:92vh;
-  display:flex;align-items:center;
-  background:linear-gradient(120deg,var(--plum) 45%, var(--plum-deep) 100%);
-  color:var(--ivory);
-  position:relative;
-  overflow:hidden;
-}
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background-image: radial-gradient(circle at 80% 20%, rgba(200,162,77,0.18), transparent 45%);
-}
-.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;max-width:var(--maxw);margin:0 auto;padding:60px 28px;position:relative;z-index:2;}
-.hero-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-soft);font-size:19px;}
-.hero h1{font-size:clamp(44px,6vw,74px);font-weight:500;line-height:1.05;margin:14px 0 22px;}
-.hero p{max-width:44ch;color:#e5d9cc;margin-bottom:32px;font-size:16px;}
-.hero-cta{display:flex;gap:16px;flex-wrap:wrap;}
-.hero-visual{position:relative;height:520px;}
-.hero-visual img{position:absolute;border-radius:2px;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.4);}
-.hero-visual .im1{width:64%;height:82%;top:0;right:0;}
-.hero-visual .im2{width:46%;height:52%;bottom:0;left:0;border:6px solid var(--plum-deep);}
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex; align-items:center;
+    padding:0 5vw;
+    background:
+      radial-gradient(ellipse 60% 50% at 78% 55%, rgba(226,164,76,.16), transparent 70%),
+      linear-gradient(180deg, var(--ink) 0%, #100c0a 100%);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:40px;
+    width:100%; max-width:1300px; margin:0 auto; padding-top:80px;
+  }
+  .eyebrow{
+    font-size:.78rem; letter-spacing:.2em; color:var(--amber); text-transform:uppercase;
+    display:inline-block; margin-bottom:18px; opacity:0; animation:rise .9s .1s forwards;
+  }
+  h1.hero-title{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(2.6rem, 5.4vw, 4.6rem);
+    line-height:1.04;
+    margin:0 0 22px;
+    opacity:0; animation:rise .9s .25s forwards;
+  }
+  h1.hero-title em{
+    font-style:italic; color:var(--amber);
+  }
+  .hero p.lead{
+    max-width:440px; font-size:1.05rem; line-height:1.7; color:rgba(244,234,217,.75);
+    margin:0 0 34px;
+    opacity:0; animation:rise .9s .4s forwards;
+  }
+  .hero-actions{
+    display:flex; gap:16px; align-items:center;
+    opacity:0; animation:rise .9s .55s forwards;
+  }
+  .btn-primary{
+    background:var(--amber); color:var(--ink);
+    padding:15px 32px; border-radius:999px;
+    font-size:.85rem; text-transform:uppercase; letter-spacing:.1em;
+    font-weight:500;
+    border:1px solid var(--amber);
+    display:inline-block; cursor:pointer;
+    transition:transform .3s ease, box-shadow .3s ease, background .3s;
+  }
+  .btn-primary:hover{transform:translateY(-3px); box-shadow:0 14px 30px -10px rgba(226,164,76,.55);}
+  .btn-ghost{
+    display:flex; align-items:center; gap:10px;
+    font-size:.85rem; letter-spacing:.06em; color:var(--wax);
+    padding:15px 6px;
+  }
+  .play-ring{
+    width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    transition:border-color .3s;
+  }
+  .btn-ghost:hover .play-ring{border-color:var(--amber);}
 
-/* ---- Marquee ---- */
-.marquee{
-  background:var(--gold);
-  color:var(--plum-deep);
-  overflow:hidden;white-space:nowrap;
-  padding:14px 0;
-  font-family:'Cormorant Garamond',serif;
-  font-size:22px;font-style:italic;
-}
-.marquee-track{display:inline-block;animation:scroll 26s linear infinite;}
-.marquee-track span{margin:0 26px;}
-@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @keyframes rise{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);} }
 
-/* ---- About ---- */
-.about{padding:100px 0;}
-.about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;}
-.about-imgs{position:relative;height:440px;}
-.about-imgs img{position:absolute;border-radius:2px;}
-.about-imgs .a1{width:70%;height:85%;left:0;top:0;box-shadow:0 24px 50px rgba(43,20,32,.25);}
-.about-imgs .a2{width:42%;height:48%;right:0;bottom:0;border:6px solid var(--ivory);box-shadow:0 24px 50px rgba(43,20,32,.25);}
-.about-copy .tag{color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;}
-.about-copy h2{font-size:clamp(30px,4vw,42px);font-weight:500;margin:10px 0 20px;}
-.about-copy p{color:#5a463d;margin-bottom:16px;max-width:52ch;}
-.stat-row{display:flex;gap:40px;margin-top:30px;}
-.stat b{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--plum);display:block;}
-.stat span{font-size:13px;color:#7a6a60;}
+  /* hero candle scene — real photo */
+  .candle-scene{
+    position:relative; height:560px;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; animation:fadeIn 1.2s .5s forwards;
+  }
+  @keyframes fadeIn{ from{opacity:0;} to{opacity:1;} }
+  .glow-floor{
+    position:absolute; bottom:30px; width:280px; height:70px; border-radius:50%;
+    background:radial-gradient(ellipse, rgba(226,164,76,.45), transparent 70%);
+    filter:blur(6px);
+  }
+  .hero-photo-frame{
+    position:relative; width:320px; height:420px; border-radius:22px; overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+  }
+  .hero-photo-frame img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    filter:saturate(1.05) contrast(1.02);
+  }
+  .hero-photo-frame::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(ellipse at 50% 30%, rgba(226,164,76,.22), transparent 60%),
+               linear-gradient(180deg, rgba(21,16,13,0) 55%, rgba(21,16,13,.55) 100%);
+    pointer-events:none;
+  }
 
-/* ---- Categories ---- */
-.categories{padding:0 0 100px;}
-.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.cat-card{position:relative;height:340px;overflow:hidden;border-radius:2px;}
-.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
-.cat-card:hover img{transform:scale(1.08);}
-.cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,12,19,.8),transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:var(--ivory);}
-.cat-overlay h3{font-size:24px;font-weight:500;}
-.cat-overlay span{font-size:13px;color:var(--gold-soft);}
+  /* ===== marquee strip ===== */
+  .marquee{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:16px 0; overflow:hidden; white-space:nowrap; background:var(--ink-2);
+  }
+  .marquee-track{display:inline-block; animation:scroll 22s linear infinite;}
+  .marquee-track span{
+    font-family:var(--serif); font-style:italic; font-size:1.1rem;
+    color:rgba(244,234,217,.55); margin:0 34px;
+  }
+  .marquee-track span::after{content:"✦"; margin-left:34px; color:var(--amber);}
+  @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
-/* ---- Shop ---- */
-.shop{padding:20px 0 100px;background:var(--ivory-soft);}
-.shop-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:36px;}
-.filters{display:flex;gap:10px;flex-wrap:wrap;}
-.filter-btn{padding:9px 20px;border:1px solid var(--line);background:transparent;font-size:13px;cursor:pointer;font-family:'Jost',sans-serif;transition:all .25s ease;letter-spacing:.3px;}
-.filter-btn.active,.filter-btn:hover{background:var(--plum);color:var(--ivory);border-color:var(--plum);}
-.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px 22px;}
-.product-card{background:var(--ivory);position:relative;}
-.pc-img{position:relative;overflow:hidden;aspect-ratio:3/4;}
-.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
-.product-card:hover .pc-img img{transform:scale(1.06);}
-.pc-badge{position:absolute;top:12px;left:12px;background:var(--plum);color:var(--ivory);font-size:11px;padding:5px 10px;letter-spacing:.5px;}
-.pc-add{position:absolute;bottom:0;left:0;right:0;background:var(--plum-deep);color:var(--ivory);border:none;padding:12px;font-size:13px;letter-spacing:.5px;cursor:pointer;transform:translateY(100%);transition:transform .35s ease;font-family:'Jost',sans-serif;}
-.product-card:hover .pc-add{transform:translateY(0);}
-.pc-info{padding:14px 4px;}
-.pc-cat{font-size:11px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;}
-.pc-info h4{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;margin:4px 0;}
-.pc-price{display:flex;gap:10px;align-items:baseline;}
-.pc-price .now{font-size:16px;}
-.pc-price .old{font-size:13px;color:#a08e83;text-decoration:line-through;}
-.load-more{text-align:center;margin-top:46px;}
+  /* ===== SECTION generic ===== */
+  section{ padding:120px 5vw; position:relative; }
+  .section-head{ max-width:640px; margin:0 auto 64px; text-align:center; }
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{
+    font-family:var(--serif); font-weight:400; font-size:clamp(2rem,3.6vw,3rem);
+    margin:0 0 16px; line-height:1.15;
+  }
+  .section-head p{ color:rgba(244,234,217,.65); line-height:1.7; margin:0 auto; }
 
-/* ---- Academy ---- */
-.academy{padding:100px 0;background:var(--plum);color:var(--ivory);}
-.academy .section-head p{color:#d9c9bc;}
-.academy .section-head .tag{color:var(--gold-soft);}
-.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.course-card{border:1px solid rgba(230,207,160,.25);padding:32px 26px;transition:background .3s ease;}
-.course-card:hover{background:rgba(255,255,255,.04);}
-.course-card .num{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--gold-soft);font-style:italic;}
-.course-card h3{font-size:24px;font-weight:500;margin:12px 0 10px;}
-.course-card p{font-size:14.5px;color:#cbb9ac;margin-bottom:18px;}
-.course-card a{font-size:13px;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:2px;}
+  .reveal{ opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .8s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
 
-/* ---- Lookbook / Instagram ---- */
-.lookbook{padding:100px 0;}
-.ig-head{text-align:center;margin-bottom:40px;}
-.ig-head .tag{color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;}
-.ig-head h2{font-size:clamp(30px,4vw,42px);font-weight:500;margin:8px 0;}
-.ig-head a{font-size:14px;color:var(--plum);border-bottom:1px solid var(--plum);}
-.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
-.ig-item{aspect-ratio:1;overflow:hidden;position:relative;}
-.ig-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
-.ig-item:hover img{transform:scale(1.1);}
-.ig-item::after{content:'♡';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;background:rgba(43,20,32,0);opacity:0;transition:all .3s ease;}
-.ig-item:hover::after{background:rgba(43,20,32,.35);opacity:1;}
+  /* ===== PRODUCTS ===== */
+  .shop{ max-width:1300px; margin:0 auto; }
+  .product-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:28px;
+  }
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:18px 18px 26px;
+    text-align:center;
+    position:relative;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1), border-color .3s, background .3s;
+  }
+  .card:hover{ transform:translateY(-8px); border-color:rgba(226,164,76,.55); background:linear-gradient(180deg, rgba(226,164,76,.07), rgba(255,255,255,0)); }
+  .card .stage{
+    height:190px; border-radius:14px; overflow:hidden; position:relative; margin-bottom:18px;
+  }
+  .card .stage img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition:transform .6s ease;
+  }
+  .card:hover .stage img{ transform:scale(1.06); }
+  .card .stage::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(21,16,13,0) 55%, rgba(21,16,13,.45) 100%);
+  }
+  .card h3{ font-family:var(--serif); font-weight:400; font-size:1.28rem; margin:0 0 6px; }
+  .card .scent{ font-size:.78rem; color:var(--plum-soft); letter-spacing:.06em; text-transform:uppercase; margin:0 0 12px; }
+  .card .price-row{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:14px; }
+  .card .price{ font-size:1.05rem; color:var(--amber); }
+  .add-btn{
+    border:1px solid var(--line); background:transparent; color:var(--wax);
+    padding:9px 18px; border-radius:999px; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+    cursor:pointer; transition:.3s;
+  }
+  .add-btn:hover{ background:var(--amber); color:var(--ink); border-color:var(--amber); }
+  .tag{
+    position:absolute; top:14px; left:14px; z-index:2; font-size:.66rem; letter-spacing:.1em; text-transform:uppercase;
+    background:rgba(21,16,13,.55); backdrop-filter:blur(4px); color:var(--amber); border:1px solid var(--line);
+    padding:4px 10px; border-radius:999px;
+  }
 
-/* ---- Testimonials ---- */
-.testimonials{padding:100px 0;background:var(--ivory-soft);}
-.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
-.t-card{background:var(--ivory);padding:36px 30px;border-top:2px solid var(--gold);}
-.t-card p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#3a2a22;margin-bottom:20px;}
-.t-who{display:flex;align-items:center;gap:12px;}
-.avatar{width:44px;height:44px;border-radius:50%;background:var(--plum);color:var(--ivory);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;flex-shrink:0;}
-.t-who b{display:block;font-size:14px;}
-.t-who span{font-size:12px;color:#8a7a6f;}
+  /* ===== PROCESS / STORY ===== */
+  .story{
+    display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; max-width:1250px; margin:0 auto; align-items:center;
+  }
+  .story-visual{ position:relative; height:460px; }
+  .pour-svg{ position:absolute; inset:0; }
+  .story h2{ font-family:var(--serif); font-weight:400; font-size:clamp(2rem,3.4vw,2.9rem); line-height:1.16; margin:0 0 22px; }
+  .story p{ color:rgba(244,234,217,.7); line-height:1.8; margin:0 0 18px; max-width:480px; }
+  .steps{ margin-top:34px; display:flex; flex-direction:column; gap:0; }
+  .step{ display:flex; gap:18px; padding:18px 0; border-top:1px solid var(--line); }
+  .step:last-child{ border-bottom:1px solid var(--line); }
+  .step .num{ font-family:var(--serif); font-style:italic; color:var(--amber); font-size:1.1rem; width:30px; flex-shrink:0; }
+  .step .txt b{ display:block; margin-bottom:3px; font-weight:500; }
+  .step .txt span{ font-size:.9rem; color:rgba(244,234,217,.6); }
 
-/* ---- Newsletter ---- */
-.newsletter{padding:90px 0;text-align:center;background:var(--plum-deep);color:var(--ivory);}
-.newsletter .tag{color:var(--gold-soft);font-family:'Cormorant Garamond',serif;font-style:italic;}
-.newsletter h2{font-size:clamp(28px,4vw,40px);font-weight:500;margin:10px 0 16px;}
-.newsletter p{color:#cbb9ac;max-width:50ch;margin:0 auto 30px;}
-.n-form{display:flex;justify-content:center;gap:0;max-width:440px;margin:0 auto;}
-.n-form input{flex:1;padding:14px 18px;border:1px solid rgba(230,207,160,.4);background:transparent;color:var(--ivory);font-family:'Jost',sans-serif;}
-.n-form input::placeholder{color:#a8988c;}
-.n-form button{padding:14px 26px;background:var(--gold);border:1px solid var(--gold);color:var(--plum-deep);cursor:pointer;font-family:'Jost',sans-serif;letter-spacing:.5px;}
+  /* ===== INSTAGRAM / ENGAGEMENT ===== */
+  .insta{ background:linear-gradient(180deg, var(--ink-2), var(--ink)); }
+  .insta-inner{ max-width:1100px; margin:0 auto; text-align:center; }
+  .insta-handle{
+    display:inline-flex; align-items:center; gap:12px;
+    border:1px solid var(--line); padding:12px 26px; border-radius:999px;
+    margin-bottom:34px; font-size:.95rem;
+  }
+  .insta-handle svg{ width:20px; height:20px; }
+  .insta-grid{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-top:10px;
+  }
+  .insta-tile{
+    position:relative; aspect-ratio:1/1; border-radius:14px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--line);
+    transition:transform .4s ease;
+  }
+  .insta-tile:hover{ transform:scale(1.04) rotate(-.5deg); }
+  .insta-tile .overlay{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:16px;
+    background:rgba(21,16,13,.0); opacity:0; transition:.35s;
+    font-size:.85rem;
+  }
+  .insta-tile:hover .overlay{ opacity:1; background:rgba(21,16,13,.55); }
+  .cta-band{
+    margin-top:70px; padding:56px 5vw; border-radius:28px;
+    background:radial-gradient(ellipse at 30% 30%, rgba(226,164,76,.18), transparent 60%), var(--ink-2);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
+    text-align:left;
+  }
+  .cta-band h3{ font-family:var(--serif); font-weight:400; font-size:1.9rem; margin:0 0 8px; }
+  .cta-band p{ margin:0; color:rgba(244,234,217,.65); max-width:420px; }
 
-/* ---- Footer ---- */
-footer{background:var(--plum-deep);color:#cbb9ac;padding:70px 0 20px;}
-.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(230,207,160,.15);}
-.f-logo{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--ivory);margin-bottom:14px;}
-.f-col h4{color:var(--ivory);font-size:15px;margin-bottom:16px;letter-spacing:.5px;}
-.f-col a{display:block;font-size:14px;margin-bottom:10px;color:#cbb9ac;}
-.f-col a:hover{color:var(--gold-soft);}
-.f-social{display:flex;gap:14px;margin-top:16px;}
-.f-social a{border:1px solid rgba(230,207,160,.3);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;}
-.f-bottom{display:flex;justify-content:space-between;padding-top:22px;font-size:12.5px;flex-wrap:wrap;gap:10px;}
+  /* ===== TESTIMONIALS ===== */
+  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; max-width:1200px; margin:0 auto; }
+  .testi{
+    border:1px solid var(--line); border-radius:18px; padding:30px 26px;
+    background:rgba(255,255,255,.02);
+  }
+  .stars{ color:var(--amber); letter-spacing:3px; margin-bottom:14px; font-size:.95rem; }
+  .testi p{ line-height:1.75; color:rgba(244,234,217,.8); font-size:.98rem; margin:0 0 20px; }
+  .testi .who{ display:flex; align-items:center; gap:12px; }
+  .avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(135deg, var(--amber), var(--plum));
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:.9rem; color:var(--ink);
+  }
+  .who b{ font-weight:500; font-size:.9rem; display:block; }
+  .who span{ font-size:.78rem; color:rgba(244,234,217,.55); }
 
-/* ---- Cart Drawer ---- */
-.overlay{position:fixed;inset:0;background:rgba(26,12,19,.5);opacity:0;visibility:hidden;transition:all .35s ease;z-index:900;}
-.overlay.show{opacity:1;visibility:visible;}
-.cart-drawer{position:fixed;top:0;right:-420px;width:400px;max-width:92vw;height:100%;background:var(--ivory);z-index:950;transition:right .4s ease;display:flex;flex-direction:column;}
-.cart-drawer.open{right:0;}
-.cart-head{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line);}
-.cart-head h3{font-family:'Cormorant Garamond',serif;font-size:22px;}
-.cart-items{flex:1;overflow-y:auto;padding:18px 24px;}
-.cart-item{display:flex;gap:14px;margin-bottom:20px;}
-.cart-item img{width:64px;height:80px;object-fit:cover;}
-.ci-info{flex:1;}
-.ci-info h5{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;}
-.ci-info span{font-size:13px;color:#8a7a6f;}
-.ci-remove{background:none;border:none;color:var(--plum);cursor:pointer;font-size:12px;text-decoration:underline;padding:0;}
-.cart-empty{text-align:center;padding:60px 20px;color:#8a7a6f;font-size:14px;}
-.cart-foot{padding:22px 24px;border-top:1px solid var(--line);}
-.cart-total{display:flex;justify-content:space-between;margin-bottom:16px;font-size:16px;}
-.cart-foot .btn{width:100%;text-align:center;}
+  /* ===== NEWSLETTER / FOOTER ===== */
+  .footer-cta{ text-align:center; padding-bottom:0; }
+  .footer-cta h2{ font-family:var(--serif); font-weight:400; font-size:clamp(2.1rem,4vw,3.3rem); margin:0 0 20px; }
+  .footer-cta p{ color:rgba(244,234,217,.65); max-width:480px; margin:0 auto 36px; line-height:1.7; }
+  .subscribe{
+    display:flex; max-width:440px; margin:0 auto; border:1px solid var(--line); border-radius:999px; overflow:hidden; padding:6px;
+  }
+  .subscribe input{
+    flex:1; background:transparent; border:none; outline:none; color:var(--wax);
+    padding:12px 18px; font-family:var(--sans); font-size:.9rem;
+  }
+  .subscribe button{
+    background:var(--amber); border:none; color:var(--ink); padding:12px 26px; border-radius:999px;
+    font-size:.8rem; text-transform:uppercase; letter-spacing:.1em; cursor:pointer; transition:.3s;
+  }
+  .subscribe button:hover{ background:#f2bd6f; }
 
-/* ---- Back to top ---- */
-.top-btn{position:fixed;bottom:26px;right:26px;width:46px;height:46px;border-radius:50%;background:var(--plum);color:var(--ivory);border:none;cursor:pointer;opacity:0;visibility:hidden;transition:all .3s ease;z-index:400;font-size:18px;}
-.top-btn.show{opacity:1;visibility:visible;}
+  footer{
+    border-top:1px solid var(--line); padding:60px 5vw 30px;
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; max-width:1300px; margin:70px auto 0;
+  }
+  .foot-brand .logo{ margin-bottom:14px; }
+  .foot-brand p{ color:rgba(244,234,217,.55); font-size:.9rem; line-height:1.7; max-width:280px; }
+  footer h4{ font-size:.78rem; text-transform:uppercase; letter-spacing:.12em; color:var(--amber); margin:0 0 18px; }
+  footer ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; }
+  footer a{ font-size:.9rem; color:rgba(244,234,217,.72); transition:color .25s; }
+  footer a:hover{ color:var(--amber); }
+  .foot-bottom{
+    max-width:1300px; margin:40px auto 0; padding:24px 5vw 0; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; font-size:.78rem; color:rgba(244,234,217,.45); flex-wrap:wrap; gap:10px;
+  }
 
-/* ---- Toast ---- */
-.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--plum-deep);color:var(--ivory);padding:14px 26px;font-size:14px;border-radius:2px;opacity:0;visibility:hidden;transition:all .35s ease;z-index:1000;}
-.toast.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+  /* toast */
+  .toast{
+    position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--wax); color:var(--ink); padding:14px 26px; border-radius:999px;
+    font-size:.85rem; opacity:0; pointer-events:none; transition:.4s; z-index:1000;
+    display:flex; align-items:center; gap:10px;
+  }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
 
-/* ---- Responsive ---- */
-@media(max-width:1000px){
-  .hero-grid,.about-grid{grid-template-columns:1fr;}
-  .hero-visual,.about-imgs{height:340px;order:-1;}
-  .cat-grid{grid-template-columns:repeat(2,1fr);}
-  .product-grid{grid-template-columns:repeat(2,1fr);}
-  .course-grid,.t-grid{grid-template-columns:1fr;}
-  .f-grid{grid-template-columns:1fr 1fr;}
-  .ig-grid{grid-template-columns:repeat(3,1fr);}
-}
-@media(max-width:720px){
-  .nav-links{position:fixed;top:68px;left:0;right:0;background:var(--ivory);flex-direction:column;padding:24px 28px;gap:20px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s ease;}
-  .nav-links.open{transform:translateY(0);}
-  .menu-toggle{display:block;}
-  .cat-grid{grid-template-columns:1fr;}
-  .product-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
-  .f-grid{grid-template-columns:1fr;}
-  .n-form{flex-direction:column;}
-}
+  /* cart badge */
+  .cart-wrap{ position:relative; }
+  .cart-badge{
+    position:absolute; top:-8px; right:-10px; background:var(--amber); color:var(--ink);
+    font-size:.65rem; width:17px; height:17px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-weight:600;
+  }
+
+  /* ===== CART DRAWER ===== */
+  .cart-overlay{
+    position:fixed; inset:0; background:rgba(10,7,5,.6); backdrop-filter:blur(2px);
+    opacity:0; pointer-events:none; transition:opacity .35s ease; z-index:700;
+  }
+  .cart-overlay.open{ opacity:1; pointer-events:auto; }
+  .cart-drawer{
+    position:fixed; top:0; right:0; bottom:0; width:400px; max-width:92vw;
+    background:var(--ink-2); border-left:1px solid var(--line);
+    z-index:701; display:flex; flex-direction:column;
+    transform:translateX(100%); transition:transform .45s cubic-bezier(.2,.8,.2,1);
+  }
+  .cart-drawer.open{ transform:translateX(0); }
+  .cart-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:24px 26px; border-bottom:1px solid var(--line);
+  }
+  .cart-head h3{ font-family:var(--serif); font-weight:400; font-size:1.4rem; margin:0; }
+  .cart-close{
+    background:none; border:1px solid var(--line); color:var(--wax);
+    width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:1rem;
+    display:flex; align-items:center; justify-content:center; transition:.3s;
+  }
+  .cart-close:hover{ border-color:var(--amber); color:var(--amber); }
+  .cart-body{ flex:1; overflow-y:auto; padding:10px 26px; }
+  .cart-empty{ color:rgba(244,234,217,.55); font-size:.92rem; text-align:center; margin-top:60px; line-height:1.7; }
+  .cart-item{
+    display:flex; align-items:center; gap:14px; padding:16px 0; border-bottom:1px solid var(--line);
+  }
+  .ci-photo{ width:56px; height:56px; border-radius:10px; overflow:hidden; flex-shrink:0; }
+  .ci-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .ci-info{ flex:1; min-width:0; }
+  .ci-info b{ display:block; font-weight:500; font-size:.95rem; margin-bottom:3px; }
+  .ci-info span{ font-size:.8rem; color:rgba(244,234,217,.6); }
+  .ci-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+  .qty-btn{
+    width:26px; height:26px; border-radius:50%; border:1px solid var(--line); background:transparent;
+    color:var(--wax); cursor:pointer; font-size:.9rem; line-height:1; display:flex; align-items:center; justify-content:center;
+    transition:.25s;
+  }
+  .qty-btn:hover{ border-color:var(--amber); color:var(--amber); }
+  .ci-actions .qty-num{ min-width:16px; text-align:center; font-size:.88rem; }
+  .cart-foot{ padding:22px 26px 28px; border-top:1px solid var(--line); }
+  .cart-subrow{ display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; font-size:.95rem; }
+  .cart-subrow b{ color:var(--amber); font-size:1.15rem; }
+  .checkout-btn{
+    width:100%; background:var(--amber); color:var(--ink); border:none; padding:15px; border-radius:999px;
+    font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; font-weight:500; cursor:pointer; transition:.3s;
+  }
+  .checkout-btn:hover{ background:#f2bd6f; }
+  .checkout-btn:disabled{ opacity:.4; cursor:not-allowed; }
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:1024px){
+    .product-grid{ grid-template-columns:repeat(2,1fr); }
+    .insta-grid{ grid-template-columns:repeat(3,1fr); }
+    .story{ grid-template-columns:1fr; }
+    .story-visual{ height:340px; order:2; }
+    footer{ grid-template-columns:1fr 1fr; }
+    .testi-grid{ grid-template-columns:1fr; }
+  }
+  @media(max-width:760px){
+    nav{ display:none; }
+    .burger{ display:flex; }
+    header.open + .mobile-menu{ display:flex; }
+    .hero-grid{ grid-template-columns:1fr; text-align:left; padding-top:120px; }
+    .candle-scene{ height:340px; order:-1; }
+    .hero-photo-frame{ width:100%; max-width:320px; height:320px; }
+    .product-grid{ grid-template-columns:1fr 1fr; gap:16px; }
+    .insta-grid{ grid-template-columns:repeat(2,1fr); }
+    footer{ grid-template-columns:1fr 1fr; }
+    .cta-band{ flex-direction:column; text-align:center; }
+    section{ padding:80px 6vw; }
+    .cart-drawer{ width:100vw; max-width:100vw; }
+  }
+  @media(max-width:480px){
+    .product-grid{ grid-template-columns:1fr 1fr; }
+    .insta-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+
+  .mobile-menu{
+    display:none; position:fixed; inset:0; background:var(--ink); z-index:400;
+    flex-direction:column; align-items:center; justify-content:center; gap:30px;
+  }
+  .mobile-menu a{ font-family:var(--serif); font-size:1.6rem; }
+  .mobile-menu.show{ display:flex; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  }
 </style>
 </head>
 <body>
 
-<div class="announce"><span>Free shipping across India on orders above ₹2999 &nbsp; • &nbsp; Follow us <b>@shengaifashionacademy</b> for daily drops</span></div>
-
-<header>
-  <div class="nav">
-    <div class="logo">Shengai <em>Fashion</em> Academy</div>
-    <nav class="nav-links" id="navLinks">
-      <a href="#shop">Shop</a>
-      <a href="#categories">Categories</a>
-      <a href="#academy">Academy</a>
-      <a href="#lookbook">Lookbook</a>
-      <a href="#about">Our Story</a>
-      <a href="#footer">Contact</a>
-    </nav>
-    <div class="nav-right">
-      <button class="icon-btn" onclick="openCart()">🛍<span class="cart-count" id="cartCount">0</span></button>
-      <button class="menu-toggle" id="menuToggle">☰</button>
-    </div>
-  </div>
+<header id="siteHeader">
+  <div class="logo"><span class="dot"></span> Sugandh</div>
+  <nav>
+    <ul>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#story">Our Craft</a></li>
+      <li><a href="#instagram">Community</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+  </nav>
+  <button class="nav-cta cart-wrap" id="cartBtn" type="button">Cart <span class="cart-badge" id="cartCount">0</span></button>
+  <button class="burger" id="burger" type="button"><span></span><span></span><span></span></button>
 </header>
 
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#shop">Shop</a>
+  <a href="#story">Our Craft</a>
+  <a href="#instagram">Community</a>
+  <a href="#reviews">Reviews</a>
+</div>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3>Your cart</h3>
+    <button class="cart-close" id="cartCloseBtn" type="button" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <p class="cart-empty">Your cart is empty — add a candle to get started.</p>
+  </div>
+  <div class="cart-foot">
+    <div class="cart-subrow"><span>Subtotal</span><b id="cartSubtotal">₹0</b></div>
+    <button class="checkout-btn" id="checkoutBtn" type="button" disabled>Checkout</button>
+  </div>
+</aside>
+
+<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-grid">
     <div>
-      <div class="hero-eyebrow">The Autumn–Winter Edit, 2026</div>
-      <h1>Draped in Heritage, Cut for Today</h1>
-      <p>Handcrafted sarees, lehengas and fusion silhouettes from our design academy in Bengaluru — where every piece is taught, made, and worn with intention.</p>
-      <div class="hero-cta">
-        <a href="#shop" class="btn btn-light">Shop The Edit</a>
-        <a href="#academy" class="btn btn-gold" style="border-color:var(--gold-soft);color:var(--gold-soft);">Explore The Academy</a>
+      <span class="eyebrow">Hand-poured in small batches</span>
+      <h1 class="hero-title">Light that<br>feels like a <em>ritual</em>.</h1>
+      <p class="lead">Sugandh candles are poured from slow-burning coconut-soy wax and dressed in scents built around Indian gardens, monsoon air, and quiet evenings. Follow along at <b>@sugandhcandles1</b>.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn-primary">Shop the collection</a>
+        <a href="https://instagram.com/sugandhcandles1" target="_blank" class="btn-ghost">
+          <span class="play-ring">▶</span> Watch us pour
+        </a>
       </div>
     </div>
-    <div class="hero-visual">
-      <img class="im1" id="heroImg1" alt="Festive saree silhouette illustration">
-      <img class="im2" id="heroImg2" alt="Lehenga silhouette illustration">
-    </div>
-  </div>
-</section>
-
-<div class="marquee"><div class="marquee-track">
-  <span>Handloom Sarees</span>•<span>Bridal Lehengas</span>•<span>Indo-Western Fusion</span>•<span>Made In-House</span>•<span>@shengaifashionacademy</span>•
-  <span>Handloom Sarees</span>•<span>Bridal Lehengas</span>•<span>Indo-Western Fusion</span>•<span>Made In-House</span>•<span>@shengaifashionacademy</span>•
-</div></div>
-
-<section class="about" id="about">
-  <div class="wrap about-grid">
-    <div class="about-imgs">
-      <img class="a1" id="aboutImg1" alt="Kurti silhouette illustration">
-      <img class="a2" id="aboutImg2" alt="Fusion wear silhouette illustration">
-    </div>
-    <div class="about-copy">
-      <div class="tag">Since 2019</div>
-      <h2>A House Built On Needle, Thread &amp; Craft</h2>
-      <p>Shengai Fashion Academy began as a small tailoring classroom above a Bengaluru textile market. Today it's both a design school and a label — every garment we sell is designed and stitched by our students and in-house karigars, blending regional weaves with contemporary tailoring.</p>
-      <p>What you see on our Instagram is what leaves our workroom: no mass production, no dropshipping — just pieces made a few hundred at a time.</p>
-      <div class="stat-row">
-        <div class="stat"><b>600+</b><span>Students Trained</span></div>
-        <div class="stat"><b>20k+</b><span>Instagram Family</span></div>
-        <div class="stat"><b>7</b><span>Years of Craft</span></div>
+    <div class="candle-scene">
+      <div class="glow-floor"></div>
+      <div class="hero-photo-frame">
+        <img src="https://images.unsplash.com/photo-1757688525739-8d1e13daf44f?q=80&w=900&auto=format&fit=crop" alt="A hand-poured candle burning in a glass jar" loading="eager">
       </div>
     </div>
   </div>
 </section>
 
-<section class="categories" id="categories">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="tag">Shop by Category</div>
-      <h2>Find Your Silhouette</h2>
-      <p>From nine-yard drapes to tailored fusion wear — every category is designed and finished in our own studio.</p>
-    </div>
-    <div class="cat-grid" id="catGrid"></div>
+<div class="marquee">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>Free shipping over ₹999</span>
+    <span>60hr slow burn</span>
+    <span>100% soy + coconut wax</span>
+    <span>Handmade in small batches</span>
+    <span>Cruelty free</span>
   </div>
-</section>
+</div>
 
-<section class="shop" id="shop">
-  <div class="wrap">
-    <div class="shop-top">
-      <div class="section-head" style="margin-bottom:0;">
-        <div class="tag">The Collection</div>
-        <h2>Shop All Pieces</h2>
-      </div>
-      <div class="filters" id="filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="Saree">Sarees</button>
-        <button class="filter-btn" data-filter="Lehenga">Lehengas</button>
-        <button class="filter-btn" data-filter="Kurti">Kurti Sets</button>
-        <button class="filter-btn" data-filter="Fusion">Fusion</button>
-        <button class="filter-btn" data-filter="Accessory">Accessories</button>
-      </div>
-    </div>
+<!-- ===== SHOP ===== -->
+<section id="shop">
+  <div class="section-head reveal">
+    <span class="eyebrow">The Collection</span>
+    <h2>Six scents, one slow evening</h2>
+    <p>Each candle is poured by hand and cured for two weeks before it ships, so the throw is even from first light to last.</p>
+  </div>
+  <div class="shop">
     <div class="product-grid" id="productGrid"></div>
   </div>
 </section>
 
-<section class="academy" id="academy">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="tag">Learn With Us</div>
-      <h2>The Academy Floor</h2>
-      <p>Short courses and long-term diplomas for the next generation of designers and tailors, taught by our in-house masters.</p>
+<!-- ===== STORY ===== -->
+<section id="story">
+  <div class="story">
+    <div class="story-visual reveal">
+      <svg class="pour-svg" viewBox="0 0 400 460" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="pourWax" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f0cf95"/>
+            <stop offset="100%" stop-color="#c88f42"/>
+          </linearGradient>
+        </defs>
+        <path d="M120,40 Q200,20 260,60 L250,100 Q190,80 130,95 Z" fill="#8a5a6e" opacity=".5"/>
+        <path id="pourStream" d="M180,60 C185,140 185,220 185,260" stroke="url(#pourWax)" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <rect x="120" y="255" width="150" height="150" rx="16" fill="#1c140f" stroke="#e2a44c" stroke-opacity=".35"/>
+        <ellipse id="pourFill" cx="195" cy="270" rx="68" ry="12" fill="url(#pourWax)"/>
+        <circle cx="90" cy="330" r="3" fill="#e2a44c" opacity=".5"/>
+        <circle cx="310" cy="120" r="3" fill="#e2a44c" opacity=".4"/>
+        <circle cx="330" cy="360" r="4" fill="#8a5a6e" opacity=".6"/>
+      </svg>
     </div>
-    <div class="course-grid">
-      <div class="course-card"><div class="num">Weekend Course</div><h3>Draping &amp; Saree Craft</h3><p>An 8-week hands-on course covering pleating, blouse fitting and regional drape styles.</p><a href="#">Enquire on Instagram</a></div>
-      <div class="course-card"><div class="num">3-Month Diploma</div><h3>Bridal Couture Design</h3><p>From sketch to embroidery — learn to construct a full bridal lehenga from scratch.</p><a href="#">Enquire on Instagram</a></div>
-      <div class="course-card"><div class="num">6-Month Diploma</div><h3>Fashion Design Foundation</h3><p>Pattern-making, garment construction and portfolio building for aspiring designers.</p><a href="#">Enquire on Instagram</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="lookbook" id="lookbook">
-  <div class="wrap">
-    <div class="ig-head">
-      <div class="tag">Follow Along</div>
-      <h2>@shengaifashionacademy</h2>
-      <a href="https://instagram.com/shengaifashionacademy" target="_blank" rel="noopener">View on Instagram</a>
-    </div>
-    <div class="ig-grid" id="igGrid"></div>
-  </div>
-</section>
-
-<section class="testimonials">
-  <div class="wrap">
-    <div class="section-head" style="margin:0 auto 46px;text-align:center;max-width:600px;">
-      <div class="tag">Kind Words</div>
-      <h2>From Our Customers</h2>
-    </div>
-    <div class="t-grid">
-      <div class="t-card">
-        <p>"The saree I ordered looked exactly like the Instagram reel — the pallu embroidery is even better in person."</p>
-        <div class="t-who"><span class="avatar">AR</span><div><b>Ananya R.</b><span>Bengaluru</span></div></div>
-      </div>
-      <div class="t-card">
-        <p>"Took the bridal couture course and now three of my own designs are being sold on their site. Full circle moment."</p>
-        <div class="t-who"><span class="avatar">MK</span><div><b>Meher K.</b><span>Hyderabad</span></div></div>
-      </div>
-      <div class="t-card">
-        <p>"Fast shipping, beautiful packaging, and the fusion jacket fits like it was tailored for me. Ordering again."</p>
-        <div class="t-who"><span class="avatar">PS</span><div><b>Priya S.</b><span>Chennai</span></div></div>
+    <div class="reveal">
+      <span class="eyebrow">Our Craft</span>
+      <h2>Poured slow,<br>burned slower.</h2>
+      <p>Sugandh started on Instagram as a one-woman kitchen-table project in Bengaluru — testing wicks, chasing scent throw, gifting jars to friends. Today every candle still goes out the same door it was poured in.</p>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><div class="txt"><b>Melt & blend</b><span>Coconut-soy wax melted low and slow, blended with skin-safe fragrance oils.</span></div></div>
+        <div class="step"><span class="num">02</span><div class="txt"><b>Hand-pour</b><span>Poured into reusable glass jars at the exact right temperature for a clean set.</span></div></div>
+        <div class="step"><span class="num">03</span><div class="txt"><b>Cure & cut</b><span>Rested for 14 days, then wicks are trimmed and each jar is hand-labelled.</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="newsletter">
-  <div class="wrap">
-    <div class="tag">Stay In The Loop</div>
-    <h2>New Drops, First Look</h2>
-    <p>Join our list for early access to new collections, workshop seats and festive sale previews.</p>
-    <form class="n-form" onsubmit="subscribeForm(event)">
-      <input type="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
+<!-- ===== INSTAGRAM ===== -->
+<section id="instagram" class="insta">
+  <div class="insta-inner">
+    <div class="reveal">
+      <div class="insta-handle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#e2a44c" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        @sugandhcandles1
+      </div>
+      <h2 style="font-family:var(--serif); font-weight:400; font-size:clamp(1.9rem,3.4vw,2.7rem); margin:0 0 16px;">Follow the flame</h2>
+      <p style="color:rgba(244,234,217,.65); max-width:520px; margin:0 auto;">New pours, restock drops, and candle-care tips — every week on Instagram.</p>
+    </div>
+    <div class="insta-grid reveal" id="instaGrid"></div>
 
-<footer id="footer">
-  <div class="wrap">
-    <div class="f-grid">
+    <div class="cta-band reveal">
       <div>
-        <div class="f-logo">Shengai Fashion Academy</div>
-        <p style="font-size:14px;max-width:32ch;">A design academy and label crafting sarees, lehengas and fusion wear in Bengaluru, India.</p>
-        <div class="f-social">
-          <a href="https://instagram.com/shengaifashionacademy" target="_blank" rel="noopener">IG</a>
-          <a href="#">FB</a>
-          <a href="#">WA</a>
-        </div>
+        <h3>Want a custom scent for your event?</h3>
+        <p>Weddings, welcome kits, corporate gifting — we hand-blend a signature scent and label just for you.</p>
       </div>
-      <div class="f-col">
-        <h4>Shop</h4>
-        <a href="#shop">Sarees</a>
-        <a href="#shop">Lehengas</a>
-        <a href="#shop">Kurti Sets</a>
-        <a href="#shop">Fusion Wear</a>
-      </div>
-      <div class="f-col">
-        <h4>Academy</h4>
-        <a href="#academy">Draping Course</a>
-        <a href="#academy">Bridal Couture</a>
-        <a href="#academy">Design Diploma</a>
-      </div>
-      <div class="f-col">
-        <h4>Contact</h4>
-        <a href="#">Indiranagar, Bengaluru</a>
-        <a href="mailto:hello@shengaifashionacademy.com">hello@shengaifashionacademy.com</a>
-        <a href="tel:+919900000000">+91 99000 00000</a>
-      </div>
+      <a href="https://instagram.com/sugandhcandles1" target="_blank" class="btn-primary">DM us on Instagram</a>
     </div>
-    <div class="f-bottom">
-      <span>© 2026 Shengai Fashion Academy. Demo website — for illustration only.</span>
-      <span>Made with care in Bengaluru</span>
-    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews">
+  <div class="section-head reveal">
+    <span class="eyebrow">Loved by 4,000+ homes</span>
+    <h2>What people are saying</h2>
+  </div>
+  <div class="testi-grid" id="testiGrid"></div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="footer-cta reveal">
+  <h2>Get first access to new scents.</h2>
+  <p>Join the list for early drops, restock alerts, and the occasional candle-care tip. No spam, just soft light.</p>
+  <form class="subscribe" id="subForm">
+    <input type="email" required placeholder="you@email.com">
+    <button type="submit">Join</button>
+  </form>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <div class="logo"><span class="dot"></span> Sugandh</div>
+    <p>Hand-poured candles made in small batches in Bengaluru. Slow scent for slow evenings.</p>
+  </div>
+  <div>
+    <h4>Shop</h4>
+    <ul><li><a href="#shop">All candles</a></li><li><a href="#shop">Gift sets</a></li><li><a href="#shop">Bestsellers</a></li></ul>
+  </div>
+  <div>
+    <h4>Studio</h4>
+    <ul><li><a href="#story">Our craft</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#instagram">Community</a></li></ul>
+  </div>
+  <div>
+    <h4>Connect</h4>
+    <ul><li><a href="https://instagram.com/sugandhcandles1" target="_blank">Instagram — @sugandhcandles1</a></li><li><a href="#">WhatsApp orders</a></li><li><a href="#">Wholesale enquiries</a></li></ul>
   </div>
 </footer>
-
-<div class="overlay" id="overlay" onclick="closeCart()"></div>
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-head">
-    <h3>Your Bag</h3>
-    <button class="icon-btn" onclick="closeCart()">✕</button>
-  </div>
-  <div class="cart-items" id="cartItems"></div>
-  <div class="cart-foot">
-    <div class="cart-total"><span>Subtotal</span><b id="cartTotal">₹0</b></div>
-    <button class="btn" style="width:100%;text-align:center;" onclick="checkoutDemo()">Checkout</button>
-  </div>
+<div class="foot-bottom">
+  <span>© <span id="year"></span> Sugandh Candle Co. Demo site.</span>
+  <span>Made with warmth in Bengaluru</span>
 </div>
 
-<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <div class="toast" id="toast"></div>
 
 <script>
-/* ---------- Product Data (20 items) ---------- */
-const products = [
-  {id:1,name:"Kanjeevaram Silk Saree",cat:"Saree",price:6499,old:7999,img:"prod1"},
-  {id:2,name:"Banarasi Zari Saree",cat:"Saree",price:5299,old:null,img:"prod2"},
-  {id:3,name:"Organza Floral Saree",cat:"Saree",price:3799,old:4499,img:"prod3"},
-  {id:4,name:"Chanderi Handloom Saree",cat:"Saree",price:4199,old:null,img:"prod4"},
-  {id:5,name:"Tussar Silk Printed Saree",cat:"Saree",price:3299,old:3899,img:"prod5"},
-  {id:6,name:"Bridal Red Lehenga Set",cat:"Lehenga",price:15999,old:18999,img:"prod6"},
-  {id:7,name:"Pastel Georgette Lehenga",cat:"Lehenga",price:9999,old:null,img:"prod7"},
-  {id:8,name:"Mirror-Work Navratri Lehenga",cat:"Lehenga",price:7499,old:8999,img:"prod8"},
-  {id:9,name:"Emerald Velvet Lehenga",cat:"Lehenga",price:12499,old:null,img:"prod9"},
-  {id:10,name:"Floral Anarkali Kurti Set",cat:"Kurti",price:2299,old:2799,img:"prod10"},
-  {id:11,name:"Chikankari Cotton Kurti",cat:"Kurti",price:1799,old:null,img:"prod11"},
-  {id:12,name:"Straight-Cut Silk Kurti Set",cat:"Kurti",price:2599,old:2999,img:"prod12"},
-  {id:13,name:"Printed A-Line Kurti Set",cat:"Kurti",price:1999,old:null,img:"prod13"},
-  {id:14,name:"Embroidered Rayon Kurti",cat:"Kurti",price:1599,old:1899,img:"prod14"},
-  {id:15,name:"Indo-Western Cape Jacket Set",cat:"Fusion",price:4599,old:5299,img:"prod15"},
-  {id:16,name:"Dhoti-Style Jumpsuit",cat:"Fusion",price:3999,old:null,img:"prod16"},
-  {id:17,name:"Draped Pant Saree Gown",cat:"Fusion",price:5199,old:5999,img:"prod17"},
-  {id:18,name:"Asymmetric Kurta Skirt Set",cat:"Fusion",price:3499,old:null,img:"prod18"},
-  {id:19,name:"Kundan Statement Necklace",cat:"Accessory",price:1299,old:1599,img:"prod19"},
-  {id:20,name:"Oxidised Jhumka Earrings",cat:"Accessory",price:599,old:null,img:"prod20"},
-];
+document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ---- Garment illustration generator (on-brand SVG art per category, no stock photos) ---- */
-const garmentPalette = ['#3a1c2b','#4a2136','#2c1420','#5a2a3c','#3d1e2e'];
-const garmentIcons = {
-  Saree: (fg)=>`<path d="M100 40 C70 60 60 120 78 190 C60 220 55 300 90 380 L100 380 C90 300 85 220 105 195 C130 240 150 320 140 380 L165 380 C172 300 150 220 130 185 C150 130 140 65 100 40 Z" fill="${fg}" opacity="0.9"/><path d="M78 190 C110 210 130 210 130 185" stroke="${fg}" stroke-width="2" fill="none" opacity="0.5"/><path d="M85 240 C110 255 122 255 122 235" stroke="${fg}" stroke-width="2" fill="none" opacity="0.4"/>`,
-  Lehenga: (fg)=>`<path d="M100 40 a26 26 0 1 0 0.1 0 Z" fill="${fg}"/><path d="M76 92 L60 380 L140 380 L124 92 Z" fill="${fg}" opacity="0.92"/><path d="M64 340 Q100 320 136 340" stroke="${fg}" stroke-width="3" fill="none" opacity="0.55"/><path d="M68 300 Q100 285 132 300" stroke="${fg}" stroke-width="2" fill="none" opacity="0.4"/>`,
-  Kurti: (fg)=>`<path d="M100 40 a24 24 0 1 0 0.1 0Z" fill="${fg}"/><path d="M78 88 L58 150 L74 158 L82 130 L80 300 L120 300 L118 130 L126 158 L142 150 L122 88 Z" fill="${fg}" opacity="0.92"/>`,
-  Fusion: (fg)=>`<path d="M100 40 a22 22 0 1 0 0.1 0Z" fill="${fg}"/><path d="M72 86 L52 140 L68 150 L78 122 L64 260 L96 320 L100 260 L112 320 L138 258 L124 122 L134 150 L150 140 L128 86 Z" fill="${fg}" opacity="0.92"/><path d="M64 260 L100 260" stroke="${fg}" stroke-width="2" opacity="0.4"/>`,
-  Accessory: (fg)=>`<circle cx="100" cy="130" r="46" fill="none" stroke="${fg}" stroke-width="6"/><circle cx="100" cy="130" r="8" fill="${fg}"/><path d="M60 172 Q100 260 140 172" stroke="${fg}" stroke-width="6" fill="none"/><circle cx="100" cy="260" r="10" fill="${fg}"/>`
-};
-function garmentSVG(cat, idx, label){
-  const bg = '#f3e9da';
-  const fg = garmentPalette[idx % garmentPalette.length];
-  const icon = (garmentIcons[cat]||garmentIcons.Kurti)(fg);
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="500" height="650">
-    <rect width="200" height="400" fill="${bg}"/>
-    <rect x="10" y="10" width="180" height="380" fill="none" stroke="${fg}" stroke-width="1" opacity="0.35"/>
-    <g>${icon}</g>
-    <text x="100" y="360" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="${fg}" opacity="0.75">${label}</text>
-  </svg>`;
-  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
-}
-
-const catList = [
-  {cat:'Saree', name:'Sarees', count:'24 styles'},
-  {cat:'Lehenga', name:'Lehengas', count:'18 styles'},
-  {cat:'Kurti', name:'Kurti Sets', count:'30 styles'},
-  {cat:'Fusion', name:'Indo-Fusion', count:'15 styles'}
-];
-const catGrid = document.getElementById('catGrid');
-catList.forEach((c,i)=>{
-  const div = document.createElement('div');
-  div.className='cat-card';
-  div.innerHTML = `<img src="${garmentSVG(c.cat, i*3, c.name)}" alt="${c.name}"><div class="cat-overlay"><span>${c.count}</span><h3>${c.name}</h3></div>`;
-  catGrid.appendChild(div);
+/* ---------- header scroll state ---------- */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', ()=>{
+  header.classList.toggle('scrolled', window.scrollY > 40);
 });
+
+/* ---------- mobile menu ---------- */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', ()=>{
+  mobileMenu.classList.toggle('show');
+});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>mobileMenu.classList.remove('show')));
+
+/* ---------- reveal on scroll ---------- */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.15});
+revealEls.forEach(el=>io.observe(el));
+
+/* ---------- marquee duplicate for seamless loop ---------- */
+const track = document.getElementById('marqueeTrack');
+track.innerHTML += track.innerHTML;
+
+/* ---------- product photography (real photos, tinted per scent for variety) ---------- */
+const PHOTO_A = "https://images.unsplash.com/photo-1663089889826-0575c6ae19de?q=80&w=700&auto=format&fit=crop";
+const PHOTO_B = "https://images.unsplash.com/photo-1757688525739-8d1e13daf44f?q=80&w=700&auto=format&fit=crop";
+const PHOTO_C = "https://images.unsplash.com/photo-1665124197613-ffbb755f4ac2?q=80&w=700&auto=format&fit=crop";
+
+/* ---------- product data ---------- */
+const products = [
+  { name:"Monsoon Petrichor", scent:"Rain-soaked earth & vetiver", price:549, img:PHOTO_B, filter:"saturate(1.1) contrast(1.05)", tag:"Bestseller" },
+  { name:"Mogra Twilight",    scent:"Jasmine, tuberose & musk",  price:599, img:PHOTO_A, filter:"hue-rotate(300deg) saturate(1.3)", tag:"New" },
+  { name:"Chandan Ember",     scent:"Sandalwood & warm amber",   price:649, img:PHOTO_C, filter:"saturate(1.15) sepia(.15)" },
+  { name:"Neem Garden",       scent:"Green fig & neem leaf",     price:529, img:PHOTO_A, filter:"hue-rotate(70deg) saturate(1.2)" },
+  { name:"Kesar Milk",        scent:"Saffron, cardamom & cream", price:579, img:PHOTO_C, filter:"hue-rotate(-15deg) saturate(1.25) brightness(1.05)", tag:"Limited" },
+  { name:"Dusk Oud",          scent:"Smoked oud & dark rose",    price:699, img:PHOTO_C, filter:"hue-rotate(255deg) saturate(1.3) brightness(.85)" },
+  { name:"Coconut Sands",     scent:"Toasted coconut & tonka",   price:539, img:PHOTO_B, filter:"sepia(.35) saturate(1.1)" },
+  { name:"Wild Fig Study",    scent:"Fig leaf & cedar wood",     price:589, img:PHOTO_A, filter:"hue-rotate(100deg) saturate(1.05)" },
+];
 
 const grid = document.getElementById('productGrid');
-function renderProducts(filter='all'){
-  grid.innerHTML='';
-  products.filter(p=>filter==='all'||p.cat===filter).forEach((p,i)=>{
-    const card = document.createElement('div');
-    card.className='product-card';
-    card.innerHTML = `
-      <div class="pc-img">
-        <img src="${garmentSVG(p.cat, p.id, p.cat)}" alt="${p.name} — ${p.cat}">
-        ${p.old ? '<span class="pc-badge">Sale</span>' : ''}
-        <button class="pc-add" onclick="addToCart(${p.id})">Add to Bag</button>
-      </div>
-      <div class="pc-info">
-        <div class="pc-cat">${p.cat}</div>
-        <h4>${p.name}</h4>
-        <div class="pc-price">
-          <span class="now">₹${p.price.toLocaleString('en-IN')}</span>
-          ${p.old ? `<span class="old">₹${p.old.toLocaleString('en-IN')}</span>` : ''}
-        </div>
-      </div>`;
-    grid.appendChild(card);
-  });
-}
-renderProducts();
-
-document.getElementById('filters').addEventListener('click', e=>{
-  if(!e.target.classList.contains('filter-btn')) return;
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  e.target.classList.add('active');
-  renderProducts(e.target.dataset.filter);
+products.forEach((p, i)=>{
+  const card = document.createElement('div');
+  card.className = 'card reveal';
+  card.style.transitionDelay = (i%4)*0.06 + 's';
+  card.innerHTML = `
+    ${p.tag ? `<span class="tag">${p.tag}</span>` : ''}
+    <div class="stage"><img src="${p.img}" alt="${p.name} candle" style="filter:${p.filter}" loading="lazy"></div>
+    <h3>${p.name}</h3>
+    <p class="scent">${p.scent}</p>
+    <div class="price-row">
+      <span class="price">₹${p.price}</span>
+      <button class="add-btn" data-name="${p.name}" data-price="${p.price}">Add to cart</button>
+    </div>
+  `;
+  grid.appendChild(card);
+  io.observe(card);
 });
 
-/* ---------- Hero & About illustrations ---------- */
-document.getElementById('heroImg1').src = garmentSVG('Saree', 1, 'Saree');
-document.getElementById('heroImg2').src = garmentSVG('Lehenga', 2, 'Lehenga');
-document.getElementById('aboutImg1').src = garmentSVG('Kurti', 3, 'Kurti');
-document.getElementById('aboutImg2').src = garmentSVG('Fusion', 4, 'Fusion');
+/* ---------- cart state & rendering ---------- */
+let cart = []; // { name, price, qty, img, filter }
+const cartOverlay = document.getElementById('cartOverlay');
+const cartDrawer = document.getElementById('cartDrawer');
+const cartBody = document.getElementById('cartBody');
+const cartCountEl = document.getElementById('cartCount');
+const cartSubtotalEl = document.getElementById('cartSubtotal');
+const checkoutBtn = document.getElementById('checkoutBtn');
 
-/* ---------- Instagram Grid (12 tiles, rotating through categories) ---------- */
-const igGrid = document.getElementById('igGrid');
-const igCats = ['Saree','Lehenga','Kurti','Fusion','Accessory'];
-for(let i=1;i<=12;i++){
-  const cat = igCats[i % igCats.length];
-  const div = document.createElement('div');
-  div.className='ig-item';
-  div.innerHTML = `<img src="${garmentSVG(cat, i, cat)}" alt="${cat} post">`;
-  igGrid.appendChild(div);
-}
+function findProduct(name){ return products.find(p=>p.name===name); }
 
-/* ---------- Cart Logic ---------- */
-let cart = [];
-function addToCart(id){
-  const p = products.find(x=>x.id===id);
-  const existing = cart.find(x=>x.id===id);
-  if(existing){ existing.qty++; } else { cart.push({...p, qty:1}); }
-  updateCart();
-  showToast(`${p.name} added to bag`);
-}
-function removeFromCart(id){
-  cart = cart.filter(x=>x.id!==id);
-  updateCart();
-}
-function updateCart(){
-  const count = cart.reduce((a,c)=>a+c.qty,0);
-  document.getElementById('cartCount').textContent = count;
-  const itemsEl = document.getElementById('cartItems');
-  if(cart.length===0){
-    itemsEl.innerHTML = '<div class="cart-empty">Your bag is empty.<br>Start adding pieces you love.</div>';
+function addToCart(name, price){
+  const existing = cart.find(i=>i.name===name);
+  if(existing){
+    existing.qty++;
   } else {
-    itemsEl.innerHTML = cart.map(c=>`
-      <div class="cart-item">
-        <img src="${garmentSVG(c.cat, c.id, c.cat)}" alt="${c.name} — ${c.cat}">
-        <div class="ci-info">
-          <h5>${c.name}</h5>
-          <span>Qty: ${c.qty} &nbsp;·&nbsp; ₹${(c.price*c.qty).toLocaleString('en-IN')}</span><br>
-          <button class="ci-remove" onclick="removeFromCart(${c.id})">Remove</button>
-        </div>
-      </div>`).join('');
+    const p = findProduct(name);
+    cart.push({ name, price, qty:1, img:p ? p.img : '', filter:p ? p.filter : '' });
   }
-  const total = cart.reduce((a,c)=>a+c.price*c.qty,0);
-  document.getElementById('cartTotal').textContent = '₹'+total.toLocaleString('en-IN');
+  renderCart();
+  showToast(`✦ ${name} added to cart`);
 }
-updateCart();
 
+function changeQty(name, delta){
+  const item = cart.find(i=>i.name===name);
+  if(!item) return;
+  item.qty += delta;
+  if(item.qty <= 0){
+    cart = cart.filter(i=>i.name!==name);
+  }
+  renderCart();
+}
+
+function renderCart(){
+  const totalQty = cart.reduce((s,i)=>s+i.qty, 0);
+  cartCountEl.textContent = totalQty;
+
+  if(cart.length === 0){
+    cartBody.innerHTML = `<p class="cart-empty">Your cart is empty — add a candle to get started.</p>`;
+  } else {
+    cartBody.innerHTML = cart.map(i => `
+      <div class="cart-item">
+        <div class="ci-photo"><img src="${i.img}" alt="${i.name}" style="filter:${i.filter}"></div>
+        <div class="ci-info">
+          <b>${i.name}</b>
+          <span>₹${i.price} each</span>
+        </div>
+        <div class="ci-actions">
+          <button class="qty-btn" data-name="${i.name}" data-delta="-1" aria-label="Decrease quantity">−</button>
+          <span class="qty-num">${i.qty}</span>
+          <button class="qty-btn" data-name="${i.name}" data-delta="1" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  const subtotal = cart.reduce((s,i)=>s + i.qty*i.price, 0);
+  cartSubtotalEl.textContent = `₹${subtotal}`;
+  checkoutBtn.disabled = cart.length === 0;
+}
+
+cartBody.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.qty-btn');
+  if(!btn) return;
+  changeQty(btn.dataset.name, parseInt(btn.dataset.delta, 10));
+});
+
+grid.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('add-btn')){
+    addToCart(e.target.dataset.name, parseFloat(e.target.dataset.price));
+  }
+});
+
+/* ---------- open / close drawer ---------- */
 function openCart(){
-  document.getElementById('cartDrawer').classList.add('open');
-  document.getElementById('overlay').classList.add('show');
+  cartDrawer.classList.add('open');
+  cartOverlay.classList.add('open');
 }
 function closeCart(){
-  document.getElementById('cartDrawer').classList.remove('open');
-  document.getElementById('overlay').classList.remove('show');
+  cartDrawer.classList.remove('open');
+  cartOverlay.classList.remove('open');
 }
-function checkoutDemo(){
-  if(cart.length===0){ showToast('Your bag is empty'); return; }
-  showToast('This is a demo store — checkout is not live.');
-}
+document.getElementById('cartBtn').addEventListener('click', openCart);
+document.getElementById('cartCloseBtn').addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', closeCart);
+document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeCart(); });
 
-/* ---------- Toast ---------- */
+checkoutBtn.addEventListener('click', ()=>{
+  if(cart.length === 0) return;
+  showToast("✦ Order placed — we'll DM you on Instagram to confirm");
+  cart = [];
+  renderCart();
+  closeCart();
+});
+
+renderCart();
+
+/* ---------- instagram grid (illustrated tiles, no external images) ---------- */
+const instaSeeds = [
+  {bg:"linear-gradient(135deg,#3a2a20,#e2a44c)", cap:"Fresh pour Monday"},
+  {bg:"linear-gradient(135deg,#5a3346,#c98ea8)", cap:"Mogra restock"},
+  {bg:"linear-gradient(135deg,#1c140f,#b9752a)", cap:"Studio corner"},
+  {bg:"linear-gradient(135deg,#6f8a5a,#dfe6c9)", cap:"Wick trim tip"},
+  {bg:"linear-gradient(135deg,#d99b3f,#f4e0ad)", cap:"Kesar Milk launch"},
+];
+const instaGrid = document.getElementById('instaGrid');
+instaSeeds.forEach((s,i)=>{
+  const tile = document.createElement('a');
+  tile.href = "https://instagram.com/sugandhcandles1";
+  tile.target = "_blank";
+  tile.className = "insta-tile";
+  tile.style.background = s.bg;
+  tile.innerHTML = `<div class="overlay">❤ ${120+i*37} &nbsp; 💬 ${8+i*3}</div>`;
+  instaGrid.appendChild(tile);
+});
+
+/* ---------- testimonials ---------- */
+const testimonials = [
+  {name:"Ananya R.", role:"Bengaluru", text:"The Mogra Twilight filled my whole living room in under ten minutes. Genuinely the best throw I've had from an Indian candle brand.", init:"A"},
+  {name:"Rohit K.", role:"Mumbai", text:"Ordered the Kesar Milk on a whim after seeing it on their Instagram — smells exactly like the reel promised. Burns clean too.", init:"R"},
+  {name:"Priya S.", role:"Pune", text:"Got a custom scent made for my sister's wedding favors through their DMs. Every guest asked where it was from.", init:"P"},
+];
+const testiGrid = document.getElementById('testiGrid');
+testimonials.forEach((t,i)=>{
+  const card = document.createElement('div');
+  card.className = 'testi reveal';
+  card.style.transitionDelay = i*0.08 + 's';
+  card.innerHTML = `
+    <div class="stars">★★★★★</div>
+    <p>"${t.text}"</p>
+    <div class="who">
+      <div class="avatar">${t.init}</div>
+      <div><b>${t.name}</b><span>${t.role}</span></div>
+    </div>
+  `;
+  testiGrid.appendChild(card);
+  io.observe(card);
+});
+
+/* ---------- newsletter ---------- */
+document.getElementById('subForm').addEventListener('submit', (e)=>{
+  e.preventDefault();
+  showToast('✦ You\'re on the list — welcome to Sugandh');
+  e.target.reset();
+});
+
+/* ---------- toast ---------- */
 let toastTimer;
 function showToast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>t.classList.remove('show'), 2600);
+  toastTimer = setTimeout(()=>toast.classList.remove('show'), 2600);
 }
-
-function subscribeForm(e){
-  e.preventDefault();
-  showToast('Thanks for subscribing! (demo form)');
-  e.target.reset();
-}
-
-/* ---------- Mobile Menu ---------- */
-document.getElementById('menuToggle').addEventListener('click', ()=>{
-  document.getElementById('navLinks').classList.toggle('open');
-});
-document.querySelectorAll('.nav-links a').forEach(a=>{
-  a.addEventListener('click', ()=>document.getElementById('navLinks').classList.remove('open'));
-});
-
-/* ---------- Back to top ---------- */
-window.addEventListener('scroll', ()=>{
-  document.getElementById('topBtn').classList.toggle('show', window.scrollY>500);
-});
 </script>
 </body>
 </html>
