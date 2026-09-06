@@ -3,714 +3,719 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#6b3e2e">
-<title>Sweet Symphony | Sakshi</title>
-
+<title>Soundarya Herbal | Nature's Beauty</title>
+<meta name="description" content="Soundarya Herbal - Natural herbal beauty and wellness products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --green:#234d3c;
+  --green2:#356650;
+  --cream:#f7f1e7;
+  --beige:#e8dcc8;
+  --gold:#c49a5a;
+  --orange:#d97745;
+  --dark:#183229;
+  --white:#fffdf9;
+  --text:#334239;
+  --muted:#718078;
+  --shadow:0 20px 60px rgba(32,67,52,.12);
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;background:#fffaf6;color:#34231d;overflow-x:hidden}
-::selection{background:#e7b8a2;color:#fff}
-
-:root{
---cream:#fffaf6;
---cream2:#f8eee8;
---brown:#5c3427;
---dark:#34231d;
---pink:#e7b8a2;
---rose:#c98773;
---gold:#c99b5d;
---white:#fff;
---shadow:0 20px 60px rgba(92,52,39,.12)
-}
-
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none}
 img{max-width:100%;display:block}
 
-.nav{
-position:fixed;top:0;left:0;width:100%;
-z-index:1000;padding:20px 7%;
-display:flex;align-items:center;justify-content:space-between;
-transition:.4s ease
+/* NAV */
+nav{
+ position:fixed;top:0;left:0;width:100%;height:78px;z-index:1000;
+ display:flex;align-items:center;justify-content:space-between;
+ padding:0 7%;transition:.4s;background:rgba(247,241,231,.72);
+ backdrop-filter:blur(16px);border-bottom:1px solid rgba(35,77,60,.08)
 }
-.nav.scrolled{
-background:rgba(255,250,246,.88);
-backdrop-filter:blur(18px);
-padding:14px 7%;
-box-shadow:0 8px 30px rgba(0,0,0,.05)
-}
+nav.scrolled{height:65px;background:rgba(255,253,249,.95);box-shadow:0 10px 40px rgba(0,0,0,.06)}
+.logo{font-family:"Playfair Display",serif;font-size:1.7rem;font-weight:700;color:var(--green);line-height:1}
+.logo span{display:block;font-family:"DM Sans",sans-serif;font-size:.55rem;letter-spacing:4px;color:var(--gold);margin-top:5px}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:.9rem;font-weight:600;position:relative}
+.nav-links a:not(.cart-btn):after{content:"";position:absolute;width:0;height:2px;background:var(--gold);bottom:-7px;left:0;transition:.3s}
+.nav-links a:hover:after{width:100%}
+.cart-btn{background:var(--green);color:white!important;padding:12px 18px;border-radius:30px;display:flex;gap:8px;align-items:center}
+.cart-count{background:var(--gold);width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:.7rem}
+.menu-btn{display:none;background:none;font-size:1.5rem;color:var(--green)}
 
-.logo{
-font-family:"Playfair Display",serif;
-font-size:25px;font-weight:700;line-height:.9;color:var(--brown)
-}
-.logo span{display:block;font-family:"DM Sans",sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;margin-top:8px;color:var(--rose)}
-
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{font-size:14px;font-weight:600;transition:.3s}
-.nav-links a:hover{color:var(--rose)}
-.nav-btn{
-background:var(--brown);color:white!important;
-padding:12px 20px;border-radius:50px
-}
-
-.menu{display:none;font-size:25px;cursor:pointer}
-
+/* HERO */
 .hero{
-min-height:100vh;
-display:grid;grid-template-columns:1fr 1fr;
-align-items:center;
-padding:110px 7% 60px;
-position:relative;
-overflow:hidden;
-background:
-radial-gradient(circle at 85% 20%,#f3d6c8 0%,transparent 28%),
-radial-gradient(circle at 15% 90%,#f6e4d9 0%,transparent 25%),
-var(--cream)
+ min-height:100vh;padding:120px 7% 60px;display:grid;
+ grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;
+ position:relative;overflow:hidden
 }
-
-.hero:before{
-content:"";
-position:absolute;width:520px;height:520px;
-border:1px solid rgba(201,155,93,.3);
-border-radius:50%;right:-180px;top:90px
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);z-index:-1}
+.hero:before{width:450px;height:450px;background:#d9e5ce;top:-160px;right:-120px}
+.hero:after{width:350px;height:350px;background:#f0d5b8;bottom:-150px;left:-100px}
+.hero-content{animation:fadeUp 1s ease both}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--green2);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+.eyebrow:before{content:"";width:35px;height:1px;background:var(--gold)}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(3.2rem,6vw,6.4rem);line-height:1.02;color:var(--dark);font-weight:600}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{font-size:1.05rem;line-height:1.8;color:var(--muted);max-width:540px;margin:25px 0 35px}
+.hero-actions{display:flex;gap:15px;flex-wrap:wrap}
+.primary-btn,.secondary-btn{
+ padding:15px 25px;border-radius:50px;font-weight:700;display:inline-flex;
+ align-items:center;gap:10px;transition:.3s
 }
-
-.hero-content{position:relative;z-index:2}
-.eyebrow{
-display:flex;align-items:center;gap:10px;
-font-size:11px;letter-spacing:3px;text-transform:uppercase;
-color:var(--rose);font-weight:700;margin-bottom:22px
+.primary-btn{background:var(--green);color:#fff;box-shadow:0 12px 30px rgba(35,77,60,.25)}
+.primary-btn:hover{transform:translateY(-4px);background:var(--dark)}
+.secondary-btn{border:1px solid rgba(35,77,60,.2);color:var(--green);background:transparent}
+.secondary-btn:hover{background:var(--white);transform:translateY(-3px)}
+.hero-visual{height:620px;position:relative;animation:fadeIn 1.2s ease both}
+.hero-image{
+ height:100%;border-radius:220px 220px 30px 30px;overflow:hidden;
+ background:linear-gradient(145deg,#bfd0a9,#dfe8d3);position:relative;
+ box-shadow:var(--shadow)
 }
-.eyebrow:before{content:"";width:35px;height:1px;background:var(--rose)}
-
-.hero h1{
-font-family:"Playfair Display",serif;
-font-size:clamp(55px,7vw,100px);
-line-height:.95;font-weight:600;
-max-width:650px;color:var(--dark)
+.hero-image:before{
+ content:"SOUNDARYA";position:absolute;inset:0;display:grid;place-items:center;
+ font-family:"Playfair Display",serif;font-size:clamp(2rem,5vw,5rem);
+ color:rgba(255,255,255,.45);letter-spacing:10px;writing-mode:vertical-rl;
+ transform:rotate(180deg)
 }
-.hero h1 i{color:var(--rose);font-weight:500}
-
-.hero p{
-max-width:500px;margin:25px 0 35px;
-font-size:16px;line-height:1.8;color:#735f56
-}
-
-.hero-buttons{display:flex;gap:15px;flex-wrap:wrap}
-.btn{
-display:inline-flex;align-items:center;justify-content:center;
-gap:8px;padding:16px 25px;border-radius:50px;
-font-weight:700;font-size:14px;transition:.35s;
-cursor:pointer;border:none
-}
-.btn-primary{background:var(--brown);color:#fff}
-.btn-primary:hover{transform:translateY(-4px);box-shadow:0 15px 30px rgba(92,52,39,.25)}
-.btn-light{background:#fff;color:var(--brown);border:1px solid #eadbd2}
-.btn-light:hover{background:var(--cream2)}
-
-.hero-image{position:relative;height:650px;display:flex;align-items:center;justify-content:center}
-.image-frame{
-width:min(500px,90%);height:570px;border-radius:250px 250px 30px 30px;
-overflow:hidden;position:relative;
-box-shadow:var(--shadow);background:#ead6ca
-}
-.image-frame img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
-.image-frame:hover img{transform:scale(1.05)}
-
+.leaf{position:absolute;font-size:4rem;filter:drop-shadow(0 10px 15px rgba(0,0,0,.1));animation:float 4s ease-in-out infinite}
+.leaf.one{top:13%;left:-30px}.leaf.two{bottom:14%;right:-25px;animation-delay:1.5s}
 .floating-card{
-position:absolute;bottom:55px;left:-10px;
-background:rgba(255,255,255,.92);backdrop-filter:blur(15px);
-padding:18px 22px;border-radius:18px;
-box-shadow:var(--shadow);display:flex;gap:13px;align-items:center;
-animation:float 4s ease-in-out infinite
+ position:absolute;bottom:35px;left:-35px;background:rgba(255,255,255,.9);
+ backdrop-filter:blur(10px);padding:20px;border-radius:18px;box-shadow:var(--shadow);
+ display:flex;gap:13px;align-items:center;animation:float 5s ease-in-out infinite
 }
-.float-icon{
-width:45px;height:45px;border-radius:50%;
-display:grid;place-items:center;background:#f8e6dc;font-size:20px
-}
-.floating-card strong{font-size:14px}
-.floating-card small{display:block;color:#88766e;font-size:11px;margin-top:4px}
+.floating-card .icon{font-size:2rem}
+.floating-card strong{display:block;color:var(--green)}
+.floating-card small{color:var(--muted)}
 
-.hero-scroll{
-position:absolute;bottom:25px;left:50%;
-transform:translateX(-50%);
-font-size:10px;letter-spacing:2px;color:#9d8478;
-text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px
-}
-.scroll-line{height:35px;width:1px;background:var(--rose)}
+/* TRUST */
+.trust{background:var(--green);color:white;padding:22px 7%;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust-item{text-align:center;font-size:.9rem;display:flex;justify-content:center;align-items:center;gap:10px}
+.trust-item span{font-size:1.3rem}
 
-@keyframes float{50%{transform:translateY(-12px)}}
+/* SECTION */
+section{padding:100px 7%}
+.section-head{text-align:center;max-width:680px;margin:0 auto 55px}
+.section-head .eyebrow{justify-content:center}
+.section-head h2{font-family:"Playfair Display",serif;font-size:clamp(2.3rem,4vw,4rem);color:var(--dark);line-height:1.15}
+.section-head p{color:var(--muted);line-height:1.7;margin-top:16px}
 
-section{padding:110px 7%}
-
-.section-tag{
-color:var(--rose);font-size:11px;letter-spacing:3px;
-text-transform:uppercase;font-weight:700;margin-bottom:14px
-}
-.section-title{
-font-family:"Playfair Display",serif;
-font-size:clamp(38px,5vw,65px);
-line-height:1.05;font-weight:600
-}
-.section-title i{color:var(--rose)}
-
-.about{background:#f8eee8}
-.about-grid{
-display:grid;grid-template-columns:1fr 1fr;
-gap:90px;align-items:center
-}
-.about-images{position:relative;min-height:570px}
-.about-main{
-width:75%;height:540px;object-fit:cover;
-border-radius:220px 220px 20px 20px;
-box-shadow:var(--shadow)
-}
-.about-small{
-position:absolute;width:46%;height:260px;
-right:0;bottom:10px;object-fit:cover;
-border:10px solid var(--cream2);
-border-radius:25px;box-shadow:var(--shadow)
-}
-.about-content p{
-color:#715d54;line-height:1.9;margin:22px 0;
-font-size:16px
-}
-.signature{
-font-family:"Playfair Display",serif;font-style:italic;
-font-size:32px;color:var(--brown);margin-top:25px
-}
-
-.stats{
-display:grid;grid-template-columns:repeat(3,1fr);
-margin-top:38px;border-top:1px solid #dec9bd;padding-top:25px
-}
-.stat strong{
-font-family:"Playfair Display",serif;
-font-size:30px;color:var(--brown);display:block
-}
-.stat span{font-size:11px;color:#8a766d}
-
-.products-header{
-display:flex;justify-content:space-between;
-align-items:end;margin-bottom:50px;gap:30px
-}
-.products-header p{max-width:400px;color:#806c63;line-height:1.7}
-
-.products{
-display:grid;grid-template-columns:repeat(3,1fr);gap:25px
-}
+/* PRODUCTS */
+.products{background:var(--white)}
+.filter-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.filter-btn{padding:10px 18px;border-radius:30px;background:#f2eee6;color:var(--green);font-weight:600;transition:.3s}
+.filter-btn.active,.filter-btn:hover{background:var(--green);color:#fff}
+.product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
 .product-card{
-background:#fff;border-radius:25px;padding:13px;
-transition:.45s;box-shadow:0 8px 30px rgba(92,52,39,.06);
-position:relative;overflow:hidden
+ background:var(--cream);border-radius:20px;padding:12px;position:relative;
+ transition:.4s;overflow:hidden
 }
 .product-card:hover{transform:translateY(-10px);box-shadow:var(--shadow)}
-.product-image{height:330px;border-radius:18px;overflow:hidden;background:#f1ddd3}
-.product-image img{width:100%;height:100%;object-fit:cover;transition:.6s}
-.product-card:hover .product-image img{transform:scale(1.08)}
+.product-img{
+ height:220px;border-radius:14px;display:grid;place-items:center;
+ font-size:5rem;position:relative;overflow:hidden
+}
+.product-img:after{content:"";position:absolute;width:130px;height:130px;background:rgba(255,255,255,.22);border-radius:50%;right:-30px;bottom:-40px}
+.p1{background:#d8e3c8}.p2{background:#f2d8b8}.p3{background:#e5d6c2}.p4{background:#cfe0d7}.p5{background:#ead9bf}
+.badge{position:absolute;top:20px;left:20px;background:var(--orange);color:white;padding:6px 10px;border-radius:20px;font-size:.68rem;font-weight:700;z-index:2}
+.product-info{padding:16px 7px 8px}
+.category{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);font-weight:700}
+.product-info h3{font-family:"Playfair Display",serif;color:var(--dark);font-size:1.1rem;margin:7px 0 9px}
+.price-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.price{font-weight:700;color:var(--green);font-size:1.05rem}
+.add-btn{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;font-size:1.3rem;transition:.3s}
+.add-btn:hover{background:var(--gold);transform:rotate(90deg)}
 
-.product-info{padding:20px 8px 10px}
-.product-info-top{display:flex;justify-content:space-between;gap:15px;align-items:start}
-.product-info h3{
-font-family:"Playfair Display",serif;font-size:24px;font-weight:600
+/* STORY */
+.story{background:#e6dccb;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-image{height:580px;border-radius:30px;background:linear-gradient(135deg,#769278,#c5d2b6);position:relative;overflow:hidden}
+.story-image:before{
+ content:"🌿";font-size:14rem;position:absolute;left:50%;top:50%;
+ transform:translate(-50%,-50%);opacity:.55
 }
-.price{font-weight:700;color:var(--rose);white-space:nowrap}
-.product-info p{font-size:13px;color:#88766e;line-height:1.6;margin-top:8px}
+.story-image:after{
+ content:"ROOTED IN NATURE";position:absolute;bottom:35px;left:35px;color:#fff;
+ font-size:.75rem;letter-spacing:4px;font-weight:700
+}
+.story-content .eyebrow{margin-bottom:18px}
+.story-content h2{font-family:"Playfair Display",serif;font-size:3.5rem;line-height:1.15;color:var(--dark)}
+.story-content p{color:#617068;line-height:1.85;margin:20px 0}
+.story-stats{display:flex;gap:35px;margin-top:35px}
+.stat strong{display:block;font-family:"Playfair Display",serif;font-size:2rem;color:var(--green)}
+.stat span{font-size:.78rem;color:var(--muted)}
 
-.badge{
-position:absolute;top:25px;left:25px;
-background:rgba(255,255,255,.9);backdrop-filter:blur(10px);
-padding:8px 13px;border-radius:30px;font-size:10px;font-weight:700;
-text-transform:uppercase;letter-spacing:1px;color:var(--brown)
-}
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.why-card{padding:30px;background:var(--white);border-radius:20px;transition:.3s;border:1px solid rgba(35,77,60,.06)}
+.why-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.why-icon{font-size:2.5rem;margin-bottom:18px}
+.why-card h3{font-family:"Playfair Display",serif;color:var(--dark);margin-bottom:10px;font-size:1.25rem}
+.why-card p{font-size:.9rem;line-height:1.7;color:var(--muted)}
 
-.cta{
-margin:100px 7% 0;padding:70px 7%;
-border-radius:35px;
-background:linear-gradient(135deg,#6d4031,#3c2118);
-color:#fff;position:relative;overflow:hidden
-}
-.cta:before{
-content:"✦";position:absolute;font-size:280px;
-right:-30px;top:-90px;color:rgba(255,255,255,.05)
-}
-.cta-content{position:relative;z-index:1;max-width:750px}
-.cta .section-tag{color:#e6b9a6}
-.cta h2{
-font-family:"Playfair Display",serif;
-font-size:clamp(38px,5vw,65px);line-height:1.05
-}
-.cta p{margin:20px 0 30px;color:#ead9d2;line-height:1.7}
-.cta .btn{background:#fff;color:var(--brown)}
-
-.contact{
-display:grid;grid-template-columns:1fr 1.1fr;
-gap:70px;background:#fffaf6
-}
-.contact-text p{color:#7b665d;line-height:1.8;margin-top:20px}
-
-.contact-details{margin-top:35px}
-.contact-item{
-display:flex;align-items:center;gap:15px;margin-bottom:18px
-}
-.contact-icon{
-width:48px;height:48px;border-radius:50%;
-background:#f8e8df;display:grid;place-items:center;font-size:18px
-}
-.contact-item small{display:block;color:#9b877d;font-size:11px;margin-bottom:3px}
-.contact-item strong{font-size:14px}
-
-.contact-form{
-background:#fff;padding:35px;border-radius:25px;
-box-shadow:var(--shadow)
-}
+/* CONTACT */
+.contact{background:var(--dark);color:white}
+.contact .section-head h2{color:white}
+.contact .section-head p{color:#b7c5bc}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;max-width:1100px;margin:auto}
+.contact-info{display:grid;gap:16px}
+.contact-box{padding:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);border-radius:18px;display:flex;gap:15px;align-items:center}
+.contact-box span{font-size:1.6rem}
+.contact-box small{display:block;color:#a9bbb0;margin-bottom:4px}
+.contact-box strong{font-size:.95rem}
+.contact-form{background:white;padding:35px;border-radius:25px;color:var(--text)}
+.contact-form h3{font-family:"Playfair Display",serif;font-size:2rem;color:var(--dark);margin-bottom:20px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.input-group{margin-bottom:15px}
-.input-group label{
-display:block;font-size:11px;font-weight:700;
-text-transform:uppercase;letter-spacing:1px;color:#806b61;margin-bottom:8px
-}
-.input-group input,.input-group textarea{
-width:100%;border:1px solid #eadbd2;
-background:#fffdfb;border-radius:12px;padding:15px;
-font-family:inherit;outline:none;transition:.3s
-}
-.input-group textarea{height:120px;resize:none}
-.input-group input:focus,.input-group textarea:focus{
-border-color:var(--rose);box-shadow:0 0 0 4px rgba(231,184,162,.15)
-}
-.contact-form .btn{width:100%;margin-top:5px}
+input,textarea{width:100%;padding:14px 16px;border:1px solid #e4e2dc;border-radius:12px;margin-bottom:15px;font-family:inherit;outline:none;transition:.3s}
+input:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(35,77,60,.08)}
+textarea{height:120px;resize:none}
+.submit-btn{width:100%;padding:15px;background:var(--green);color:white;border-radius:12px;font-weight:700;transition:.3s}
+.submit-btn:hover{background:var(--gold)}
 
-footer{
-background:#34231d;color:#f6e9e3;
-padding:70px 7% 25px
+/* LOCATION */
+.location{padding-top:70px;padding-bottom:70px;background:var(--cream)}
+.location-wrap{background:var(--white);border-radius:28px;padding:15px;box-shadow:var(--shadow);display:grid;grid-template-columns:.85fr 1.15fr;overflow:hidden}
+.location-info{padding:45px}
+.location-info h2{font-family:"Playfair Display",serif;font-size:2.8rem;color:var(--dark)}
+.location-info p{line-height:1.8;color:var(--muted);margin:18px 0}
+.map-placeholder{
+ min-height:360px;background:linear-gradient(135deg,#b8cfb7,#d8e4c8);
+ display:grid;place-items:center;text-align:center;position:relative
 }
-.footer-top{
-display:grid;grid-template-columns:2fr 1fr 1fr;
-gap:50px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.12)
-}
-.footer-brand h2{
-font-family:"Playfair Display",serif;font-size:35px;margin-bottom:15px
-}
-.footer-brand p{color:#bba69d;line-height:1.7;max-width:380px;font-size:14px}
-.footer-column h4{margin-bottom:18px;font-size:13px}
-.footer-column a{
-display:block;color:#bba69d;font-size:13px;margin-bottom:11px;transition:.3s
-}
-.footer-column a:hover{color:#fff;transform:translateX(4px)}
-.footer-bottom{
-padding-top:22px;display:flex;justify-content:space-between;
-gap:20px;flex-wrap:wrap;color:#9d8980;font-size:12px
-}
-.phariea{
-color:#e7b8a2;font-weight:700;letter-spacing:.5px
-}
+.map-placeholder:before{content:"";position:absolute;width:70px;height:70px;border-radius:50% 50% 50% 0;background:var(--orange);transform:rotate(-45deg);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.map-placeholder span{position:relative;color:white;font-size:1.8rem;font-weight:bold;margin-top:-2px}
 
-.reveal{
-opacity:0;transform:translateY(35px);
-transition:opacity .8s ease,transform .8s ease
+/* CART */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:2000;opacity:0;visibility:hidden;transition:.3s}
+.cart-overlay.active{opacity:1;visibility:visible}
+.cart{
+ position:absolute;right:0;top:0;height:100%;width:min(420px,100%);
+ background:var(--white);padding:25px;transform:translateX(100%);transition:.4s;
+ display:flex;flex-direction:column
 }
-.reveal.active{opacity:1;transform:translateY(0)}
+.cart-overlay.active .cart{transform:translateX(0)}
+.cart-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding-bottom:18px}
+.cart-header h2{font-family:"Playfair Display",serif;color:var(--dark)}
+.close-cart{font-size:1.7rem;background:none;color:var(--green)}
+.cart-items{flex:1;overflow:auto;padding:15px 0}
+.empty-cart{text-align:center;color:var(--muted);margin-top:70px}
+.cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #eee;align-items:center}
+.cart-icon{width:55px;height:55px;border-radius:12px;background:#e4eddc;display:grid;place-items:center;font-size:1.8rem}
+.cart-item-info{flex:1}
+.cart-item-info strong{display:block;color:var(--dark)}
+.cart-item-info small{color:var(--gold);font-weight:700}
+.qty-controls{display:flex;align-items:center;gap:9px;margin-top:7px}
+.qty-controls button{width:24px;height:24px;border-radius:50%;background:#eee;color:var(--green)}
+.remove{color:#c65353;background:none;font-size:.75rem}
+.cart-footer{border-top:1px solid #eee;padding-top:18px}
+.total{display:flex;justify-content:space-between;font-weight:700;font-size:1.2rem;margin-bottom:15px;color:var(--dark)}
+.checkout{width:100%;padding:16px;background:var(--green);color:#fff;border-radius:12px;font-weight:700}
 
-@media(max-width:900px){
-.nav{padding:17px 5%}
-.nav-links{
-position:fixed;top:70px;left:5%;right:5%;
-background:rgba(255,250,246,.97);backdrop-filter:blur(15px);
-padding:25px;border-radius:20px;flex-direction:column;
-align-items:flex-start;gap:20px;
-transform:translateY(-20px);opacity:0;pointer-events:none;transition:.3s;
-box-shadow:var(--shadow)
-}
-.nav-links.active{transform:translateY(0);opacity:1;pointer-events:auto}
-.menu{display:block}
-.hero{grid-template-columns:1fr;padding:130px 7% 70px}
-.hero-image{height:500px;margin-top:30px}
-.image-frame{height:470px;width:90%}
-.about-grid,.contact{grid-template-columns:1fr;gap:50px}
-.products{grid-template-columns:repeat(2,1fr)}
-.footer-top{grid-template-columns:1fr 1fr}
-}
+/* FOOTER */
+footer{background:#10251d;color:#d5e0d8;padding:55px 7% 25px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-logo{font-family:"Playfair Display",serif;font-size:2rem;color:white}
+.footer-desc{max-width:400px;color:#9fb0a5;line-height:1.7;margin-top:15px;font-size:.9rem}
+footer h4{color:white;margin-bottom:15px}
+footer a{display:block;color:#9fb0a5;margin:9px 0;font-size:.9rem}
+footer a:hover{color:var(--gold)}
+.footer-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:20px;font-size:.82rem;color:#82948a}
+.phariea{color:#e3bd79!important;font-weight:700}
 
-@media(max-width:600px){
-section{padding:80px 5%}
-.hero{padding:120px 5% 60px}
-.hero h1{font-size:58px}
-.hero p{font-size:14px}
-.hero-image{height:430px}
-.image-frame{height:410px;width:100%;border-radius:180px 180px 20px 20px}
-.floating-card{left:0;bottom:20px;padding:13px}
-.about-images{min-height:450px}
-.about-main{height:420px;width:80%}
-.about-small{height:190px}
-.products-header{display:block}
-.products-header p{margin-top:15px}
-.products{grid-template-columns:1fr}
-.product-image{height:360px}
-.stats{gap:10px}
-.stat strong{font-size:24px}
-.cta{margin:50px 5% 0;padding:50px 7%}
-.contact{padding-left:5%;padding-right:5%}
-.form-row{grid-template-columns:1fr}
-.contact-form{padding:22px}
-.footer-top{grid-template-columns:1fr;gap:35px}
-.footer-bottom{flex-direction:column}
+/* ANIMATION */
+.reveal{opacity:0;transform:translateY(35px);transition:all .8s ease}
+.reveal.show{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* MOBILE */
+@media(max-width:1000px){
+ .product-grid{grid-template-columns:repeat(3,1fr)}
+ .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+ nav{height:68px;padding:0 5%}
+ .menu-btn{display:block}
+ .nav-links{
+  position:fixed;top:68px;left:0;width:100%;background:var(--white);
+  flex-direction:column;padding:25px;gap:20px;transform:translateY(-130%);
+  transition:.4s;box-shadow:0 20px 40px rgba(0,0,0,.1)
+ }
+ .nav-links.active{transform:translateY(0)}
+ .hero{grid-template-columns:1fr;padding:110px 6% 50px;gap:40px}
+ .hero-content{text-align:center}.hero .eyebrow{justify-content:center}
+ .hero p{margin-left:auto;margin-right:auto}
+ .hero-actions{justify-content:center}
+ .hero-visual{height:430px;width:90%;margin:auto}
+ .hero-image{border-radius:150px 150px 25px 25px}
+ .floating-card{left:-15px;bottom:20px;padding:14px}
+ .trust{grid-template-columns:repeat(2,1fr);padding:18px 5%}
+ section{padding:75px 6%}
+ .product-grid{grid-template-columns:repeat(2,1fr);gap:13px}
+ .product-card{border-radius:16px;padding:9px}
+ .product-img{height:150px;font-size:3.5rem}
+ .product-info h3{font-size:.95rem}
+ .story{grid-template-columns:1fr;gap:35px}
+ .story-image{height:390px}
+ .story-content h2{font-size:2.7rem}
+ .why-grid{grid-template-columns:1fr 1fr;gap:12px}
+ .why-card{padding:20px}
+ .contact-grid,.location-wrap{grid-template-columns:1fr}
+ .contact-form{padding:25px}
+ .location-info{padding:30px}
+ .footer-top{grid-template-columns:1fr;gap:25px}
+ .footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:420px){
+ .hero h1{font-size:3rem}
+ .product-grid{gap:10px}
+ .product-img{height:130px;font-size:3rem}
+ .product-info{padding:12px 4px 5px}
+ .badge{top:13px;left:13px;font-size:.58rem}
+ .price{font-size:.9rem}
+ .add-btn{width:33px;height:33px}
+ .why-grid{grid-template-columns:1fr}
+ .form-row{grid-template-columns:1fr}
+ .trust-item{font-size:.75rem}
 }
 </style>
 </head>
 
 <body>
 
-<nav class="nav" id="navbar">
-<a href="#home" class="logo">
-Sweet Symphony
-<span>By Sakshi</span>
-</a>
+<nav id="navbar">
+  <a href="#" class="logo">Soundarya<span>HERBAL</span></a>
 
-<div class="nav-links" id="navLinks">
-<a href="#home">Home</a>
-<a href="#about">Our Story</a>
-<a href="#products">Sweet Menu</a>
-<a href="#contact">Contact</a>
-<a href="#contact" class="nav-btn">Order Now</a>
-</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#story">Our Story</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="cart-btn" onclick="openCart();return false;">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </a>
+  </div>
 
-<div class="menu" id="menu">☰</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </nav>
 
-
+<!-- HERO -->
 <section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Nature • Purity • Beauty</div>
+    <h1>Beauty that grows from <em>nature.</em></h1>
+    <p>
+      Discover the gentle power of traditional herbal care. Thoughtfully crafted
+      beauty essentials inspired by nature and everyday self-care rituals.
+    </p>
 
-<div class="hero-content reveal">
-<div class="eyebrow">Made with love & sweetness</div>
+    <div class="hero-actions">
+      <a href="#products" class="primary-btn">Explore Products →</a>
+      <a href="#story" class="secondary-btn">Our Story</a>
+    </div>
+  </div>
 
-<h1>
-Every bite tells a <i>beautiful story.</i>
-</h1>
+  <div class="hero-visual">
+    <div class="hero-image"></div>
+    <div class="leaf one">🌿</div>
+    <div class="leaf two">🍃</div>
 
-<p>
-Welcome to Sweet Symphony — where handcrafted desserts, beautiful flavours and unforgettable moments come together in perfect harmony.
-</p>
-
-<div class="hero-buttons">
-<a href="#products" class="btn btn-primary">Explore Our Menu ✦</a>
-<a href="https://instagram.com/sweet_symphony_sakshi" target="_blank" class="btn btn-light">Follow on Instagram ↗</a>
-</div>
-</div>
-
-<div class="hero-image reveal">
-<div class="image-frame">
-<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=90" alt="Sweet Symphony Cake">
-</div>
-
-<div class="floating-card">
-<div class="float-icon">🧁</div>
-<div>
-<strong>Handcrafted with love</strong>
-<small>Fresh • Beautiful • Delicious</small>
-</div>
-</div>
-</div>
-
-<div class="hero-scroll">
-<span>Scroll to explore</span>
-<div class="scroll-line"></div>
-</div>
-
+    <div class="floating-card">
+      <div class="icon">🌱</div>
+      <div>
+        <strong>Herbal Care</strong>
+        <small>Inspired by nature</small>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<section class="about" id="about">
-
-<div class="about-grid">
-
-<div class="about-images reveal">
-<img class="about-main" src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?auto=format&fit=crop&w=900&q=90" alt="Beautiful dessert">
-<img class="about-small" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=90" alt="Sweet creation">
+<div class="trust">
+  <div class="trust-item"><span>🌿</span> Herbal Inspired</div>
+  <div class="trust-item"><span>✨</span> Beauty Rituals</div>
+  <div class="trust-item"><span>📦</span> Easy Ordering</div>
+  <div class="trust-item"><span>💚</span> Made with Care</div>
 </div>
 
-<div class="about-content reveal">
-<div class="section-tag">The Sweet Symphony Story</div>
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-head reveal">
+    <div class="eyebrow">Our Collection</div>
+    <h2>Nature, bottled beautifully.</h2>
+    <p>Explore our herbal-inspired collection for hair, skin and everyday self-care.</p>
+  </div>
 
-<h2 class="section-title">
-A little sweetness.<br>
-A lot of <i>love.</i>
-</h2>
+  <div class="filter-row reveal">
+    <button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
+    <button class="filter-btn" onclick="filterProducts('hair',this)">Hair Care</button>
+    <button class="filter-btn" onclick="filterProducts('skin',this)">Skin Care</button>
+    <button class="filter-btn" onclick="filterProducts('body',this)">Body Care</button>
+  </div>
 
-<p>
-Sweet Symphony is created from a passion for making moments feel special. Every dessert is thoughtfully prepared to bring together beautiful presentation, comforting flavours and that little bit of magic that makes celebrations unforgettable.
-</p>
-
-<p>
-From intimate celebrations to grand occasions, every creation is made with attention to detail and a whole lot of heart. Because we believe the sweetest memories deserve something truly special.
-</p>
-
-<div class="stats">
-<div class="stat">
-<strong>100%</strong>
-<span>Made with Love</span>
-</div>
-<div class="stat">
-<strong>Fresh</strong>
-<span>Quality Ingredients</span>
-</div>
-<div class="stat">
-<strong>Custom</strong>
-<span>Made for You</span>
-</div>
-</div>
-
-<div class="signature">— Sakshi</div>
-
-</div>
-</div>
-
+  <div class="product-grid" id="productGrid"></div>
 </section>
 
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-image reveal"></div>
 
-<section id="products">
+  <div class="story-content reveal">
+    <div class="eyebrow">The Soundarya Story</div>
+    <h2>Inspired by the wisdom of nature.</h2>
 
-<div class="products-header reveal">
-<div>
-<div class="section-tag">Our Sweet Collection</div>
-<h2 class="section-title">Made to make you <i>smile.</i></h2>
-</div>
+    <p>
+      Soundarya Herbal celebrates the timeless connection between nature and
+      self-care. Our vision is simple: bring the beauty of traditional herbal
+      rituals into modern everyday life.
+    </p>
 
-<p>
-Beautifully crafted treats for birthdays, celebrations, surprises and every little moment worth celebrating.</p>
-</div>
+    <p>
+      From refreshing skin rituals to nourishing hair care, every collection is
+      designed around the idea that beauty feels even better when it feels natural.
+    </p>
 
-<div class="products">
-
-<div class="product-card reveal">
-<div class="badge">Signature</div>
-<div class="product-image">
-<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=90" alt="Custom Cakes">
-</div>
-<div class="product-info">
-<div class="product-info-top">
-<h3>Custom Cakes</h3>
-<span class="price">From ₹XXX</span>
-</div>
-<p>Beautifully personalised cakes made especially for your celebration.</p>
-</div>
-</div>
-
-<div class="product-card reveal">
-<div class="badge">Popular</div>
-<div class="product-image">
-<img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=800&q=90" alt="Cupcakes">
-</div>
-<div class="product-info">
-<div class="product-info-top">
-<h3>Sweet Cupcakes</h3>
-<span class="price">From ₹XXX</span>
-</div>
-<p>Little bites of happiness, beautifully decorated and freshly made.</p>
-</div>
-</div>
-
-<div class="product-card reveal">
-<div class="badge">Freshly Made</div>
-<div class="product-image">
-<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=90" alt="Dessert Collection">
-</div>
-<div class="product-info">
-<div class="product-info-top">
-<h3>Dessert Boxes</h3>
-<span class="price">From ₹XXX</span>
-</div>
-<p>A carefully curated collection of sweet treats for sharing and gifting.</p>
-</div>
-</div>
-
-</div>
-
+    <div class="story-stats">
+      <div class="stat"><strong>10+</strong><span>Featured Products</span></div>
+      <div class="stat"><strong>🌿</strong><span>Nature Inspired</span></div>
+      <div class="stat"><strong>♥</strong><span>Made with Care</span></div>
+    </div>
+  </div>
 </section>
 
+<!-- WHY -->
+<section>
+  <div class="section-head reveal">
+    <div class="eyebrow">Why Soundarya</div>
+    <h2>A gentler approach to beauty.</h2>
+  </div>
 
-<section class="cta reveal">
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">🌿</div>
+      <h3>Herbal Inspired</h3>
+      <p>Inspired by the richness of traditional herbs and natural beauty rituals.</p>
+    </div>
 
-<div class="cta-content">
-<div class="section-tag">Something Sweet is Waiting</div>
+    <div class="why-card reveal">
+      <div class="why-icon">✨</div>
+      <h3>Everyday Glow</h3>
+      <p>Simple self-care products designed to become part of your daily routine.</p>
+    </div>
 
-<h2>Let’s make your celebration a little more delicious.</h2>
+    <div class="why-card reveal">
+      <div class="why-icon">🤍</div>
+      <h3>Made with Care</h3>
+      <p>Beauty should feel thoughtful, comforting and enjoyable every day.</p>
+    </div>
 
-<p>
-Have something special in mind? Share your idea with us and let's create a dessert that looks as beautiful as your celebration feels.
-</p>
-
-<a href="#contact" class="btn">Create Your Sweet Moment ✦</a>
-</div>
-
+    <div class="why-card reveal">
+      <div class="why-icon">📦</div>
+      <h3>Easy Shopping</h3>
+      <p>Browse products, add them to your cart and create your perfect collection.</p>
+    </div>
+  </div>
 </section>
 
-
+<!-- CONTACT -->
 <section class="contact" id="contact">
+  <div class="section-head reveal">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Let's stay connected.</h2>
+    <p>Have a question about our products? We'd love to hear from you.</p>
+  </div>
 
-<div class="contact-text reveal">
-<div class="section-tag">Get In Touch</div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="contact-box">
+        <span>📱</span>
+        <div>
+          <small>Instagram</small>
+          <strong>@dattatreyjedage</strong>
+        </div>
+      </div>
 
-<h2 class="section-title">
-Let's create something <i>sweet.</i>
-</h2>
+      <div class="contact-box">
+        <span>💬</span>
+        <div>
+          <small>Business</small>
+          <strong>Soundarya Herbal</strong>
+        </div>
+      </div>
 
-<p>
-For custom orders, celebrations, collaborations or enquiries, we'd absolutely love to hear from you.
-</p>
+      <div class="contact-box">
+        <span>📍</span>
+        <div>
+          <small>Location</small>
+          <strong>Contact via Instagram for details</strong>
+        </div>
+      </div>
+    </div>
 
-<div class="contact-details">
+    <form class="contact-form reveal" onsubmit="sendMessage(event)">
+      <h3>Send us a message</h3>
 
-<div class="contact-item">
-<div class="contact-icon">📷</div>
-<div>
-<small>Instagram</small>
-<strong>@sweet_symphony_sakshi</strong>
-</div>
-</div>
+      <div class="form-row">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Email address" required>
+      </div>
 
-<div class="contact-item">
-<div class="contact-icon">💌</div>
-<div>
-<small>Orders & Enquiries</small>
-<strong>DM us on Instagram</strong>
-</div>
-</div>
+      <input type="tel" placeholder="Phone number">
+      <textarea placeholder="Tell us how we can help..." required></textarea>
 
-<div class="contact-item">
-<div class="contact-icon">🎂</div>
-<div>
-<small>Custom Orders</small>
-<strong>Made especially for your moments</strong>
-</div>
-</div>
-
-</div>
-</div>
-
-
-<form class="contact-form reveal" id="contactForm">
-
-<div class="form-row">
-<div class="input-group">
-<label>Your Name</label>
-<input type="text" placeholder="Enter your name" required>
-</div>
-
-<div class="input-group">
-<label>Phone Number</label>
-<input type="tel" placeholder="Your number">
-</div>
-</div>
-
-<div class="input-group">
-<label>What are you looking for?</label>
-<input type="text" placeholder="Cake, cupcakes, custom order...">
-</div>
-
-<div class="input-group">
-<label>Tell us about your idea</label>
-<textarea placeholder="Tell us about your celebration and sweet requirements..."></textarea>
-</div>
-
-<button class="btn btn-primary" type="submit">
-Send Enquiry ✦
-</button>
-
-</form>
-
+      <button class="submit-btn" type="submit">Send Message →</button>
+    </form>
+  </div>
 </section>
 
+<!-- LOCATION -->
+<section class="location">
+  <div class="location-wrap reveal">
+    <div class="location-info">
+      <div class="eyebrow">Find Us</div>
+      <h2>Our location</h2>
+      <p>
+        For the latest store location, delivery availability and product enquiries,
+        please connect with Soundarya Herbal directly through Instagram.
+      </p>
 
+      <a href="https://www.instagram.com/dattatreyjedage/" target="_blank" class="primary-btn">
+        Visit Instagram →
+      </a>
+    </div>
+
+    <div class="map-placeholder">
+      <span>📍</span>
+    </div>
+  </div>
+</section>
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay">
+  <div class="cart">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart" onclick="closeCart()">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">Your cart is waiting for something beautiful 🌿</div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+
+      <button class="checkout" onclick="checkout()">Proceed to Checkout →</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Soundarya Herbal</div>
+      <p class="footer-desc">
+        Celebrating nature-inspired beauty, herbal traditions and everyday self-care.
+      </p>
+    </div>
 
-<div class="footer-top">
+    <div>
+      <h4>Explore</h4>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<div class="footer-brand">
-<h2>Sweet Symphony</h2>
-<p>
-Creating sweet little moments, one beautiful dessert at a time. Made with passion, creativity and a whole lot of love.
-</p>
-</div>
+    <div>
+      <h4>Connect</h4>
+      <a href="https://www.instagram.com/dattatreyjedage/" target="_blank">@dattatreyjedage</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </div>
 
-<div class="footer-column">
-<h4>EXPLORE</h4>
-<a href="#home">Home</a>
-<a href="#about">Our Story</a>
-<a href="#products">Sweet Menu</a>
-<a href="#contact">Contact</a>
-</div>
-
-<div class="footer-column">
-<h4>FOLLOW THE JOURNEY</h4>
-<a href="https://instagram.com/sweet_symphony_sakshi" target="_blank">Instagram ↗</a>
-<a href="#contact">Custom Orders</a>
-<a href="#contact">Collaborations</a>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-<span>© 2026 Sweet Symphony by Sakshi. Made with sweetness ♡</span>
-<span>Website developed by <span class="phariea">Phariea ✦</span></span>
-</div>
-
+  <div class="footer-bottom">
+    <span>© 2026 Soundarya Herbal. All rights reserved.</span>
+    <span>Made by <a class="phariea" href="https://phariea.netlify.app" target="_blank">Phariea</a> ✦</span>
+  </div>
 </footer>
 
-
 <script>
+const products=[
+ {id:1,name:"Herbal Hair Oil",price:349,category:"hair",emoji:"🫙",class:"p1",badge:"POPULAR"},
+ {id:2,name:"Herbal Hair Shampoo",price:299,category:"hair",emoji:"🧴",class:"p2",badge:"NEW"},
+ {id:3,name:"Herbal Hair Pack",price:249,category:"hair",emoji:"🌿",class:"p3",badge:"HERBAL"},
+ {id:4,name:"Natural Face Pack",price:299,category:"skin",emoji:"✨",class:"p4",badge:"BESTSELLER"},
+ {id:5,name:"Herbal Face Wash",price:249,category:"skin",emoji:"🫧",class:"p5",badge:"GLOW"},
+ {id:6,name:"Rose Water",price:199,category:"skin",emoji:"🌹",class:"p2",badge:"FRESH"},
+ {id:7,name:"Herbal Soap",price:149,category:"body",emoji:"🧼",class:"p1",badge:"NATURAL"},
+ {id:8,name:"Neem & Turmeric Soap",price:169,category:"body",emoji:"🌿",class:"p4",badge:"POPULAR"},
+ {id:9,name:"Herbal Body Powder",price:279,category:"body",emoji:"🌾",class:"p3",badge:"CARE"},
+ {id:10,name:"Herbal Beauty Combo",price:799,category:"body",emoji:"🎁",class:"p5",badge:"SPECIAL"}
+];
 
-const navbar=document.getElementById("navbar");
-const menu=document.getElementById("menu");
-const navLinks=document.getElementById("navLinks");
+let cart=[];
+let currentFilter="all";
+
+function renderProducts(){
+ const grid=document.getElementById("productGrid");
+ const filtered=currentFilter==="all"?products:products.filter(p=>p.category===currentFilter);
+
+ grid.innerHTML=filtered.map(p=>`
+  <div class="product-card reveal show">
+   <span class="badge">${p.badge}</span>
+   <div class="product-img ${p.class}">${p.emoji}</div>
+   <div class="product-info">
+    <div class="category">${p.category} care</div>
+    <h3>${p.name}</h3>
+    <div class="price-row">
+     <span class="price">₹${p.price}</span>
+     <button class="add-btn" onclick="addToCart(${p.id})">+</button>
+    </div>
+   </div>
+  </div>
+ `).join("");
+}
+
+function filterProducts(category,button){
+ currentFilter=category;
+ document.querySelectorAll(".filter-btn").forEach(btn=>btn.classList.remove("active"));
+ button.classList.add("active");
+ renderProducts();
+}
+
+function addToCart(id){
+ const product=products.find(p=>p.id===id);
+ const existing=cart.find(item=>item.id===id);
+
+ if(existing) existing.qty++;
+ else cart.push({...product,qty:1});
+
+ updateCart();
+ showToast(product.name+" added to cart 🌿");
+}
+
+function updateCart(){
+ const count=cart.reduce((sum,item)=>sum+item.qty,0);
+ const total=cart.reduce((sum,item)=>sum+(item.price*item.qty),0);
+
+ document.getElementById("cartCount").textContent=count;
+ document.getElementById("cartTotal").textContent="₹"+total;
+
+ const cartItems=document.getElementById("cartItems");
+
+ if(cart.length===0){
+  cartItems.innerHTML='<div class="empty-cart">Your cart is waiting for something beautiful 🌿</div>';
+  return;
+ }
+
+ cartItems.innerHTML=cart.map(item=>`
+  <div class="cart-item">
+   <div class="cart-icon">${item.emoji}</div>
+
+   <div class="cart-item-info">
+    <strong>${item.name}</strong>
+    <small>₹${item.price*item.qty}</small>
+
+    <div class="qty-controls">
+     <button onclick="changeQty(${item.id},-1)">−</button>
+     <span>${item.qty}</span>
+     <button onclick="changeQty(${item.id},1)">+</button>
+     <button class="remove" onclick="removeItem(${item.id})">Remove</button>
+    </div>
+   </div>
+  </div>
+ `).join("");
+}
+
+function changeQty(id,change){
+ const item=cart.find(item=>item.id===id);
+ if(!item)return;
+
+ item.qty+=change;
+ if(item.qty<=0)cart=cart.filter(item=>item.id!==id);
+
+ updateCart();
+}
+
+function removeItem(id){
+ cart=cart.filter(item=>item.id!==id);
+ updateCart();
+}
+
+function openCart(){
+ document.getElementById("cartOverlay").classList.add("active");
+}
+
+function closeCart(){
+ document.getElementById("cartOverlay").classList.remove("active");
+}
+
+document.getElementById("cartOverlay").addEventListener("click",function(e){
+ if(e.target===this)closeCart();
+});
+
+function checkout(){
+ if(cart.length===0){
+  showToast("Your cart is empty 🌿");
+  return;
+ }
+
+ const message=cart.map(item=>`${item.name} x${item.qty}`).join(", ");
+ alert("Order summary: "+message+"\\n\\nConnect the checkout button to WhatsApp, Razorpay or your preferred payment system.");
+}
+
+function toggleMenu(){
+ document.getElementById("navLinks").classList.toggle("active");
+}
+
+function sendMessage(e){
+ e.preventDefault();
+ showToast("Thank you! Your message has been received 💚");
+ e.target.reset();
+}
+
+function showToast(message){
+ const toast=document.createElement("div");
+ toast.textContent=message;
+ toast.style.cssText=`
+ position:fixed;bottom:25px;left:50%;transform:translateX(-50%) translateY(100px);
+ background:#234d3c;color:white;padding:14px 22px;border-radius:30px;
+ z-index:5000;box-shadow:0 15px 40px rgba(0,0,0,.2);
+ transition:.4s;font-weight:600;font-size:.9rem
+ `;
+ document.body.appendChild(toast);
+
+ setTimeout(()=>toast.style.transform="translateX(-50%) translateY(0)",50);
+ setTimeout(()=>{
+  toast.style.transform="translateX(-50%) translateY(100px)";
+  setTimeout(()=>toast.remove(),400);
+ },2500);
+}
 
 window.addEventListener("scroll",()=>{
-navbar.classList.toggle("scrolled",window.scrollY>50);
+ document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>40);
 });
 
-menu.addEventListener("click",()=>{
-navLinks.classList.toggle("active");
-menu.textContent=navLinks.classList.contains("active")?"✕":"☰";
-});
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-link.addEventListener("click",()=>{
-navLinks.classList.remove("active");
-menu.textContent="☰";
-});
-});
-
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("active");
-}
-});
-},{threshold:.12});
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting)entry.target.classList.add("show");
+ });
+},{threshold:.15});
 
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
-document.getElementById("contactForm").addEventListener("submit",(e)=>{
-e.preventDefault();
-
-const button=e.target.querySelector("button");
-const original=button.innerHTML;
-
-button.innerHTML="Thank you! ♡";
-button.style.background="#c98773";
-
-setTimeout(()=>{
-button.innerHTML=original;
-button.style.background="";
-e.target.reset();
-},3000);
-});
-
+renderProducts();
 </script>
 
 </body>
