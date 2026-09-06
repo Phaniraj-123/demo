@@ -3,876 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sugandh — Hand-Poured Candles</title>
+<title>MERAKI — Premium Nail Care at Home</title>
+<meta name="description" content="Premium nail care and salon-quality nail services at your doorstep.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#15100d;
-    --ink-2:#1e1712;
-    --wax:#f4ead9;
-    --amber:#e2a44c;
-    --amber-deep:#b9752a;
-    --plum:#5a3346;
-    --plum-soft:#8a5a6e;
-    --line:rgba(226,164,76,.25);
-    --serif:'Canela','Playfair Display', 'Times New Roman', serif;
-    --sans:'Jost', 'Helvetica Neue', Arial, sans-serif;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--ink);
-    color:var(--wax);
-    font-family:var(--sans);
-    font-weight:300;
-    letter-spacing:.01em;
-    overflow-x:hidden;
-  }
-  a{color:inherit;text-decoration:none;}
-  button{font-family:var(--sans);}
-  ::selection{background:var(--amber);color:var(--ink);}
-
-  /* subtle grain */
-  body::before{
-    content:"";
-    position:fixed; inset:0;
-    background-image:radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px);
-    background-size:3px 3px;
-    pointer-events:none;
-    z-index:9999;
-    mix-blend-mode:overlay;
-  }
-
-  /* ===== NAV ===== */
-  header{
-    position:fixed; top:0; left:0; right:0; z-index:500;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:22px 5vw;
-    transition:background .4s ease, padding .4s ease, backdrop-filter .4s ease;
-  }
-  header.scrolled{
-    background:rgba(21,16,13,.86);
-    backdrop-filter:blur(10px);
-    padding:14px 5vw;
-    border-bottom:1px solid var(--line);
-  }
-  .logo{
-    font-family:var(--serif);
-    font-size:1.5rem;
-    letter-spacing:.04em;
-    display:flex; align-items:center; gap:10px;
-  }
-  .logo .dot{
-    width:8px;height:8px;border-radius:50%;
-    background:var(--amber);
-    box-shadow:0 0 10px 3px rgba(226,164,76,.7);
-    animation:flicker 3s infinite ease-in-out;
-  }
-  nav ul{
-    list-style:none; display:flex; gap:38px; margin:0; padding:0;
-  }
-  nav a{
-    font-size:.82rem;
-    text-transform:uppercase;
-    letter-spacing:.14em;
-    opacity:.85;
-    position:relative;
-    padding-bottom:4px;
-  }
-  nav a::after{
-    content:"";position:absolute; left:0; bottom:0; width:0; height:1px;
-    background:var(--amber); transition:width .35s ease;
-  }
-  nav a:hover::after{width:100%;}
-  .nav-cta{
-    border:1px solid var(--line);
-    padding:9px 20px;
-    border-radius:999px;
-    font-size:.78rem;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    transition:background .3s, border-color .3s;
-    background:transparent;
-    color:var(--wax);
-    cursor:pointer;
-    display:flex; align-items:center; gap:8px;
-  }
-  .nav-cta:hover{background:var(--amber); color:var(--ink); border-color:var(--amber);}
-  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:600; background:none; border:none; padding:0;}
-  .burger span{width:24px; height:1px; background:var(--wax); display:block;}
-
-  /* ===== HERO ===== */
-  .hero{
-    position:relative;
-    min-height:100vh;
-    display:flex; align-items:center;
-    padding:0 5vw;
-    background:
-      radial-gradient(ellipse 60% 50% at 78% 55%, rgba(226,164,76,.16), transparent 70%),
-      linear-gradient(180deg, var(--ink) 0%, #100c0a 100%);
-    overflow:hidden;
-  }
-  .hero-grid{
-    display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:40px;
-    width:100%; max-width:1300px; margin:0 auto; padding-top:80px;
-  }
-  .eyebrow{
-    font-size:.78rem; letter-spacing:.2em; color:var(--amber); text-transform:uppercase;
-    display:inline-block; margin-bottom:18px; opacity:0; animation:rise .9s .1s forwards;
-  }
-  h1.hero-title{
-    font-family:var(--serif);
-    font-weight:400;
-    font-size:clamp(2.6rem, 5.4vw, 4.6rem);
-    line-height:1.04;
-    margin:0 0 22px;
-    opacity:0; animation:rise .9s .25s forwards;
-  }
-  h1.hero-title em{
-    font-style:italic; color:var(--amber);
-  }
-  .hero p.lead{
-    max-width:440px; font-size:1.05rem; line-height:1.7; color:rgba(244,234,217,.75);
-    margin:0 0 34px;
-    opacity:0; animation:rise .9s .4s forwards;
-  }
-  .hero-actions{
-    display:flex; gap:16px; align-items:center;
-    opacity:0; animation:rise .9s .55s forwards;
-  }
-  .btn-primary{
-    background:var(--amber); color:var(--ink);
-    padding:15px 32px; border-radius:999px;
-    font-size:.85rem; text-transform:uppercase; letter-spacing:.1em;
-    font-weight:500;
-    border:1px solid var(--amber);
-    display:inline-block; cursor:pointer;
-    transition:transform .3s ease, box-shadow .3s ease, background .3s;
-  }
-  .btn-primary:hover{transform:translateY(-3px); box-shadow:0 14px 30px -10px rgba(226,164,76,.55);}
-  .btn-ghost{
-    display:flex; align-items:center; gap:10px;
-    font-size:.85rem; letter-spacing:.06em; color:var(--wax);
-    padding:15px 6px;
-  }
-  .play-ring{
-    width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
-    transition:border-color .3s;
-  }
-  .btn-ghost:hover .play-ring{border-color:var(--amber);}
-
-  @keyframes rise{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);} }
-
-  /* hero candle scene — real photo */
-  .candle-scene{
-    position:relative; height:560px;
-    display:flex; align-items:center; justify-content:center;
-    opacity:0; animation:fadeIn 1.2s .5s forwards;
-  }
-  @keyframes fadeIn{ from{opacity:0;} to{opacity:1;} }
-  .glow-floor{
-    position:absolute; bottom:30px; width:280px; height:70px; border-radius:50%;
-    background:radial-gradient(ellipse, rgba(226,164,76,.45), transparent 70%);
-    filter:blur(6px);
-  }
-  .hero-photo-frame{
-    position:relative; width:320px; height:420px; border-radius:22px; overflow:hidden;
-    border:1px solid var(--line);
-    box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
-  }
-  .hero-photo-frame img{
-    width:100%; height:100%; object-fit:cover; display:block;
-    filter:saturate(1.05) contrast(1.02);
-  }
-  .hero-photo-frame::after{
-    content:""; position:absolute; inset:0;
-    background:radial-gradient(ellipse at 50% 30%, rgba(226,164,76,.22), transparent 60%),
-               linear-gradient(180deg, rgba(21,16,13,0) 55%, rgba(21,16,13,.55) 100%);
-    pointer-events:none;
-  }
-
-  /* ===== marquee strip ===== */
-  .marquee{
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-    padding:16px 0; overflow:hidden; white-space:nowrap; background:var(--ink-2);
-  }
-  .marquee-track{display:inline-block; animation:scroll 22s linear infinite;}
-  .marquee-track span{
-    font-family:var(--serif); font-style:italic; font-size:1.1rem;
-    color:rgba(244,234,217,.55); margin:0 34px;
-  }
-  .marquee-track span::after{content:"✦"; margin-left:34px; color:var(--amber);}
-  @keyframes scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
-
-  /* ===== SECTION generic ===== */
-  section{ padding:120px 5vw; position:relative; }
-  .section-head{ max-width:640px; margin:0 auto 64px; text-align:center; }
-  .section-head .eyebrow{margin-bottom:14px;}
-  .section-head h2{
-    font-family:var(--serif); font-weight:400; font-size:clamp(2rem,3.6vw,3rem);
-    margin:0 0 16px; line-height:1.15;
-  }
-  .section-head p{ color:rgba(244,234,217,.65); line-height:1.7; margin:0 auto; }
-
-  .reveal{ opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .8s ease; }
-  .reveal.in{ opacity:1; transform:translateY(0); }
-
-  /* ===== PRODUCTS ===== */
-  .shop{ max-width:1300px; margin:0 auto; }
-  .product-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:28px;
-  }
-  .card{
-    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
-    border:1px solid var(--line);
-    border-radius:18px;
-    padding:18px 18px 26px;
-    text-align:center;
-    position:relative;
-    transition:transform .45s cubic-bezier(.2,.8,.2,1), border-color .3s, background .3s;
-  }
-  .card:hover{ transform:translateY(-8px); border-color:rgba(226,164,76,.55); background:linear-gradient(180deg, rgba(226,164,76,.07), rgba(255,255,255,0)); }
-  .card .stage{
-    height:190px; border-radius:14px; overflow:hidden; position:relative; margin-bottom:18px;
-  }
-  .card .stage img{
-    width:100%; height:100%; object-fit:cover; display:block;
-    transition:transform .6s ease;
-  }
-  .card:hover .stage img{ transform:scale(1.06); }
-  .card .stage::after{
-    content:""; position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(21,16,13,0) 55%, rgba(21,16,13,.45) 100%);
-  }
-  .card h3{ font-family:var(--serif); font-weight:400; font-size:1.28rem; margin:0 0 6px; }
-  .card .scent{ font-size:.78rem; color:var(--plum-soft); letter-spacing:.06em; text-transform:uppercase; margin:0 0 12px; }
-  .card .price-row{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:14px; }
-  .card .price{ font-size:1.05rem; color:var(--amber); }
-  .add-btn{
-    border:1px solid var(--line); background:transparent; color:var(--wax);
-    padding:9px 18px; border-radius:999px; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
-    cursor:pointer; transition:.3s;
-  }
-  .add-btn:hover{ background:var(--amber); color:var(--ink); border-color:var(--amber); }
-  .tag{
-    position:absolute; top:14px; left:14px; z-index:2; font-size:.66rem; letter-spacing:.1em; text-transform:uppercase;
-    background:rgba(21,16,13,.55); backdrop-filter:blur(4px); color:var(--amber); border:1px solid var(--line);
-    padding:4px 10px; border-radius:999px;
-  }
-
-  /* ===== PROCESS / STORY ===== */
-  .story{
-    display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; max-width:1250px; margin:0 auto; align-items:center;
-  }
-  .story-visual{ position:relative; height:460px; }
-  .pour-svg{ position:absolute; inset:0; }
-  .story h2{ font-family:var(--serif); font-weight:400; font-size:clamp(2rem,3.4vw,2.9rem); line-height:1.16; margin:0 0 22px; }
-  .story p{ color:rgba(244,234,217,.7); line-height:1.8; margin:0 0 18px; max-width:480px; }
-  .steps{ margin-top:34px; display:flex; flex-direction:column; gap:0; }
-  .step{ display:flex; gap:18px; padding:18px 0; border-top:1px solid var(--line); }
-  .step:last-child{ border-bottom:1px solid var(--line); }
-  .step .num{ font-family:var(--serif); font-style:italic; color:var(--amber); font-size:1.1rem; width:30px; flex-shrink:0; }
-  .step .txt b{ display:block; margin-bottom:3px; font-weight:500; }
-  .step .txt span{ font-size:.9rem; color:rgba(244,234,217,.6); }
-
-  /* ===== INSTAGRAM / ENGAGEMENT ===== */
-  .insta{ background:linear-gradient(180deg, var(--ink-2), var(--ink)); }
-  .insta-inner{ max-width:1100px; margin:0 auto; text-align:center; }
-  .insta-handle{
-    display:inline-flex; align-items:center; gap:12px;
-    border:1px solid var(--line); padding:12px 26px; border-radius:999px;
-    margin-bottom:34px; font-size:.95rem;
-  }
-  .insta-handle svg{ width:20px; height:20px; }
-  .insta-grid{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-top:10px;
-  }
-  .insta-tile{
-    position:relative; aspect-ratio:1/1; border-radius:14px; overflow:hidden;
-    display:flex; align-items:center; justify-content:center;
-    border:1px solid var(--line);
-    transition:transform .4s ease;
-  }
-  .insta-tile:hover{ transform:scale(1.04) rotate(-.5deg); }
-  .insta-tile .overlay{
-    position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:16px;
-    background:rgba(21,16,13,.0); opacity:0; transition:.35s;
-    font-size:.85rem;
-  }
-  .insta-tile:hover .overlay{ opacity:1; background:rgba(21,16,13,.55); }
-  .cta-band{
-    margin-top:70px; padding:56px 5vw; border-radius:28px;
-    background:radial-gradient(ellipse at 30% 30%, rgba(226,164,76,.18), transparent 60%), var(--ink-2);
-    border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
-    text-align:left;
-  }
-  .cta-band h3{ font-family:var(--serif); font-weight:400; font-size:1.9rem; margin:0 0 8px; }
-  .cta-band p{ margin:0; color:rgba(244,234,217,.65); max-width:420px; }
-
-  /* ===== TESTIMONIALS ===== */
-  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; max-width:1200px; margin:0 auto; }
-  .testi{
-    border:1px solid var(--line); border-radius:18px; padding:30px 26px;
-    background:rgba(255,255,255,.02);
-  }
-  .stars{ color:var(--amber); letter-spacing:3px; margin-bottom:14px; font-size:.95rem; }
-  .testi p{ line-height:1.75; color:rgba(244,234,217,.8); font-size:.98rem; margin:0 0 20px; }
-  .testi .who{ display:flex; align-items:center; gap:12px; }
-  .avatar{
-    width:38px;height:38px;border-radius:50%;
-    background:linear-gradient(135deg, var(--amber), var(--plum));
-    display:flex; align-items:center; justify-content:center;
-    font-family:var(--serif); font-size:.9rem; color:var(--ink);
-  }
-  .who b{ font-weight:500; font-size:.9rem; display:block; }
-  .who span{ font-size:.78rem; color:rgba(244,234,217,.55); }
-
-  /* ===== NEWSLETTER / FOOTER ===== */
-  .footer-cta{ text-align:center; padding-bottom:0; }
-  .footer-cta h2{ font-family:var(--serif); font-weight:400; font-size:clamp(2.1rem,4vw,3.3rem); margin:0 0 20px; }
-  .footer-cta p{ color:rgba(244,234,217,.65); max-width:480px; margin:0 auto 36px; line-height:1.7; }
-  .subscribe{
-    display:flex; max-width:440px; margin:0 auto; border:1px solid var(--line); border-radius:999px; overflow:hidden; padding:6px;
-  }
-  .subscribe input{
-    flex:1; background:transparent; border:none; outline:none; color:var(--wax);
-    padding:12px 18px; font-family:var(--sans); font-size:.9rem;
-  }
-  .subscribe button{
-    background:var(--amber); border:none; color:var(--ink); padding:12px 26px; border-radius:999px;
-    font-size:.8rem; text-transform:uppercase; letter-spacing:.1em; cursor:pointer; transition:.3s;
-  }
-  .subscribe button:hover{ background:#f2bd6f; }
-
-  footer{
-    border-top:1px solid var(--line); padding:60px 5vw 30px;
-    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; max-width:1300px; margin:70px auto 0;
-  }
-  .foot-brand .logo{ margin-bottom:14px; }
-  .foot-brand p{ color:rgba(244,234,217,.55); font-size:.9rem; line-height:1.7; max-width:280px; }
-  footer h4{ font-size:.78rem; text-transform:uppercase; letter-spacing:.12em; color:var(--amber); margin:0 0 18px; }
-  footer ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; }
-  footer a{ font-size:.9rem; color:rgba(244,234,217,.72); transition:color .25s; }
-  footer a:hover{ color:var(--amber); }
-  .foot-bottom{
-    max-width:1300px; margin:40px auto 0; padding:24px 5vw 0; border-top:1px solid var(--line);
-    display:flex; justify-content:space-between; font-size:.78rem; color:rgba(244,234,217,.45); flex-wrap:wrap; gap:10px;
-  }
-
-  /* toast */
-  .toast{
-    position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(20px);
-    background:var(--wax); color:var(--ink); padding:14px 26px; border-radius:999px;
-    font-size:.85rem; opacity:0; pointer-events:none; transition:.4s; z-index:1000;
-    display:flex; align-items:center; gap:10px;
-  }
-  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
-
-  /* cart badge */
-  .cart-wrap{ position:relative; }
-  .cart-badge{
-    position:absolute; top:-8px; right:-10px; background:var(--amber); color:var(--ink);
-    font-size:.65rem; width:17px; height:17px; border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-weight:600;
-  }
-
-  /* ===== CART DRAWER ===== */
-  .cart-overlay{
-    position:fixed; inset:0; background:rgba(10,7,5,.6); backdrop-filter:blur(2px);
-    opacity:0; pointer-events:none; transition:opacity .35s ease; z-index:700;
-  }
-  .cart-overlay.open{ opacity:1; pointer-events:auto; }
-  .cart-drawer{
-    position:fixed; top:0; right:0; bottom:0; width:400px; max-width:92vw;
-    background:var(--ink-2); border-left:1px solid var(--line);
-    z-index:701; display:flex; flex-direction:column;
-    transform:translateX(100%); transition:transform .45s cubic-bezier(.2,.8,.2,1);
-  }
-  .cart-drawer.open{ transform:translateX(0); }
-  .cart-head{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:24px 26px; border-bottom:1px solid var(--line);
-  }
-  .cart-head h3{ font-family:var(--serif); font-weight:400; font-size:1.4rem; margin:0; }
-  .cart-close{
-    background:none; border:1px solid var(--line); color:var(--wax);
-    width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:1rem;
-    display:flex; align-items:center; justify-content:center; transition:.3s;
-  }
-  .cart-close:hover{ border-color:var(--amber); color:var(--amber); }
-  .cart-body{ flex:1; overflow-y:auto; padding:10px 26px; }
-  .cart-empty{ color:rgba(244,234,217,.55); font-size:.92rem; text-align:center; margin-top:60px; line-height:1.7; }
-  .cart-item{
-    display:flex; align-items:center; gap:14px; padding:16px 0; border-bottom:1px solid var(--line);
-  }
-  .ci-photo{ width:56px; height:56px; border-radius:10px; overflow:hidden; flex-shrink:0; }
-  .ci-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .ci-info{ flex:1; min-width:0; }
-  .ci-info b{ display:block; font-weight:500; font-size:.95rem; margin-bottom:3px; }
-  .ci-info span{ font-size:.8rem; color:rgba(244,234,217,.6); }
-  .ci-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
-  .qty-btn{
-    width:26px; height:26px; border-radius:50%; border:1px solid var(--line); background:transparent;
-    color:var(--wax); cursor:pointer; font-size:.9rem; line-height:1; display:flex; align-items:center; justify-content:center;
-    transition:.25s;
-  }
-  .qty-btn:hover{ border-color:var(--amber); color:var(--amber); }
-  .ci-actions .qty-num{ min-width:16px; text-align:center; font-size:.88rem; }
-  .cart-foot{ padding:22px 26px 28px; border-top:1px solid var(--line); }
-  .cart-subrow{ display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; font-size:.95rem; }
-  .cart-subrow b{ color:var(--amber); font-size:1.15rem; }
-  .checkout-btn{
-    width:100%; background:var(--amber); color:var(--ink); border:none; padding:15px; border-radius:999px;
-    font-size:.85rem; text-transform:uppercase; letter-spacing:.1em; font-weight:500; cursor:pointer; transition:.3s;
-  }
-  .checkout-btn:hover{ background:#f2bd6f; }
-  .checkout-btn:disabled{ opacity:.4; cursor:not-allowed; }
-
-  /* ===== RESPONSIVE ===== */
-  @media(max-width:1024px){
-    .product-grid{ grid-template-columns:repeat(2,1fr); }
-    .insta-grid{ grid-template-columns:repeat(3,1fr); }
-    .story{ grid-template-columns:1fr; }
-    .story-visual{ height:340px; order:2; }
-    footer{ grid-template-columns:1fr 1fr; }
-    .testi-grid{ grid-template-columns:1fr; }
-  }
-  @media(max-width:760px){
-    nav{ display:none; }
-    .burger{ display:flex; }
-    header.open + .mobile-menu{ display:flex; }
-    .hero-grid{ grid-template-columns:1fr; text-align:left; padding-top:120px; }
-    .candle-scene{ height:340px; order:-1; }
-    .hero-photo-frame{ width:100%; max-width:320px; height:320px; }
-    .product-grid{ grid-template-columns:1fr 1fr; gap:16px; }
-    .insta-grid{ grid-template-columns:repeat(2,1fr); }
-    footer{ grid-template-columns:1fr 1fr; }
-    .cta-band{ flex-direction:column; text-align:center; }
-    section{ padding:80px 6vw; }
-    .cart-drawer{ width:100vw; max-width:100vw; }
-  }
-  @media(max-width:480px){
-    .product-grid{ grid-template-columns:1fr 1fr; }
-    .insta-grid{ grid-template-columns:repeat(2,1fr); }
-  }
-
-  .mobile-menu{
-    display:none; position:fixed; inset:0; background:var(--ink); z-index:400;
-    flex-direction:column; align-items:center; justify-content:center; gap:30px;
-  }
-  .mobile-menu a{ font-family:var(--serif); font-size:1.6rem; }
-  .mobile-menu.show{ display:flex; }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
-  }
+:root{
+  --green:#315d4b;--green2:#6e927b;--cream:#f7f0df;--beige:#e9d8bc;
+  --peach:#f4b49f;--yellow:#efcf68;--ink:#23342d;--white:#fffdf8;
+  --line:rgba(49,93,75,.14);--shadow:0 20px 60px rgba(35,52,45,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+body.menu-open{overflow:hidden}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--yellow);color:var(--ink)}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:.72rem;font-weight:700;color:var(--green)}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--peach)}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:.98}
+.section{padding:110px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}
+.section-head h2{font-size:clamp(2.5rem,5vw,4.8rem);max-width:700px}
+.section-head p{max-width:390px;line-height:1.7;color:#58655f}
+.btn{border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;font-weight:700;transition:.3s}
+.btn-primary{background:var(--green);color:white;box-shadow:0 10px 25px rgba(49,93,75,.22)}
+.btn-primary:hover{transform:translateY(-3px);background:#234a3b}
+.btn-light{background:var(--white);color:var(--ink)}
+.btn-outline{border:1px solid var(--green);background:transparent;color:var(--green)}
+.btn-outline:hover{background:var(--green);color:#fff}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:30}
+.logo{font-family:"Playfair Display",serif;font-size:2rem;font-weight:800;letter-spacing:.05em;color:var(--green)}
+.logo span{font-family:"DM Sans";font-size:.7rem;letter-spacing:.15em;font-weight:700;margin-left:5px}
+.nav-links{display:flex;gap:27px;align-items:center;font-size:.92rem;font-weight:600}
+.nav-links a{opacity:.75}.nav-links a:hover{opacity:1;color:var(--green)}
+.menu-btn{display:none;background:var(--green);color:white;border:0;border-radius:12px;width:46px;height:46px;font-size:1.25rem}
+.hero{position:relative;min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:50px;padding:60px 0 80px}
+.hero-copy h1{font-size:clamp(3.8rem,7vw,7.5rem);letter-spacing:-.045em}
+.hero-copy h1 em{color:var(--green);font-weight:600}
+.hero-copy>p{max-width:570px;font-size:1.08rem;line-height:1.75;margin:25px 0 32px;color:#56635d}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:30px;margin-top:38px;align-items:center}
+.avatar-stack{display:flex}.avatar{width:39px;height:39px;border-radius:50%;border:3px solid var(--cream);margin-right:-11px;background-size:cover;background-position:center}
+.avatar:nth-child(1){background-image:url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=120&q=80")}
+.avatar:nth-child(2){background-image:url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80")}
+.avatar:nth-child(3){background-image:url("https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=120&q=80")}
+.meta-copy{font-size:.82rem;line-height:1.35}.meta-copy strong{display:block}
+.hero-art{position:relative;height:640px}
+.blob{position:absolute;border-radius:50%;filter:blur(.2px)}
+.blob.one{width:440px;height:440px;background:var(--beige);right:10px;top:60px}
+.blob.two{width:150px;height:150px;background:var(--yellow);left:5px;top:100px}
+.blob.three{width:105px;height:105px;background:var(--peach);right:0;bottom:60px}
+.hero-card{position:absolute;inset:0 40px 0 40px;border-radius:220px 220px 34px 34px;overflow:hidden;box-shadow:var(--shadow);background:#d5c2ad}
+.hero-card img{width:100%;height:100%;object-fit:cover}
+.float-card{position:absolute;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);padding:15px 18px;border-radius:18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+.float-card.left{left:-5px;bottom:75px}.float-card.right{right:-10px;top:95px}
+.float-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);font-size:1.25rem}
+.float-card strong{font-size:.88rem;display:block}.float-card small{color:#68736d;font-size:.72rem}
+.marquee{background:var(--green);color:var(--cream);padding:17px 0;overflow:hidden}
+.marquee-track{display:flex;width:max-content;animation:move 24s linear infinite;white-space:nowrap}
+.marquee span{font-family:"Playfair Display";font-size:1.3rem;padding:0 25px}.marquee b{color:var(--yellow)}
+@keyframes move{to{transform:translateX(-50%)}}
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.about-images{height:600px;position:relative}
+.about-images .big{position:absolute;width:72%;height:82%;right:0;top:0;object-fit:cover;border-radius:180px 180px 25px 25px}
+.about-images .small{position:absolute;width:45%;height:43%;left:0;bottom:0;object-fit:cover;border:10px solid var(--white);border-radius:120px 120px 20px 20px}
+.about-text h2{font-size:clamp(3rem,5vw,5.4rem);margin:15px 0 25px}.about-text>p{line-height:1.8;color:#5d6963;max-width:600px}
+.feature-list{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.feature{background:#f6f2e9;border-radius:18px;padding:18px}.feature i{font-style:normal;font-size:1.3rem}.feature strong{display:block;margin-top:8px}.feature p{font-size:.82rem;line-height:1.5;color:#68736d;margin-top:5px}
+.story{background:var(--peach);position:relative;overflow:hidden}
+.story:after{content:"M";position:absolute;right:-20px;bottom:-100px;font-family:"Playfair Display";font-size:32rem;color:rgba(255,255,255,.2);font-weight:800}
+.story-grid{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:center;position:relative;z-index:1}
+.story-copy h2{font-size:clamp(3rem,5.5vw,6rem);margin:17px 0 24px}.story-copy p{max-width:600px;line-height:1.8;color:#584b44}
+.story-note{margin-top:30px;padding:22px;border-left:4px solid var(--green);background:rgba(255,255,255,.45);font-family:"Playfair Display";font-size:1.35rem;line-height:1.45}
+.story-image{height:520px;border-radius:30px;overflow:hidden;transform:rotate(3deg);box-shadow:var(--shadow)}
+.story-image img{height:100%;width:100%;object-fit:cover}
+.services{background:#f2e7d1}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{background:var(--white);border-radius:24px;overflow:hidden;transition:.35s;display:flex;flex-direction:column}.service:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.service-img{height:240px;overflow:hidden}.service-img img{height:100%;width:100%;object-fit:cover;transition:.6s}.service:hover img{transform:scale(1.07)}
+.service-body{padding:20px;display:flex;flex-direction:column;flex:1}.service-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.service h3{font-size:1.6rem}.price{background:var(--yellow);border-radius:999px;padding:7px 10px;font-size:.8rem;font-weight:700;white-space:nowrap}
+.service p{font-size:.86rem;color:#68736d;line-height:1.55;margin:11px 0 18px}.duration{margin-top:auto;font-size:.76rem;font-weight:700;color:var(--green)}
+.ad{padding:80px 0;background:var(--green);color:var(--white)}
+.ad-box{background:linear-gradient(120deg,#426e5a,#274b3d);border-radius:36px;padding:60px;display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:35px;overflow:hidden;position:relative}
+.ad-box:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(239,207,104,.16);right:-140px;top:-150px}
+.ad-copy{position:relative;z-index:1}.ad-copy h2{font-size:clamp(3rem,5vw,5.4rem);margin:15px 0}.ad-copy p{line-height:1.7;color:#e5eee8;max-width:560px;margin-bottom:25px}
+.ad-stats{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:14px}.stat{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.13);border-radius:22px;padding:25px}.stat b{font-family:"Playfair Display";font-size:2rem;color:var(--yellow);display:block}.stat span{font-size:.78rem;color:#d9e6dc}
+.reviews{background:var(--white)}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{padding:26px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(150deg,#fffdf8,#f7f0df)}
+.stars{color:#d6a51f;letter-spacing:2px;font-size:.9rem}.review blockquote{font-family:"Playfair Display";font-size:1.35rem;line-height:1.45;margin:18px 0}.review-user{display:flex;align-items:center;gap:11px}.review-user .circle{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--peach);font-weight:700}.review-user small{display:block;color:#718078;margin-top:2px}
+.booking{background:var(--beige)}
+.booking-wrap{display:grid;grid-template-columns:.82fr 1.18fr;background:var(--white);border-radius:34px;overflow:hidden;box-shadow:var(--shadow)}
+.booking-info{padding:55px;background:var(--yellow);position:relative;overflow:hidden}.booking-info:after{content:"✦";position:absolute;right:25px;bottom:-30px;font-size:12rem;color:rgba(255,255,255,.35)}
+.booking-info h2{font-size:clamp(3rem,4.8vw,4.8rem);margin:16px 0 20px}.booking-info p{line-height:1.7;max-width:370px}
+.steps{margin-top:35px;display:grid;gap:16px}.step{display:flex;align-items:center;gap:13px;font-size:.9rem;font-weight:600}.step b{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center}
+.form{padding:45px}.form h3{font-size:2rem;margin-bottom:25px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.76rem;font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#faf7ef;border-radius:12px;padding:14px;outline:none;color:var(--ink)}.field textarea{height:92px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(49,93,75,.08)}
+.form .btn{margin-top:20px;width:100%}.form-msg{font-size:.82rem;color:var(--green);font-weight:700;margin-top:12px;display:none}
+.contact{background:var(--green);color:#fff}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}.contact h2{font-size:clamp(3rem,5vw,5.3rem);margin:15px 0 20px}.contact p{line-height:1.7;color:#dce8df;max-width:550px}.contact-links{margin-top:30px;display:grid;gap:13px}.contact-link{padding:16px 18px;border:1px solid rgba(255,255,255,.15);border-radius:15px;display:flex;justify-content:space-between;align-items:center;transition:.25s}.contact-link:hover{background:rgba(255,255,255,.08)}.contact-link span{color:var(--yellow)}
+.contact-card{background:var(--cream);color:var(--ink);padding:35px;border-radius:28px}.contact-card h3{font-size:2.1rem;margin-bottom:16px}.contact-card p{color:#5e6b65}.hours{margin-top:22px;border-top:1px solid var(--line);padding-top:15px}.hours div{display:flex;justify-content:space-between;padding:9px 0;font-size:.86rem;border-bottom:1px solid var(--line)}
+footer{background:#1f352c;color:#dbe6de;padding:25px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:.8rem}.socials{display:flex;gap:10px}.social{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:.25s}.social:hover{background:var(--yellow);color:var(--ink)}
+.social1{width:74px;height:34px;border-radius:20px;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:.25s}.social1:hover{background:var(--yellow);color:var(--ink)}
+.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+.toast{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;padding:15px 20px;border-radius:14px;box-shadow:var(--shadow);transform:translateY(120px);transition:.35s;z-index:100}.toast.show{transform:translateY(0)}
+@media(max-width:900px){
+ .nav-links{position:fixed;inset:0;background:var(--cream);flex-direction:column;justify-content:center;font-size:1.4rem;transform:translateX(100%);transition:.35s}.nav-links.open{transform:none}.menu-btn{display:block;z-index:40}
+ .hero{grid-template-columns:1fr;padding-top:35px}.hero-art{height:520px;max-width:600px;width:100%;margin:auto}.hero-card{inset:0 50px}.hero-copy{text-align:center}.hero-copy>p{margin-left:auto;margin-right:auto}.hero-actions,.hero-meta{justify-content:center}
+ .about-grid,.story-grid,.contact-grid,.ad-box{grid-template-columns:1fr}.about-images{max-width:600px;width:100%;margin:auto}.story-image{max-width:550px;width:85%;margin:auto}
+ .service-grid{grid-template-columns:repeat(2,1fr)}.review-grid{grid-template-columns:1fr 1fr}.booking-wrap{grid-template-columns:1fr}.booking-info{padding:45px}
+}
+@media(max-width:620px){
+ .container{width:min(100% - 28px,1180px)}nav{height:70px}.logo{font-size:1.65rem}.section{padding:75px 0}.section-head{display:block;margin-bottom:30px}.section-head p{margin-top:16px}
+ .hero{min-height:auto;padding:35px 0 65px}.hero-copy h1{font-size:3.8rem}.hero-art{height:440px;margin-top:8px}.hero-card{inset:0 25px;border-radius:150px 150px 24px 24px}.blob.one{width:320px;height:320px;right:0}.float-card{padding:11px}.float-card.left{left:0}.float-card.right{right:0}.hero-meta{gap:15px}
+ .about-images{height:440px}.feature-list{grid-template-columns:1fr}.story-image{height:390px;width:92%}
+ .service-grid,.review-grid{grid-template-columns:1fr}.service-img{height:260px}.ad{padding:55px 0}.ad-box{padding:35px 24px}.ad-stats{grid-template-columns:1fr 1fr}.stat{padding:18px}
+ .form{padding:28px 18px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.booking-info{padding:35px 25px}.contact-grid{gap:40px}.contact-card{padding:25px}.footer-row{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<header id="siteHeader">
-  <div class="logo"><span class="dot"></span> Sugandh</div>
+<div class="toast" id="toast">✨ Your booking request has been received!</div>
+
+<header class="container">
   <nav>
-    <ul>
-      <li><a href="#shop">Shop</a></li>
-      <li><a href="#story">Our Craft</a></li>
-      <li><a href="#instagram">Community</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-    </ul>
+    <a href="#home" class="logo">MERAKI<span>NAIL & Lashes</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#story">Our Story</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+      <a href="#book" class="btn btn-primary">Book at Home ↗</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
   </nav>
-  <button class="nav-cta cart-wrap" id="cartBtn" type="button">Cart <span class="cart-badge" id="cartCount">0</span></button>
-  <button class="burger" id="burger" type="button"><span></span><span></span><span></span></button>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#shop">Shop</a>
-  <a href="#story">Our Craft</a>
-  <a href="#instagram">Community</a>
-  <a href="#reviews">Reviews</a>
-</div>
-
-<!-- ===== CART DRAWER ===== -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
-  <div class="cart-head">
-    <h3>Your cart</h3>
-    <button class="cart-close" id="cartCloseBtn" type="button" aria-label="Close cart">✕</button>
-  </div>
-  <div class="cart-body" id="cartBody">
-    <p class="cart-empty">Your cart is empty — add a candle to get started.</p>
-  </div>
-  <div class="cart-foot">
-    <div class="cart-subrow"><span>Subtotal</span><b id="cartSubtotal">₹0</b></div>
-    <button class="checkout-btn" id="checkoutBtn" type="button" disabled>Checkout</button>
-  </div>
-</aside>
-
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-grid">
-    <div>
-      <span class="eyebrow">Hand-poured in small batches</span>
-      <h1 class="hero-title">Light that<br>feels like a <em>ritual</em>.</h1>
-      <p class="lead">Sugandh candles are poured from slow-burning coconut-soy wax and dressed in scents built around Indian gardens, monsoon air, and quiet evenings. Follow along at <b>@sugandhcandles1</b>.</p>
-      <div class="hero-actions">
-        <a href="#shop" class="btn-primary">Shop the collection</a>
-        <a href="https://instagram.com/sugandhcandles1" target="_blank" class="btn-ghost">
-          <span class="play-ring">▶</span> Watch us pour
-        </a>
-      </div>
+<main>
+<section class="container hero" id="home">
+  <div class="hero-copy reveal">
+    <span class="eyebrow">Premium nail care • at your doorstep</span>
+    <h1>Your nails.<br><em>Your home.</em><br>Your moment.</h1>
+    <p>Salon-quality nail care without the traffic, waiting or rush. Book a professional MERAKI nail experience and let beauty come to you.</p>
+    <div class="hero-actions">
+      <a href="#book" class="btn btn-primary">Book your appointment <span>→</span></a>
+      <a href="#services" class="btn btn-outline">Explore services</a>
     </div>
-    <div class="candle-scene">
-      <div class="glow-floor"></div>
-      <div class="hero-photo-frame">
-        <img src="https://images.unsplash.com/photo-1757688525739-8d1e13daf44f?q=80&w=900&auto=format&fit=crop" alt="A hand-poured candle burning in a glass jar" loading="eager">
-      </div>
+    <div class="hero-meta">
+      <div class="avatar-stack"><div class="avatar"></div><div class="avatar"></div><div class="avatar"></div></div>
+      <div class="meta-copy"><strong>Made for beautiful moments</strong><span>Professional care, wherever you are.</span></div>
     </div>
+  </div>
+  <div class="hero-art reveal">
+    <div class="blob one"></div><div class="blob two"></div><div class="blob three"></div>
+    <div class="hero-card"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=90" alt="Elegant premium nail art"></div>
+    <div class="float-card right"><div class="float-icon">⌂</div><div><strong>At-home service</strong><small>We come to you</small></div></div>
+    <div class="float-card left"><div class="float-icon">✦</div><div><strong>Premium finish</strong><small>Every appointment</small></div></div>
   </div>
 </section>
 
-<div class="marquee">
-  <div class="marquee-track" id="marqueeTrack">
-    <span>Free shipping over ₹999</span>
-    <span>60hr slow burn</span>
-    <span>100% soy + coconut wax</span>
-    <span>Handmade in small batches</span>
-    <span>Cruelty free</span>
+<div class="marquee"><div class="marquee-track">
+<span>NAILS MADE <b>PERSONAL</b> ✦</span><span>BEAUTY COMES <b>HOME</b> ✦</span><span>YOUR TIME. <b>YOUR SPACE.</b> ✦</span>
+<span>NAILS MADE <b>PERSONAL</b> ✦</span><span>BEAUTY COMES <b>HOME</b> ✦</span><span>YOUR TIME. <b>YOUR SPACE.</b> ✦</span>
+</div></div>
+
+<section class="section about" id="about">
+<div class="container about-grid">
+  <div class="about-images reveal">
+    <img class="big" src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=85" alt="Professional nail care">
+    <img class="small" src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=700&q=85" alt="Nail art detail">
+  </div>
+  <div class="about-text reveal">
+    <span class="eyebrow">Why MERAKI</span>
+    <h2>Salon quality.<br>On your terms.</h2>
+    <p>MERAKI brings a thoughtful, premium nail experience to the comfort of your home. From a quick gel polish refresh to a complete set of extensions, every appointment is designed around your time and your style.</p>
+    <div class="feature-list">
+      <div class="feature"><i>✓</i><strong>Professional care</strong><p>Trained nail artists focused on beautiful finishing.</p></div>
+      <div class="feature"><i>⌂</i><strong>At your doorstep</strong><p>Skip the commute and enjoy the service at home.</p></div>
+      <div class="feature"><i>✦</i><strong>Premium products</strong><p>Professional-grade products for every service.</p></div>
+      <div class="feature"><i>◷</i><strong>Easy booking</strong><p>Choose your service and preferred appointment time.</p></div>
+    </div>
   </div>
 </div>
+</section>
 
-<!-- ===== SHOP ===== -->
-<section id="shop">
+<section class="section story" id="story">
+<div class="container story-grid">
+  <div class="story-copy reveal">
+    <span class="eyebrow">The MERAKI story</span>
+    <h2>Beauty should fit into your life — not the other way around.</h2>
+    <p>We believe a premium beauty experience should feel effortless. That's why MERAKI is built around convenience, comfort and the little details that make a service feel special.</p>
+    <div class="story-note">“You choose the place. You choose the moment. We bring the nail experience.”</div>
+  </div>
+  <div class="story-image reveal"><img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1000&q=85" alt="Beautiful hands and nail art"></div>
+</div>
+</section>
+
+<section class="section services" id="services">
+<div class="container">
   <div class="section-head reveal">
-    <span class="eyebrow">The Collection</span>
-    <h2>Six scents, one slow evening</h2>
-    <p>Each candle is poured by hand and cured for two weeks before it ships, so the throw is even from first light to last.</p>
+    <div><span class="eyebrow">Our services</span><h2>A little luxury for your hands.</h2></div>
+    <p>Choose the finish, length and experience that feels like you. Transparent pricing. Professional care.</p>
   </div>
-  <div class="shop">
-    <div class="product-grid" id="productGrid"></div>
+  <div class="service-grid">
+    <article class="service reveal"><div class="service-img"><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=85" alt="Gel polish"></div><div class="service-body"><div class="service-top"><h3>Gel Polish</h3><span class="price">₹799</span></div><p>A polished, long-lasting salon-quality finish in the comfort of your home.</p><span class="duration">◷ 60 minutes</span></div></article>
+    <article class="service reveal"><div class="service-img"><img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=800&q=85" alt="Gel X nails"></div><div class="service-body"><div class="service-top"><h3>Gel-X</h3><span class="price">₹1,599</span></div><p>Lightweight soft-gel extensions shaped for a beautiful, natural-looking finish.</p><span class="duration">◷ 120 minutes</span></div></article>
+    <article class="service reveal"><div class="service-img"><img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=85" alt="Gel extensions"></div><div class="service-body"><div class="service-top"><h3>Gel Extension</h3><span class="price">₹1,899</span></div><p>Stunning length, shape and a durable premium finish for your chosen look.</p><span class="duration">◷ 120 minutes</span></div></article>
+    <article class="service reveal"><div class="service-img"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85" alt="Natural nail overlay"></div><div class="service-body"><div class="service-top"><h3>Overlay</h3><span class="price">₹1,199</span></div><p>A smooth strengthening gel layer over your natural nails without added length.</p><span class="duration">◷ 60 minutes</span></div></article>
+    <article class="service reveal"><div class="service-img"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85" alt="Nail refill"></div><div class="service-body"><div class="service-top"><h3>Refill</h3><span class="price">₹1,499</span></div><p>Professional maintenance for existing overlay or gel extension nails.</p><span class="duration">◷ 120 minutes</span></div></article>
+    <article class="service reveal"><div class="service-img"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=85" alt="Nail care removal"></div><div class="service-body"><div class="service-top"><h3>Safe Removal</h3><span class="price">From ₹349</span></div><p>Gentle removal designed to protect your natural nails and finish with a clean-up.</p><span class="duration">◷ 30–45 minutes</span></div></article>
   </div>
+</div>
 </section>
 
-<!-- ===== STORY ===== -->
-<section id="story">
-  <div class="story">
-    <div class="story-visual reveal">
-      <svg class="pour-svg" viewBox="0 0 400 460" preserveAspectRatio="xMidYMid meet">
-        <defs>
-          <linearGradient id="pourWax" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#f0cf95"/>
-            <stop offset="100%" stop-color="#c88f42"/>
-          </linearGradient>
-        </defs>
-        <path d="M120,40 Q200,20 260,60 L250,100 Q190,80 130,95 Z" fill="#8a5a6e" opacity=".5"/>
-        <path id="pourStream" d="M180,60 C185,140 185,220 185,260" stroke="url(#pourWax)" stroke-width="10" fill="none" stroke-linecap="round"/>
-        <rect x="120" y="255" width="150" height="150" rx="16" fill="#1c140f" stroke="#e2a44c" stroke-opacity=".35"/>
-        <ellipse id="pourFill" cx="195" cy="270" rx="68" ry="12" fill="url(#pourWax)"/>
-        <circle cx="90" cy="330" r="3" fill="#e2a44c" opacity=".5"/>
-        <circle cx="310" cy="120" r="3" fill="#e2a44c" opacity=".4"/>
-        <circle cx="330" cy="360" r="4" fill="#8a5a6e" opacity=".6"/>
-      </svg>
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Our Craft</span>
-      <h2>Poured slow,<br>burned slower.</h2>
-      <p>Sugandh started on Instagram as a one-woman kitchen-table project in Bengaluru — testing wicks, chasing scent throw, gifting jars to friends. Today every candle still goes out the same door it was poured in.</p>
-      <div class="steps">
-        <div class="step"><span class="num">01</span><div class="txt"><b>Melt & blend</b><span>Coconut-soy wax melted low and slow, blended with skin-safe fragrance oils.</span></div></div>
-        <div class="step"><span class="num">02</span><div class="txt"><b>Hand-pour</b><span>Poured into reusable glass jars at the exact right temperature for a clean set.</span></div></div>
-        <div class="step"><span class="num">03</span><div class="txt"><b>Cure & cut</b><span>Rested for 14 days, then wicks are trimmed and each jar is hand-labelled.</span></div></div>
-      </div>
-    </div>
-  </div>
+<section class="ad">
+<div class="container"><div class="ad-box reveal">
+  <div class="ad-copy"><span class="eyebrow" style="color:var(--yellow)">The MERAKI experience</span><h2>Your favourite salon appointment is now your favourite home appointment.</h2><p>Book the service you love, choose a time that works for you and enjoy professional nail care in your own space.</p><a href="#book" class="btn btn-light">Book your moment →</a></div>
+  <div class="ad-stats"><div class="stat"><b>⌂</b><span>At-home convenience</span></div><div class="stat"><b>✦</b><span>Premium nail care</span></div><div class="stat"><b>◷</b><span>Book around your schedule</span></div><div class="stat"><b>✓</b><span>Professional service</span></div></div>
+</div></div>
 </section>
 
-<!-- ===== INSTAGRAM ===== -->
-<section id="instagram" class="insta">
-  <div class="insta-inner">
-    <div class="reveal">
-      <div class="insta-handle">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#e2a44c" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-        @sugandhcandles1
-      </div>
-      <h2 style="font-family:var(--serif); font-weight:400; font-size:clamp(1.9rem,3.4vw,2.7rem); margin:0 0 16px;">Follow the flame</h2>
-      <p style="color:rgba(244,234,217,.65); max-width:520px; margin:0 auto;">New pours, restock drops, and candle-care tips — every week on Instagram.</p>
-    </div>
-    <div class="insta-grid reveal" id="instaGrid"></div>
-
-    <div class="cta-band reveal">
-      <div>
-        <h3>Want a custom scent for your event?</h3>
-        <p>Weddings, welcome kits, corporate gifting — we hand-blend a signature scent and label just for you.</p>
-      </div>
-      <a href="https://instagram.com/sugandhcandles1" target="_blank" class="btn-primary">DM us on Instagram</a>
-    </div>
-  </div>
+<section class="section reviews" id="reviews">
+<div class="container">
+<div class="section-head reveal"><div><span class="eyebrow">Client love</span><h2>Beautiful nails.<br>Beautiful words.</h2></div><p>A premium service should feel personal from the first booking to the final detail.</p></div>
+<div class="review-grid">
+  <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“The comfort of getting my nails done at home completely changed the experience for me.”</blockquote><div class="review-user"><div class="circle">A</div><div><strong>Happy Client</strong><small>MERAKI customer</small></div></div></article>
+  <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“Professional, relaxing and so convenient. The finish looked exactly how I wanted.”</blockquote><div class="review-user"><div class="circle">S</div><div><strong>Happy Client</strong><small>MERAKI customer</small></div></div></article>
+  <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“No traffic, no waiting — just a beautiful nail appointment in my own space.”</blockquote><div class="review-user"><div class="circle">R</div><div><strong>Happy Client</strong><small>MERAKI customer</small></div></div></article>
+</div>
+</div>
 </section>
 
-<!-- ===== REVIEWS ===== -->
-<section id="reviews">
-  <div class="section-head reveal">
-    <span class="eyebrow">Loved by 4,000+ homes</span>
-    <h2>What people are saying</h2>
+<section class="section booking" id="book">
+<div class="container">
+<div class="booking-wrap reveal">
+  <div class="booking-info">
+    <span class="eyebrow">Book at home</span>
+    <h2>Your next nail day starts here.</h2>
+    <p>Tell us what you're looking for and we'll help you take the next step toward your MERAKI appointment.</p>
+    <div class="steps"><div class="step"><b>1</b>Choose your service</div><div class="step"><b>2</b>Pick your preferred date</div><div class="step"><b>3</b>We'll take it from there</div></div>
   </div>
-  <div class="testi-grid" id="testiGrid"></div>
-</section>
-
-<!-- ===== NEWSLETTER ===== -->
-<section class="footer-cta reveal">
-  <h2>Get first access to new scents.</h2>
-  <p>Join the list for early drops, restock alerts, and the occasional candle-care tip. No spam, just soft light.</p>
-  <form class="subscribe" id="subForm">
-    <input type="email" required placeholder="you@email.com">
-    <button type="submit">Join</button>
+  <form class="form" id="bookingForm">
+    <h3>Let's get you booked ✦</h3>
+    <div class="form-grid">
+      <div class="field"><label>YOUR NAME</label><input required placeholder="Enter your name"></div>
+      <div class="field"><label>PHONE NUMBER</label><input required type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      <div class="field"><label>SELECT SERVICE</label><select required><option value="">Choose a service</option><option>Gel Polish — ₹799</option><option>Gel-X — ₹1,599</option><option>Gel Extension — ₹1,899</option><option>Overlay — ₹1,199</option><option>Refill — ₹1,499</option><option>Removal</option></select></div>
+      <div class="field"><label>PREFERRED DATE</label><input required type="date"></div>
+      <div class="field full"><label>ADDRESS / AREA</label><input required placeholder="Where should we come to you?"></div>
+      <div class="field full"><label>ANYTHING WE SHOULD KNOW? (OPTIONAL)</label><textarea placeholder="Your preferred style, nail shape, questions..."></textarea></div>
+    </div>
+    <button class="btn btn-primary" type="submit">Send booking request →</button>
+    <div class="form-msg" id="formMsg">Thank you! Your request has been received.</div>
   </form>
+</div>
+</div>
 </section>
 
-<footer>
-  <div class="foot-brand">
-    <div class="logo"><span class="dot"></span> Sugandh</div>
-    <p>Hand-poured candles made in small batches in Bengaluru. Slow scent for slow evenings.</p>
+<section class="section contact" id="contact">
+<div class="container contact-grid">
+  <div class="reveal">
+    <span class="eyebrow" style="color:var(--yellow)">Let's talk</span>
+    <h2>Questions?<br>We're here.</h2>
+    <p>Whether you're booking your first appointment, exploring services or simply want to know more about MERAKI, we'd love to hear from you.</p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:support@MERAKI.in"><span>Email us</span><strong>support@MERAKI.in ↗</strong></a>
+      <a class="contact-link" href="tel:+919686831282"><span>Call us</span><strong>+91 96868 31282 ↗</strong></a>
+      <a class="contact-link" href="https://www.instagram.com/" target="_blank" rel="noopener"><span>Follow the journey</span><strong>Instagram ↗</strong></a>
+    </div>
   </div>
-  <div>
-    <h4>Shop</h4>
-    <ul><li><a href="#shop">All candles</a></li><li><a href="#shop">Gift sets</a></li><li><a href="#shop">Bestsellers</a></li></ul>
+  <div class="contact-card reveal">
+    <span class="eyebrow">MERAKI</span><h3>Premium nail care, made convenient.</h3><p>Salon-quality nail services designed around your comfort and schedule.</p>
+    <div class="hours"><div><span>Booking</span><strong>Online / App</strong></div><div><span>Service</span><strong>At your doorstep</strong></div><div><span>Support</span><strong>We're here to help</strong></div></div>
+    <a href="#book" class="btn btn-primary" style="margin-top:22px;width:100%">Book your appointment</a>
   </div>
-  <div>
-    <h4>Studio</h4>
-    <ul><li><a href="#story">Our craft</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#instagram">Community</a></li></ul>
-  </div>
-  <div>
-    <h4>Connect</h4>
-    <ul><li><a href="https://instagram.com/sugandhcandles1" target="_blank">Instagram — @sugandhcandles1</a></li><li><a href="#">WhatsApp orders</a></li><li><a href="#">Wholesale enquiries</a></li></ul>
-  </div>
-</footer>
-<div class="foot-bottom">
-  <span>© <span id="year"></span> Sugandh Candle Co. Demo site.</span>
-  <span>Made with warmth in Bengaluru</span>
 </div>
+</section>
+</main>
 
-<div class="toast" id="toast"></div>
+<footer><div class="container footer-row"><div>© 2026 MERAKI. Premium nail care at your doorstep.</div> <div class="Phani">Designed by <a class="social1" href="https://phariea.netlify.app" target="_blank" rel="noopener" aria-label="Portfolio">Phariea</a></div> <div class="socials"><a class="social" href="#" aria-label="Instagram">◎</a><a class="social" href="mailto:support@MERAKI.in" aria-label="Email">✉</a></div></div></footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-/* ---------- header scroll state ---------- */
-const header = document.getElementById('siteHeader');
-window.addEventListener('scroll', ()=>{
-  header.classList.toggle('scrolled', window.scrollY > 40);
-});
-
-/* ---------- mobile menu ---------- */
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', ()=>{
-  mobileMenu.classList.toggle('show');
-});
-mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>mobileMenu.classList.remove('show')));
-
-/* ---------- reveal on scroll ---------- */
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-},{threshold:.15});
-revealEls.forEach(el=>io.observe(el));
-
-/* ---------- marquee duplicate for seamless loop ---------- */
-const track = document.getElementById('marqueeTrack');
-track.innerHTML += track.innerHTML;
-
-/* ---------- product photography (real photos, tinted per scent for variety) ---------- */
-const PHOTO_A = "https://images.unsplash.com/photo-1663089889826-0575c6ae19de?q=80&w=700&auto=format&fit=crop";
-const PHOTO_B = "https://images.unsplash.com/photo-1757688525739-8d1e13daf44f?q=80&w=700&auto=format&fit=crop";
-const PHOTO_C = "https://images.unsplash.com/photo-1665124197613-ffbb755f4ac2?q=80&w=700&auto=format&fit=crop";
-
-/* ---------- product data ---------- */
-const products = [
-  { name:"Monsoon Petrichor", scent:"Rain-soaked earth & vetiver", price:549, img:PHOTO_B, filter:"saturate(1.1) contrast(1.05)", tag:"Bestseller" },
-  { name:"Mogra Twilight",    scent:"Jasmine, tuberose & musk",  price:599, img:PHOTO_A, filter:"hue-rotate(300deg) saturate(1.3)", tag:"New" },
-  { name:"Chandan Ember",     scent:"Sandalwood & warm amber",   price:649, img:PHOTO_C, filter:"saturate(1.15) sepia(.15)" },
-  { name:"Neem Garden",       scent:"Green fig & neem leaf",     price:529, img:PHOTO_A, filter:"hue-rotate(70deg) saturate(1.2)" },
-  { name:"Kesar Milk",        scent:"Saffron, cardamom & cream", price:579, img:PHOTO_C, filter:"hue-rotate(-15deg) saturate(1.25) brightness(1.05)", tag:"Limited" },
-  { name:"Dusk Oud",          scent:"Smoked oud & dark rose",    price:699, img:PHOTO_C, filter:"hue-rotate(255deg) saturate(1.3) brightness(.85)" },
-  { name:"Coconut Sands",     scent:"Toasted coconut & tonka",   price:539, img:PHOTO_B, filter:"sepia(.35) saturate(1.1)" },
-  { name:"Wild Fig Study",    scent:"Fig leaf & cedar wood",     price:589, img:PHOTO_A, filter:"hue-rotate(100deg) saturate(1.05)" },
-];
-
-const grid = document.getElementById('productGrid');
-products.forEach((p, i)=>{
-  const card = document.createElement('div');
-  card.className = 'card reveal';
-  card.style.transitionDelay = (i%4)*0.06 + 's';
-  card.innerHTML = `
-    ${p.tag ? `<span class="tag">${p.tag}</span>` : ''}
-    <div class="stage"><img src="${p.img}" alt="${p.name} candle" style="filter:${p.filter}" loading="lazy"></div>
-    <h3>${p.name}</h3>
-    <p class="scent">${p.scent}</p>
-    <div class="price-row">
-      <span class="price">₹${p.price}</span>
-      <button class="add-btn" data-name="${p.name}" data-price="${p.price}">Add to cart</button>
-    </div>
-  `;
-  grid.appendChild(card);
-  io.observe(card);
-});
-
-/* ---------- cart state & rendering ---------- */
-let cart = []; // { name, price, qty, img, filter }
-const cartOverlay = document.getElementById('cartOverlay');
-const cartDrawer = document.getElementById('cartDrawer');
-const cartBody = document.getElementById('cartBody');
-const cartCountEl = document.getElementById('cartCount');
-const cartSubtotalEl = document.getElementById('cartSubtotal');
-const checkoutBtn = document.getElementById('checkoutBtn');
-
-function findProduct(name){ return products.find(p=>p.name===name); }
-
-function addToCart(name, price){
-  const existing = cart.find(i=>i.name===name);
-  if(existing){
-    existing.qty++;
-  } else {
-    const p = findProduct(name);
-    cart.push({ name, price, qty:1, img:p ? p.img : '', filter:p ? p.filter : '' });
-  }
-  renderCart();
-  showToast(`✦ ${name} added to cart`);
-}
-
-function changeQty(name, delta){
-  const item = cart.find(i=>i.name===name);
-  if(!item) return;
-  item.qty += delta;
-  if(item.qty <= 0){
-    cart = cart.filter(i=>i.name!==name);
-  }
-  renderCart();
-}
-
-function renderCart(){
-  const totalQty = cart.reduce((s,i)=>s+i.qty, 0);
-  cartCountEl.textContent = totalQty;
-
-  if(cart.length === 0){
-    cartBody.innerHTML = `<p class="cart-empty">Your cart is empty — add a candle to get started.</p>`;
-  } else {
-    cartBody.innerHTML = cart.map(i => `
-      <div class="cart-item">
-        <div class="ci-photo"><img src="${i.img}" alt="${i.name}" style="filter:${i.filter}"></div>
-        <div class="ci-info">
-          <b>${i.name}</b>
-          <span>₹${i.price} each</span>
-        </div>
-        <div class="ci-actions">
-          <button class="qty-btn" data-name="${i.name}" data-delta="-1" aria-label="Decrease quantity">−</button>
-          <span class="qty-num">${i.qty}</span>
-          <button class="qty-btn" data-name="${i.name}" data-delta="1" aria-label="Increase quantity">+</button>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  const subtotal = cart.reduce((s,i)=>s + i.qty*i.price, 0);
-  cartSubtotalEl.textContent = `₹${subtotal}`;
-  checkoutBtn.disabled = cart.length === 0;
-}
-
-cartBody.addEventListener('click', (e)=>{
-  const btn = e.target.closest('.qty-btn');
-  if(!btn) return;
-  changeQty(btn.dataset.name, parseInt(btn.dataset.delta, 10));
-});
-
-grid.addEventListener('click', (e)=>{
-  if(e.target.classList.contains('add-btn')){
-    addToCart(e.target.dataset.name, parseFloat(e.target.dataset.price));
-  }
-});
-
-/* ---------- open / close drawer ---------- */
-function openCart(){
-  cartDrawer.classList.add('open');
-  cartOverlay.classList.add('open');
-}
-function closeCart(){
-  cartDrawer.classList.remove('open');
-  cartOverlay.classList.remove('open');
-}
-document.getElementById('cartBtn').addEventListener('click', openCart);
-document.getElementById('cartCloseBtn').addEventListener('click', closeCart);
-cartOverlay.addEventListener('click', closeCart);
-document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeCart(); });
-
-checkoutBtn.addEventListener('click', ()=>{
-  if(cart.length === 0) return;
-  showToast("✦ Order placed — we'll DM you on Instagram to confirm");
-  cart = [];
-  renderCart();
-  closeCart();
-});
-
-renderCart();
-
-/* ---------- instagram grid (illustrated tiles, no external images) ---------- */
-const instaSeeds = [
-  {bg:"linear-gradient(135deg,#3a2a20,#e2a44c)", cap:"Fresh pour Monday"},
-  {bg:"linear-gradient(135deg,#5a3346,#c98ea8)", cap:"Mogra restock"},
-  {bg:"linear-gradient(135deg,#1c140f,#b9752a)", cap:"Studio corner"},
-  {bg:"linear-gradient(135deg,#6f8a5a,#dfe6c9)", cap:"Wick trim tip"},
-  {bg:"linear-gradient(135deg,#d99b3f,#f4e0ad)", cap:"Kesar Milk launch"},
-];
-const instaGrid = document.getElementById('instaGrid');
-instaSeeds.forEach((s,i)=>{
-  const tile = document.createElement('a');
-  tile.href = "https://instagram.com/sugandhcandles1";
-  tile.target = "_blank";
-  tile.className = "insta-tile";
-  tile.style.background = s.bg;
-  tile.innerHTML = `<div class="overlay">❤ ${120+i*37} &nbsp; 💬 ${8+i*3}</div>`;
-  instaGrid.appendChild(tile);
-});
-
-/* ---------- testimonials ---------- */
-const testimonials = [
-  {name:"Ananya R.", role:"Bengaluru", text:"The Mogra Twilight filled my whole living room in under ten minutes. Genuinely the best throw I've had from an Indian candle brand.", init:"A"},
-  {name:"Rohit K.", role:"Mumbai", text:"Ordered the Kesar Milk on a whim after seeing it on their Instagram — smells exactly like the reel promised. Burns clean too.", init:"R"},
-  {name:"Priya S.", role:"Pune", text:"Got a custom scent made for my sister's wedding favors through their DMs. Every guest asked where it was from.", init:"P"},
-];
-const testiGrid = document.getElementById('testiGrid');
-testimonials.forEach((t,i)=>{
-  const card = document.createElement('div');
-  card.className = 'testi reveal';
-  card.style.transitionDelay = i*0.08 + 's';
-  card.innerHTML = `
-    <div class="stars">★★★★★</div>
-    <p>"${t.text}"</p>
-    <div class="who">
-      <div class="avatar">${t.init}</div>
-      <div><b>${t.name}</b><span>${t.role}</span></div>
-    </div>
-  `;
-  testiGrid.appendChild(card);
-  io.observe(card);
-});
-
-/* ---------- newsletter ---------- */
-document.getElementById('subForm').addEventListener('submit', (e)=>{
-  e.preventDefault();
-  showToast('✦ You\'re on the list — welcome to Sugandh');
-  e.target.reset();
-});
-
-/* ---------- toast ---------- */
-let toastTimer;
-function showToast(msg){
-  const toast = document.getElementById('toast');
-  toast.textContent = msg;
-  toast.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>toast.classList.remove('show'), 2600);
-}
+const menuBtn=document.getElementById("menuBtn"),navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("open");document.body.classList.toggle("menu-open");menuBtn.textContent=navLinks.classList.contains("open")?"×":"☰"});
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");document.body.classList.remove("menu-open");menuBtn.textContent="☰"}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+const form=document.getElementById("bookingForm"),msg=document.getElementById("formMsg"),toast=document.getElementById("toast");
+form.addEventListener("submit",e=>{e.preventDefault();msg.style.display="block";toast.classList.add("show");form.reset();setTimeout(()=>toast.classList.remove("show"),3500)});
+document.querySelector('input[type="date"]').min=new Date().toISOString().split("T")[0];
 </script>
 </body>
 </html>
