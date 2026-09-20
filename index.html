@@ -3,169 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Serene Touch Wellness by Ramesh — professional massage therapy and home wellness sessions in Bangalore.">
-<title>Serene Touch Wellness | Ramesh</title>
+<meta name="description" content="LumiGlow Candles — handmade scented candles crafted to make your space glow.">
+<title>LumiGlow Candles | Handmade Scented Candles</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-:root{--ink:#24352f;--sage:#71887b;--cream:#f5f1e8;--paper:#fffdf8;--gold:#b6925c;--muted:#68736e;--line:#dfe3da}
+:root{--cream:#fbf5eb;--cream2:#f3e7d5;--brown:#4a3025;--brown2:#765544;--gold:#c99a5b;--white:#fffdf9;--text:#34251f;--muted:#7d6b60}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--text);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-button,input,select,textarea{font:inherit}
-header{position:fixed;top:0;left:0;width:100%;z-index:20;background:rgba(245,241,232,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(36,53,47,.08)}
-.nav{max-width:1180px;margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
-.logo{font-family:"Playfair Display",serif;font-size:24px;letter-spacing:-.5px}.logo span{display:block;font:500 10px "DM Sans";letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:-5px}
-.navlinks{display:flex;gap:30px;font-size:14px;color:#45534d}.navlinks a:hover{color:var(--gold)}
-.navcta{background:var(--ink);color:#fff;padding:11px 18px;border-radius:30px;font-size:13px}
-.menu{display:none;border:0;background:none;font-size:25px;color:var(--ink)}
-.hero{min-height:760px;padding:145px 24px 80px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;max-width:1180px;margin:auto}
-.kicker{display:flex;align-items:center;gap:10px;color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:2.5px;font-weight:700;margin-bottom:20px}.kicker i{width:34px;height:1px;background:var(--gold)}
-h1{font:500 clamp(52px,7vw,86px)/.98 "Playfair Display",serif;letter-spacing:-3px;max-width:650px}
-.hero p{font-size:17px;color:var(--muted);max-width:550px;margin:25px 0 32px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:14px 22px;border-radius:4px;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px}.btn.dark{background:var(--ink);color:#fff}.btn.light{background:transparent}
-.note{margin-top:30px;display:flex;gap:20px;font-size:12px;color:#65706b}.note strong{color:var(--ink);display:block}
-.hero-art{position:relative;min-height:510px;display:flex;align-items:center;justify-content:center}
-.orb{width:390px;height:480px;border-radius:48% 48% 44% 44%;background:linear-gradient(145deg,#d8dfd5,#aebeb2);position:relative;transform:rotate(5deg);overflow:hidden;box-shadow:25px 25px 0 rgba(113,136,123,.12)}
-.orb:before{content:"";position:absolute;width:190px;height:270px;border-radius:50%;background:rgba(255,255,255,.32);top:55px;left:75px;filter:blur(12px)}
-.cardfloat{position:absolute;background:var(--paper);padding:22px 24px;box-shadow:0 18px 50px rgba(36,53,47,.13);border:1px solid rgba(36,53,47,.07)}
-.cardfloat.top{top:38px;right:0}.cardfloat.bottom{bottom:35px;left:0}
-.cardfloat small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.5px}.cardfloat b{font-family:"Playfair Display";font-size:22px;font-weight:500}
-section{padding:100px 24px}.wrap{max-width:1180px;margin:auto}
-.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.sectionhead h2{font:500 clamp(36px,5vw,56px)/1.05 "Playfair Display",serif;letter-spacing:-1.5px}.sectionhead p{max-width:420px;color:var(--muted);font-size:14px}
-.services{background:var(--paper)}
-.servicegrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.service{padding:27px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:180px;transition:.3s}.service:hover{background:#f2eee4;transform:translateY(-3px)}.num{font-size:11px;color:var(--gold);letter-spacing:2px}.service h3{font:500 25px "Playfair Display";margin:20px 0 8px}.service p{font-size:13px;color:var(--muted)}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.portrait{min-height:490px;background:#cbd4ca;position:relative;overflow:hidden}.portrait:after{content:"R";position:absolute;font:500 360px "Playfair Display";color:rgba(255,255,255,.4);left:50%;top:45%;transform:translate(-50%,-50%)}
-.badge{position:absolute;bottom:25px;right:25px;background:var(--paper);padding:18px 20px;z-index:2}.badge b{display:block;font-family:"Playfair Display";font-size:20px}.aboutcopy h2{font:500 52px/1.05 "Playfair Display";letter-spacing:-1.5px}.aboutcopy p{color:var(--muted);margin:20px 0}.ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}.ticks div{font-size:13px}.ticks span{display:inline-block;width:20px;height:20px;background:#dfe7de;border-radius:50%;text-align:center;line-height:20px;margin-right:8px;font-size:11px}
-.home{background:var(--ink);color:#fff}.homegrid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.home h2{font:500 54px/1.05 "Playfair Display";letter-spacing:-1.5px}.home p{color:#bdc8c1;margin:20px 0}.zones{display:flex;flex-wrap:wrap;gap:8px}.zones span{border:1px solid #52635b;border-radius:30px;padding:8px 13px;font-size:12px;color:#d6ddd8}
-.booking{background:#e9e6db}.bookinggrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.booking h2{font:500 50px/1.05 "Playfair Display"}.bookingcopy p{color:var(--muted);margin:18px 0}.bookingform{background:var(--paper);padding:35px;box-shadow:0 20px 55px rgba(36,53,47,.08)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin-bottom:16px}.field.full{grid-column:1/-1}.field label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:#6a756f;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;border:1px solid #d8ddd5;background:#fff;padding:13px 14px;outline:none;color:var(--ink);border-radius:2px}.field textarea{min-height:90px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sage)}.submit{width:100%;border:0;background:var(--ink);color:#fff;padding:15px;cursor:pointer;font-weight:700}.formnote{font-size:11px;color:#77817c;margin-top:10px;text-align:center}
-footer{padding:35px 24px;background:#1b2924;color:#b9c5be}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}.foot b{font:500 21px "Playfair Display";color:#fff}
-.toast{position:fixed;right:22px;bottom:22px;background:var(--ink);color:#fff;padding:16px 20px;max-width:360px;box-shadow:0 12px 30px #0003;transform:translateY(130px);opacity:0;transition:.35s;z-index:50;font-size:13px}.toast.show{transform:none;opacity:1}
-@media(max-width:800px){
-.navlinks,.navcta{display:none}.menu{display:block}.nav.open .navlinks{display:flex;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:20px 24px;flex-direction:column;gap:17px;border-bottom:1px solid var(--line)}.hero{grid-template-columns:1fr;padding-top:125px;gap:35px}.hero-art{min-height:420px}.orb{width:300px;height:370px}.cardfloat.top{right:5px}.cardfloat.bottom{left:5px}.servicegrid{grid-template-columns:1fr 1fr}.about,.homegrid,.bookinggrid{grid-template-columns:1fr;gap:40px}.portrait{min-height:400px}.sectionhead{display:block}.sectionhead p{margin-top:15px}.home h2,.booking h2,.aboutcopy h2{font-size:44px}
+button{font:inherit}
+.nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(251,245,235,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,48,37,.08)}
+.logo{font-size:25px;font-weight:700;letter-spacing:-.5px;color:var(--brown)}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:34px;align-items:center;font-family:Arial,sans-serif;font-size:13px;font-weight:600}
+.navlinks a{transition:.25s}
+.navlinks a:hover{color:var(--gold)}
+.navbtn{padding:11px 18px;border:1px solid var(--brown);border-radius:30px}
+.menu{display:none;border:0;background:none;font-size:25px;color:var(--brown);cursor:pointer}
+.hero{min-height:100vh;padding:125px 6% 70px;display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center;position:relative}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:#ead4b5;filter:blur(5px);opacity:.32;right:-130px;top:100px}
+.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-size:11px;font-weight:700;margin-bottom:20px}
+.hero h1{font-size:clamp(52px,7vw,88px);line-height:.93;letter-spacing:-4px;color:var(--brown);max-width:650px}
+.hero h1 em{font-weight:400;color:var(--gold)}
+.hero p{font-family:Arial,sans-serif;color:var(--muted);line-height:1.8;max-width:500px;margin:27px 0 31px;font-size:15px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn{padding:14px 23px;border-radius:30px;font-family:Arial,sans-serif;font-size:13px;font-weight:700;transition:.3s;display:inline-flex;align-items:center;justify-content:center}
+.btn-primary{background:var(--brown);color:white}
+.btn-primary:hover{background:#684435;transform:translateY(-2px)}
+.btn-outline{border:1px solid #bca897;color:var(--brown)}
+.btn-outline:hover{border-color:var(--brown);transform:translateY(-2px)}
+.hero-visual{height:570px;position:relative;display:flex;align-items:center;justify-content:center}
+.hero-img{width:min(430px,82%);height:510px;object-fit:cover;border-radius:220px 220px 24px 24px;box-shadow:0 30px 60px rgba(74,48,37,.18);filter:saturate(.9)}
+.float-card{position:absolute;bottom:18px;left:5%;background:rgba(255,253,249,.95);padding:18px 20px;border-radius:15px;box-shadow:0 12px 30px rgba(74,48,37,.12);max-width:190px}
+.float-card small{font-family:Arial,sans-serif;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1.5px}
+.float-card strong{display:block;font-size:18px;margin-top:5px;color:var(--brown)}
+.section{padding:100px 6%}
+.section-head{text-align:center;max-width:650px;margin:0 auto 45px}
+.section-head .eyebrow{margin-bottom:12px}
+.section-head h2{font-size:clamp(35px,5vw,55px);color:var(--brown);letter-spacing:-2px}
+.section-head p{font-family:Arial,sans-serif;color:var(--muted);font-size:14px;line-height:1.7;margin-top:14px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(74,48,37,.06);transition:.35s}
+.product:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(74,48,37,.12)}
+.product-img{height:290px;width:100%;object-fit:cover}
+.product-info{padding:18px}
+.product-info h3{font-size:21px;color:var(--brown);margin-bottom:7px}
+.product-info p{font-family:Arial,sans-serif;color:var(--muted);font-size:12px;line-height:1.5;min-height:36px}
+.product-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:15px}
+.price{font-family:Arial,sans-serif;font-size:14px;font-weight:700;color:var(--brown)}
+.order{border:0;background:var(--cream2);color:var(--brown);padding:9px 13px;border-radius:20px;font-family:Arial,sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:.25s}
+.order:hover{background:var(--brown);color:white}
+.story{background:var(--brown);color:white;display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.story-img{width:100%;height:500px;object-fit:cover;border-radius:18px}
+.story .eyebrow{color:#d9b477}
+.story h2{font-size:clamp(38px,5vw,60px);line-height:1;letter-spacing:-2px;margin-bottom:22px}
+.story p{font-family:Arial,sans-serif;color:#e8dcd3;line-height:1.8;font-size:14px;max-width:520px;margin-bottom:20px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.feature{border:1px solid rgba(255,255,255,.16);padding:20px;border-radius:14px}
+.feature b{font-size:20px;display:block;margin-bottom:7px}
+.feature span{font-family:Arial,sans-serif;font-size:11px;color:#d7c8bd;line-height:1.5}
+.ritual{background:#f2e6d5}
+.ritual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.ritual-card{text-align:center;padding:28px 22px}
+.icon{width:65px;height:65px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 17px;font-size:25px}
+.ritual-card h3{font-size:22px;color:var(--brown);margin-bottom:9px}
+.ritual-card p{font-family:Arial,sans-serif;color:var(--muted);font-size:12px;line-height:1.7}
+.instagram{padding-bottom:110px}
+.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.insta-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;transition:.3s}
+.insta-grid img:hover{transform:scale(.97);filter:brightness(.9)}
+.cta{margin:0 6% 90px;border-radius:24px;padding:75px 30px;text-align:center;background:var(--brown);color:white;position:relative;overflow:hidden}
+.cta:after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-80px;top:-130px}
+.cta h2{font-size:clamp(38px,5vw,58px);letter-spacing:-2px;margin-bottom:13px}
+.cta p{font-family:Arial,sans-serif;color:#dfd0c6;font-size:13px;margin-bottom:25px}
+.cta .btn{background:#fff;color:var(--brown)}
+.footer{padding:35px 6%;border-top:1px solid rgba(74,48,37,.1);display:flex;justify-content:space-between;align-items:center;gap:20px}
+.footer p,.footer a{font-family:Arial,sans-serif;font-size:11px;color:var(--muted)}
+.social{display:flex;gap:16px}
+.social a:hover{color:var(--gold)}
+.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--brown);color:white;padding:13px 20px;border-radius:30px;font-family:Arial,sans-serif;font-size:12px;opacity:0;pointer-events:none;transition:.3s;z-index:200}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){
+.products{grid-template-columns:repeat(2,1fr)}
+.hero{grid-template-columns:1fr;gap:25px}.hero-visual{height:500px}.hero-img{height:450px}
+.story{grid-template-columns:1fr;gap:40px}.story-img{height:420px}
 }
-@media(max-width:520px){
-section{padding:75px 18px}.nav{padding:0 18px}.hero{padding-left:18px;padding-right:18px}.servicegrid{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.bookingform{padding:22px}.hero-art{min-height:370px}.orb{width:255px;height:330px}.cardfloat{padding:15px}.cardfloat b{font-size:18px}.note{display:block}.note div{margin-bottom:8px}.foot{display:block}.foot div+div{margin-top:10px}
+@media(max-width:650px){
+.nav{padding:16px 5%}.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;width:100%;background:var(--cream);padding:22px 5%;flex-direction:column;align-items:flex-start;gap:20px;box-shadow:0 12px 25px rgba(74,48,37,.08)}.navlinks.open{display:flex}.navbtn{padding:0;border:0}
+.hero{padding:105px 5% 45px}.hero h1{font-size:56px;letter-spacing:-3px}.hero-visual{height:430px}.hero-img{height:390px;width:85%}.float-card{left:0;bottom:5px}
+.section{padding:75px 5%}.products{grid-template-columns:1fr 1fr;gap:12px}.product-img{height:220px}.product-info{padding:14px}.product-info h3{font-size:18px}.product-info p{font-size:11px}
+.story{padding:75px 5%}.story-img{height:330px}.features{grid-template-columns:1fr}
+.ritual-grid{grid-template-columns:1fr;gap:5px}.insta-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+.cta{margin:0 5% 65px;padding:60px 20px}.footer{padding:28px 5%;flex-direction:column;text-align:center}
 }
 </style>
 </head>
 <body>
-<header>
-<nav class="nav" id="nav">
-<a href="#" class="logo">Serene Touch<span>Wellness • Bangalore</span></a>
-<div class="navlinks"><a href="#services">Therapies</a><a href="#ramesh">About Ramesh</a><a href="#home">Home Service</a><a href="#book">Appointment</a></div>
-<a class="navcta" href="#book">Book a Session</a><button class="menu" id="menu">☰</button>
+
+<header class="nav">
+<a href="#" class="logo">Lumi<span>Glow</span>.</a>
+<button class="menu" id="menu" aria-label="Open menu">☰</button>
+<nav class="navlinks" id="navlinks">
+<a href="#home">Home</a>
+<a href="#collection">Collection</a>
+<a href="#story">Our Story</a>
+<a href="#instagram">Instagram</a>
+<a class="navbtn" href="https://instagram.com/lumiglowcandles.in" target="_blank">Shop on Instagram ↗</a>
 </nav>
 </header>
 
 <main>
-<section class="hero">
+<section class="hero" id="home">
 <div>
-<div class="kicker"><i></i> Professional Wellness Therapy</div>
-<h1>Slow down.<br>Feel restored.</h1>
-<p>Personalised massage therapy by Ramesh, designed around relaxation, muscle recovery and mindful wellbeing — in a calm studio setting or at your home in Bangalore.</p>
-<div class="actions"><a class="btn dark" href="#book">Make an appointment ↗</a><a class="btn light" href="#services">Explore therapies</a></div>
-<div class="note"><div><strong>Women-friendly</strong>Respectful, professional sessions</div><div><strong>Home visits</strong>Available across Bangalore</div></div>
+<div class="eyebrow">Handmade • Scented • Aesthetic</div>
+<h1>Light a little <em>beautiful.</em></h1>
+<p>Hand-poured candles made with love, soft fragrances and beautiful little details — created to turn everyday moments into warm memories.</p>
+<div class="hero-actions">
+<a href="#collection" class="btn btn-primary">Explore Collection</a>
+<a href="https://instagram.com/lumiglowcandles.in" target="_blank" class="btn btn-outline">Follow @lumiglowcandles.in</a>
 </div>
-<div class="hero-art">
-<div class="orb"></div>
-<div class="cardfloat top"><small>Therapist</small><b>Ramesh</b></div>
-<div class="cardfloat bottom"><small>Special focus</small><b>Relax • Recover • Reset</b></div>
 </div>
-</section>
-
-<section class="services" id="services">
-<div class="wrap">
-<div class="sectionhead"><h2>Choose your<br>way to unwind.</h2><p>Every session begins with a short consultation so the pressure, pace and focus can be adapted to your comfort and wellness goals.</p></div>
-<div class="servicegrid">
-<div class="service"><span class="num">01</span><h3>Swedish Massage</h3><p>Gentle-to-moderate flowing techniques for relaxation and full-body ease.</p></div>
-<div class="service"><span class="num">02</span><h3>Deep Tissue</h3><p>Focused, firmer work for areas of muscular tension and everyday stiffness.</p></div>
-<div class="service"><span class="num">03</span><h3>Balinese Massage</h3><p>A traditional-inspired blend of pressure, stretching and rhythmic techniques.</p></div>
-<div class="service"><span class="num">04</span><h3>Aromatherapy</h3><p>A soothing massage experience paired with selected aromatic oils.</p></div>
-<div class="service"><span class="num">05</span><h3>Head • Neck • Shoulder</h3><p>A focused session for people carrying tension through the upper body.</p></div>
-<div class="service"><span class="num">06</span><h3>Foot Massage</h3><p>Relaxing pressure work focused on tired feet and lower-leg comfort.</p></div>
-<div class="service"><span class="num">07</span><h3>Abhyanga</h3><p>An oil-based traditional wellness massage inspired by Ayurvedic practice.</p></div>
-<div class="service"><span class="num">08</span><h3>Lomi Lomi</h3><p>Long, flowing massage movements inspired by Hawaiian bodywork traditions.</p></div>
-<div class="service"><span class="num">09</span><h3>Back Massage</h3><p>A focused treatment for the back, with pressure adjusted to your comfort.</p></div>
-<div class="service"><span class="num">10</span><h3>Yoni Massage</h3><p>A private, consent-led intimate wellness session, discussed and agreed before booking.</p></div>
-</div>
+<div class="hero-visual">
+<img class="hero-img" src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=700&q=85" alt="Aesthetic scented candle">
+<div class="float-card"><small>Our signature mood</small><strong>Warm. Calm. You.</strong></div>
 </div>
 </section>
 
-<section id="ramesh">
-<div class="wrap about">
-<div class="portrait"><div class="badge"><small>YOUR THERAPIST</small><b>Ramesh</b></div></div>
-<div class="aboutcopy">
-<div class="kicker"><i></i> The person behind Serene Touch</div>
-<h2>Professional hands. Respectful care.</h2>
-<p>Serene Touch Wellness is built around one simple idea: a massage should leave you feeling comfortable, heard and genuinely cared for.</p>
-<p>Ramesh provides personalised sessions with a calm, professional approach and clear communication throughout the appointment.</p>
-<div class="ticks"><div><span>✓</span>Women-friendly environment</div><div><span>✓</span>Professional boundaries</div><div><span>✓</span>Pressure tailored to you</div><div><span>✓</span>Privacy & comfort first</div></div>
-<a class="btn dark" href="#book">Request an appointment</a>
+<section class="section" id="collection">
+<div class="section-head">
+<div class="eyebrow">The collection</div>
+<h2>Candles with character.</h2>
+<p>From cute statement pieces to calming scented jars, find a candle that feels like it belongs in your space.</p>
+</div>
+<div class="products">
+<article class="product">
+<img class="product-img" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=700&q=85" alt="Vanilla candle">
+<div class="product-info"><h3>Vanilla Cloud</h3><p>Soft, creamy and comforting with a warm vanilla finish.</p><div class="product-bottom"><span class="price">₹399</span><button class="order" data-name="Vanilla Cloud">Enquire</button></div></div>
+</article>
+<article class="product">
+<img class="product-img" src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=700&q=85" alt="Floral candle">
+<div class="product-info"><h3>Bloom</h3><p>A delicate floral mood designed for slow evenings.</p><div class="product-bottom"><span class="price">₹449</span><button class="order" data-name="Bloom">Enquire</button></div></div>
+</article>
+<article class="product">
+<img class="product-img" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=700&q=85" alt="Decorative candle">
+<div class="product-info"><h3>Little Muse</h3><p>A sculptural candle made to look gorgeous even unlit.</p><div class="product-bottom"><span class="price">₹349</span><button class="order" data-name="Little Muse">Enquire</button></div></div>
+</article>
+<article class="product">
+<img class="product-img" src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=700&q=85" alt="Luxury candle">
+<div class="product-info"><h3>Amber Glow</h3><p>Rich amber notes for a warm, cozy and luxe atmosphere.</p><div class="product-bottom"><span class="price">₹499</span><button class="order" data-name="Amber Glow">Enquire</button></div></div>
+</article>
+</div>
+</section>
+
+<section class="section story" id="story">
+<img class="story-img" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1000&q=85" alt="Handmade candle making">
+<div>
+<div class="eyebrow">Made by hand</div>
+<h2>Small batch.<br>Big feeling.</h2>
+<p>At LumiGlow, every candle is created with attention to the little things — the shape, the scent, the texture and the way it makes your room feel.</p>
+<p>Whether you're treating yourself or gifting someone special, each piece is made to add a little glow to their day.</p>
+<div class="features">
+<div class="feature"><b>♡</b><span>Hand-poured with care</span></div>
+<div class="feature"><b>✦</b><span>Aesthetic designs</span></div>
+<div class="feature"><b>⌁</b><span>Beautiful fragrances</span></div>
 </div>
 </div>
 </section>
 
-<section class="home" id="home">
-<div class="wrap homegrid">
-<div><div class="kicker"><i></i> Bangalore Home Service</div><h2>Your wellness space can be home.</h2><p>Prefer not to travel? Request a home session in Bangalore. Share your area while booking and availability will be confirmed before the appointment.</p><a class="btn" style="color:#fff;border-color:#87968e" href="#book">Check home-service availability ↗</a></div>
-<div><p style="font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#8f9e96;margin-bottom:16px">Serving Bangalore</p><div class="zones"><span>Koramangala</span><span>HSR Layout</span><span>Indiranagar</span><span>Jayanagar</span><span>JP Nagar</span><span>Whitefield</span><span>BTM</span><span>Electronic City</span><span>And nearby areas</span></div></div>
+<section class="section ritual">
+<div class="section-head">
+<div class="eyebrow">Your candle ritual</div>
+<h2>Make space for calm.</h2>
+</div>
+<div class="ritual-grid">
+<div class="ritual-card"><div class="icon">✦</div><h3>Light</h3><p>Light your favourite LumiGlow candle and let the room slowly change its mood.</p></div>
+<div class="ritual-card"><div class="icon">☾</div><h3>Unwind</h3><p>Put your phone away, breathe in the fragrance and give yourself a quiet moment.</p></div>
+<div class="ritual-card"><div class="icon">♡</div><h3>Enjoy</h3><p>Let the warm glow become part of your everyday rituals, celebrations and memories.</p></div>
 </div>
 </section>
 
-<section class="booking" id="book">
-<div class="wrap bookinggrid">
-<div class="bookingcopy">
-<div class="kicker"><i></i> Appointment</div>
-<h2>Let's find a time that works.</h2>
-<p>Fill in the form and your booking request will open in WhatsApp for confirmation with Ramesh.</p>
-<p><strong>Instagram</strong><br>@serene_touch_wellness</p>
-<p><strong>Sessions</strong><br>Studio / Home service • Bangalore</p>
+<section class="section instagram" id="instagram">
+<div class="section-head">
+<div class="eyebrow">Follow the glow</div>
+<h2>Made for your feed.</h2>
+<p>Discover new designs, launches and behind-the-scenes moments on Instagram.</p>
 </div>
-<form class="bookingform" id="bookingForm">
-<div class="formgrid">
-<div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div>
-<div class="field"><label>Phone</label><input id="phone" required type="tel" placeholder="10-digit number"></div>
-<div class="field"><label>Service</label><select id="service" required><option value="">Select a therapy</option><option>Swedish Massage</option><option>Deep Tissue</option><option>Balinese Massage</option><option>Aromatherapy</option><option>Head • Neck • Shoulder</option><option>Foot Massage</option><option>Abhyanga</option><option>Lomi Lomi</option><option>Back Massage</option><option>Yoni Massage</option></select></div>
-<div class="field"><label>Location</label><select id="location" required><option value="">Choose</option><option>Studio</option><option>Home service — Bangalore</option></select></div>
-<div class="field"><label>Preferred date</label><input id="date" required type="date"></div>
-<div class="field"><label>Preferred time</label><input id="time" required type="time"></div>
-<div class="field full"><label>Area / Address note</label><input id="area" placeholder="For home service: area or locality"></div>
-<div class="field full"><label>Message</label><textarea id="message" placeholder="Anything Ramesh should know about your preference?"></textarea></div>
+<div class="insta-grid">
+<img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80" alt="LumiGlow candle">
+<img src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=600&q=80" alt="LumiGlow floral candle">
+<img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80" alt="LumiGlow decorative candle">
+<img src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=600&q=80" alt="LumiGlow scented candle">
 </div>
-<button class="submit" type="submit">Send appointment request on WhatsApp →</button>
-<div class="formnote">Your request is not confirmed until availability is checked and confirmed.</div>
-</form>
-</div>
+</section>
+
+<section class="cta">
+<h2>Your space deserves a glow.</h2>
+<p>See the latest handmade candle designs and place your order through Instagram.</p>
+<a class="btn" href="https://instagram.com/lumiglowcandles.in" target="_blank">Visit @lumiglowcandles.in ↗</a>
 </section>
 </main>
 
-<footer><div class="foot"><div><b>Serene Touch Wellness</b><br>Professional massage therapy in Bangalore</div><div>© <span id="year"></span> Serene Touch • @serene_touch_wellness</div></div></footer>
-<div class="toast" id="toast">Your WhatsApp booking request is ready.</div>
+<footer class="footer">
+<p>© 2026 LumiGlow Candles. Handmade with ♡</p>
+<div class="social"><a href="https://instagram.com/lumiglowcandles.in" target="_blank">Instagram</a><a href="#home">Back to top ↑</a></div>
+</footer>
+
+<div class="toast" id="toast"></div>
 
 <script>
-const nav=document.getElementById("nav"),menu=document.getElementById("menu");
-menu.onclick=()=>nav.classList.toggle("open");
-document.querySelectorAll(".navlinks a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
-const date=document.getElementById("date");
-const today=new Date();date.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().split("T")[0];
-document.getElementById("year").textContent=new Date().getFullYear();
-
-document.getElementById("bookingForm").addEventListener("submit",e=>{
-e.preventDefault();
-const name=document.getElementById("name").value.trim();
-const phone=document.getElementById("phone").value.trim();
-const service=document.getElementById("service").value;
-const location=document.getElementById("location").value;
-const d=document.getElementById("date").value;
-const t=document.getElementById("time").value;
-const area=document.getElementById("area").value.trim();
-const msg=document.getElementById("message").value.trim();
-const prettyDate=d?new Date(d+"T00:00:00").toLocaleDateString("en-IN",{day:"numeric",month:"long",year:"numeric"}):"";
-const text=`Hello Ramesh, I would like to request an appointment at Serene Touch Wellness.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ATherapy: ${encodeURIComponent(service)}%0ALocation: ${encodeURIComponent(location)}%0ADate: ${encodeURIComponent(prettyDate)}%0ATime: ${encodeURIComponent(t)}%0AArea/Address note: ${encodeURIComponent(area||"N/A")}%0AMessage: ${encodeURIComponent(msg||"N/A")}%0A%0APlease let me know if the slot is available.`;
-document.getElementById("toast").classList.add("show");setTimeout(()=>document.getElementById("toast").classList.remove("show"),3500);
-window.open("https://wa.me/919999999999?text="+text,"_blank");
+const menu=document.getElementById('menu'),nav=document.getElementById('navlinks'),toast=document.getElementById('toast');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.querySelectorAll('.order').forEach(btn=>{
+btn.addEventListener('click',()=>{
+const name=btn.dataset.name;
+toast.textContent=`Interested in ${name}? Message us on Instagram to order ✨`;
+toast.classList.add('show');
+setTimeout(()=>toast.classList.remove('show'),3000);
+setTimeout(()=>window.open('https://instagram.com/lumiglowcandles.in','_blank'),700);
+});
 });
 </script>
 </body>
