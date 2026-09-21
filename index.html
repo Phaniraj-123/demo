@@ -3,226 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="LumiGlow Candles — handmade scented candles crafted to make your space glow.">
-<title>LumiGlow Candles | Handmade Scented Candles</title>
+<title>Aadriti Nutri Bites | Dates & Nuts Goodness</title>
+<meta name="description" content="Aadriti Nutri Bites — handcrafted date & nut sweets, protein bars, laddus, modakas and namkeen. Pan India delivery. FSSAI registered.">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <style>
-:root{--cream:#fbf5eb;--cream2:#f3e7d5;--brown:#4a3025;--brown2:#765544;--gold:#c99a5b;--white:#fffdf9;--text:#34251f;--muted:#7d6b60}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--text);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(251,245,235,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,48,37,.08)}
-.logo{font-size:25px;font-weight:700;letter-spacing:-.5px;color:var(--brown)}
-.logo span{color:var(--gold)}
-.navlinks{display:flex;gap:34px;align-items:center;font-family:Arial,sans-serif;font-size:13px;font-weight:600}
-.navlinks a{transition:.25s}
-.navlinks a:hover{color:var(--gold)}
-.navbtn{padding:11px 18px;border:1px solid var(--brown);border-radius:30px}
-.menu{display:none;border:0;background:none;font-size:25px;color:var(--brown);cursor:pointer}
-.hero{min-height:100vh;padding:125px 6% 70px;display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center;position:relative}
-.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:#ead4b5;filter:blur(5px);opacity:.32;right:-130px;top:100px}
-.eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-size:11px;font-weight:700;margin-bottom:20px}
-.hero h1{font-size:clamp(52px,7vw,88px);line-height:.93;letter-spacing:-4px;color:var(--brown);max-width:650px}
-.hero h1 em{font-weight:400;color:var(--gold)}
-.hero p{font-family:Arial,sans-serif;color:var(--muted);line-height:1.8;max-width:500px;margin:27px 0 31px;font-size:15px}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
-.btn{padding:14px 23px;border-radius:30px;font-family:Arial,sans-serif;font-size:13px;font-weight:700;transition:.3s;display:inline-flex;align-items:center;justify-content:center}
-.btn-primary{background:var(--brown);color:white}
-.btn-primary:hover{background:#684435;transform:translateY(-2px)}
-.btn-outline{border:1px solid #bca897;color:var(--brown)}
-.btn-outline:hover{border-color:var(--brown);transform:translateY(-2px)}
-.hero-visual{height:570px;position:relative;display:flex;align-items:center;justify-content:center}
-.hero-img{width:min(430px,82%);height:510px;object-fit:cover;border-radius:220px 220px 24px 24px;box-shadow:0 30px 60px rgba(74,48,37,.18);filter:saturate(.9)}
-.float-card{position:absolute;bottom:18px;left:5%;background:rgba(255,253,249,.95);padding:18px 20px;border-radius:15px;box-shadow:0 12px 30px rgba(74,48,37,.12);max-width:190px}
-.float-card small{font-family:Arial,sans-serif;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1.5px}
-.float-card strong{display:block;font-size:18px;margin-top:5px;color:var(--brown)}
-.section{padding:100px 6%}
-.section-head{text-align:center;max-width:650px;margin:0 auto 45px}
-.section-head .eyebrow{margin-bottom:12px}
-.section-head h2{font-size:clamp(35px,5vw,55px);color:var(--brown);letter-spacing:-2px}
-.section-head p{font-family:Arial,sans-serif;color:var(--muted);font-size:14px;line-height:1.7;margin-top:14px}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.product{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(74,48,37,.06);transition:.35s}
-.product:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(74,48,37,.12)}
-.product-img{height:290px;width:100%;object-fit:cover}
-.product-info{padding:18px}
-.product-info h3{font-size:21px;color:var(--brown);margin-bottom:7px}
-.product-info p{font-family:Arial,sans-serif;color:var(--muted);font-size:12px;line-height:1.5;min-height:36px}
-.product-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:15px}
-.price{font-family:Arial,sans-serif;font-size:14px;font-weight:700;color:var(--brown)}
-.order{border:0;background:var(--cream2);color:var(--brown);padding:9px 13px;border-radius:20px;font-family:Arial,sans-serif;font-size:11px;font-weight:700;cursor:pointer;transition:.25s}
-.order:hover{background:var(--brown);color:white}
-.story{background:var(--brown);color:white;display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-.story-img{width:100%;height:500px;object-fit:cover;border-radius:18px}
-.story .eyebrow{color:#d9b477}
-.story h2{font-size:clamp(38px,5vw,60px);line-height:1;letter-spacing:-2px;margin-bottom:22px}
-.story p{font-family:Arial,sans-serif;color:#e8dcd3;line-height:1.8;font-size:14px;max-width:520px;margin-bottom:20px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
-.feature{border:1px solid rgba(255,255,255,.16);padding:20px;border-radius:14px}
-.feature b{font-size:20px;display:block;margin-bottom:7px}
-.feature span{font-family:Arial,sans-serif;font-size:11px;color:#d7c8bd;line-height:1.5}
-.ritual{background:#f2e6d5}
-.ritual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-.ritual-card{text-align:center;padding:28px 22px}
-.icon{width:65px;height:65px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 17px;font-size:25px}
-.ritual-card h3{font-size:22px;color:var(--brown);margin-bottom:9px}
-.ritual-card p{font-family:Arial,sans-serif;color:var(--muted);font-size:12px;line-height:1.7}
-.instagram{padding-bottom:110px}
-.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.insta-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;transition:.3s}
-.insta-grid img:hover{transform:scale(.97);filter:brightness(.9)}
-.cta{margin:0 6% 90px;border-radius:24px;padding:75px 30px;text-align:center;background:var(--brown);color:white;position:relative;overflow:hidden}
-.cta:after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-80px;top:-130px}
-.cta h2{font-size:clamp(38px,5vw,58px);letter-spacing:-2px;margin-bottom:13px}
-.cta p{font-family:Arial,sans-serif;color:#dfd0c6;font-size:13px;margin-bottom:25px}
-.cta .btn{background:#fff;color:var(--brown)}
-.footer{padding:35px 6%;border-top:1px solid rgba(74,48,37,.1);display:flex;justify-content:space-between;align-items:center;gap:20px}
-.footer p,.footer a{font-family:Arial,sans-serif;font-size:11px;color:var(--muted)}
-.social{display:flex;gap:16px}
-.social a:hover{color:var(--gold)}
-.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--brown);color:white;padding:13px 20px;border-radius:30px;font-family:Arial,sans-serif;font-size:12px;opacity:0;pointer-events:none;transition:.3s;z-index:200}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:900px){
-.products{grid-template-columns:repeat(2,1fr)}
-.hero{grid-template-columns:1fr;gap:25px}.hero-visual{height:500px}.hero-img{height:450px}
-.story{grid-template-columns:1fr;gap:40px}.story-img{height:420px}
-}
-@media(max-width:650px){
-.nav{padding:16px 5%}.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;width:100%;background:var(--cream);padding:22px 5%;flex-direction:column;align-items:flex-start;gap:20px;box-shadow:0 12px 25px rgba(74,48,37,.08)}.navlinks.open{display:flex}.navbtn{padding:0;border:0}
-.hero{padding:105px 5% 45px}.hero h1{font-size:56px;letter-spacing:-3px}.hero-visual{height:430px}.hero-img{height:390px;width:85%}.float-card{left:0;bottom:5px}
-.section{padding:75px 5%}.products{grid-template-columns:1fr 1fr;gap:12px}.product-img{height:220px}.product-info{padding:14px}.product-info h3{font-size:18px}.product-info p{font-size:11px}
-.story{padding:75px 5%}.story-img{height:330px}.features{grid-template-columns:1fr}
-.ritual-grid{grid-template-columns:1fr;gap:5px}.insta-grid{grid-template-columns:repeat(2,1fr);gap:8px}
-.cta{margin:0 5% 65px;padding:60px 20px}.footer{padding:28px 5%;flex-direction:column;text-align:center}
-}
+:root{--purple:#8b5cf6;--deep:#5b21b6;--soft:#f4edff;--lav:#ede3ff;--pink:#f7e9ff;--text:#29213b;--muted:#766d85;--white:#fff;--green:#168a55;--shadow:0 18px 45px rgba(91,33,182,.12)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:var(--text);line-height:1.5}button,input{font:inherit}button{cursor:pointer;border:0}.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #eee7f8}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text)}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--purple),#c084fc);display:grid;place-items:center;color:white;font-weight:900;font-size:20px;box-shadow:0 8px 20px #8b5cf633}.brand strong{font-size:19px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}.navlinks{display:flex;gap:28px;align-items:center}.navlinks a{color:var(--text);text-decoration:none;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--purple)}.cartbtn{position:relative;background:var(--text);color:#fff;padding:11px 17px;border-radius:13px;font-weight:800}.count{position:absolute;right:-7px;top:-8px;background:#c084fc;color:#fff;border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:11px}.menu{display:none;background:var(--soft);padding:10px;border-radius:10px;font-size:20px}
+.hero{background:radial-gradient(circle at 80% 20%,#eadcff 0,transparent 30%),linear-gradient(135deg,#faf7ff,#f0e8ff);padding:72px 0 80px;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}.pill{display:inline-flex;background:#fff;border:1px solid #e2d4ff;color:var(--deep);padding:8px 13px;border-radius:99px;font-size:12px;font-weight:800;margin-bottom:18px}.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-2.5px;margin-bottom:20px}.hero h1 span{color:var(--purple)}.hero p{font-size:17px;color:var(--muted);max-width:580px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.primary,.secondary{padding:14px 20px;border-radius:13px;font-weight:800;text-decoration:none;display:inline-block}.primary{background:var(--purple);color:white;box-shadow:0 12px 25px #8b5cf633}.secondary{background:white;color:var(--deep);border:1px solid #e1d5f5}.heroCard{background:#fff;border-radius:30px;padding:20px;box-shadow:var(--shadow);transform:rotate(2deg)}.heroPic{height:370px;border-radius:22px;background:linear-gradient(145deg,#dcc4ff,#f8eaff);display:flex;align-items:end;justify-content:center;overflow:hidden;position:relative}.heroPic:before{content:"DATE • NUT • LOVE";position:absolute;top:30px;left:28px;color:#fff;background:#6d28d9;padding:8px 12px;border-radius:8px;font-weight:900;font-size:11px;letter-spacing:1px}.sweetStack{font-size:105px;filter:drop-shadow(0 16px 15px #5b21b633);transform:rotate(-8deg)}.heroCardText{padding:15px 5px 3px;display:flex;justify-content:space-between;align-items:center}.heroCardText b{font-size:18px}.heroCardText span{color:var(--green);font-size:12px;font-weight:800}
+.trust{padding:20px 0;background:#fff;border-bottom:1px solid #f0ebf5}.trustGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.trustItem{display:flex;gap:10px;align-items:center;justify-content:center;color:#5c5368;font-size:13px;font-weight:700}.trustIcon{width:36px;height:36px;border-radius:11px;background:var(--soft);display:grid;place-items:center}
+.section{padding:75px 0}.sectionHead{text-align:center;max-width:680px;margin:0 auto 38px}.eyebrow{color:var(--purple);font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase}.section h2{font-size:38px;line-height:1.1;margin:8px 0 12px}.sectionHead p{color:var(--muted)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{background:#fff;border:1px solid #eee7f5;border-radius:20px;overflow:hidden;transition:.25s;box-shadow:0 8px 24px #5b21b608}.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.productVisual{height:190px;background:linear-gradient(135deg,#f2e7ff,#fbf2ff);display:grid;place-items:center;position:relative;font-size:70px}.tag{position:absolute;top:12px;left:12px;background:#fff;color:var(--deep);border-radius:99px;padding:5px 9px;font-size:10px;font-weight:900}.productBody{padding:17px}.productBody h3{font-size:17px;margin-bottom:5px}.productBody p{font-size:12px;color:var(--muted);min-height:37px}.priceRow{display:flex;align-items:center;justify-content:space-between;margin-top:14px}.price{font-weight:900;font-size:18px}.add{background:var(--text);color:#fff;border-radius:10px;padding:9px 12px;font-weight:800;font-size:12px}.add:hover{background:var(--purple)}
+.story{background:var(--soft)}.storyGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}.storyBox{background:linear-gradient(145deg,#cdb0ff,#f5dfff);border-radius:28px;min-height:390px;display:grid;place-items:center;font-size:125px;box-shadow:var(--shadow)}.storyText h2{font-size:42px;line-height:1.05;margin:9px 0 17px}.storyText p{color:var(--muted);margin-bottom:18px}.checks{display:grid;gap:10px}.check{display:flex;gap:10px;font-weight:700;font-size:14px}.check i{font-style:normal;color:var(--green)}
+.contact{background:#211833;color:#fff}.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.contact h2{font-size:40px;line-height:1.05}.contact p{color:#c8bfd4;margin-top:12px}.contactForm{background:#fff;padding:20px;border-radius:20px}.contactForm input{width:100%;padding:13px;margin-bottom:10px;border:1px solid #e5def0;border-radius:10px;outline:none}.contactForm button{width:100%;padding:13px;border-radius:10px;background:var(--purple);color:#fff;font-weight:900}
+footer{background:#171122;color:#a9a0b5;padding:25px 0;font-size:12px}.footerIn{display:flex;justify-content:space-between;gap:15px;align-items:center}.footerIn b{color:#fff}.cartPanel{position:fixed;right:-430px;top:0;width:min(410px,100%);height:100vh;background:#fff;z-index:100;box-shadow:-20px 0 50px #0002;transition:.3s;padding:24px;display:flex;flex-direction:column}.cartPanel.open{right:0}.cartTop{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.close{background:var(--soft);border-radius:9px;padding:8px 11px}.cartItems{flex:1;overflow:auto}.cartItem{display:grid;grid-template-columns:55px 1fr auto;gap:11px;align-items:center;padding:13px 0;border-bottom:1px solid #eee}.cartEmoji{width:55px;height:55px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:28px}.cartItem small{color:var(--muted)}.qty{display:flex;gap:7px;align-items:center;margin-top:5px}.qty button{width:22px;height:22px;border-radius:6px;background:#eee7f7}.remove{background:none;color:#d14b70;font-size:11px;margin-top:4px}.cartBottom{border-top:1px solid #eee;padding-top:15px}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:900;margin-bottom:13px}.checkout{width:100%;padding:14px;background:var(--green);color:#fff;border-radius:12px;font-weight:900}.empty{text-align:center;color:var(--muted);padding:50px 10px}.overlay{display:none;position:fixed;inset:0;background:#21183366;z-index:90}.overlay.show{display:block}
+@media(max-width:900px){.heroGrid,.storyGrid,.contactGrid{grid-template-columns:1fr}.hero{padding:50px 0}.heroCard{max-width:600px;margin:auto}.products{grid-template-columns:repeat(2,1fr)}.trustGrid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.menu{display:block}.nav{position:relative}.navlinks.mobile{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px;border-radius:15px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}.storyBox{min-height:280px}.contactGrid{gap:25px}}
+@media(max-width:540px){.products{grid-template-columns:1fr 1fr;gap:12px}.productVisual{height:145px;font-size:52px}.productBody{padding:12px}.productBody h3{font-size:14px}.productBody p{font-size:11px}.price{font-size:15px}.add{padding:8px}.hero h1{font-size:42px}.section{padding:55px 0}.section h2,.storyText h2,.contact h2{font-size:32px}.trustItem{justify-content:flex-start}.heroPic{height:280px}}
 </style>
 </head>
 <body>
-
-<header class="nav">
-<a href="#" class="logo">Lumi<span>Glow</span>.</a>
-<button class="menu" id="menu" aria-label="Open menu">☰</button>
-<nav class="navlinks" id="navlinks">
-<a href="#home">Home</a>
-<a href="#collection">Collection</a>
-<a href="#story">Our Story</a>
-<a href="#instagram">Instagram</a>
-<a class="navbtn" href="https://instagram.com/lumiglowcandles.in" target="_blank">Shop on Instagram ↗</a>
-</nav>
-</header>
+<header><div class="container nav">
+<a class="brand" href="#"><div class="logo">A</div><div><strong>Aadriti Nutri Bites</strong><small>Dates • Nuts • Goodness</small></div></a>
+<nav class="navlinks" id="navlinks"><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#contact">Contact</a></nav>
+<div style="display:flex;gap:8px;align-items:center"><button class="cartbtn" onclick="toggleCart()">Cart <span class="count" id="count">0</span></button><button class="menu" onclick="document.getElementById('navlinks').classList.toggle('mobile')">☰</button></div>
+</div></header>
 
 <main>
-<section class="hero" id="home">
-<div>
-<div class="eyebrow">Handmade • Scented • Aesthetic</div>
-<h1>Light a little <em>beautiful.</em></h1>
-<p>Hand-poured candles made with love, soft fragrances and beautiful little details — created to turn everyday moments into warm memories.</p>
-<div class="hero-actions">
-<a href="#collection" class="btn btn-primary">Explore Collection</a>
-<a href="https://instagram.com/lumiglowcandles.in" target="_blank" class="btn btn-outline">Follow @lumiglowcandles.in</a>
-</div>
-</div>
-<div class="hero-visual">
-<img class="hero-img" src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=700&q=85" alt="Aesthetic scented candle">
-<div class="float-card"><small>Our signature mood</small><strong>Warm. Calm. You.</strong></div>
-</div>
-</section>
+<section class="hero"><div class="container heroGrid">
+<div><div class="pill">🇮🇳 PAN INDIA DELIVERY • FSSAI REGISTERED</div><h1>Sweetness made from <span>nature.</span></h1><p>Wholesome date & nut treats handcrafted for your everyday cravings — from protein bars and laddus to modakas and crunchy namkeen.</p><div class="actions"><a class="primary" href="#shop">Shop the collection</a><a class="secondary" href="https://instagram.com/aadritinutribites" target="_blank">Instagram ↗</a></div></div>
+<div class="heroCard"><div class="heroPic"><div class="sweetStack">🍫🥜</div></div><div class="heroCardText"><b>Dates + Nuts Protein Bar</b><span>100% goodness</span></div></div>
+</div></section>
 
-<section class="section" id="collection">
-<div class="section-head">
-<div class="eyebrow">The collection</div>
-<h2>Candles with character.</h2>
-<p>From cute statement pieces to calming scented jars, find a candle that feels like it belongs in your space.</p>
-</div>
-<div class="products">
-<article class="product">
-<img class="product-img" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=700&q=85" alt="Vanilla candle">
-<div class="product-info"><h3>Vanilla Cloud</h3><p>Soft, creamy and comforting with a warm vanilla finish.</p><div class="product-bottom"><span class="price">₹399</span><button class="order" data-name="Vanilla Cloud">Enquire</button></div></div>
-</article>
-<article class="product">
-<img class="product-img" src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=700&q=85" alt="Floral candle">
-<div class="product-info"><h3>Bloom</h3><p>A delicate floral mood designed for slow evenings.</p><div class="product-bottom"><span class="price">₹449</span><button class="order" data-name="Bloom">Enquire</button></div></div>
-</article>
-<article class="product">
-<img class="product-img" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=700&q=85" alt="Decorative candle">
-<div class="product-info"><h3>Little Muse</h3><p>A sculptural candle made to look gorgeous even unlit.</p><div class="product-bottom"><span class="price">₹349</span><button class="order" data-name="Little Muse">Enquire</button></div></div>
-</article>
-<article class="product">
-<img class="product-img" src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=700&q=85" alt="Luxury candle">
-<div class="product-info"><h3>Amber Glow</h3><p>Rich amber notes for a warm, cozy and luxe atmosphere.</p><div class="product-bottom"><span class="price">₹499</span><button class="order" data-name="Amber Glow">Enquire</button></div></div>
-</article>
-</div>
-</section>
+<section class="trust"><div class="container trustGrid"><div class="trustItem"><span class="trustIcon">🇮🇳</span>Pan India Delivery</div><div class="trustItem"><span class="trustIcon">✓</span>FSSAI Registered</div><div class="trustItem"><span class="trustIcon">🌿</span>Handcrafted</div><div class="trustItem"><span class="trustIcon">🥜</span>Date & Nut Based</div></div></section>
 
-<section class="section story" id="story">
-<img class="story-img" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1000&q=85" alt="Handmade candle making">
-<div>
-<div class="eyebrow">Made by hand</div>
-<h2>Small batch.<br>Big feeling.</h2>
-<p>At LumiGlow, every candle is created with attention to the little things — the shape, the scent, the texture and the way it makes your room feel.</p>
-<p>Whether you're treating yourself or gifting someone special, each piece is made to add a little glow to their day.</p>
-<div class="features">
-<div class="feature"><b>♡</b><span>Hand-poured with care</span></div>
-<div class="feature"><b>✦</b><span>Aesthetic designs</span></div>
-<div class="feature"><b>⌁</b><span>Beautiful fragrances</span></div>
-</div>
-</div>
-</section>
+<section class="section" id="shop"><div class="container"><div class="sectionHead"><div class="eyebrow">The Collection</div><h2>Little bites. Big goodness.</h2><p>Choose your favourites and add them to your cart. Prices shown are for one pack.</p></div><div class="products" id="products"></div></div></section>
 
-<section class="section ritual">
-<div class="section-head">
-<div class="eyebrow">Your candle ritual</div>
-<h2>Make space for calm.</h2>
-</div>
-<div class="ritual-grid">
-<div class="ritual-card"><div class="icon">✦</div><h3>Light</h3><p>Light your favourite LumiGlow candle and let the room slowly change its mood.</p></div>
-<div class="ritual-card"><div class="icon">☾</div><h3>Unwind</h3><p>Put your phone away, breathe in the fragrance and give yourself a quiet moment.</p></div>
-<div class="ritual-card"><div class="icon">♡</div><h3>Enjoy</h3><p>Let the warm glow become part of your everyday rituals, celebrations and memories.</p></div>
-</div>
-</section>
+<section class="section story" id="story"><div class="container storyGrid"><div class="storyBox">🥜</div><div class="storyText"><div class="eyebrow">Why Aadriti?</div><h2>Traditional flavours, a modern little twist.</h2><p>Aadriti Nutri Bites brings together dates, nuts, seeds and familiar Indian flavours into delicious snackable treats made for gifting, celebrations and everyday cravings.</p><div class="checks"><div class="check"><i>✓</i> Thoughtfully crafted date & nut recipes</div><div class="check"><i>✓</i> Sweet treats and savoury bites</div><div class="check"><i>✓</i> Delivery across India</div><div class="check"><i>✓</i> FSSAI registered food business</div></div></div></div></section>
 
-<section class="section instagram" id="instagram">
-<div class="section-head">
-<div class="eyebrow">Follow the glow</div>
-<h2>Made for your feed.</h2>
-<p>Discover new designs, launches and behind-the-scenes moments on Instagram.</p>
-</div>
-<div class="insta-grid">
-<img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80" alt="LumiGlow candle">
-<img src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=600&q=80" alt="LumiGlow floral candle">
-<img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80" alt="LumiGlow decorative candle">
-<img src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=600&q=80" alt="LumiGlow scented candle">
-</div>
-</section>
-
-<section class="cta">
-<h2>Your space deserves a glow.</h2>
-<p>See the latest handmade candle designs and place your order through Instagram.</p>
-<a class="btn" href="https://instagram.com/lumiglowcandles.in" target="_blank">Visit @lumiglowcandles.in ↗</a>
-</section>
+<section class="section contact" id="contact"><div class="container contactGrid"><div><div class="eyebrow">Let's connect</div><h2>Have a gifting or bulk order?</h2><p>Tell us what you need and we'll get back to you. You can also DM us on Instagram.</p></div><form class="contactForm" onsubmit="sendEnquiry(event)"><input id="name" placeholder="Your name" required><input id="phone" placeholder="Phone / WhatsApp" required><input id="message" placeholder="What would you like to order?" required><button>Send enquiry on WhatsApp</button></form></div></section>
 </main>
 
-<footer class="footer">
-<p>© 2026 LumiGlow Candles. Handmade with ♡</p>
-<div class="social"><a href="https://instagram.com/lumiglowcandles.in" target="_blank">Instagram</a><a href="#home">Back to top ↑</a></div>
-</footer>
+<footer><div class="container footerIn"><div>© 2026 <b>Aadriti Nutri Bites</b>. All rights reserved.</div><div>FSSAI Registered • Pan India Delivery</div></div></footer>
 
-<div class="toast" id="toast"></div>
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<aside class="cartPanel" id="cart"><div class="cartTop"><h2>Your Cart</h2><button class="close" onclick="toggleCart()">✕</button></div><div class="cartItems" id="cartItems"></div><div class="cartBottom"><div class="total"><span>Total</span><span id="total">₹0</span></div><button class="checkout" onclick="payNow()">Pay securely with Razorpay</button><small style="display:block;color:#888;margin-top:8px">Demo setup: replace the Razorpay key in the JavaScript with your live/test key.</small></div></aside>
 
 <script>
-const menu=document.getElementById('menu'),nav=document.getElementById('navlinks'),toast=document.getElementById('toast');
-menu.addEventListener('click',()=>nav.classList.toggle('open'));
-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-document.querySelectorAll('.order').forEach(btn=>{
-btn.addEventListener('click',()=>{
-const name=btn.dataset.name;
-toast.textContent=`Interested in ${name}? Message us on Instagram to order ✨`;
-toast.classList.add('show');
-setTimeout(()=>toast.classList.remove('show'),3000);
-setTimeout(()=>window.open('https://instagram.com/lumiglowcandles.in','_blank'),700);
-});
-});
+const products=[
+{id:1,name:"Dates & Nut Protein Bar",desc:"Dates, almonds, cashews & seeds.",price:299,emoji:"🍫",tag:"BESTSELLER"},
+{id:2,name:"Classic Date & Nut Laddu",desc:"Rich, naturally sweet festive laddus.",price:349,emoji:"🟤",tag:"POPULAR"},
+{id:3,name:"Premium Nut Laddu",desc:"A decadent mix of premium nuts.",price:399,emoji:"🥜",tag:"PREMIUM"},
+{id:4,name:"Dry Fruit Modaka",desc:"Festive modakas with a nutty centre.",price:449,emoji:"🪔",tag:"FESTIVE"},
+{id:5,name:"Pani Puri Flavour Namkeen",desc:"Tangy, chatpata and seriously crunchy.",price:199,emoji:"🟣",tag:"NEW"},
+{id:6,name:"Masala Nut Mix",desc:"Crunchy nuts with a savoury masala.",price:249,emoji:"🌰",tag:"CRUNCHY"},
+{id:7,name:"Cocoa Date Bites",desc:"Date bites with a rich cocoa finish.",price:279,emoji:"🍫",tag:"NEW"},
+{id:8,name:"Coconut Date Ladoo",desc:"Soft dates, coconut & crunchy nuts.",price:329,emoji:"🥥",tag:"FAVOURITE"},
+{id:9,name:"Anjeer Nut Bites",desc:"Fig, dates and nuts in bite-sized treats.",price:379,emoji:"🟤",tag:"PREMIUM"},
+{id:10,name:"Celebration Gift Box",desc:"A curated box of Aadriti favourites.",price:699,emoji:"🎁",tag:"GIFTING"}
+];
+let cart=JSON.parse(localStorage.getItem("aadritiCart")||"[]");
+function renderProducts(){document.getElementById("products").innerHTML=products.map(p=>`<article class="product"><div class="productVisual"><span class="tag">${p.tag}</span>${p.emoji}</div><div class="productBody"><h3>${p.name}</h3><p>${p.desc}</p><div class="priceRow"><span class="price">₹${p.price}</span><button class="add" onclick="addToCart(${p.id})">+ Add</button></div></div></article>`).join("")}
+function addToCart(id){let item=cart.find(x=>x.id===id);item?item.qty++:cart.push({id,qty:1});saveCart();toggleCart(true)}
+function saveCart(){localStorage.setItem("aadritiCart",JSON.stringify(cart));renderCart()}
+function renderCart(){let el=document.getElementById("cartItems"),count=cart.reduce((s,x)=>s+x.qty,0),total=cart.reduce((s,x)=>{let p=products.find(y=>y.id===x.id);return s+p.price*x.qty},0);document.getElementById("count").textContent=count;document.getElementById("total").textContent="₹"+total;if(!cart.length){el.innerHTML='<div class="empty">Your cart is empty.<br>Pick a few delicious bites! 🥜</div>';return}el.innerHTML=cart.map(x=>{let p=products.find(y=>y.id===x.id);return `<div class="cartItem"><div class="cartEmoji">${p.emoji}</div><div><b>${p.name}</b><small>₹${p.price} × ${x.qty}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${p.id},1)">+</button></div></div><button class="remove" onclick="removeItem(${p.id})">Remove</button></div>`}).join("")}
+function changeQty(id,n){let x=cart.find(a=>a.id===id);if(x){x.qty+=n;if(x.qty<=0)cart=cart.filter(a=>a.id!==id)}saveCart()}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);saveCart()}
+function toggleCart(force){let c=document.getElementById("cart"),o=document.getElementById("overlay");let open=force===true?!c.classList.contains("open"):!c.classList.contains("open");c.classList.toggle("open",open);o.classList.toggle("show",open)}
+function payNow(){if(!cart.length)return alert("Please add a product first.");let total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);let options={key:"rzp_test_REPLACE_WITH_YOUR_KEY",amount:total*100,currency:"INR",name:"Aadriti Nutri Bites",description:"Dates & Nut treats",image:"",handler:function(response){alert("Payment successful! Payment ID: "+response.razorpay_payment_id);cart=[];saveCart();toggleCart()},prefill:{name:"",email:"",contact:""},theme:{color:"#8b5cf6"}};if(options.key.includes("REPLACE")){alert("Razorpay is ready. Replace the demo key in the code with your Razorpay Test/Live Key ID to accept payments.");return}new Razorpay(options).open()}
+function sendEnquiry(e){e.preventDefault();let text=`Hello Aadriti Nutri Bites!%0AName: ${encodeURIComponent(document.getElementById("name").value)}%0APhone: ${encodeURIComponent(document.getElementById("phone").value)}%0AOrder/Enquiry: ${encodeURIComponent(document.getElementById("message").value)}`;window.open("https://wa.me/919999999999?text="+text,"_blank")}
+renderProducts();renderCart();
 </script>
 </body>
 </html>
