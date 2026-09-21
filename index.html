@@ -2,75 +2,366 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Aadriti Nutri Bites | Dates & Nuts Goodness</title>
-<meta name="description" content="Aadriti Nutri Bites — handcrafted date & nut sweets, protein bars, laddus, modakas and namkeen. Pan India delivery. FSSAI registered.">
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Salsphere — Fresh salads, made this morning</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--purple:#8b5cf6;--deep:#5b21b6;--soft:#f4edff;--lav:#ede3ff;--pink:#f7e9ff;--text:#29213b;--muted:#766d85;--white:#fff;--green:#168a55;--shadow:0 18px 45px rgba(91,33,182,.12)}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:var(--text);line-height:1.5}button,input{font:inherit}button{cursor:pointer;border:0}.container{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #eee7f8}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text)}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--purple),#c084fc);display:grid;place-items:center;color:white;font-weight:900;font-size:20px;box-shadow:0 8px 20px #8b5cf633}.brand strong{font-size:19px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}.navlinks{display:flex;gap:28px;align-items:center}.navlinks a{color:var(--text);text-decoration:none;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--purple)}.cartbtn{position:relative;background:var(--text);color:#fff;padding:11px 17px;border-radius:13px;font-weight:800}.count{position:absolute;right:-7px;top:-8px;background:#c084fc;color:#fff;border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:11px}.menu{display:none;background:var(--soft);padding:10px;border-radius:10px;font-size:20px}
-.hero{background:radial-gradient(circle at 80% 20%,#eadcff 0,transparent 30%),linear-gradient(135deg,#faf7ff,#f0e8ff);padding:72px 0 80px;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}.pill{display:inline-flex;background:#fff;border:1px solid #e2d4ff;color:var(--deep);padding:8px 13px;border-radius:99px;font-size:12px;font-weight:800;margin-bottom:18px}.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-2.5px;margin-bottom:20px}.hero h1 span{color:var(--purple)}.hero p{font-size:17px;color:var(--muted);max-width:580px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.primary,.secondary{padding:14px 20px;border-radius:13px;font-weight:800;text-decoration:none;display:inline-block}.primary{background:var(--purple);color:white;box-shadow:0 12px 25px #8b5cf633}.secondary{background:white;color:var(--deep);border:1px solid #e1d5f5}.heroCard{background:#fff;border-radius:30px;padding:20px;box-shadow:var(--shadow);transform:rotate(2deg)}.heroPic{height:370px;border-radius:22px;background:linear-gradient(145deg,#dcc4ff,#f8eaff);display:flex;align-items:end;justify-content:center;overflow:hidden;position:relative}.heroPic:before{content:"DATE • NUT • LOVE";position:absolute;top:30px;left:28px;color:#fff;background:#6d28d9;padding:8px 12px;border-radius:8px;font-weight:900;font-size:11px;letter-spacing:1px}.sweetStack{font-size:105px;filter:drop-shadow(0 16px 15px #5b21b633);transform:rotate(-8deg)}.heroCardText{padding:15px 5px 3px;display:flex;justify-content:space-between;align-items:center}.heroCardText b{font-size:18px}.heroCardText span{color:var(--green);font-size:12px;font-weight:800}
-.trust{padding:20px 0;background:#fff;border-bottom:1px solid #f0ebf5}.trustGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.trustItem{display:flex;gap:10px;align-items:center;justify-content:center;color:#5c5368;font-size:13px;font-weight:700}.trustIcon{width:36px;height:36px;border-radius:11px;background:var(--soft);display:grid;place-items:center}
-.section{padding:75px 0}.sectionHead{text-align:center;max-width:680px;margin:0 auto 38px}.eyebrow{color:var(--purple);font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase}.section h2{font-size:38px;line-height:1.1;margin:8px 0 12px}.sectionHead p{color:var(--muted)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{background:#fff;border:1px solid #eee7f5;border-radius:20px;overflow:hidden;transition:.25s;box-shadow:0 8px 24px #5b21b608}.product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.productVisual{height:190px;background:linear-gradient(135deg,#f2e7ff,#fbf2ff);display:grid;place-items:center;position:relative;font-size:70px}.tag{position:absolute;top:12px;left:12px;background:#fff;color:var(--deep);border-radius:99px;padding:5px 9px;font-size:10px;font-weight:900}.productBody{padding:17px}.productBody h3{font-size:17px;margin-bottom:5px}.productBody p{font-size:12px;color:var(--muted);min-height:37px}.priceRow{display:flex;align-items:center;justify-content:space-between;margin-top:14px}.price{font-weight:900;font-size:18px}.add{background:var(--text);color:#fff;border-radius:10px;padding:9px 12px;font-weight:800;font-size:12px}.add:hover{background:var(--purple)}
-.story{background:var(--soft)}.storyGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}.storyBox{background:linear-gradient(145deg,#cdb0ff,#f5dfff);border-radius:28px;min-height:390px;display:grid;place-items:center;font-size:125px;box-shadow:var(--shadow)}.storyText h2{font-size:42px;line-height:1.05;margin:9px 0 17px}.storyText p{color:var(--muted);margin-bottom:18px}.checks{display:grid;gap:10px}.check{display:flex;gap:10px;font-weight:700;font-size:14px}.check i{font-style:normal;color:var(--green)}
-.contact{background:#211833;color:#fff}.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.contact h2{font-size:40px;line-height:1.05}.contact p{color:#c8bfd4;margin-top:12px}.contactForm{background:#fff;padding:20px;border-radius:20px}.contactForm input{width:100%;padding:13px;margin-bottom:10px;border:1px solid #e5def0;border-radius:10px;outline:none}.contactForm button{width:100%;padding:13px;border-radius:10px;background:var(--purple);color:#fff;font-weight:900}
-footer{background:#171122;color:#a9a0b5;padding:25px 0;font-size:12px}.footerIn{display:flex;justify-content:space-between;gap:15px;align-items:center}.footerIn b{color:#fff}.cartPanel{position:fixed;right:-430px;top:0;width:min(410px,100%);height:100vh;background:#fff;z-index:100;box-shadow:-20px 0 50px #0002;transition:.3s;padding:24px;display:flex;flex-direction:column}.cartPanel.open{right:0}.cartTop{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.close{background:var(--soft);border-radius:9px;padding:8px 11px}.cartItems{flex:1;overflow:auto}.cartItem{display:grid;grid-template-columns:55px 1fr auto;gap:11px;align-items:center;padding:13px 0;border-bottom:1px solid #eee}.cartEmoji{width:55px;height:55px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:28px}.cartItem small{color:var(--muted)}.qty{display:flex;gap:7px;align-items:center;margin-top:5px}.qty button{width:22px;height:22px;border-radius:6px;background:#eee7f7}.remove{background:none;color:#d14b70;font-size:11px;margin-top:4px}.cartBottom{border-top:1px solid #eee;padding-top:15px}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:900;margin-bottom:13px}.checkout{width:100%;padding:14px;background:var(--green);color:#fff;border-radius:12px;font-weight:900}.empty{text-align:center;color:var(--muted);padding:50px 10px}.overlay{display:none;position:fixed;inset:0;background:#21183366;z-index:90}.overlay.show{display:block}
-@media(max-width:900px){.heroGrid,.storyGrid,.contactGrid{grid-template-columns:1fr}.hero{padding:50px 0}.heroCard{max-width:600px;margin:auto}.products{grid-template-columns:repeat(2,1fr)}.trustGrid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.menu{display:block}.nav{position:relative}.navlinks.mobile{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px;border-radius:15px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}.storyBox{min-height:280px}.contactGrid{gap:25px}}
-@media(max-width:540px){.products{grid-template-columns:1fr 1fr;gap:12px}.productVisual{height:145px;font-size:52px}.productBody{padding:12px}.productBody h3{font-size:14px}.productBody p{font-size:11px}.price{font-size:15px}.add{padding:8px}.hero h1{font-size:42px}.section{padding:55px 0}.section h2,.storyText h2,.contact h2{font-size:32px}.trustItem{justify-content:flex-start}.heroPic{height:280px}}
+:root{
+  --bg:#ffffff;--card:#ffffff;--ink:#1c2a1e;--muted:#5d6b5f;
+  --green:#2f8f3e;--green-d:#1f6b2c;--green-l:#e6f4e4;
+  --red:#e03a2f;--red-l:#fde8e5;--yellow:#ffc933;--yellow-l:#fff4cc;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fffdf6;--card:#fff;}}
+:root[data-theme="dark"]{--bg:#fffdf6;--card:#fff;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.5;overflow-x:hidden}
+img,svg{max-width:100%}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.1}
+.hand{font-family:'Caveat','Comic Sans MS',cursive;font-weight:700}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#fff;border-bottom:2px solid var(--ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Fraunces',serif;font-weight:800;font-size:1.6rem;color:var(--green-d);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{display:inline-block;width:26px;height:26px;border-radius:50% 50% 50% 8%;background:var(--green);border:2px solid var(--ink);transform:rotate(-12deg);position:relative}
+.logo i::after{content:"";position:absolute;right:-3px;top:-4px;width:9px;height:9px;background:var(--red);border:2px solid var(--ink);border-radius:50%}
+.links{display:flex;gap:22px;align-items:center}
+.links a{color:var(--ink);text-decoration:none;font-weight:500}
+.links a:hover{color:var(--green)}
+.cart-btn{background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:8px 16px;font-weight:700;box-shadow:3px 3px 0 var(--ink);transition:.15s}
+.cart-btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.cart-btn b{background:var(--red);color:#fff;border-radius:999px;padding:1px 8px;margin-left:6px;font-size:.85rem}
+
+/* hero */
+.hero{padding:56px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.tag{display:inline-block;background:var(--yellow-l);border:2px dashed var(--ink);padding:4px 14px;border-radius:8px;transform:rotate(-2deg);font-size:1.3rem;color:var(--red)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin:16px 0}
+.hero h1 span{color:var(--green);position:relative;white-space:nowrap}
+.hero h1 span::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:10px;background:var(--yellow);z-index:-1;transform:rotate(-1deg);border-radius:4px}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:460px}
+.cta{display:inline-flex;gap:10px;align-items:center;margin-top:24px;background:var(--green);color:#fff;font-weight:700;padding:14px 26px;border:2px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 var(--ink);text-decoration:none;transition:.15s}
+.cta:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.ig{margin-left:14px;color:var(--ink);font-weight:600}
+.bowl{position:relative;aspect-ratio:1;max-width:400px;margin:auto;width:100%}
+.bowl .plate{position:absolute;inset:8%;background:var(--green-l);border:3px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:clamp(4rem,14vw,7.5rem);box-shadow:8px 8px 0 var(--green)}
+.bowl .s{position:absolute;font-size:2.2rem;animation:bob 4s ease-in-out infinite}
+.s1{top:2%;left:8%}.s2{top:10%;right:2%;animation-delay:-1s}.s3{bottom:6%;left:0;animation-delay:-2s}.s4{bottom:0;right:10%;animation-delay:-3s}
+@keyframes bob{50%{transform:translateY(-8px) rotate(8deg)}}
+.stamp{position:absolute;right:-2%;bottom:20%;background:var(--red);color:#fff;border:2px solid var(--ink);border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font-size:1.2rem;line-height:1;transform:rotate(12deg)}
+
+/* strip */
+.strip{background:var(--green);color:#fff;border-block:2px solid var(--ink);overflow:hidden;white-space:nowrap;padding:10px 0}
+.strip div{display:inline-block;animation:mq 22s linear infinite;font-weight:700;letter-spacing:.04em}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* menu */
+section{padding:56px 0}
+.head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px;margin-bottom:26px}
+.head h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+.head .hand{color:var(--red);font-size:1.5rem}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:7px 16px;border:2px solid var(--ink);border-radius:999px;font-weight:500;background:#fff}
+.chip.on{background:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:18px;overflow:hidden;box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column;transition:.2s}
+.card:nth-child(odd){transform:rotate(-.6deg)}.card:nth-child(even){transform:rotate(.5deg)}
+.card:hover{transform:rotate(0) translateY(-4px)}
+.pic{height:150px;display:grid;place-items:center;font-size:4.6rem;border-bottom:2px solid var(--ink);position:relative}
+.c0{background:var(--green-l)}.c1{background:var(--yellow-l)}.c2{background:var(--red-l)}
+.badge{position:absolute;top:10px;left:10px;background:#fff;border:2px solid var(--ink);border-radius:6px;font-size:.72rem;font-weight:700;padding:2px 8px;transform:rotate(-4deg)}
+.info{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.info h3{font-size:1.25rem}
+.info p{color:var(--muted);font-size:.92rem;flex:1}
+.meta{font-size:.8rem;color:var(--green-d);font-weight:700}
+.buy{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.price{font-family:'Fraunces',serif;font-weight:800;font-size:1.4rem}
+.add{background:var(--yellow);border:2px solid var(--ink);border-radius:10px;padding:8px 14px;font-weight:700;transition:.15s}
+.add:hover{background:var(--red);color:#fff}
+.add:active{transform:scale(.94)}
+
+/* why */
+.why{background:var(--yellow-l);border-block:2px solid var(--ink)}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.three div{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:22px}
+.three .big{font-size:2.2rem}
+.three h3{margin:6px 0;font-size:1.2rem}
+.three p{color:var(--muted);font-size:.95rem}
+
+/* footer */
+footer{background:var(--ink);color:#e9f1ea;padding:36px 0 28px;text-align:center}
+footer a{color:var(--yellow)}
+footer .hand{font-size:1.6rem}
+
+/* drawer + modal */
+.veil{position:fixed;inset:0;background:rgba(20,30,20,.55);opacity:0;pointer-events:none;transition:.25s;z-index:40}
+.veil.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:#fff;border-left:2px solid var(--ink);z-index:50;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:2px solid var(--ink)}
+.x{font-size:1.6rem;line-height:1}
+.items{flex:1;overflow:auto;padding:12px 20px}
+.it{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px dashed #bbb}
+.it .e{font-size:2rem;width:52px;height:52px;display:grid;place-items:center;background:var(--green-l);border-radius:10px;border:2px solid var(--ink)}
+.it .n{flex:1;font-weight:700;font-size:.95rem}
+.it small{display:block;color:var(--muted);font-weight:400}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:26px;height:26px;border:2px solid var(--ink);border-radius:50%;font-weight:700;line-height:1}
+.empty{text-align:center;color:var(--muted);padding:60px 10px}
+.empty .hand{font-size:1.8rem;color:var(--red)}
+.foot{padding:16px 20px;border-top:2px solid var(--ink);background:var(--green-l)}
+.row{display:flex;justify-content:space-between;margin:3px 0;font-size:.95rem}
+.row.t{font-weight:800;font-size:1.15rem;margin-top:8px}
+.pay{width:100%;margin-top:12px;background:var(--red);color:#fff;font-weight:700;padding:13px;border:2px solid var(--ink);border-radius:12px;box-shadow:3px 3px 0 var(--ink)}
+.pay:disabled{opacity:.5}
+.modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-46%);width:min(480px,94%);max-height:90vh;overflow:auto;background:#fff;border:2px solid var(--ink);border-radius:18px;box-shadow:8px 8px 0 var(--green);z-index:60;padding:24px;opacity:0;pointer-events:none;transition:.25s}
+.modal.on{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+.modal h2{font-size:1.6rem;margin-bottom:14px}
+label{display:block;font-weight:700;font-size:.85rem;margin:10px 0 4px}
+input,textarea{width:100%;padding:10px 12px;border:2px solid var(--ink);border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{outline:3px solid var(--yellow)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.methods{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.m{border:2px solid var(--ink);border-radius:10px;padding:10px 4px;text-align:center;font-weight:700;font-size:.85rem;background:#fff}
+.m.on{background:var(--yellow)}
+.err{color:var(--red);font-size:.85rem;min-height:1.2em;margin-top:8px}
+.ok{text-align:center;padding:10px 0}
+.ok .big{font-size:4rem}
+.spin{width:22px;height:22px;border:3px solid #fff;border-top-color:transparent;border-radius:50%;display:inline-block;animation:sp .7s linear infinite;vertical-align:middle}
+@keyframes sp{to{transform:rotate(360deg)}}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:10px 20px;border-radius:999px;z-index:80;transition:.3s;border:2px solid var(--yellow)}
+.toast.on{transform:translate(-50%,0)}
+
+@media(max-width:780px){
+  .hero{grid-template-columns:1fr;padding-top:32px;text-align:center}
+  .hero p{margin:auto}.bowl{max-width:300px}
+  .links a:not(.cart-btn){display:none}
+  .ig{display:block;margin:12px 0 0}
+  .head{align-items:start}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header><div class="container nav">
-<a class="brand" href="#"><div class="logo">A</div><div><strong>Aadriti Nutri Bites</strong><small>Dates • Nuts • Goodness</small></div></a>
-<nav class="navlinks" id="navlinks"><a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#contact">Contact</a></nav>
-<div style="display:flex;gap:8px;align-items:center"><button class="cartbtn" onclick="toggleCart()">Cart <span class="count" id="count">0</span></button><button class="menu" onclick="document.getElementById('navlinks').classList.toggle('mobile')">☰</button></div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#top"><i></i>salsphere</a>
+  <div class="links">
+    <a href="#menu">Menu</a><a href="#why">Why us</a>
+    <a href="https://instagram.com/salsphere_" target="_blank" rel="noopener">@salsphere_</a>
+    <button class="cart-btn" id="openCart" aria-label="Open cart">🛒 Cart<b id="count">0</b></button>
+  </div>
 </div></header>
 
-<main>
-<section class="hero"><div class="container heroGrid">
-<div><div class="pill">🇮🇳 PAN INDIA DELIVERY • FSSAI REGISTERED</div><h1>Sweetness made from <span>nature.</span></h1><p>Wholesome date & nut treats handcrafted for your everyday cravings — from protein bars and laddus to modakas and crunchy namkeen.</p><div class="actions"><a class="primary" href="#shop">Shop the collection</a><a class="secondary" href="https://instagram.com/aadritinutribites" target="_blank">Instagram ↗</a></div></div>
-<div class="heroCard"><div class="heroPic"><div class="sweetStack">🍫🥜</div></div><div class="heroCardText"><b>Dates + Nuts Protein Bar</b><span>100% goodness</span></div></div>
+<main id="top">
+<div class="wrap hero">
+  <div>
+    <span class="tag hand">chopped fresh, every morning</span>
+    <h1>Salads that don't taste like <span>homework.</span></h1>
+    <p>Crunchy, colourful bowls tossed to order and delivered cold. No sad lettuce, no soggy dressing — just food you'll actually finish.</p>
+    <a class="cta" href="#menu">Build your lunch →</a>
+    <a class="ig" href="https://instagram.com/salsphere_" target="_blank" rel="noopener">📸 follow @salsphere_</a>
+  </div>
+  <div class="bowl">
+    <div class="plate">🥗</div>
+    <span class="s s1">🍅</span><span class="s s2">🥕</span><span class="s s3">🌽</span><span class="s s4">🍋</span>
+    <div class="stamp hand">100%<br>fresh</div>
+  </div>
+</div>
+
+<div class="strip"><div id="mq"></div></div>
+
+<section id="menu"><div class="wrap">
+  <div class="head">
+    <div><span class="hand">today's bowls</span><h2>The Menu</h2></div>
+    <div class="chips" id="chips">
+      <button class="chip on" data-c="all">All</button>
+      <button class="chip" data-c="veg">Veggie</button>
+      <button class="chip" data-c="protein">Protein</button>
+      <button class="chip" data-c="fruity">Fruity</button>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
 </div></section>
 
-<section class="trust"><div class="container trustGrid"><div class="trustItem"><span class="trustIcon">🇮🇳</span>Pan India Delivery</div><div class="trustItem"><span class="trustIcon">✓</span>FSSAI Registered</div><div class="trustItem"><span class="trustIcon">🌿</span>Handcrafted</div><div class="trustItem"><span class="trustIcon">🥜</span>Date & Nut Based</div></div></section>
-
-<section class="section" id="shop"><div class="container"><div class="sectionHead"><div class="eyebrow">The Collection</div><h2>Little bites. Big goodness.</h2><p>Choose your favourites and add them to your cart. Prices shown are for one pack.</p></div><div class="products" id="products"></div></div></section>
-
-<section class="section story" id="story"><div class="container storyGrid"><div class="storyBox">🥜</div><div class="storyText"><div class="eyebrow">Why Aadriti?</div><h2>Traditional flavours, a modern little twist.</h2><p>Aadriti Nutri Bites brings together dates, nuts, seeds and familiar Indian flavours into delicious snackable treats made for gifting, celebrations and everyday cravings.</p><div class="checks"><div class="check"><i>✓</i> Thoughtfully crafted date & nut recipes</div><div class="check"><i>✓</i> Sweet treats and savoury bites</div><div class="check"><i>✓</i> Delivery across India</div><div class="check"><i>✓</i> FSSAI registered food business</div></div></div></div></section>
-
-<section class="section contact" id="contact"><div class="container contactGrid"><div><div class="eyebrow">Let's connect</div><h2>Have a gifting or bulk order?</h2><p>Tell us what you need and we'll get back to you. You can also DM us on Instagram.</p></div><form class="contactForm" onsubmit="sendEnquiry(event)"><input id="name" placeholder="Your name" required><input id="phone" placeholder="Phone / WhatsApp" required><input id="message" placeholder="What would you like to order?" required><button>Send enquiry on WhatsApp</button></form></div></section>
+<section class="why" id="why"><div class="wrap">
+  <div class="head"><div><span class="hand">not to brag, but…</span><h2>Why people keep ordering</h2></div></div>
+  <div class="three">
+    <div><div class="big">🌱</div><h3>Picked, not stored</h3><p>Veggies come from local farms and go into your bowl the same day.</p></div>
+    <div><div class="big">🥣</div><h3>Dressing on the side</h3><p>Nothing gets soggy. You pour it when you're ready to eat.</p></div>
+    <div><div class="big">🛵</div><h3>Cold-box delivery</h3><p>Insulated packs keep it crisp. Free delivery above ₹499.</p></div>
+  </div>
+</div></section>
 </main>
 
-<footer><div class="container footerIn"><div>© 2026 <b>Aadriti Nutri Bites</b>. All rights reserved.</div><div>FSSAI Registered • Pan India Delivery</div></div></footer>
+<footer><div class="wrap">
+  <div class="hand">salsphere — eat something green today</div>
+  <p style="margin-top:8px">Find us on Instagram <a href="https://instagram.com/salsphere_" target="_blank" rel="noopener">@salsphere_</a> · Orders 10am – 8pm</p>
+  <p style="margin-top:6px;font-size:.8rem;opacity:.7">© <span id="yr"></span> Salsphere. Made with too much coffee.</p>
+</div></footer>
 
-<div class="overlay" id="overlay" onclick="toggleCart()"></div>
-<aside class="cartPanel" id="cart"><div class="cartTop"><h2>Your Cart</h2><button class="close" onclick="toggleCart()">✕</button></div><div class="cartItems" id="cartItems"></div><div class="cartBottom"><div class="total"><span>Total</span><span id="total">₹0</span></div><button class="checkout" onclick="payNow()">Pay securely with Razorpay</button><small style="display:block;color:#888;margin-top:8px">Demo setup: replace the Razorpay key in the JavaScript with your live/test key.</small></div></aside>
+<div class="veil" id="veil"></div>
+
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <div class="dh"><h2 style="font-size:1.4rem">Your bowl bag</h2><button class="x" id="closeCart" aria-label="Close">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="foot">
+    <div class="row"><span>Subtotal</span><span id="sub">₹0</span></div>
+    <div class="row"><span>Delivery</span><span id="del">₹0</span></div>
+    <div class="row t"><span>Total</span><span id="tot">₹0</span></div>
+    <button class="pay" id="toCheckout" disabled>Checkout →</button>
+  </div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div id="form">
+    <h2>Almost there 🥗</h2>
+    <label for="nm">Name</label><input id="nm" autocomplete="name" placeholder="Your name">
+    <div class="two">
+      <div><label for="ph">Phone</label><input id="ph" type="tel" inputmode="numeric" maxlength="10" placeholder="98765 43210"></div>
+      <div><label for="pin">Pincode</label><input id="pin" inputmode="numeric" maxlength="6" placeholder="560001"></div>
+    </div>
+    <label for="ad">Delivery address</label><textarea id="ad" rows="2" placeholder="Flat, street, landmark"></textarea>
+    <label>Pay with</label>
+    <div class="methods" id="methods">
+      <button class="m on" data-m="upi">UPI</button><button class="m" data-m="card">Card</button><button class="m" data-m="cod">Cash</button>
+    </div>
+    <div id="pf"></div>
+    <div class="err" id="err"></div>
+    <button class="pay" id="payNow">Pay now</button>
+    <button style="width:100%;margin-top:8px;color:var(--muted)" id="back">← back to cart</button>
+  </div>
+  <div class="ok" id="done" hidden>
+    <div class="big">🎉</div>
+    <h2>Order placed!</h2>
+    <p style="margin:8px 0">Thanks <b id="dn"></b>. Your order <b id="oid"></b> is being chopped right now.</p>
+    <p class="hand" style="font-size:1.4rem;color:var(--green-d)">arriving in ~35 minutes</p>
+    <button class="pay" style="background:var(--green)" id="closeDone">Back to the menu</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <script>
-const products=[
-{id:1,name:"Dates & Nut Protein Bar",desc:"Dates, almonds, cashews & seeds.",price:299,emoji:"🍫",tag:"BESTSELLER"},
-{id:2,name:"Classic Date & Nut Laddu",desc:"Rich, naturally sweet festive laddus.",price:349,emoji:"🟤",tag:"POPULAR"},
-{id:3,name:"Premium Nut Laddu",desc:"A decadent mix of premium nuts.",price:399,emoji:"🥜",tag:"PREMIUM"},
-{id:4,name:"Dry Fruit Modaka",desc:"Festive modakas with a nutty centre.",price:449,emoji:"🪔",tag:"FESTIVE"},
-{id:5,name:"Pani Puri Flavour Namkeen",desc:"Tangy, chatpata and seriously crunchy.",price:199,emoji:"🟣",tag:"NEW"},
-{id:6,name:"Masala Nut Mix",desc:"Crunchy nuts with a savoury masala.",price:249,emoji:"🌰",tag:"CRUNCHY"},
-{id:7,name:"Cocoa Date Bites",desc:"Date bites with a rich cocoa finish.",price:279,emoji:"🍫",tag:"NEW"},
-{id:8,name:"Coconut Date Ladoo",desc:"Soft dates, coconut & crunchy nuts.",price:329,emoji:"🥥",tag:"FAVOURITE"},
-{id:9,name:"Anjeer Nut Bites",desc:"Fig, dates and nuts in bite-sized treats.",price:379,emoji:"🟤",tag:"PREMIUM"},
-{id:10,name:"Celebration Gift Box",desc:"A curated box of Aadriti favourites.",price:699,emoji:"🎁",tag:"GIFTING"}
+const PRODUCTS=[
+ {id:1,n:'Green Goddess Bowl',d:'Kale, cucumber, avocado, edamame and a herby lime dressing.',p:229,e:'🥬',c:'veg',t:'Bestseller',k:'320 kcal'},
+ {id:2,n:'Chicken Caesar Crunch',d:'Grilled chicken, romaine, garlic croutons, parmesan shavings.',p:279,e:'🥗',c:'protein',t:'Filling',k:'480 kcal'},
+ {id:3,n:'Watermelon Feta Fresh',d:'Juicy watermelon, feta, mint and a little black pepper.',p:199,e:'🍉',c:'fruity',t:'Summer pick',k:'210 kcal'},
+ {id:4,n:'Mexican Corn & Bean',d:'Sweet corn, kidney beans, peppers, salsa and lime.',p:219,e:'🌽',c:'veg',t:'Spicy',k:'350 kcal'},
+ {id:5,n:'Paneer Tikka Salad',d:'Charred paneer cubes, onions, mint chutney, tomato.',p:249,e:'🧀',c:'protein',t:'Desi fave',k:'430 kcal'},
+ {id:6,n:'Mango Quinoa Sunrise',d:'Quinoa, ripe mango, cherry tomato, roasted seeds.',p:239,e:'🥭',c:'fruity',t:'New',k:'340 kcal'},
+ {id:7,n:'Greek Olive Bowl',d:'Olives, cucumber, red onion, feta, oregano vinaigrette.',p:229,e:'🫒',c:'veg',t:'Classic',k:'300 kcal'},
+ {id:8,n:'Egg & Avocado Power',d:'Boiled eggs, smashed avocado, spinach, cherry tomato.',p:269,e:'🥑',c:'protein',t:'Gym crowd',k:'460 kcal'}
 ];
-let cart=JSON.parse(localStorage.getItem("aadritiCart")||"[]");
-function renderProducts(){document.getElementById("products").innerHTML=products.map(p=>`<article class="product"><div class="productVisual"><span class="tag">${p.tag}</span>${p.emoji}</div><div class="productBody"><h3>${p.name}</h3><p>${p.desc}</p><div class="priceRow"><span class="price">₹${p.price}</span><button class="add" onclick="addToCart(${p.id})">+ Add</button></div></div></article>`).join("")}
-function addToCart(id){let item=cart.find(x=>x.id===id);item?item.qty++:cart.push({id,qty:1});saveCart();toggleCart(true)}
-function saveCart(){localStorage.setItem("aadritiCart",JSON.stringify(cart));renderCart()}
-function renderCart(){let el=document.getElementById("cartItems"),count=cart.reduce((s,x)=>s+x.qty,0),total=cart.reduce((s,x)=>{let p=products.find(y=>y.id===x.id);return s+p.price*x.qty},0);document.getElementById("count").textContent=count;document.getElementById("total").textContent="₹"+total;if(!cart.length){el.innerHTML='<div class="empty">Your cart is empty.<br>Pick a few delicious bites! 🥜</div>';return}el.innerHTML=cart.map(x=>{let p=products.find(y=>y.id===x.id);return `<div class="cartItem"><div class="cartEmoji">${p.emoji}</div><div><b>${p.name}</b><small>₹${p.price} × ${x.qty}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${p.id},1)">+</button></div></div><button class="remove" onclick="removeItem(${p.id})">Remove</button></div>`}).join("")}
-function changeQty(id,n){let x=cart.find(a=>a.id===id);if(x){x.qty+=n;if(x.qty<=0)cart=cart.filter(a=>a.id!==id)}saveCart()}
-function removeItem(id){cart=cart.filter(x=>x.id!==id);saveCart()}
-function toggleCart(force){let c=document.getElementById("cart"),o=document.getElementById("overlay");let open=force===true?!c.classList.contains("open"):!c.classList.contains("open");c.classList.toggle("open",open);o.classList.toggle("show",open)}
-function payNow(){if(!cart.length)return alert("Please add a product first.");let total=cart.reduce((s,x)=>s+products.find(p=>p.id===x.id).price*x.qty,0);let options={key:"rzp_test_REPLACE_WITH_YOUR_KEY",amount:total*100,currency:"INR",name:"Aadriti Nutri Bites",description:"Dates & Nut treats",image:"",handler:function(response){alert("Payment successful! Payment ID: "+response.razorpay_payment_id);cart=[];saveCart();toggleCart()},prefill:{name:"",email:"",contact:""},theme:{color:"#8b5cf6"}};if(options.key.includes("REPLACE")){alert("Razorpay is ready. Replace the demo key in the code with your Razorpay Test/Live Key ID to accept payments.");return}new Razorpay(options).open()}
-function sendEnquiry(e){e.preventDefault();let text=`Hello Aadriti Nutri Bites!%0AName: ${encodeURIComponent(document.getElementById("name").value)}%0APhone: ${encodeURIComponent(document.getElementById("phone").value)}%0AOrder/Enquiry: ${encodeURIComponent(document.getElementById("message").value)}`;window.open("https://wa.me/919999999999?text="+text,"_blank")}
-renderProducts();renderCart();
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const inr=n=>'₹'+n.toLocaleString('en-IN');
+let cart={}, filter='all', method='upi';
+try{cart=JSON.parse(localStorage.getItem('sal_cart')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('sal_cart',JSON.stringify(cart))}catch(e){}};
+
+$('#yr').textContent=new Date().getFullYear();
+$('#mq').innerHTML=('FRESH ✦ CRUNCHY ✦ NO PRESERVATIVES ✦ TOSSED TO ORDER ✦ ').repeat(8);
+
+function renderGrid(){
+  $('#grid').innerHTML=PRODUCTS.filter(x=>filter==='all'||x.c===filter).map((x,i)=>`
+   <article class="card"><div class="pic c${i%3}"><span class="badge">${x.t}</span>${x.e}</div>
+   <div class="info"><span class="meta">${x.k}</span><h3>${x.n}</h3><p>${x.d}</p>
+   <div class="buy"><span class="price">${inr(x.p)}</span><button class="add" data-id="${x.id}">+ Add</button></div></div></article>`).join('');
+}
+function totals(){
+  const sub=Object.entries(cart).reduce((s,[id,q])=>s+PRODUCTS.find(p=>p.id==id).p*q,0);
+  const del=sub===0?0:(sub>=499?0:30);
+  return{sub,del,tot:sub+del,n:Object.values(cart).reduce((a,b)=>a+b,0)};
+}
+function renderCart(){
+  const t=totals(), ids=Object.keys(cart);
+  $('#count').textContent=t.n;
+  $('#items').innerHTML=ids.length?ids.map(id=>{const p=PRODUCTS.find(x=>x.id==id),q=cart[id];
+    return`<div class="it"><div class="e">${p.e}</div><div class="n">${p.n}<small>${inr(p.p)} each</small></div>
+    <div class="qty"><button data-d="-1" data-id="${id}">−</button><b>${q}</b><button data-d="1" data-id="${id}">+</button></div></div>`}).join('')
+   :`<div class="empty"><div class="hand">nothing here yet…</div><p>Your bag is hungry. Add a salad!</p></div>`;
+  $('#sub').textContent=inr(t.sub);
+  $('#del').textContent=t.del?inr(t.del):(t.sub?'Free':'₹0');
+  $('#tot').textContent=inr(t.tot);
+  $('#toCheckout').disabled=!ids.length;
+  $('#payNow').textContent=method==='cod'?`Place order · ${inr(t.tot)}`:`Pay ${inr(t.tot)}`;
+  save();
+}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),1600)}
+const openDrawer=()=>{$('#drawer').classList.add('on');$('#veil').classList.add('on')};
+const closeAll=()=>{$('#drawer').classList.remove('on');$('#modal').classList.remove('on');$('#veil').classList.remove('on')};
+
+$('#grid').addEventListener('click',e=>{
+  const b=e.target.closest('.add');if(!b)return;
+  cart[b.dataset.id]=(cart[b.dataset.id]||0)+1;renderCart();
+  toast(PRODUCTS.find(p=>p.id==b.dataset.id).n+' added 🥗');
+});
+$('#items').addEventListener('click',e=>{
+  const b=e.target.closest('[data-d]');if(!b)return;
+  const id=b.dataset.id;cart[id]+=+b.dataset.d;if(cart[id]<=0)delete cart[id];renderCart();
+});
+$('#chips').addEventListener('click',e=>{
+  const c=e.target.closest('.chip');if(!c)return;
+  $$('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');filter=c.dataset.c;renderGrid();
+});
+$('#openCart').onclick=openDrawer;
+$('#closeCart').onclick=closeAll;
+$('#veil').onclick=closeAll;
+
+function payFields(){
+  const f=$('#pf');
+  if(method==='upi')f.innerHTML=`<label for="upi">UPI ID</label><input id="upi" placeholder="yourname@upi" autocapitalize="off">`;
+  else if(method==='card')f.innerHTML=`<label for="cn">Card number</label><input id="cn" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456">
+    <div class="two"><div><label for="ex">Expiry</label><input id="ex" maxlength="5" placeholder="MM/YY"></div><div><label for="cv">CVV</label><input id="cv" type="password" inputmode="numeric" maxlength="3" placeholder="•••"></div></div>`;
+  else f.innerHTML=`<p style="margin-top:10px;color:var(--muted);font-size:.9rem">Pay in cash or UPI to our delivery partner at your door.</p>`;
+  const cn=$('#cn');if(cn)cn.oninput=()=>cn.value=cn.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim();
+  const ex=$('#ex');if(ex)ex.oninput=()=>{let v=ex.value.replace(/\D/g,'');ex.value=v.length>2?v.slice(0,2)+'/'+v.slice(2,4):v};
+  renderCart();
+}
+$('#methods').addEventListener('click',e=>{
+  const m=e.target.closest('.m');if(!m)return;
+  $$('.m').forEach(x=>x.classList.remove('on'));m.classList.add('on');method=m.dataset.m;payFields();
+});
+$('#toCheckout').onclick=()=>{
+  $('#drawer').classList.remove('on');
+  $('#form').hidden=false;$('#done').hidden=true;$('#err').textContent='';
+  $('#modal').classList.add('on');payFields();
+};
+$('#back').onclick=()=>{$('#modal').classList.remove('on');$('#drawer').classList.add('on')};
+
+function validate(){
+  if($('#nm').value.trim().length<2)return'Please add your name.';
+  if(!/^[6-9]\d{9}$/.test($('#ph').value.trim()))return'Enter a valid 10-digit phone number.';
+  if(!/^\d{6}$/.test($('#pin').value.trim()))return'Pincode should be 6 digits.';
+  if($('#ad').value.trim().length<8)return'Please add your full address.';
+  if(method==='upi'&&!/^[\w.\-]{2,}@[a-z]{2,}$/i.test($('#upi').value.trim()))return'That UPI ID looks off (e.g. name@okaxis).';
+  if(method==='card'){
+    if($('#cn').value.replace(/\s/g,'').length<16)return'Enter the 16-digit card number.';
+    if(!/^(0[1-9]|1[0-2])\/\d{2}$/.test($('#ex').value))return'Expiry should be MM/YY.';
+    if($('#cv').value.length!==3)return'CVV should be 3 digits.';
+  }
+  return'';
+}
+$('#payNow').onclick=()=>{
+  const er=validate();$('#err').textContent=er;if(er)return;
+  const b=$('#payNow'),t=totals();b.disabled=true;b.innerHTML='<span class="spin"></span> Processing…';
+  /* DEMO GATEWAY: swap this timeout for Razorpay / Stripe / Cashfree checkout.
+     e.g. new Razorpay({key:'YOUR_KEY_ID',amount:t.tot*100,currency:'INR',handler:onSuccess}).open()
+     Create the order + verify the signature on your server, never in the browser. */
+  setTimeout(()=>{
+    $('#dn').textContent=$('#nm').value.trim().split(' ')[0];
+    $('#oid').textContent='#SAL'+Math.floor(10000+Math.random()*89999);
+    $('#form').hidden=true;$('#done').hidden=false;
+    cart={};renderCart();b.disabled=false;
+  },1700);
+};
+$('#closeDone').onclick=closeAll;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+
+renderGrid();renderCart();
 </script>
 </body>
 </html>
