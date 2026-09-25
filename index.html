@@ -2,304 +2,183 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>CROSTA e CREMA — The Art of the Basque</title>
-<meta name="description" content="CROSTA e CREMA — handcrafted desserts, burnt Basque cheesecake and indulgent creations from Bengaluru.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vedvisha Naturals | The Online Herb Store</title>
+<meta name="description" content="Buy dried herbs, powders, spices, superfoods and dry fruits of the best quality at your doorstep with free shipping all over India.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#171512;--cream:#f5f0e8;--paper:#fbf9f5;--muted:#777168;--line:#ded7cb;--accent:#9a4e32;--dark:#211c17}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.wrap{max-width:1240px;margin:auto;padding:0 34px}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10;background:rgba(251,249,245,.94);backdrop-filter:blur(14px)}
-.logo{font-size:15px;letter-spacing:.19em;font-weight:600;line-height:1.05}
-.logo span{font-family:"Playfair Display",serif;font-style:italic;letter-spacing:0;font-size:14px;font-weight:500}
-.navlinks{display:flex;gap:32px;font-size:12px;text-transform:uppercase;letter-spacing:.13em}
-.navlinks a{transition:.3s}
-.navlinks a:hover{color:var(--accent)}
-.navcta{border:1px solid var(--ink);padding:12px 18px;font-size:11px;text-transform:uppercase;letter-spacing:.13em;transition:.3s}
-.navcta:hover{background:var(--ink);color:#fff}
-.menu{display:none;background:none;border:0;font-size:24px}
-.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:70px;padding:70px 0 90px}
-.eyebrow{display:flex;align-items:center;gap:11px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:25px}
-.eyebrow:before{content:"";width:30px;height:1px;background:var(--accent)}
-.hero h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(60px,7.4vw,108px);line-height:.88;letter-spacing:-.055em;max-width:700px}
-.hero h1 em{font-weight:500;color:var(--accent)}
-.hero p{max-width:470px;margin:34px 0 30px;color:var(--muted);font-size:15px;line-height:1.8}
-.actions{display:flex;gap:12px;align-items:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 23px;border:1px solid var(--ink);font-size:11px;text-transform:uppercase;letter-spacing:.15em;transition:.3s}
-.btn.dark{background:var(--ink);color:white}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #17151216}
-.btn.light:hover{background:var(--cream)}
-.hero-visual{height:650px;position:relative}
-.hero-card{height:100%;background:linear-gradient(145deg,#e8d7c6,#c99878 48%,#6f3524);position:relative;overflow:hidden}
-.hero-card:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,#fff6 0 8%,transparent 9%),radial-gradient(circle,#e4c4aa 0 42%,#9a583e 43% 64%,transparent 65%);left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 35px 80px #24120c55}
-.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,#fff4,transparent 32%,#0002)}
-.hero-label{position:absolute;z-index:2;bottom:28px;left:28px;color:white;font-family:"Playfair Display",serif;font-style:italic;font-size:23px}
-.hero-stamp{position:absolute;z-index:3;right:28px;top:28px;width:82px;height:82px;border:1px solid #fff9;border-radius:50%;display:grid;place-items:center;color:white;text-align:center;font-size:9px;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
-.marquee{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:15px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:20px}
-.track{display:inline-block;animation:move 22s linear infinite}
-.track span{margin:0 30px;color:#d9b69f}
-@keyframes move{to{transform:translateX(-50%)}}
-.intro{padding:130px 0 100px;display:grid;grid-template-columns:.7fr 1.3fr;gap:80px}
-.kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.intro h2{font-family:"Playfair Display",serif;font-size:clamp(42px,5vw,70px);line-height:1;letter-spacing:-.04em;font-weight:500;max-width:760px}
-.intro h2 em{color:var(--accent)}
-.intro-copy{margin-top:35px;max-width:600px;color:var(--muted);font-size:15px;line-height:1.9}
-.products{padding:90px 0 130px;background:var(--cream)}
-.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:45px}
-.section-head h2{font-family:"Playfair Display",serif;font-size:58px;font-weight:500;letter-spacing:-.04em}
-.section-head p{color:var(--muted);max-width:330px;font-size:13px;line-height:1.7}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.product{background:var(--paper);min-width:0;transition:.45s;cursor:pointer}
-.product:hover{transform:translateY(-8px)}
-.pic{height:350px;position:relative;overflow:hidden;background:#d8c1ab}
-.pic:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#fff4,transparent 40%,#0002)}
-.p1{background:radial-gradient(circle at 50% 56%,#f0d5bd 0 24%,#b96c47 25% 40%,transparent 41%),linear-gradient(135deg,#e7cdb7,#7f3826)}
-.p2{background:radial-gradient(circle at 50% 56%,#5a3025 0 23%,#241711 24% 39%,transparent 40%),linear-gradient(135deg,#6b4638,#181311)}
-.p3{background:radial-gradient(circle at 50% 56%,#f7e4db 0 23%,#b75b58 24% 40%,transparent 41%),linear-gradient(135deg,#ead0c8,#8c4b47)}
-.p4{background:radial-gradient(circle at 50% 56%,#ded4d0 0 23%,#626d79 24% 40%,transparent 41%),linear-gradient(135deg,#c6b8b2,#34404b)}
-.tag{position:absolute;top:14px;left:14px;z-index:2;background:var(--paper);padding:7px 10px;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
-.product-info{padding:20px 18px 23px;display:flex;justify-content:space-between;gap:15px}
-.product-info h3{font-family:"Playfair Display",serif;font-size:21px;font-weight:500}
-.product-info p{color:var(--muted);font-size:11px;margin-top:7px;line-height:1.5}
-.price{font-size:13px;white-space:nowrap}
-.story{padding:130px 0;background:var(--dark);color:#fff}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
-.story-art{height:620px;position:relative;background:linear-gradient(145deg,#d5b99f,#74422f 52%,#2c1d18);overflow:hidden}
-.story-art:before{content:"";position:absolute;width:70%;height:70%;border:1px solid #fff5;left:15%;top:15%;transform:rotate(7deg)}
-.story-art:after{content:"CROSTA\\A E CREMA";white-space:pre;text-align:center;position:absolute;inset:0;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:42px;line-height:1;font-style:italic;color:#fff;letter-spacing:.02em}
-.story h2{font-family:"Playfair Display",serif;font-size:clamp(48px,5vw,76px);font-weight:500;line-height:.98;letter-spacing:-.045em}
-.story h2 em{color:#cda388}
-.story p{margin:30px 0;color:#bdb4ac;line-height:1.9;font-size:14px;max-width:500px}
-.values{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #ffffff25;margin-top:55px;padding-top:28px;gap:25px}
-.values strong{font-family:"Playfair Display",serif;font-size:22px;font-weight:500}
-.values span{display:block;color:#99918a;font-size:10px;text-transform:uppercase;letter-spacing:.14em;margin-top:7px}
-.visit{padding:125px 0;text-align:center}
-.visit h2{font-family:"Playfair Display",serif;font-size:clamp(48px,6vw,82px);font-weight:500;line-height:.95;letter-spacing:-.05em}
-.visit p{color:var(--muted);margin:24px auto 32px;max-width:520px;line-height:1.8;font-size:14px}
-.location{display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:8px;font-size:11px;text-transform:uppercase;letter-spacing:.14em}
-footer{background:#eee8df;border-top:1px solid var(--line);padding:50px 0 30px}
-.footer-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:50px}
-.footer-brand{font-family:"Playfair Display",serif;font-size:30px;font-style:italic}
-.footer-links{display:flex;gap:30px;font-size:11px;text-transform:uppercase;letter-spacing:.12em}
-.footer-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
-.toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:15px 18px;font-size:12px;transform:translateY(100px);opacity:0;transition:.4s;z-index:30}
-.toast.show{transform:translateY(0);opacity:1}
-@media(max-width:900px){
-.wrap{padding:0 20px}.nav{height:70px}.navlinks,.navcta{display:none}.menu{display:block}
-.hero{grid-template-columns:1fr;padding:55px 0 70px;gap:45px}.hero h1{font-size:65px}.hero-visual{height:470px}
-.intro{grid-template-columns:1fr;gap:25px;padding:90px 0 75px}.intro h2{font-size:49px}
-.products{padding:75px 0 90px}.section-head{display:block}.section-head p{margin-top:15px}.section-head h2{font-size:48px}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.pic{height:290px}
-.story{padding:85px 0}.story-grid{grid-template-columns:1fr;gap:55px}.story-art{height:440px}.values{margin-top:35px}
-.visit{padding:90px 0}.footer-top{display:block}.footer-links{margin-top:25px;flex-wrap:wrap}.footer-bottom{gap:10px;flex-direction:column}
-}
-@media(max-width:520px){
-.hero h1{font-size:54px}.hero p{font-size:13px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}.hero-visual{height:390px}
-.grid{grid-template-columns:1fr}.pic{height:370px}.product-info{padding:18px 15px}.story-art{height:370px}.story-art:after{font-size:34px}
-}
-
-.shopbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filter{border:1px solid #cfc7bc;background:transparent;padding:10px 16px;font-size:10px;text-transform:uppercase;letter-spacing:.13em;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.catalogue{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.catalogue .product{position:relative}.product-add{position:absolute;z-index:3;right:14px;bottom:88px;width:40px;height:40px;border-radius:50%;border:1px solid var(--ink);background:var(--paper);cursor:pointer;font-size:22px;transition:.3s}.product-add:hover{background:var(--ink);color:#fff;transform:scale(1.06)}
-.product .pic{height:330px}.product-info .from{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:9px}
-.order-features{max-width:900px;margin:55px auto 42px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 0;gap:20px;text-align:left}.order-features b{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;color:var(--accent)}.order-features span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-top:7px}
-.cart-overlay,.modal,.success-modal{position:fixed;inset:0;background:#1715128c;backdrop-filter:blur(8px);z-index:50;opacity:0;visibility:hidden;transition:.3s}.cart-overlay.open,.modal.open,.success-modal.open{opacity:1;visibility:visible}
-.cart{margin-left:auto;background:var(--paper);width:min(480px,100%);height:100%;padding:30px;display:flex;flex-direction:column;transform:translateX(100%);transition:.4s}.cart-overlay.open .cart{transform:translateX(0)}.cart-head{display:flex;justify-content:space-between;align-items:start;border-bottom:1px solid var(--line);padding-bottom:20px}.cart-head h3{font-family:"Playfair Display",serif;font-size:38px;font-weight:500}.cart-head button,.modal-close{border:0;background:none;font-size:30px;cursor:pointer}.cart-items{overflow:auto;flex:1;padding:10px 0}.cart-row{display:grid;grid-template-columns:70px 1fr auto;gap:13px;padding:18px 0;border-bottom:1px solid var(--line);align-items:center}.mini-pic{width:70px;height:70px}.cart-row h4{font-family:"Playfair Display",serif;font-size:17px;font-weight:500}.cart-row p{font-size:10px;color:var(--muted);margin:4px 0}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{width:23px;height:23px;border:1px solid var(--line);background:none;cursor:pointer}.remove{font-size:10px;color:var(--accent);border:0;background:none;cursor:pointer}.cart-bottom{padding-top:18px}.subtotal,.summary-line,.summary-total{display:flex;justify-content:space-between;padding:7px 0;font-size:13px}.subtotal{font-size:18px}.delivery-note{font-size:10px;color:var(--muted);padding:8px 0 17px}.full{width:100%}
-.modal{display:grid;place-items:center;padding:20px;overflow:auto}.modal-card,.checkout-card,.success-card{width:min(950px,100%);background:var(--paper);padding:40px;position:relative;max-height:92vh;overflow:auto}.modal-card{display:grid;grid-template-columns:1fr 1fr;gap:40px}.modal-product-pic{min-height:480px}.modal-close{position:absolute;right:20px;top:15px;z-index:4}.modal-card h2,.checkout-head h2,.success-card h2{font-family:"Playfair Display",serif;font-size:48px;line-height:.95;font-weight:500;margin:12px 0 18px}.modal-card p{color:var(--muted);line-height:1.8;font-size:13px}.size-title{font-size:10px;text-transform:uppercase;letter-spacing:.15em;margin:30px 0 10px}.size-options{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.size-btn{border:1px solid var(--line);background:none;padding:13px 5px;cursor:pointer;font-size:11px}.size-btn.selected,.size-btn:hover{border-color:var(--ink);background:var(--ink);color:#fff}.modal-price{font-size:24px;margin:25px 0}.add-big{width:100%}
-.checkout-card{width:min(1050px,100%)}.checkout-head{border-bottom:1px solid var(--line);padding-bottom:25px;margin-bottom:30px}.checkout-head p{color:var(--muted);font-size:13px}.checkout-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px}.field{margin-bottom:18px}.field label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px}.field label span{color:var(--muted);text-transform:none;letter-spacing:0}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);background:#fffdfa;padding:13px 14px;outline:none;font:inherit;font-size:13px}.field textarea{min-height:85px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--ink)}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice-row{display:flex;gap:10px}.choice{border:1px solid var(--line);padding:13px;flex:1;font-size:11px!important;text-transform:none!important;letter-spacing:0!important}.choice input{width:auto!important;margin-right:7px}.checkout-summary{background:var(--cream);padding:25px;height:max-content;position:sticky;top:0}.summary-title{font-family:"Playfair Display",serif;font-size:25px;margin-bottom:15px}.summary-product{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid #d8d0c4;font-size:12px}.summary-product small{display:block;color:var(--muted);margin-top:4px}.summary-line{margin-top:15px}.summary-total{border-top:1px solid var(--ink);margin-top:10px;padding-top:15px;font-size:16px}.secure{margin-top:22px;border-top:1px solid #d8d0c4;padding-top:16px;font-size:10px;color:var(--muted);line-height:2}
-.success-modal{display:grid;place-items:center;padding:20px}.success-card{text-align:center;width:min(540px,100%);padding:60px 40px}.success-mark{width:60px;height:60px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;margin:0 auto 25px;font-size:25px}.success-card p{color:var(--muted);line-height:1.8;font-size:13px;margin:15px auto 28px;max-width:390px}
-@media(max-width:900px){.catalogue{grid-template-columns:repeat(2,1fr)}.order-features{grid-template-columns:repeat(2,1fr)}.checkout-grid{grid-template-columns:1fr}.checkout-summary{position:static}.modal-card{grid-template-columns:1fr}.modal-product-pic{min-height:350px}}
-@media(max-width:520px){.catalogue{grid-template-columns:1fr}.product .pic{height:380px}.order-features{grid-template-columns:1fr 1fr}.cart{padding:22px}.modal-card,.checkout-card{padding:25px 18px}.modal-card h2,.checkout-head h2,.success-card h2{font-size:40px}.size-options{grid-template-columns:repeat(2,1fr)}.twocol{grid-template-columns:1fr}.choice-row{flex-direction:column}}
+:root{--g:#4f7d2c;--gd:#345a1b;--y:#f2b400;--ink:#222;--mut:#777;--ln:#e6e6e6;--bg:#f6f7f3}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:14px;line-height:1.55}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}ul{list-style:none}
+:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+.w{max-width:1240px;margin:0 auto;padding:0 16px}
+.top{background:#2c3e1c;color:#fff;font-size:12.5px}.top .w{display:flex;justify-content:space-between;align-items:center;padding-top:7px;padding-bottom:7px;gap:10px}
+.top ul{display:flex;gap:18px}.top a:hover{color:var(--y)}
+.hd{background:#fff;position:sticky;top:0;z-index:30;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.bar{display:flex;align-items:center;gap:24px;padding:12px 16px}
+.logo{font-family:Lora,serif;font-weight:700;font-size:26px;color:var(--gd);line-height:1}.logo small{display:block;font:400 10.5px Poppins;color:var(--mut);letter-spacing:.5px;margin-top:3px}
+.srch{flex:1;display:flex;border:2px solid var(--g);border-radius:4px;overflow:hidden;max-width:560px}
+.srch input{flex:1;border:0;padding:10px 14px;font:inherit;min-width:0}.srch input:focus{outline:none}.srch button{background:var(--g);color:#fff;padding:0 22px;font-weight:500}
+.acts{display:flex;align-items:center;gap:18px;margin-left:auto;font-weight:500}
+.cbtn{background:var(--y);padding:9px 16px;border-radius:4px;font-weight:600}
+nav.mn{background:var(--g)}nav.mn>.w>ul{display:flex}
+nav.mn>.w>ul>li{position:relative}nav.mn>.w>ul>li>a{display:block;padding:13px 16px;color:#fff;font-weight:500;font-size:13.5px;text-transform:uppercase;letter-spacing:.3px;white-space:nowrap}
+nav.mn>.w>ul>li:hover>a{background:var(--gd)}
+.dd{display:none;position:absolute;left:0;top:100%;background:#fff;min-width:230px;box-shadow:0 10px 24px rgba(0,0,0,.15);z-index:40;padding:8px 0;border-top:3px solid var(--y)}
+li:hover>.dd,li:focus-within>.dd{display:block}.dd a{display:block;padding:8px 20px}.dd a:hover{background:var(--bg);color:var(--g)}
+.burger{display:none}
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--gd)}
+.sl{display:none;min-height:400px;color:#fff;align-items:center}.sl.on{display:flex;animation:f .6s}@keyframes f{from{opacity:.2}to{opacity:1}}
+.sl .w{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+.sl h4{color:var(--y);text-transform:uppercase;letter-spacing:2px;font-size:13px;font-weight:600}
+.sl h2{font-family:Lora,serif;font-size:clamp(28px,4.4vw,52px);line-height:1.12;margin:10px 0}.sl p{opacity:.9;margin-bottom:22px;font-size:16px}
+.btn{display:inline-block;background:var(--y);color:#222;padding:12px 30px;font-weight:600;border-radius:4px;text-transform:uppercase;font-size:13px;letter-spacing:.5px}.btn:hover{background:#fff}
+.sl .pic{height:300px;border-radius:50% 50% 8px 8px/40% 40% 8px 8px;position:relative;justify-self:center;width:min(380px,100%)}
+.pic::before,.pic::after,.im::after{content:"";position:absolute;background:rgba(255,255,255,.28);border-radius:100% 0 100% 0}
+.sl .pic::before{width:110px;height:160px;left:24%;top:22%;transform:rotate(-24deg)}.sl .pic::after{width:80px;height:120px;right:20%;bottom:18%;transform:rotate(32deg)}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;background:rgba(255,255,255,.2);color:#fff;border-radius:50%;font-size:22px;z-index:2}.ar:hover{background:var(--y);color:#222}.pv{left:12px}.nx{right:12px}
+.dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px}.dots button{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4)}.dots .on{background:var(--y)}
+/* banners */
+.ban{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.bn{border-radius:6px;padding:26px;color:#fff;min-height:150px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.bn small{text-transform:uppercase;letter-spacing:1px;font-size:11px;opacity:.85}.bn b{font-family:Lora,serif;font-size:21px;line-height:1.2;margin:4px 0 10px}.bn span{font-weight:600;text-decoration:underline;font-size:13px}
+/* sections */
+.sec{padding:34px 0 0}.sh{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--ln);margin-bottom:18px;position:relative}
+.sh h3{font-size:16px;text-transform:uppercase;letter-spacing:.6px;padding-bottom:9px;border-bottom:3px solid var(--g);margin-bottom:-2px}.sh a{color:var(--g);font-weight:600;font-size:13px;padding-bottom:9px}
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.ct{border:1px solid var(--ln);border-radius:6px;padding:14px 8px;text-align:center;font-weight:500;background:#fff;transition:.2s}.ct i{display:block;width:60px;height:60px;border-radius:50%;margin:0 auto 8px}.ct:hover{border-color:var(--g);box-shadow:0 6px 16px rgba(0,0,0,.08);color:var(--g)}
+.gr{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cd{border:1px solid var(--ln);border-radius:6px;background:#fff;display:flex;flex-direction:column;position:relative;transition:.2s}.cd:hover{box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.sale{position:absolute;top:10px;left:10px;background:var(--y);color:#222;font-weight:700;font-size:11.5px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;z-index:1}
+.im{height:190px;position:relative;border-radius:6px 6px 0 0}.im::after{width:70px;height:100px;left:50%;top:50%;margin:-50px 0 0 -35px;transform:rotate(-20deg)}
+.in{padding:12px 14px 6px;display:flex;flex-direction:column;flex:1}.in small{color:var(--mut);font-size:12px}.in h4{font-size:14px;font-weight:500;line-height:1.35;margin:2px 0 6px}
+.pr{margin-top:auto;font-weight:600;color:var(--gd);font-size:15px}.pr s{color:var(--mut);font-weight:400;font-size:13px;margin-right:6px}
+.ad{margin:8px 14px 14px;padding:9px;background:var(--g);color:#fff;border-radius:4px;font-weight:500}.ad:hover{background:var(--gd)}
+.empty{grid-column:1/-1;padding:26px;text-align:center;color:var(--mut)}
+/* extras */
+.rv{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.rv div{background:var(--bg);padding:20px;border-radius:6px;border-top:4px solid var(--g)}.rv h5{font-size:15px;margin-bottom:6px}.rv p{color:#555;font-size:13px}.rv b{display:block;margin-top:10px;color:var(--gd)}
+.st{background:var(--g);color:#fff;margin-top:40px;padding:26px 0}.st .w{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:10px}.st b{display:block;font-family:Lora,serif;font-size:26px}
+footer{background:#1e2b14;color:#c7d3b9;padding:40px 0 16px;font-size:13.5px}.fg{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.2fr;gap:26px}
+footer h5{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px}footer li{margin-bottom:7px}footer a:hover{color:var(--y)}
+.dc{border-top:1px solid #34472a;margin-top:26px;padding-top:14px;font-size:12px;color:#93a586}
+.wa{position:fixed;left:16px;bottom:16px;background:#25a244;color:#fff;padding:11px 18px;border-radius:30px;font-weight:600;z-index:35;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.up{position:fixed;right:16px;bottom:16px;background:var(--g);color:#fff;width:42px;height:42px;border-radius:50%;z-index:35;font-size:18px}
+.sd{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:.25s;z-index:60}.sd.on{opacity:1;pointer-events:auto}
+.dr{position:fixed;top:0;right:0;height:100%;width:min(390px,100%);background:#fff;z-index:70;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}.dr.on{transform:none}
+.dh{display:flex;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--ln);font-weight:600;font-size:17px}.its{flex:1;overflow:auto;padding:6px 18px}
+.it{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 0;border-bottom:1px solid var(--ln)}.q{display:flex;align-items:center;gap:8px}.q button{width:26px;height:26px;border:1px solid var(--ln);border-radius:4px}
+.df{padding:16px 18px;border-top:1px solid var(--ln)}.tt{display:flex;justify-content:space-between;font-weight:600;font-size:16px}.sm{font-size:12.5px;color:var(--mut);margin:4px 0 12px}.co{width:100%;background:var(--g);color:#fff;padding:12px;border-radius:4px;font-weight:600}
+.ts{position:fixed;bottom:20px;left:50%;transform:translate(-50%,90px);background:#222;color:#fff;padding:10px 20px;border-radius:30px;z-index:80;transition:.3s}.ts.on{transform:translate(-50%,0)}
+@media(max-width:960px){.burger{display:block;background:var(--gd);color:#fff;width:100%;text-align:left;padding:12px 16px;font-weight:600}nav.mn>.w{padding:0}nav.mn>.w>ul{display:none;flex-direction:column}nav.mn.open>.w>ul{display:flex}.dd{position:static;box-shadow:none;border:0;background:var(--gd)}.dd a{color:#fff;padding-left:30px}li:hover>.dd{display:block}
+.top ul{display:none}.bar{flex-wrap:wrap;gap:10px}.srch{order:3;flex-basis:100%;max-width:none}.sl .w{grid-template-columns:1fr}.sl .pic{height:170px}.sl{padding:30px 0 40px}
+.ban,.rv{grid-template-columns:1fr}.cats{grid-template-columns:repeat(3,1fr)}.gr{grid-template-columns:repeat(2,1fr)}.fg{grid-template-columns:1fr 1fr}.acts .lg{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header class="nav">
-<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
-<a class="logo" href="#">CROSTA <span>e</span> CREMA</a>
-<nav class="navlinks"><a href="#story">Our Story</a><a href="#menu">Menu</a><a href="#visit">Visit</a></nav>
-<a class="navcta" href="#menu">Explore Menu</a>
-<button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-</div>
+<div class="top"><div class="w"><span>Free Shipping all over India | 100% Genuine Products</span><ul><li><a href="#ft">Track Order</a></li><li><a href="#ft">Customer Care</a></li><li><a href="#ft">Bulk Orders</a></li><li><a href="#ft">FAQ</a></li></ul></div></div>
+<header class="hd">
+<div class="w bar"><a href="#" class="logo">Vedvisha Naturals<small>YOUR ONLINE HERB STORE</small></a>
+<form class="srch" id="sf" role="search"><input id="q" type="search" placeholder="Search for herbs, powders, spices…" aria-label="Search"><button>Search</button></form>
+<div class="acts"><button class="lg" id="lg">Login / Register</button><button class="cbtn" id="ob">Cart / ₹<span id="ct">0</span> (<span id="cc">0</span>)</button></div></div>
+<nav class="mn" id="mn"><button class="burger" id="bg">☰ Menu</button><div class="w"><ul>
+<li><a href="#" data-c="all">Home</a></li>
+<li><a href="#shop" data-c="all">Shop</a></li>
+<li><a href="#">Personal Care ▾</a><div class="dd"><a href="#" data-c="Hair care">Hair care</a><a href="#" data-c="Skin care">Skin care</a><a href="#" data-c="Diabetic care">Diabetic care</a><a href="#" data-c="Weight loss">Weight loss</a><a href="#" data-c="Digestive">Constipation</a><a href="#" data-c="Bone care">Bone / Joint care</a></div></li>
+<li><a href="#" data-c="Hair care">Hair care ▾</a><div class="dd"><a href="#" data-c="Hair care">Amla</a><a href="#" data-c="Hair care">Reetha</a><a href="#" data-c="Hair care">Shikakai</a><a href="#" data-c="Hair care">Bhringraj</a><a href="#" data-c="Hair care">Henna and indigo</a></div></li>
+<li><a href="#" data-c="Spices">Exotic Spices ▾</a><div class="dd"><a href="#" data-c="Spices">Cardamom</a><a href="#" data-c="Spices">Cinnamon</a><a href="#" data-c="Spices">Black pepper</a><a href="#" data-c="Spices">Saffron</a></div></li>
+<li><a href="#" data-c="Super food">Super Food</a></li>
+<li><a href="#" data-c="Dry fruits">Dry Fruits ▾</a><div class="dd"><a href="#" data-c="Dry fruits">Almonds</a><a href="#" data-c="Dry fruits">Cashews</a><a href="#" data-c="Dry fruits">Raisins</a></div></li>
+<li><a href="#" data-c="Combos">Combos</a></li><li><a href="#top10">Top 10 Picks</a></li><li><a href="#ft">About Us</a></li><li><a href="#ft">Contact Us</a></li>
+</ul></div></nav>
 </header>
 
-<main>
-<section class="hero wrap">
-<div>
-<div class="eyebrow">Artisanal dessert studio · Bengaluru</div>
-<h1>Where the <em>crosta</em> meets the crema.</h1>
-<p>Handcrafted desserts made to order, finished with patience and designed for the moment you take the first slice.</p>
-<div class="actions"><a class="btn dark" href="#shop">Shop the collection</a><a class="btn light" href="#visit">Pre-order a celebration</a></div>
-<div style="display:flex;gap:20px;margin-top:28px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em"><span>Fresh to order</span><span>·</span><span>Scheduled delivery</span><span>·</span><span>Premium batches</span></div>
-</div>
-<div class="hero-visual"><div class="hero-card"><div class="hero-stamp">Made<br>to<br>order</div><div class="hero-label">The Basque Ritual</div></div></div>
+<section class="hero" aria-label="Featured">
+<div class="sl on"><div class="w"><div><h4>Herbal</h4><h2>All in one herbal hair care pack</h2><p>Natural hair cleanser made from powerful herbs.</p><a class="btn" href="#" data-c="Hair care">Shop now</a></div><div class="pic" style="background:linear-gradient(160deg,#5a9a3a,#1e3d12)"></div></div></div>
+<div class="sl"><div class="w"><div><h4>Premium quality</h4><h2>Cardamom, saffron and pepper, sealed fresh</h2><p>Whole spices packed to keep their aroma.</p><a class="btn" href="#" data-c="Spices">Shop now</a></div><div class="pic" style="background:linear-gradient(160deg,#c98a1c,#6b3f0c)"></div></div></div>
+<div class="sl"><div class="w"><div><h4>Relieve constipation with</h4><h2>Triphala, the classic three-fruit blend</h2><p>Gentle daily support for digestion and gut health.</p><a class="btn" href="#" data-c="Digestive">Shop now</a></div><div class="pic" style="background:linear-gradient(160deg,#7a6a34,#33290e)"></div></div></div>
+<button class="ar pv" id="pv" aria-label="Previous">‹</button><button class="ar nx" id="nx" aria-label="Next">›</button><div class="dots" id="dots"></div>
 </section>
 
-<div class="marquee"><div class="track">slowly baked <span>✦</span> deeply caramelised <span>✦</span> creamy centre <span>✦</span> made to order <span>✦</span> CROSTA e CREMA <span>✦</span> slowly baked <span>✦</span> deeply caramelised <span>✦</span> creamy centre <span>✦</span> made to order <span>✦</span></div></div>
+<div class="w"><div class="ban">
+<a class="bn" href="#" data-c="Skin care" style="background:linear-gradient(120deg,#3d9a72,#1b5a40)"><small>Hydrate your skin with</small><b>Natural Aloe Vera Gel</b><span>Shop now</span></a>
+<a class="bn" href="#" data-c="Super food" style="background:linear-gradient(120deg,#8a6a1c,#4a3408)"><small>Nutritional</small><b>Super foods for daily energy</b><span>Shop now</span></a>
+<a class="bn" href="#" data-c="Hair care" style="background:linear-gradient(120deg,#3f4a86,#1b2148)"><small>Natural black dye</small><b>Henna and indigo combo</b><span>Shop now</span></a>
+</div></div>
 
-<section class="intro wrap">
-<div class="kicker">01 / The philosophy</div>
-<div><h2>Simple ingredients. <em>Unforgettable texture.</em></h2><p class="intro-copy">A dessert studio built around contrast — caramelised edges, soft centres, bold flavours and thoughtful finishing. Choose your favourite, choose your size, then choose exactly when you want it delivered.</p></div>
-</section>
+<section class="sec"><div class="w"><div class="sh"><h3>Categories</h3></div><div class="cats" id="cats"></div></div></section>
+<div id="res"></div>
+<div id="secs"></div>
 
-<section class="products" id="shop">
-<div class="wrap">
-<div class="section-head"><div><div class="kicker">02 / The collection</div><h2>Order the good stuff.</h2></div><p>Choose a flavour, pick your weight and add it to your box. Prices below are editable demo catalogue values until the brand supplies its final menu.</p></div>
+<section class="sec"><div class="w"><div class="sh"><h3>What customers are saying about us</h3></div>
+<div class="rv"><div><h5>Attention to detail</h5><p>Neat packaging and regular order updates. The herbs smelled fresh and were well sorted.</p><b>Priya S.</b></div><div><h5>Genuine products</h5><p>Good quality at fair prices. I now buy all my triphala and moringa here.</p><b>Rahul M.</b></div><div><h5>Excellent quality</h5><p>Quality is what keeps me coming back, and free shipping is a great bonus.</p><b>Aman K.</b></div><div><h5>Great customer support</h5><p>They answered my questions patiently before I ordered and kept me updated.</p><b>Sunil P.</b></div></div></div></section>
+<div class="st"><div class="w"><div><b>100%</b>Genuine products</div><div><b>Free</b>Shipping across India</div><div><b>Pan India</b>Doorstep delivery</div></div></div>
 
-<div class="shopbar">
-<button class="filter active" onclick="filterProducts('all',this)">All</button>
-<button class="filter" onclick="filterProducts('basque',this)">Basque</button>
-<button class="filter" onclick="filterProducts('chocolate',this)">Chocolate</button>
-<button class="filter" onclick="filterProducts('cookies',this)">Cookies</button>
-<button class="filter" onclick="filterProducts('celebration',this)">Celebration</button>
+<footer id="ft"><div class="w"><div class="fg">
+<div><h5>Contact us</h5><p><b>Address:</b><br>Add your store address here</p><p style="margin-top:8px"><b>E-mail:</b><br>care@vedvishwanaturals.com</p></div>
+<div><h5>Our policies</h5><ul><li><a href="#">Terms and Conditions</a></li><li><a href="#">Shipping and Delivery</a></li><li><a href="#">Return and Refund</a></li><li><a href="#">Order Cancellation</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Disclaimer</a></li></ul></div>
+<div><h5>Extras</h5><ul><li><a href="#">Request a Product</a></li><li><a href="#">Bulk Orders</a></li><li><a href="#">FAQs</a></li><li><a href="#">About Us</a></li></ul></div>
+<div><h5>Keep in touch</h5><p>Get offers and new arrivals in your inbox.</p><form id="nf" style="display:flex;margin-top:10px"><input type="email" required placeholder="Email address" aria-label="Email" style="flex:1;padding:9px;border:0;border-radius:4px 0 0 4px;min-width:0"><button style="background:var(--y);color:#222;padding:0 14px;font-weight:600;border-radius:0 4px 4px 0">Join</button></form></div>
 </div>
+<p class="dc"><b>Disclaimer:</b> Health information on this site is for basic information only and is not medical advice. Consult your physician before using any herb, especially during pregnancy or while on medication.<br>Copyright 2026 © Vedvisha Naturals. All rights reserved.</p></div></footer>
 
-<div class="catalogue" id="catalogue"></div>
-</div>
-</section>
+<a class="wa" href="#" id="wa">WhatsApp us</a><button class="up" onclick="scrollTo({top:0})" aria-label="Back to top">↑</button>
+<div class="sd" id="sd"></div>
+<aside class="dr" id="dr" aria-label="Cart"><div class="dh">Cart<button id="cl" aria-label="Close">✕</button></div><div class="its" id="its"></div><div class="df"><div class="tt"><span>Subtotal</span><span>₹<span id="sub">0</span></span></div><p class="sm" id="sm"></p><button class="co" id="co">Checkout</button></div></aside>
+<div class="ts" id="ts" role="status"></div>
 
-<section class="story" id="story">
-<div class="wrap story-grid">
-<div class="story-art"></div>
-<div>
-<div class="kicker">03 / Behind the bake</div>
-<h2>Made with patience. <em>Finished with fire.</em></h2>
-<p>There is beauty in restraint. We keep the process considered and the presentation clean, letting texture, caramelisation and flavour do the talking.</p>
-<a class="btn" style="border-color:#fff;color:#fff" href="#visit">Plan your order</a>
-<div class="values"><div><strong>Small batch</strong><span>Made fresh</span></div><div><strong>Hand finished</strong><span>Every order</span></div><div><strong>Scheduled</strong><span>Delivery slots</span></div></div>
-</div>
-</div>
-</section>
-
-<section class="visit" id="visit">
-<div class="wrap">
-<div class="kicker">04 / Your order, your time</div>
-<h2>Make it a<br><em>pre-order.</em></h2>
-<p>Choose a delivery date and preferred time slot at checkout. For celebrations and larger quantities, select advance order and we’ll reserve your production slot.</p>
-<div class="order-features"><div><b>01</b><span>Select your dessert</span></div><div><b>02</b><span>Choose weight</span></div><div><b>03</b><span>Pick delivery slot</span></div><div><b>04</b><span>Pay your advance</span></div></div>
-<a class="btn dark" href="#shop">Start your order</a>
-</div>
-</section>
-
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart(event)">
-<aside class="cart" onclick="event.stopPropagation()">
-<div class="cart-head"><div><span class="kicker">Your box</span><h3>Cart <span id="cartCount">0</span></h3></div><button onclick="closeCart()">×</button></div>
-<div id="cartItems" class="cart-items"></div>
-<div class="cart-bottom">
-<div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
-<div class="delivery-note">Delivery is calculated at checkout based on location.</div>
-<button class="btn dark full" onclick="openCheckout()">Continue to checkout</button>
-</div>
-</aside>
-</div>
-
-<div class="modal" id="productModal">
-<div class="modal-card">
-<button class="modal-close" onclick="closeProduct()">×</button>
-<div id="modalContent"></div>
-</div>
-</div>
-
-<div class="modal" id="checkoutModal">
-<div class="checkout-card">
-<button class="modal-close" onclick="closeCheckout()">×</button>
-<div class="checkout-head"><span class="kicker">05 / Checkout</span><h2>Complete your order.</h2><p>Freshly prepared for the date and time you select.</p></div>
-<div class="checkout-grid">
-<form id="checkoutForm" onsubmit="placeOrder(event)">
-<div class="field"><label>Full name</label><input required id="name" placeholder="Your name"></div>
-<div class="field"><label>Phone number</label><input required id="phone" type="tel" placeholder="+91 98765 43210"></div>
-<div class="field"><label>Delivery address</label><textarea required id="address" placeholder="House / flat, street, area, Bengaluru"></textarea></div>
-<div class="twocol"><div class="field"><label>Delivery date</label><input required id="date" type="date"></div><div class="field"><label>Preferred time</label><select id="time"><option>10:00 AM – 12:00 PM</option><option>12:00 PM – 2:00 PM</option><option>2:00 PM – 4:00 PM</option><option>4:00 PM – 6:00 PM</option><option>6:00 PM – 8:00 PM</option></select></div></div>
-<div class="field"><label>Order type</label><div class="choice-row"><label class="choice"><input type="radio" name="orderType" value="preorder" checked onchange="updatePayment()"> Pre-order</label><label class="choice"><input type="radio" name="orderType" value="advance" onchange="updatePayment()"> Celebration / advance</label></div></div>
-<div class="field"><label>Payment</label><div class="choice-row"><label class="choice"><input type="radio" name="payment" value="full" checked onchange="updatePayment()"> Pay full amount</label><label class="choice"><input type="radio" name="payment" value="advance" onchange="updatePayment()"> Pay 30% advance</label></div></div>
-<div class="field"><label>Order note <span>optional</span></label><textarea id="note" placeholder="Message on cake, allergy note, occasion..."></textarea></div>
-<button class="btn dark full" type="submit">Place order · <span id="payNow">₹0</span></button>
-</form>
-<div class="checkout-summary"><div class="summary-title">Order summary</div><div id="checkoutItems"></div><div class="summary-line"><span>Items</span><strong id="checkSubtotal">₹0</strong></div><div class="summary-line"><span>Delivery</span><strong>Calculated</strong></div><div class="summary-total"><span>Total before delivery</span><strong id="checkTotal">₹0</strong></div><div class="secure">✓ Secure payment integration ready<br>✓ Scheduled production slot<br>✓ Order confirmation after payment</div></div>
-</div>
-</div>
-</div>
-
-<div class="success-modal" id="successModal">
-<div class="success-card"><div class="success-mark">✓</div><div class="kicker">Order request received</div><h2>We’ve got your order.</h2><p id="successText"></p><button class="btn dark" onclick="closeSuccess()">Back to shop</button></div>
-</div>
-</main>
-
-<footer>
-<div class="wrap">
-<div class="footer-top"><div class="footer-brand">CROSTA e CREMA</div><div class="footer-links"><a href="#story">Story</a><a href="#menu">Menu</a><a href="#visit">Location</a><a href="https://instagram.com/crostaecrema" target="_blank">Instagram ↗</a></div></div>
-<div class="footer-bottom"><span>© 2026 Crosta e Crema</span><span>Handcrafted in Bengaluru</span></div>
-</div>
-</footer>
-<div class="toast" id="toast"></div>
 <script>
-const products=[
-{id:1,name:"Classic Burnt Basque",cat:"basque",desc:"Deeply caramelised top with a soft, creamy centre.",prices:{250:599,500:999,1000:1799,2000:3299},cls:"p1",tag:"Signature"},
-{id:2,name:"Dark Chocolate Basque",cat:"chocolate",desc:"Rich chocolate folded through a molten cheesecake base.",prices:{250:659,500:1099,1000:1999,2000:3699},cls:"p2",tag:"Rich"},
-{id:3,name:"Strawberry Basque",cat:"basque",desc:"Silky cheesecake finished with strawberry compote.",prices:{250:679,500:1149,1000:2099,2000:3899},cls:"p3",tag:"Seasonal"},
-{id:4,name:"Blueberry Basque",cat:"basque",desc:"Classic creamy base with a bright blueberry finish.",prices:{250:699,500:1199,1000:2199,2000:3999},cls:"p4",tag:"Special"},
-{id:5,name:"Biscoff Basque",cat:"basque",desc:"Caramelised cheesecake with silky Biscoff and crumble.",prices:{250:699,500:1199,1000:2199,2000:3999},cls:"p1",tag:"Bestseller"},
-{id:6,name:"Salted Caramel Basque",cat:"basque",desc:"Burnt Basque finished with deep salted caramel.",prices:{250:699,500:1199,1000:2199,2000:3999},cls:"p3",tag:"Favourite"},
-{id:7,name:"Triple Chocolate Brownie",cat:"chocolate",desc:"Dense, fudgy brownie slab with three chocolate layers.",prices:{250:349,500:699,1000:1299,2000:2399},cls:"p2",tag:"Eggless"},
-{id:8,name:"Biscoff Brownie Slab",cat:"chocolate",desc:"Fudgy brownie with Biscoff spread and biscuit crunch.",prices:{250:399,500:799,1000:1499,2000:2799},cls:"p4",tag:"Eggless"},
-{id:9,name:"Classic Chocolate Chip Cookies",cat:"cookies",desc:"Chunky bakery-style cookies with molten chocolate.",prices:{250:349,500:649,1000:1199,2000:2199},cls:"p1",tag:"Eggless"},
-{id:10,name:"Oreo Cookies & Cream",cat:"cookies",desc:"Vanilla-rich cookie dough with Oreo and white chocolate.",prices:{250:379,500:699,1000:1299,2000:2399},cls:"p3",tag:"Eggless"},
-{id:11,name:"Dark Chocolate Sea Salt Cookies",cat:"cookies",desc:"Deep cocoa cookie with dark chocolate and sea salt.",prices:{250:399,500:749,1000:1399,2000:2599},cls:"p2",tag:"Eggless"},
-{id:12,name:"Celebration Dessert Box",cat:"celebration",desc:"A curated box of signature bakes for gifting and occasions.",prices:{250:599,500:1099,1000:1999,2000:3699},cls:"p4",tag:"Gift"},
-{id:13,name:"Mini Basque Party Box",cat:"celebration",desc:"Assorted mini Basque flavours for sharing.",prices:{250:699,500:1299,1000:2399,2000:4399},cls:"p1",tag:"Party"},
-{id:14,name:"Premium Dessert Platter",cat:"celebration",desc:"A generous assortment designed for celebrations.",prices:{250:899,500:1699,1000:3199,2000:5999},cls:"p3",tag:"Premium"},
-{id:15,name:"Custom Celebration Cake",cat:"celebration",desc:"Made-to-order celebration cake with custom message.",prices:{250:899,500:1599,1000:2899,2000:4999},cls:"p4",tag:"Pre-order"}
-];
-let cart=JSON.parse(localStorage.getItem("crostaCart")||"[]"),selectedProduct=null,selectedSize=500;
-function money(n){return "₹"+n.toLocaleString("en-IN")}
-function renderProducts(cat="all"){
-const el=document.getElementById("catalogue");
-el.innerHTML=products.filter(p=>cat==="all"||p.cat===cat).map(p=>`<article class="product">
-<div class="pic ${p.cls}" onclick="openProduct(${p.id})"><span class="tag">${p.tag}</span></div>
-<button class="product-add" onclick="openProduct(${p.id})" aria-label="Add ${p.name}">+</button>
-<div class="product-info" onclick="openProduct(${p.id})"><div><h3>${p.name}</h3><p>${p.desc}</p><div class="from">From ${money(p.prices[250])} · 250g / 500g / 1kg / 2kg</div></div><span class="price">${money(p.prices[250])}</span></div>
-</article>`).join("");
+const $=s=>document.querySelector(s);
+// name, category, min, max, old price, colour
+const D={
+"New launches":[["Neem wooden comb with rosemary oil","Hair care",189,189,199,"#a67c52"],["Himalayan sea buckthorn berry","Super food",399,1499,0,"#d9781c"],["Triphala powder 1:1:1","Digestive",199,699,0,"#6a5a34"],["Bhumi amla powder","Digestive",199,699,0,"#4a7a3a"],["Amla, reetha, shikakai mix","Hair care",259,899,0,"#3f8a58"],["Punarnava capsules 350 mg","Digestive",299,849,0,"#5a6a3a"],["Ashwagandha tablets 500 mg","Super food",249,649,0,"#8a6a3c"],["Dried rosemary leaves","Hair care",189,599,0,"#4a6a4a"]],
+"Immunity essentials":[["Moringa leaves tablets","Super food",249,599,0,"#4c8a3a"],["Wheat grass tablets","Super food",299,749,0,"#3c7a3c"],["Edible gond for ladoo","Super food",219,699,0,"#c9a566"],["Immunity booster capsules","Super food",299,1099,0,"#7a5a2a"]],
+"Hair care essentials":[["All in one herbal hair care pack","Hair care",695,719,899,"#3f8a58"],["Reetha, amla, shikakai combo","Combos",289,299,0,"#6a9a3c"],["Henna and indigo black dye combo","Combos",460,460,997,"#4a4f87"],["Amla for skin, hair and eating","Hair care",230,819,0,"#2d5a3d"],["Bhringraj for hair growth","Hair care",249,499,0,"#2d6a4d"],["Hibiscus for hair and face pack","Hair care",220,850,0,"#b5546c"],["Reetha (soapnuts)","Hair care",190,525,0,"#a67c3c"],["Shikakai","Hair care",260,710,0,"#7a6a2c"]],
+"Skin care essentials":[["Aloe vera gel 200 ml","Skin care",249,699,0,"#5fae8a"],["Neem leaf for skin and hair","Skin care",199,390,0,"#3a7a3a"],["Multani mitti","Skin care",180,930,0,"#b59a6a"],["Orange peel powder","Skin care",209,599,0,"#d98a2b"],["Rose petals","Skin care",299,1380,0,"#b5546c"],["Mulethi (licorice)","Skin care",249,780,0,"#9a7a3c"]],
+"Nutritional super foods":[["Chia seeds","Super food",199,699,0,"#4a4a52"],["Pumpkin seeds","Super food",295,899,0,"#4a7a3a"],["Wheatgrass powder","Super food",250,399,0,"#3c7a3c"],["Moringa powder","Super food",229,699,0,"#4c8a3a"],["Sabja (basil) seeds","Super food",299,549,0,"#3a3a3a"],["Ashwagandha powder","Super food",195,679,0,"#8a6a3c"]],
+"Diabetic care essentials":[["Paneer doda","Diabetic care",330,899,0,"#7a8a4a"],["Jamun seed powder","Diabetic care",249,740,0,"#5a3a6a"],["Kutki (katuki)","Diabetic care",480,1079,0,"#6a5a3a"],["Karva indrajau","Diabetic care",210,1440,0,"#8a7a5a"]],
+"Weight loss essentials":[["Green tea loose leaves","Weight loss",295,999,0,"#4a8a5a"],["Sabja seeds","Weight loss",299,549,0,"#3a3a3a"],["Methi, ajwain, kali jeeri combo","Combos",325,325,495,"#8a8a3a"],["Moringa powder","Weight loss",229,699,0,"#4c8a3a"]],
+"Dry fruits":[["Kaju (cashews)","Dry fruits",490,1399,0,"#c9a566"],["Kishmish (golden raisins)","Dry fruits",299,799,0,"#c2932c"],["Elaichi (green cardamom)","Spices",675,1650,0,"#7a9a3a"],["Badam (almonds)","Dry fruits",499,1399,0,"#b8894a"]]
+};
+const P=[];Object.entries(D).forEach(([s,l])=>l.forEach(p=>P.push({id:P.length,s,n:p[0],c:p[1],a:p[2],b:p[3],o:p[4],col:p[5]})));
+const catList=[["Hair care","#3f8a58"],["Skin care","#5fae8a"],["Diabetic care","#7a8a4a"],["Weight loss","#4a8a5a"],["Digestive","#6a5a34"],["Bone care","#8a6a3c"],["Super food","#4c8a3a"],["Spices","#9a5a2a"],["Dry fruits","#c2932c"],["Combos","#4a4f87"],["Immunity","#7a5a2a"],["Top picks","#d98a1c"]];
+const card=p=>`<article class="cd">${p.o?'<span class="sale">Sale!</span>':''}<div class="im" style="background:linear-gradient(150deg,${p.col},#1a2c12)"></div><div class="in"><small>${p.c}</small><h4>${p.n}</h4><div class="pr">${p.o?`<s>₹${p.o}</s>`:''}₹${p.a}${p.b>p.a?` – ₹${p.b}`:''}</div></div><button class="ad" data-id="${p.id}">Add to cart</button></article>`;
+$("#cats").innerHTML=catList.map(c=>`<button class="ct" data-c="${c[0]}"><i style="background:${c[1]}"></i>${c[0]}</button>`).join("");
+$("#secs").innerHTML=Object.keys(D).map((s,i)=>`<section class="sec"${i===0?' id="shop"':''}><div class="w"><div class="sh"><h3>${s}</h3><a href="#" data-c="${D[s][0][1]}">View all</a></div><div class="gr">${P.filter(p=>p.s===s).map(card).join("")}</div></div></section>`).join("");
+$("#secs").insertAdjacentHTML("afterbegin",'<span id="top10"></span>');
+function show(c,t){
+ const l=P.filter(p=>c?(p.c===c||(c==="Immunity"&&p.s==="Immunity essentials")||(c==="Top picks"&&p.id%3===0)):p.n.toLowerCase().includes(t));
+ const seen=new Set(),u=l.filter(p=>!seen.has(p.n)&&seen.add(p.n));
+ $("#res").innerHTML=`<section class="sec"><div class="w"><div class="sh"><h3>${c||'Results for "'+t+'"'}</h3><a href="#" data-c="all">Clear</a></div><div class="gr">${u.length?u.map(card).join(""):'<p class="empty">No products found. Try a different name.</p>'}</div></div></section>`;
+ $("#res").scrollIntoView();
 }
-function filterProducts(cat,b){document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(cat)}
-function openProduct(id){
-selectedProduct=products.find(p=>p.id===id);selectedSize=500;
-document.getElementById("modalContent").innerHTML=`<div class="modal-product-pic pic ${selectedProduct.cls}"><span class="tag">${selectedProduct.tag}</span></div><div>
-<div class="kicker">${selectedProduct.cat} · made to order</div><h2>${selectedProduct.name}</h2><p>${selectedProduct.desc}</p>
-<div class="size-title">Choose your size</div><div class="size-options">${[250,500,1000,2000].map(s=>`<button class="size-btn ${s===500?"selected":""}" onclick="selectSize(${s},this)">${s>=1000?s/1000+"kg":s+"g"}<br><small>${money(selectedProduct.prices[s])}</small></button>`).join("")}</div>
-<div class="modal-price" id="modalPrice">${money(selectedProduct.prices[500])}</div><button class="btn dark add-big" onclick="addToCart()">Add to cart</button>
-</div>`;
-document.getElementById("productModal").classList.add("open");
-}
-function selectSize(s,b){selectedSize=s;document.querySelectorAll(".size-btn").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");document.getElementById("modalPrice").textContent=money(selectedProduct.prices[s])}
-function addToCart(){let found=cart.find(x=>x.id===selectedProduct.id&&x.size===selectedSize);if(found)found.qty++;else cart.push({id:selectedProduct.id,size:selectedSize,qty:1});saveCart();closeProduct();openCart()}
-function saveCart(){localStorage.setItem("crostaCart",JSON.stringify(cart));renderCart()}
-function renderCart(){
-document.getElementById("cartCount").textContent=cart.reduce((a,x)=>a+x.qty,0);
-document.getElementById("cartItems").innerHTML=cart.length?cart.map((x,i)=>{let p=products.find(p=>p.id===x.id);return `<div class="cart-row"><div class="mini-pic pic ${p.cls}"></div><div><h4>${p.name}</h4><p>${x.size>=1000?x.size/1000+"kg":x.size+"g"} · ${money(p.prices[x.size])}</p><div class="qty"><button onclick="changeQty(${i},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${i},1)">+</button><button class="remove" onclick="removeItem(${i})">Remove</button></div></div><strong>${money(p.prices[x.size]*x.qty)}</strong></div>`}).join(""):`<div style="padding:50px 0;text-align:center;color:var(--muted);font-size:13px">Your box is waiting to be filled.</div>`;
-document.getElementById("subtotal").textContent=money(total());
-}
-function total(){return cart.reduce((a,x)=>{let p=products.find(p=>p.id===x.id);return a+p.prices[x.size]*x.qty},0)}
-function changeQty(i,n){cart[i].qty+=n;if(cart[i].qty<=0)cart.splice(i,1);saveCart()}
-function removeItem(i){cart.splice(i,1);saveCart()}
-function openCart(){renderCart();document.getElementById("cartOverlay").classList.add("open")}
-function closeCart(e){if(!e||e.target===document.getElementById("cartOverlay"))document.getElementById("cartOverlay").classList.remove("open")}
-function closeProduct(){document.getElementById("productModal").classList.remove("open")}
-function openCheckout(){
-if(!cart.length){alert("Add at least one item to your box.");return}
-document.getElementById("cartOverlay").classList.remove("open");renderCheckout();document.getElementById("checkoutModal").classList.add("open");
-const d=new Date();d.setDate(d.getDate()+1);document.getElementById("date").min=d.toISOString().split("T")[0];if(!document.getElementById("date").value)document.getElementById("date").value=d.toISOString().split("T")[0];
-updatePayment()
-}
-function renderCheckout(){document.getElementById("checkoutItems").innerHTML=cart.map(x=>{let p=products.find(p=>p.id===x.id);return `<div class="summary-product"><div>${p.name}<small>${x.qty} × ${x.size>=1000?x.size/1000+"kg":x.size+"g"}</small></div><strong>${money(p.prices[x.size]*x.qty)}</strong></div>`}).join("");document.getElementById("checkSubtotal").textContent=money(total());document.getElementById("checkTotal").textContent=money(total())}
-function updatePayment(){let adv=document.querySelector('input[name="payment"]:checked').value==="advance";document.getElementById("payNow").textContent=money(adv?Math.ceil(total()*.3):total())}
-function closeCheckout(){document.getElementById("checkoutModal").classList.remove("open")}
-function placeOrder(e){e.preventDefault();let name=document.getElementById("name").value,date=document.getElementById("date").value,time=document.getElementById("time").value,adv=document.querySelector('input[name="payment"]:checked').value==="advance";document.getElementById("successText").innerHTML=`Thank you, ${name}. Your ${adv?"30% advance":"full payment"} request for <b>${date}</b>, ${time} has been captured. Connect your payment gateway and order backend here to collect payment and send the final confirmation automatically.`;closeCheckout();document.getElementById("successModal").classList.add("open")}
-function closeSuccess(){document.getElementById("successModal").classList.remove("open")}
-renderProducts();renderCart();
+document.addEventListener("click",e=>{
+ const a=e.target.closest("[data-c]");if(a){e.preventDefault();$("#mn").classList.remove("open");a.dataset.c==="all"?($("#res").innerHTML="",scrollTo({top:0,behavior:"smooth"})):show(a.dataset.c)}
+ const b=e.target.closest(".ad");if(b){cart[b.dataset.id]=(cart[b.dataset.id]||0)+1;save();toast(P[b.dataset.id].n+" added to cart")}
+});
+$("#sf").onsubmit=e=>{e.preventDefault();const t=$("#q").value.trim().toLowerCase();if(t)show(null,t)};
+let cart={};try{cart=JSON.parse(sessionStorage.getItem("vn")||"{}")}catch(e){}
+function save(){try{sessionStorage.setItem("vn",JSON.stringify(cart))}catch(e){}render()}
+function render(){let n=0,t=0;const k=Object.keys(cart).filter(i=>cart[i]>0);
+ $("#its").innerHTML=k.length?k.map(i=>{const p=P[i],q=cart[i];n+=q;t+=q*p.a;return`<div class="it"><b>${p.n}</b><span>₹${p.a*q}</span><div class="q"><button data-m="${i}" aria-label="Less">−</button>${q}<button data-p="${i}" aria-label="More">+</button></div></div>`}).join(""):'<p class="empty">No products in the cart.</p>';
+ $("#cc").textContent=n;$("#ct").textContent=t;$("#sub").textContent=t;$("#sm").textContent=n?(t>=499?"Free shipping applied.":`Add ₹${499-t} more for free shipping.`):""}
+$("#its").onclick=e=>{const m=e.target.dataset.m,p=e.target.dataset.p;if(m)cart[m]--;if(p)cart[p]++;if(m||p)save()};
+const op=v=>{$("#dr").classList.toggle("on",v);$("#sd").classList.toggle("on",v)};
+$("#ob").onclick=()=>op(true);$("#cl").onclick=$("#sd").onclick=()=>op(false);document.addEventListener("keydown",e=>e.key==="Escape"&&op(false));
+$("#co").onclick=()=>toast(Object.values(cart).some(v=>v>0)?"Connect your payment gateway to enable checkout":"Your cart is empty");
+$("#lg").onclick=()=>toast("Connect your login system here");$("#wa").onclick=e=>{e.preventDefault();toast("Add your WhatsApp link")};
+$("#nf").onsubmit=e=>{e.preventDefault();e.target.reset();toast("Subscribed. Thank you!")};
+$("#bg").onclick=()=>$("#mn").classList.toggle("open");
+let tt;function toast(m){const t=$("#ts");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),2200)}
+const S=[...document.querySelectorAll(".sl")],DT=$("#dots");let si=0,iv;
+S.forEach((_,i)=>{const b=document.createElement("button");b.setAttribute("aria-label","Slide "+(i+1));b.onclick=()=>{go(i);auto()};DT.append(b)});
+function go(i){si=(i+S.length)%S.length;S.forEach((s,j)=>s.classList.toggle("on",j===si));[...DT.children].forEach((b,j)=>b.classList.toggle("on",j===si))}
+function auto(){clearInterval(iv);if(!matchMedia("(prefers-reduced-motion:reduce)").matches)iv=setInterval(()=>go(si+1),5500)}
+$("#pv").onclick=()=>{go(si-1);auto()};$("#nx").onclick=()=>{go(si+1);auto()};
+go(0);auto();render();
 </script>
 </body>
 </html>
