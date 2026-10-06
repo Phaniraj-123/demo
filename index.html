@@ -3,281 +3,295 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>craftedby_aj | Handmade laddoos &amp; gifting hampers</title>
+<title>Dietician Mansi Jain | Personalised diet plans, 10+ years, 8000+ transformations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--white:#fffdf9;--cream:#f6ecdc;--sand:#ead9bd;--brown:#3f2616;--cocoa:#7b4a2b;--caramel:#b07a45;--line:#e2cfae;
---serif:'Young Serif',Georgia,'Times New Roman',serif;--sans:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+:root{--deep:#0b2523;--ink:#123633;--ivory:#f8f4ec;--paper:#fffdf8;--gold:#e2a63b;--leaf:#3f7a5a;--sage:#a9c3a0;--clay:#c98f5a;--line:#e4dccb;--mut:#5d716d;
+--serif:'Gloock',Georgia,'Times New Roman',serif;--sans:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
 color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
-body{margin:0;background:var(--white);color:var(--brown);font:400 16px/1.6 var(--sans)}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0}
-h2{font-size:clamp(1.8rem,4vw,2.6rem)}
-p{margin:0}
-a{color:inherit}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 17px/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;margin:0}
+h2{font-size:clamp(1.9rem,4.2vw,2.8rem);margin-bottom:14px}
+h3{font-size:1.3rem}
+p{margin:0}a{color:inherit}
 button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--caramel);outline-offset:2px}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-section{padding:72px 0}
-.btn{display:inline-block;background:var(--brown);color:var(--cream);border:0;border-radius:999px;padding:12px 26px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .2s}
-.btn:hover{background:var(--cocoa)}
-.btn.ghost{background:transparent;color:var(--brown);border:1.5px solid var(--brown)}
-.btn.ghost:hover{background:var(--sand)}
-.btn.sm{padding:8px 18px;font-size:.9rem}
-/* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--serif);font-size:1.3rem;text-decoration:none}
-nav{display:flex;gap:26px}
-nav a{text-decoration:none;font-weight:500}
-nav a:hover{color:var(--caramel)}
-.cartbtn{display:flex;align-items:center;gap:8px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;font-weight:600}
-.cartbtn b{background:var(--brown);color:var(--cream);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.8rem}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.btn{display:inline-block;background:var(--gold);color:var(--deep);border:0;border-radius:999px;padding:14px 30px;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{background:#ecb853;transform:translateY(-2px)}
+.btn.line{background:transparent;color:var(--ivory);border:1.5px solid rgba(248,244,236,.5)}
+.btn.line:hover{background:rgba(248,244,236,.1)}
+.lead{color:var(--mut);max-width:56ch}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,37,35,.95);backdrop-filter:blur(8px);color:var(--ivory)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{font-family:var(--serif);font-size:1.25rem;text-decoration:none}
+nav{display:flex;gap:26px;align-items:center}
+nav a{text-decoration:none;font-weight:400;font-size:.95rem;opacity:.85}
+nav a:hover{opacity:1;color:var(--gold)}
+.btn.sm{padding:9px 20px;font-size:.92rem}
 /* hero */
-.hero{background:var(--cream);padding:56px 0 72px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(2.3rem,6vw,4.1rem);margin-bottom:18px}
-.hero p{max-width:46ch;font-size:1.1rem;margin-bottom:28px}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-.plate{position:relative;aspect-ratio:1;max-width:440px;margin:0 auto;width:100%;border-radius:50%;background:radial-gradient(circle,var(--white) 0 62%,var(--sand) 63% 64%,var(--white) 65%);box-shadow:0 30px 50px -20px rgba(63,38,22,.35)}
-.plate .ld{position:absolute}
-.plate .ld:nth-child(1){--s:38%;left:8%;top:30%}
-.plate .ld:nth-child(2){--s:34%;left:42%;top:12%}
-.plate .ld:nth-child(3){--s:36%;left:40%;top:46%}
-/* laddoo art */
-.ld{--s:120px;--t:#f1d98a;width:var(--s);aspect-ratio:1;border-radius:50%;flex:none;
-background:radial-gradient(circle at 33% 28%,rgba(255,255,255,.4),transparent 32%),
-radial-gradient(circle 3px at 24% 52%,var(--t) 95%,transparent),radial-gradient(circle 3px at 62% 24%,var(--t) 95%,transparent),
-radial-gradient(circle 3.5px at 70% 62%,var(--t) 95%,transparent),radial-gradient(circle 3px at 44% 74%,var(--t) 95%,transparent),
-radial-gradient(circle 2.5px at 50% 46%,var(--t) 95%,transparent),radial-gradient(circle 3px at 80% 40%,var(--t) 95%,transparent),
-radial-gradient(circle at 40% 35%,var(--c1),var(--c2));box-shadow:inset -8px -10px 18px rgba(0,0,0,.22),0 12px 14px -8px rgba(63,38,22,.5)}
-/* products */
-.head{margin-bottom:34px;max-width:560px}
-.head p{margin-top:10px;color:var(--cocoa)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
-.card{background:var(--cream);border-radius:22px 22px 60px 22px;padding:22px;display:flex;flex-direction:column;gap:12px}
-.card .art{height:150px;display:grid;place-items:center;background:var(--white);border-radius:16px}
-.card h3{font-size:1.25rem}
-.card p{font-size:.93rem;color:var(--cocoa);flex:1}
-.card .row{display:flex;justify-content:space-between;align-items:center}
-.price{font-weight:600;font-size:1.1rem}
-.price small{font-weight:400;color:var(--cocoa)}
-.hampers{background:var(--cream)}
-.hampers .card{background:var(--white);border:1px solid var(--line)}
-.hampers .card .art{background:var(--cream)}
-.box{width:96px;height:80px;border-radius:8px;background:linear-gradient(90deg,transparent 44%,var(--caramel) 44% 56%,transparent 56%),linear-gradient(0deg,transparent 40%,var(--caramel) 40% 52%,transparent 52%),var(--cocoa);box-shadow:0 12px 14px -8px rgba(63,38,22,.5)}
-/* checkout */
-.co{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
-form{display:grid;gap:14px}
-.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-label{display:grid;gap:5px;font-weight:500;font-size:.92rem}
-input,select,textarea{background:var(--white);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;width:100%}
-input:focus,select:focus,textarea:focus{border-color:var(--caramel);outline:none}
-.sum{background:var(--cream);border-radius:22px;padding:24px;position:sticky;top:90px}
-.sum h3{margin-bottom:14px}
-.ln{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:.95rem}
-.ln.t{border-top:1.5px solid var(--line);margin-top:8px;padding-top:12px;font-weight:600;font-size:1.1rem}
-.empty{color:var(--cocoa);padding:10px 0}
-.done{display:none;background:var(--cream);border-radius:22px;padding:36px;text-align:center}
-.done.show{display:block}
-.done h3{font-size:1.8rem;margin-bottom:10px}
-.done .btn{margin:16px 6px 0}
+.hero{background:var(--deep);color:var(--ivory);padding:64px 0 0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.8vw,4.3rem);margin-bottom:20px}
+.hero .lead{color:#b9ccc6;font-size:1.12rem;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.plate{max-width:420px;width:100%;margin:0 auto}
+.plate svg{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 30px rgba(0,0,0,.45))}
+.sl{transition:opacity .25s;cursor:pointer}
+.plate.dim .sl{opacity:.28}
+.plate.dim .sl.on{opacity:1}
+.key{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-top:18px;padding:0;list-style:none}
+.key button{background:none;border:0;display:flex;gap:9px;align-items:center;cursor:pointer;color:#cfe0da;padding:4px 0;text-align:left;font-size:.92rem}
+.key i{width:12px;height:12px;border-radius:50%;flex:none}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid rgba(248,244,236,.16)}
+.stats div{padding:26px 10px;text-align:center}
+.stats div+div{border-left:1px solid rgba(248,244,236,.16)}
+.stats b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--gold);line-height:1.1}
+.stats span{font-size:.9rem;color:#b9ccc6}
 /* about */
-.about{background:var(--brown);color:var(--cream)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.mono{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,var(--leaf),var(--deep));display:grid;place-items:center;font-family:var(--serif);font-size:5rem;color:var(--gold);position:relative;max-width:360px;width:100%;margin:0 auto}
+.mono small{position:absolute;bottom:18px;font:400 .8rem var(--sans);color:#cfe0da;text-align:center;padding:0 16px}
 .about p+p{margin-top:14px}
-.about .ld{--s:100px}
-.pile{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
-.pile .ld:nth-child(even){margin-top:34px}
-.vals{display:grid;gap:10px;margin-top:22px;padding:0;list-style:none}
-.vals li{border-left:3px solid var(--caramel);padding-left:14px}
-/* contact */
-.ct{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px}
-.ct ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
-.ct li b{display:block}
-footer{background:var(--cream);border-top:1px solid var(--line);padding:34px 0 28px;text-align:center;font-size:.92rem}
-footer .logo{display:block;margin-bottom:6px}
-footer nav{justify-content:center;margin:14px 0;flex-wrap:wrap;gap:18px}
-/* drawer */
-.ov{position:fixed;inset:0;background:rgba(63,38,22,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:30}
-.ov.open{opacity:1;pointer-events:auto}
-.dr{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--white);z-index:31;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px))}
-.dr.open{transform:none}
-.dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.x{background:none;border:0;font-size:1.8rem;line-height:1;cursor:pointer}
-.items{flex:1;overflow:auto}
-.it{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
-.it .ld{--s:48px}
-.it .box{width:48px;height:40px}
-.it .nm{flex:1;font-weight:500;line-height:1.3}
-.it .nm small{display:block;font-weight:400;color:var(--cocoa)}
-.qty{display:flex;align-items:center;gap:8px}
-.qty button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--brown);background:none;cursor:pointer;line-height:1}
-.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--brown);color:var(--cream);padding:10px 20px;border-radius:999px;opacity:0;transition:.3s;z-index:40;pointer-events:none}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:800px){
-nav.main{display:none}
-section{padding:52px 0}
-.hero .wrap,.co,.about .wrap,.ct{grid-template-columns:1fr}
-.hero{padding:36px 0 52px}
-.plate{max-width:320px}
-.sum{position:static}
+.pts{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+.pts li{padding-left:28px;position:relative}
+.pts li::before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:2.5px solid var(--leaf);border-bottom:2.5px solid var(--leaf);transform:rotate(-45deg)}
+/* programs */
+.prog{background:var(--paper)}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px;margin-top:34px}
+.pg article{border-top:2px solid var(--ink);padding:22px 0 30px}
+.pg article:nth-child(3n+2){border-color:var(--gold)}
+.pg article:nth-child(3n){border-color:var(--leaf)}
+.pg p{color:var(--mut);margin-top:8px;font-size:.97rem}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:34px;counter-reset:s;padding:0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding-top:58px}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:var(--deep);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:1.2rem}
+.steps li::after{content:"";position:absolute;top:22px;left:56px;right:-14px;height:1px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps p{color:var(--mut);font-size:.95rem;margin-top:6px}
+/* results + bmi */
+.res{background:var(--deep);color:var(--ivory)}
+.res .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.res .lead{color:#b9ccc6;margin-bottom:24px}
+.big{font-family:var(--serif);font-size:clamp(3rem,8vw,5.5rem);color:var(--gold);line-height:1}
+.bmi{background:var(--ivory);color:var(--ink);border-radius:26px;padding:30px}
+.bmi h3{margin-bottom:6px}
+.bmi .f2{margin:16px 0}
+.out{min-height:3.4em;font-weight:500}
+.out small{display:block;font-weight:400;color:var(--mut)}
+.scale{height:10px;border-radius:99px;background:linear-gradient(90deg,#8fb3d9 0 18.5%,var(--leaf) 18.5% 40%,var(--gold) 40% 60%,#c9604a 60%);position:relative;margin:10px 0}
+.scale i{position:absolute;top:-4px;width:4px;height:18px;background:var(--deep);border-radius:2px;left:0;transition:left .4s}
+/* form */
+.fw{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.fw ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px;color:var(--mut)}
+form{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:34px;display:grid;gap:16px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label,fieldset{display:grid;gap:6px;font-weight:500;font-size:.92rem;border:0;padding:0;margin:0}
+input,select,textarea{background:var(--ivory);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--leaf);outline:none}
+.rad{display:flex;gap:10px}
+.rad label{display:block;flex:1}
+.rad input{position:absolute;opacity:0;width:1px;height:1px}
+.rad span{display:block;text-align:center;border:1.5px solid var(--line);background:var(--ivory);border-radius:12px;padding:11px;cursor:pointer;font-weight:500}
+.rad input:checked+span{background:var(--deep);color:var(--gold);border-color:var(--deep)}
+.rad input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.note{font-size:.84rem;color:var(--mut);font-weight:400}
+.ok{display:none;background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:40px;text-align:center}
+.ok.show{display:block}
+.ok h3{font-size:1.8rem;margin-bottom:10px}
+.ok .btn{margin-top:18px}
+/* faq */
+.faq{background:var(--paper)}
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:780px}
+summary{cursor:pointer;font-weight:500;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--leaf)}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:10px;color:var(--mut)}
+footer{background:var(--deep);color:#b9ccc6;padding:46px 0 30px;font-size:.92rem}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:30px}
+footer .logo{color:var(--ivory);display:block;margin-bottom:8px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+.fine{grid-column:1/-1;border-top:1px solid rgba(248,244,236,.14);padding-top:18px;font-size:.84rem}
+@media(max-width:860px){
+nav a:not(.btn){display:none}
+section{padding:58px 0}
+.hero{padding-top:40px}
+.hero .wrap,.about .wrap,.res .wrap,.fw,footer .wrap{grid-template-columns:1fr}
+.pg{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr 1fr}
+.steps li::after{display:none}
+form{padding:24px 18px}
 .f2{grid-template-columns:1fr}
+.about .mono{max-width:240px;font-size:3.6rem}
 }
+@media(max-width:480px){.steps{grid-template-columns:1fr}.stats div{padding:20px 4px}.key{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <header><div class="wrap bar">
-<a class="logo" href="#top">craftedby_aj</a>
-<nav class="main"><a href="#products">Laddoos</a><a href="#hampers">Hampers</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-<button class="cartbtn" id="openCart" aria-label="Open cart">Cart <b id="cnt">0</b></button>
+<a class="logo" href="#top">Mansi Jain</a>
+<nav><a href="#about">About</a><a href="#programs">Programs</a><a href="#process">Process</a><a href="#faq">FAQ</a><a class="btn sm" href="#consult">Book consultation</a></nav>
 </div></header>
 
 <main id="top">
 <section class="hero"><div class="wrap">
 <div>
-<h1>Handmade laddoos, packed with dry fruits and care.</h1>
-<p>Small-batch sweets rolled by hand in ghee, and curated gift hampers for birthdays, festivals, weddings and every thank you in between.</p>
-<div class="cta"><a class="btn" href="#products">Shop laddoos</a><a class="btn ghost" href="#hampers">See gift hampers</a></div>
+<h1>Diet plans built around your life, not a generic chart.</h1>
+<p class="lead">Dietician Mansi Jain has guided over 8000 people towards a healthier weight and better habits in 10+ years, with plans that fit Indian food, your routine and your health needs.</p>
+<div class="cta"><a class="btn" href="#consult">Get my diet plan</a><a class="btn line" href="https://instagram.com/dieticianmansijain" target="_blank" rel="noopener">See results on Instagram</a></div>
 </div>
-<div class="plate" aria-hidden="true">
-<div class="ld" style="--c1:#d9a65f;--c2:#a8692f;--t:#f6e3a1"></div>
-<div class="ld" style="--c1:#f0d9a2;--c2:#cfa45f;--t:#8fa65a"></div>
-<div class="ld" style="--c1:#8a5532;--c2:#4f2c18;--t:#e8cf9d"></div>
+<div class="plate" id="plate">
+<svg viewBox="0 0 200 200" role="img" aria-label="Balanced plate: vegetables, protein, grains and healthy fats">
+<circle cx="100" cy="100" r="98" fill="#fffdf8"/><circle cx="100" cy="100" r="90" fill="none" stroke="#e4dccb" stroke-width="1.5"/>
+<g transform="rotate(-90 100 100)" fill="none" stroke-width="80">
+<circle class="sl" data-i="0" cx="100" cy="100" r="40" stroke="#3f7a5a" stroke-dasharray="98.5 251.33" stroke-dashoffset="0"/>
+<circle class="sl" data-i="1" cx="100" cy="100" r="40" stroke="#e2a63b" stroke-dasharray="61.3 251.33" stroke-dashoffset="-100.53"/>
+<circle class="sl" data-i="2" cx="100" cy="100" r="40" stroke="#c98f5a" stroke-dasharray="61.3 251.33" stroke-dashoffset="-163.36"/>
+<circle class="sl" data-i="3" cx="100" cy="100" r="40" stroke="#a9c3a0" stroke-dasharray="23.6 251.33" stroke-dashoffset="-226.19"/>
+</g>
+<circle cx="100" cy="100" r="16" fill="#fffdf8"/>
+</svg>
+<ul class="key" id="key">
+<li><button data-i="0"><i style="background:#3f7a5a"></i>Vegetables and fruit, 40%</button></li>
+<li><button data-i="1"><i style="background:#e2a63b"></i>Protein (dal, paneer, eggs, meat), 25%</button></li>
+<li><button data-i="2"><i style="background:#c98f5a"></i>Whole grains and millets, 25%</button></li>
+<li><button data-i="3"><i style="background:#a9c3a0"></i>Healthy fats, 10%</button></li>
+</ul>
 </div>
-</div></section>
-
-<section id="products"><div class="wrap">
-<div class="head"><h2>Our six signature laddoos</h2><p>Sold in boxes of 6. Sweetened with jaggery, dates or a little sugar, never artificial colour.</p></div>
-<div class="grid" id="pg"></div>
-</div></section>
-
-<section class="hampers" id="hampers"><div class="wrap">
-<div class="head"><h2>Curated gifting hampers</h2><p>Pick a hamper for the occasion. Add a handwritten note at checkout.</p></div>
-<div class="grid" id="hg"></div>
-</div></section>
-
-<section id="checkout"><div class="wrap">
-<div class="head"><h2>Checkout</h2><p>Fill in your details and place the order. We confirm payment and delivery on WhatsApp.</p></div>
-<div class="co">
-<div>
-<form id="cf">
-<div class="f2"><label>Full name<input name="name" required autocomplete="name"></label>
-<label>Phone<input name="phone" type="tel" required pattern="[0-9+ ]{10,14}" autocomplete="tel" placeholder="10-digit mobile"></label></div>
-<label>Delivery address<textarea name="addr" rows="3" required autocomplete="street-address"></textarea></label>
-<div class="f2"><label>City<input name="city" required autocomplete="address-level2"></label>
-<label>Pincode<input name="pin" required pattern="[0-9]{6}" inputmode="numeric" autocomplete="postal-code"></label></div>
-<div class="f2"><label>Payment<select name="pay"><option>UPI (pay after confirmation)</option><option>Cash on delivery</option></select></label>
-<label>Gift note (optional)<input name="note" maxlength="120"></label></div>
-<button class="btn" type="submit">Place order</button>
-</form>
-<div class="done" id="done" tabindex="-1"><h3>Thank you, your order is placed</h3><p id="dmsg"></p><a class="btn" id="wa" target="_blank" rel="noopener">Confirm on WhatsApp</a><button class="btn ghost" id="again" type="button">Start a new order</button></div>
 </div>
-<aside class="sum"><h3>Order summary</h3><div id="sum"></div></aside>
+<div class="wrap stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0">
+<div><b data-n="10" data-s="+">10+</b><span>years of experience</span></div>
+<div><b data-n="8000" data-s="+">8000+</b><span>transformations</span></div>
+<div><b>1:1</b><span>personalised plans</span></div>
 </div>
-</div></section>
+</section>
 
 <section class="about" id="about"><div class="wrap">
+<div class="mono" aria-hidden="true">MJ<small></small></div>
 <div>
-<h2>Made in a home kitchen, shared with yours</h2>
-<p style="margin-top:16px">craftedby_aj started with one family laddoo recipe and a habit of gifting it to everyone. Today every batch is still made in small quantities, rolled by hand and packed fresh to order.</p>
-<p>We use whole cashews, almonds, pistachios, figs and dates, roasted in pure ghee. Nothing is made far ahead, so what reaches you tastes like it was made for you.</p>
-<ul class="vals"><li>Small batches, made to order</li><li>No preservatives or artificial colour</li><li>Gift-ready packing for every occasion</li></ul>
-</div>
-<div class="pile" aria-hidden="true">
-<div class="ld" style="--c1:#e3b46c;--c2:#b8782e;--t:#fff1c4"></div>
-<div class="ld" style="--c1:#a9795a;--c2:#6b4630;--t:#d9b58a"></div>
-<div class="ld" style="--c1:#7a5a47;--c2:#46301f;--t:#e3c58f"></div>
-<div class="ld" style="--c1:#f0d9a2;--c2:#cfa45f;--t:#8fa65a"></div>
+<h2>Food advice that you can actually follow</h2>
+<p class="lead">Mansi believes the best diet is the one that fits your kitchen, your family and your schedule. Every plan starts with you: your numbers, your medical history, your food choices and your goal.</p>
+<p class="lead">No extreme diets, no banned foods. Just balanced meals, simple swaps and steady follow-ups until the habits stick.</p>
+<ul class="pts"><li>Plans that use home-cooked Indian food</li><li>Veg, non-veg and egg-friendly options</li><li>Regular check-ins and plan adjustments</li></ul>
 </div>
 </div></section>
 
-<section id="contact"><div class="wrap ct">
-<div><h2>Say hello</h2><p style="margin-top:10px;color:var(--cocoa)">Bulk orders, wedding favours or a custom hamper? Tell us what you need.</p>
-<ul><li><b>Instagram</b><a href="https://instagram.com/craftedby_aj" target="_blank" rel="noopener">@craftedby_aj</a></li>
-<li><b>WhatsApp</b><a id="wal" target="_blank" rel="noopener">Message us</a></li>
-<li><b>Delivery</b>Pan-India shipping. Local delivery on request.</li></ul></div>
-<form id="msg">
-<div class="f2"><label>Your name<input name="n" required></label><label>Phone<input name="p" type="tel" required></label></div>
-<label>Message<textarea name="m" rows="4" required></textarea></label>
-<button class="btn" type="submit">Send on WhatsApp</button>
+<section class="prog" id="programs"><div class="wrap">
+<h2>Programs for every goal</h2>
+<p class="lead">Choose what you need. Each plan is personalised after your consultation.</p>
+<div class="pg">
+<article><h3>Weight loss</h3><p>Steady, sustainable fat loss with meals you enjoy and no crash dieting.</p></article>
+<article><h3>Weight gain</h3><p>Healthy, nutrient-dense plans to build weight and strength the right way.</p></article>
+<article><h3>PCOS and thyroid care</h3><p>Food guidance that supports hormonal balance, alongside your doctor's treatment.</p></article>
+<article><h3>Diabetes and BP support</h3><p>Meal plans that help manage blood sugar and pressure through everyday food.</p></article>
+<article><h3>Post-pregnancy recovery</h3><p>Gentle nutrition for new mothers to regain energy and a healthy weight.</p></article>
+<article><h3>Healthy lifestyle</h3><p>Better eating habits for the whole family, kids and elders included.</p></article>
+</div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>How it works</h2>
+<ol class="steps">
+<li><h3>Share your details</h3><p>Fill the short form below with your height, weight and goal.</p></li>
+<li><h3>Consultation</h3><p>Mansi reviews your history and food habits and calls you.</p></li>
+<li><h3>Your custom plan</h3><p>Receive a diet plan made around your routine and taste.</p></li>
+<li><h3>Follow-ups</h3><p>Regular check-ins keep you on track and the plan evolving.</p></li>
+</ol>
+</div></section>
+
+<section class="res" id="results"><div class="wrap">
+<div>
+<div class="big">8000+</div>
+<h2 style="margin-top:10px">lives changed, one plate at a time</h2>
+<p class="lead">Real client transformations are shared regularly on Instagram. Follow along to see what steady, guided change looks like.</p>
+<a class="btn" href="https://instagram.com/dieticianmansijain" target="_blank" rel="noopener">View transformations</a>
+</div>
+<div class="bmi">
+<h3>Check your BMI</h3>
+<p class="note">A quick starting point. Your consultation covers the full picture.</p>
+<div class="f2"><label>Height (cm)<input id="bh" type="number" min="100" max="250" inputmode="decimal" placeholder="165"></label>
+<label>Weight (kg)<input id="bw" type="number" min="20" max="300" inputmode="decimal" placeholder="68"></label></div>
+<div class="scale"><i id="bp"></i></div>
+<div class="out" id="bo" aria-live="polite">Enter your height and weight.</div>
+</div>
+</div></section>
+
+<section id="consult"><div class="wrap fw">
+<div>
+<h2>Start your transformation</h2>
+<p class="lead">Fill in your details and Mansi's team will reach out to schedule your consultation.</p>
+<ul><li>Your details are only used to prepare your plan.</li><li>Takes about two minutes.</li><li>No obligation to continue after the call.</li></ul>
+</div>
+<div>
+<form id="cf">
+<label>Full name<input name="name" required autocomplete="name"></label>
+<div class="f2"><label>Age<input name="age" type="number" min="5" max="100" required inputmode="numeric"></label>
+<label>Phone number<input name="phone" type="tel" required pattern="[0-9+ ]{10,14}" autocomplete="tel"></label></div>
+<div class="f2"><label>Height (cm)<input name="h" type="number" min="100" max="250" required inputmode="decimal"></label>
+<label>Weight (kg)<input name="w" type="number" min="20" max="300" required inputmode="decimal"></label></div>
+<div class="f2"><label>Target weight (kg)<input name="tw" type="number" min="20" max="300" required inputmode="decimal"></label>
+<fieldset><span>Food preference</span><div class="rad"><label><input type="radio" name="food" value="Vegetarian" required><span>Veg</span></label><label><input type="radio" name="food" value="Non-vegetarian"><span>Non-veg</span></label></div></fieldset></div>
+<label>Requirement<select name="req" required><option value="">Choose your goal</option><option>Weight loss</option><option>Weight gain</option><option>PCOS / thyroid care</option><option>Diabetes / BP support</option><option>Post-pregnancy recovery</option><option>Healthy lifestyle</option><option>Other</option></select></label>
+<label>Medical issues<textarea name="med" rows="3" placeholder="Any conditions, medicines or allergies. Write None if not applicable." required></textarea></label>
+<button class="btn" type="submit">Send my details</button>
+<p class="note">Submitting opens WhatsApp with your details ready to send to the clinic.</p>
 </form>
+<div class="ok" id="ok" tabindex="-1"><h3>Thank you, one step left</h3><p class="lead" style="margin:0 auto">Send the message on WhatsApp so we receive your details and book your consultation.</p><a class="btn" id="wa" target="_blank" rel="noopener">Send on WhatsApp</a></div>
+</div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+<h2>Common questions</h2>
+<details><summary>Will I have to give up my favourite foods?</summary><p>No. Plans work with the food you already eat, with portion and timing changes instead of strict bans.</p></details>
+<details><summary>Can I follow a plan if I have a medical condition?</summary><p>Yes. Share your conditions and medicines in the form so the plan can be adjusted. It supports, and does not replace, your doctor's treatment.</p></details>
+<details><summary>How soon will I see results?</summary><p>It varies from person to person. Healthy change is gradual, and regular follow-ups keep it on track.</p></details>
+<details><summary>Do you offer online consultations?</summary><p>Yes. You can consult and follow your plan from anywhere over call and WhatsApp.</p></details>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-<a class="logo" href="#top">craftedby_aj</a>
-<p>Handmade foods and gifting hampers</p>
-<nav><a href="#products">Laddoos</a><a href="#hampers">Hampers</a><a href="#about">About</a><a href="#contact">Contact</a><a href="https://instagram.com/craftedby_aj" target="_blank" rel="noopener">Instagram</a></nav>
-<p>&copy; <span id="yr"></span> craftedby_aj. Made with ghee and patience.</p>
+<div><a class="logo" href="#top">Dietician Mansi Jain</a>Personalised diet plans with 10+ years of experience and 8000+ transformations.</div>
+<ul><li><a href="https://instagram.com/dieticianmansijain" target="_blank" rel="noopener">Instagram: @dieticianmansijain</a></li><li><a id="wal" target="_blank" rel="noopener">WhatsApp us</a></li><li><a href="#consult">Book a consultation</a></li></ul>
+<p class="fine">&copy; <span id="yr"></span> Dietician Mansi Jain. Plans are personalised guidance and not a substitute for medical treatment. Results vary by individual.</p>
+<p class="fine">Designed by Phariea</p>
 </div></footer>
 
-<div class="ov" id="ov"></div>
-<aside class="dr" id="dr" aria-label="Your cart">
-<div class="dh"><h3>Your cart</h3><button class="x" id="closeCart" aria-label="Close cart">&times;</button></div>
-<div class="items" id="items"></div>
-<div id="dft"></div>
-</aside>
-<div class="toast" id="toast" role="status"></div>
-
 <script>
-// Change this to your WhatsApp number (country code + number, no + or spaces)
-var WA='919999999999', FREE=999, SHIP=60;
-var P=[
-{id:'l1',n:'Royal Dry Fruit Laddoo',d:'Cashew, almond, pistachio and raisin bound with ghee and dates.',p:520,c1:'#d9a65f',c2:'#a8692f',t:'#f6e3a1'},
-{id:'l2',n:'Kaju Pista Laddoo',d:'Creamy cashew with crushed pistachio and a hint of cardamom.',p:580,c1:'#f0d9a2',c2:'#cfa45f',t:'#8fa65a'},
-{id:'l3',n:'Badam Khajur Laddoo',d:'Roasted almonds and soft dates, naturally sweet with no added sugar.',p:540,c1:'#8a5532',c2:'#4f2c18',t:'#e8cf9d'},
-{id:'l4',n:'Anjeer Akhrot Laddoo',d:'Sun-dried fig and walnut, rich and slightly chewy.',p:560,c1:'#a9795a',c2:'#6b4630',t:'#d9b58a'},
-{id:'l5',n:'Gond Dry Fruit Laddoo',d:'Edible gum, nuts and jaggery. A winter favourite.',p:600,c1:'#e3b46c',c2:'#b8782e',t:'#fff1c4'},
-{id:'l6',n:'Ragi Nut Laddoo',d:'Finger millet roasted in ghee with almonds and jaggery.',p:480,c1:'#7a5a47',c2:'#46301f',t:'#e3c58f'}];
-var H=[
-{id:'h1',n:'Festive Hamper',d:'6 laddoos, roasted nuts and a keepsake box for Diwali and Rakhi.',p:1499,h:1},
-{id:'h2',n:'Celebration Hamper',d:'Two laddoo flavours with dried fruit, ideal for birthdays and weddings.',p:999,h:1},
-{id:'h3',n:'Thank You Hamper',d:'A small box of 3 assorted laddoos with a handwritten card.',p:649,h:1}];
-var ALL=P.concat(H), cart={}, $=function(i){return document.getElementById(i)};
-try{cart=JSON.parse(localStorage.getItem('cba_cart')||'{}')}catch(e){}
-function inr(n){return '\u20B9'+n.toLocaleString('en-IN')}
-function art(x){return x.h?'<div class="box"></div>':'<div class="ld" style="--c1:'+x.c1+';--c2:'+x.c2+';--t:'+x.t+'"></div>'}
-function card(x){return '<article class="card"><div class="art">'+art(x)+'</div><h3>'+x.n+'</h3><p>'+x.d+'</p><div class="row"><span class="price">'+inr(x.p)+' <small>'+(x.h?'per hamper':'per box of 6')+'</small></span><button class="btn sm" data-add="'+x.id+'">Add to cart</button></div></article>'}
-$('pg').innerHTML=P.map(card).join('');$('hg').innerHTML=H.map(card).join('');
-$('yr').textContent=new Date().getFullYear();
-$('wal').href='https://wa.me/'+WA;
-function find(id){return ALL.filter(function(x){return x.id===id})[0]}
-function totals(){var s=0,c=0;for(var k in cart){s+=find(k).p*cart[k];c+=cart[k]}var sh=s&&s<FREE?SHIP:0;return{s:s,c:c,sh:sh,t:s+sh}}
-function save(){try{localStorage.setItem('cba_cart',JSON.stringify(cart))}catch(e){}}
-function lines(){return Object.keys(cart).map(function(k){var x=find(k);return {x:x,q:cart[k]}})}
-function render(){
-var T=totals(),L=lines();$('cnt').textContent=T.c;
-$('items').innerHTML=L.length?L.map(function(l){return '<div class="it">'+art(l.x)+'<div class="nm">'+l.x.n+'<small>'+inr(l.x.p)+'</small></div><div class="qty"><button data-dec="'+l.x.id+'" aria-label="Remove one">&minus;</button><span>'+l.q+'</span><button data-inc="'+l.x.id+'" aria-label="Add one">+</button></div></div>'}).join(''):'<p class="empty">Your cart is empty. Add a laddoo box or a hamper to begin.</p>';
-var tot='<div class="ln"><span>Subtotal</span><span>'+inr(T.s)+'</span></div><div class="ln"><span>Delivery</span><span>'+(T.s?(T.sh?inr(T.sh):'Free'):'-')+'</span></div><div class="ln t"><span>Total</span><span>'+inr(T.t)+'</span></div>';
-$('dft').innerHTML=L.length?tot+(T.s<FREE?'<p class="empty">Add '+inr(FREE-T.s)+' more for free delivery.</p>':'')+'<a class="btn" style="display:block;text-align:center;margin-top:12px" href="#checkout" data-close>Go to checkout</a>':'';
-$('sum').innerHTML=L.length?L.map(function(l){return '<div class="ln"><span>'+l.x.n+' &times; '+l.q+'</span><span>'+inr(l.x.p*l.q)+'</span></div>'}).join('')+tot:'<p class="empty">Nothing in your cart yet.</p>';
-save()}
-function toast(m){var t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(function(){t.classList.remove('show')},1800)}
-function drawer(o){$('dr').classList.toggle('open',o);$('ov').classList.toggle('open',o)}
-document.addEventListener('click',function(e){
-var b=e.target.closest('[data-add],[data-inc],[data-dec],[data-close]');if(!b)return;
-if(b.dataset.add){cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;toast(find(b.dataset.add).n+' added');render()}
-else if(b.dataset.inc){cart[b.dataset.inc]++;render()}
-else if(b.dataset.dec){if(--cart[b.dataset.dec]<1)delete cart[b.dataset.dec];render()}
-else drawer(false)});
-$('openCart').onclick=function(){drawer(true)};$('closeCart').onclick=$('ov').onclick=function(){drawer(false)};
-document.addEventListener('keydown',function(e){if(e.key==='Escape')drawer(false)});
+// Set the clinic WhatsApp number: country code + number, no + or spaces
+var WA='919999999999', $=function(i){return document.getElementById(i)};
+$('yr').textContent=new Date().getFullYear();$('wal').href='https://wa.me/'+WA;
+// plate hover
+var pl=$('plate'),sl=pl.querySelectorAll('.sl');
+function hl(i){pl.classList.toggle('dim',i!==null);sl.forEach(function(s){s.classList.toggle('on',s.dataset.i===i)})}
+pl.addEventListener('mouseover',function(e){var t=e.target.closest('[data-i]');if(t)hl(t.dataset.i)});
+pl.addEventListener('focusin',function(e){var t=e.target.closest('[data-i]');if(t)hl(t.dataset.i)});
+pl.addEventListener('mouseleave',function(){hl(null)});
+pl.addEventListener('focusout',function(){hl(null)});
+// count up once
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+document.querySelectorAll('[data-n]').forEach(function(el){var n=+el.dataset.n,t0=null;
+function f(t){t0=t0||t;var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString('en-IN')+el.dataset.s;if(p<1)requestAnimationFrame(f)}
+requestAnimationFrame(f)})}
+// bmi
+function bmi(){var h=+$('bh').value/100,w=+$('bw').value,o=$('bo');
+if(!h||!w||h<1||h>2.5){o.textContent='Enter your height and weight.';return}
+var b=w/(h*h),c=b<18.5?'Underweight':b<25?'Healthy range':b<30?'Overweight':'Obese';
+o.innerHTML='BMI '+b.toFixed(1)+': '+c+'<small>A general guide only. Book a consultation for a plan that fits you.</small>';
+$('bp').style.left='calc('+Math.max(0,Math.min(1,(b-14)/22))*100+'% - 2px)'}
+$('bh').oninput=$('bw').oninput=bmi;
+// form -> whatsapp
 $('cf').addEventListener('submit',function(e){
-e.preventDefault();var L=lines();if(!L.length){toast('Your cart is empty');drawer(true);return}
-var f=new FormData(this),T=totals(),id='CAJ'+Date.now().toString().slice(-6);
-var m='New order '+id+'\n'+L.map(function(l){return l.x.n+' x '+l.q+' = '+inr(l.x.p*l.q)}).join('\n')+'\nDelivery: '+(T.sh?inr(T.sh):'Free')+'\nTotal: '+inr(T.t)+'\nPayment: '+f.get('pay')+'\n\nName: '+f.get('name')+'\nPhone: '+f.get('phone')+'\nAddress: '+f.get('addr')+', '+f.get('city')+' - '+f.get('pin')+(f.get('note')?'\nGift note: '+f.get('note'):'');
-$('dmsg').textContent='Order '+id+' for '+inr(T.t)+' is saved. Send it on WhatsApp so we can confirm payment and delivery.';
+e.preventDefault();var f=new FormData(this);
+var m='New consultation request\n\nName: '+f.get('name')+'\nAge: '+f.get('age')+'\nPhone: '+f.get('phone')+'\nHeight: '+f.get('h')+' cm\nWeight: '+f.get('w')+' kg\nTarget weight: '+f.get('tw')+' kg\nFood: '+f.get('food')+'\nRequirement: '+f.get('req')+'\nMedical issues: '+f.get('med');
 $('wa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(m);
-this.style.display='none';$('done').classList.add('show');$('done').focus();
-cart={};render()});
-$('again').onclick=function(){$('done').classList.remove('show');$('cf').style.display='';$('cf').reset()};
-$('msg').addEventListener('submit',function(e){e.preventDefault();var f=new FormData(this);
-window.open('https://wa.me/'+WA+'?text='+encodeURIComponent('Hi craftedby_aj, I am '+f.get('n')+' ('+f.get('p')+').\n'+f.get('m')),'_blank');this.reset()});
-render();
+this.style.display='none';$('ok').classList.add('show');$('ok').focus()});
 </script>
 </body>
 </html>
