@@ -3,361 +3,399 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Puppy Glow by Pallavi | Doorstep Pet Grooming in Bengaluru</title>
-<meta name="description" content="Luxury pet spa comes to you. Professional at-home dog & cat grooming in Bengaluru. Book on WhatsApp: 97402 58702.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<title>NOAH's ARF – Kennel-free dog boarding in Bangalore</title>
+<meta name="description" content="Home-based, kennel-free dog boarding in Bangalore. Your dog lives in a real home with friendly dogs while you travel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--pink:#ff6fa5;--pink2:#ffd6e6;--pink3:#fff0f6;--ink:#4a2c3d;--blue:#8fd9ff;--yellow:#ffe27a;--mint:#b8f0d8;--white:#fff;--r:26px}
+:root{--ink:#14332C;--ink2:#2B4B43;--gold:#F5B335;--mist:#E7EFE8;--paper:#FAFBF6;--coral:#E8795A;--wa:#1FAF57;--line:#cfdcd2;
+--d:'Bricolage Grotesque',system-ui,sans-serif;--b:'Figtree',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--pink3);line-height:1.6;overflow-x:hidden}
-h1,h2,h3,.logo{font-family:'Fredoka',sans-serif;line-height:1.15}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:auto;padding:0 20px}
-section{padding:80px 0;position:relative}
-.tag{display:inline-block;background:var(--yellow);padding:6px 16px;border-radius:50px;font-weight:800;font-size:.85rem;margin-bottom:12px;transform:rotate(-2deg)}
-h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:10px}
-h2 span,h1 span{color:var(--pink)}
-.sub{max-width:560px;opacity:.8;margin-bottom:40px}
-.center{text-align:center}.center .sub{margin-inline:auto}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-family:'Fredoka';font-weight:600;font-size:1.05rem;border:3px solid var(--ink);cursor:pointer;box-shadow:0 5px 0 var(--ink);transition:.15s;background:var(--pink);color:#fff}
-.btn:hover{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
-.btn.alt{background:#fff;color:var(--ink)}
-.btn.wa{background:#25d366}
+body{font-family:var(--b);background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:var(--d);line-height:1.1;letter-spacing:-.02em}
+h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:800;margin-bottom:14px}
+h3{font-size:1.25rem;font-weight:700;margin-bottom:6px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.lead{max-width:62ch;color:var(--ink2);margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font:600 1rem var(--b);text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.wa{background:var(--wa);border-color:var(--wa)}
 /* nav */
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,240,246,.92);backdrop-filter:blur(10px);border-bottom:3px dashed var(--pink2)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,251,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:8px}
-.logo b{color:var(--pink)}
-.logo i{font-style:normal;display:inline-block;animation:wiggle 2s infinite}
-.links{display:flex;gap:26px;align-items:center;font-weight:800}
-.links a:not(.btn):hover{color:var(--pink)}
-.links .btn{padding:8px 20px;font-size:.95rem;box-shadow:0 3px 0 var(--ink)}
-.burger{display:none;width:46px;height:46px;border-radius:50%;border:3px solid var(--ink);background:var(--pink);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
-.burger span{width:20px;height:3px;background:#fff;border-radius:3px;transition:.3s}
-.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.logo{font:800 1.4rem var(--d);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo svg{width:26px;height:26px;fill:var(--gold);stroke:var(--ink);stroke-width:1.5}
+.links{display:flex;gap:26px;align-items:center;list-style:none}
+.links a{text-decoration:none;font-weight:500}
+.links a:hover{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:3px}
+.burger{display:none;background:none;border:2px solid var(--ink);border-radius:10px;padding:6px 12px;font:600 .95rem var(--b);cursor:pointer;color:var(--ink)}
 /* hero */
-.hero{padding-top:130px;background:linear-gradient(180deg,var(--pink2),var(--pink3));overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
-h1{font-size:clamp(2.5rem,6.5vw,4.6rem);margin-bottom:16px}
-.hero p{font-size:1.15rem;max-width:480px;margin-bottom:28px}
-.cta{display:flex;flex-wrap:wrap;gap:14px}
-.stats{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap}
-.stats div{font-weight:800}.stats b{display:block;font-family:Fredoka;font-size:1.6rem;color:var(--pink)}
-.scene{position:relative;aspect-ratio:1;max-width:460px;margin:auto;width:100%}
-.blob{position:absolute;inset:6%;background:var(--pink);border-radius:58% 42% 55% 45%/50% 55% 45% 50%;animation:morph 8s infinite alternate;border:4px solid var(--ink)}
-.pet{position:absolute;font-size:clamp(7rem,22vw,12rem);inset:0;display:grid;place-items:center;animation:float 3.5s ease-in-out infinite}
-.bub{position:absolute;border-radius:50%;background:rgba(255,255,255,.7);border:3px solid #fff;animation:rise 6s infinite}
-.sticker{position:absolute;background:#fff;border:3px solid var(--ink);border-radius:18px;padding:8px 14px;font-weight:800;font-family:Fredoka;box-shadow:0 4px 0 var(--ink);animation:float 4s ease-in-out infinite}
-.s1{top:4%;right:0;transform:rotate(6deg)}.s2{bottom:10%;left:-2%;transform:rotate(-6deg);animation-delay:1s}
-/* marquee */
-.marq{background:var(--ink);color:#fff;overflow:hidden;padding:14px 0;font-family:Fredoka;font-size:1.2rem;transform:rotate(-1deg);margin:-10px -10px 0}
-.marq div{display:flex;gap:40px;width:max-content;animation:scroll 22s linear infinite}
-/* services */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.card{background:#fff;border:3px solid var(--ink);border-radius:var(--r);padding:28px 24px;box-shadow:0 8px 0 var(--ink);transition:.25s;cursor:default}
-.card:hover{transform:translateY(-8px) rotate(-1.5deg)}
-.card .ic{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;font-size:2.2rem;margin-bottom:14px;border:3px solid var(--ink)}
-.card:hover .ic{animation:wiggle .6s}
-.card h3{font-size:1.4rem;margin-bottom:6px}
-.card p{font-size:.95rem;opacity:.85}
-.card:nth-child(4n+1) .ic{background:var(--pink2)}.card:nth-child(4n+2) .ic{background:var(--blue)}.card:nth-child(4n+3) .ic{background:var(--yellow)}.card:nth-child(4n) .ic{background:var(--mint)}
-.pick{margin-top:16px;width:100%;justify-content:center;padding:10px;font-size:.95rem;box-shadow:0 3px 0 var(--ink)}
-/* why */
-.why{background:var(--yellow)}
-.why .card{box-shadow:0 8px 0 var(--ink)}
+.hero{padding:56px 0 90px;background:linear-gradient(180deg,var(--mist),var(--paper))}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero p{font-size:1.2rem;color:var(--ink2);margin:22px 0 30px;max-width:46ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.door{position:relative;aspect-ratio:3/4;max-width:400px;margin-left:auto;width:100%;background:var(--gold);border-radius:999px 999px 28px 28px;border:4px solid var(--ink);overflow:hidden;box-shadow:12px 12px 0 var(--ink)}
+.door svg{position:absolute;inset:0;width:100%;height:100%}
+.sign{position:absolute;right:-6px;bottom:30px;background:var(--paper);border:3px solid var(--ink);border-radius:14px;padding:8px 16px;font:700 1rem var(--d);transform:rotate(-5deg)}
+.tail{transform-origin:332px 330px;animation:wag .5s ease-in-out infinite alternate}
+@keyframes wag{to{transform:rotate(14deg)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.stat{border-top:3px solid var(--ink);padding-top:12px}
+.stat b{display:block;font:800 2.2rem var(--d)}
+.stat span{font-size:.95rem;color:var(--ink2)}
+/* compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:28px;padding:30px;border:2px solid var(--ink)}
+.box.home{background:var(--ink);color:#fff}
+.box.kennel{background:#fff}
+.box ul{list-style:none;margin-top:14px}
+.box li{padding:9px 0 9px 32px;position:relative;border-bottom:1px solid rgba(127,127,127,.3)}
+.box li:before{position:absolute;left:0;font-weight:800}
+.home li:before{content:"✓";color:var(--gold)}
+.kennel li:before{content:"✕";color:var(--coral)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:2px solid var(--ink);padding:26px;border-radius:24px 24px 24px 6px}
+.card:nth-child(2n){border-radius:24px 6px 24px 24px}
+.card .ic{font-size:2rem;margin-bottom:8px;display:block}
+.card p{color:var(--ink2);font-size:.97rem}
+.alt{background:var(--mist)}
+/* day timeline */
+.tl{border-left:4px solid var(--ink);margin-left:10px;padding-left:28px;display:grid;gap:22px}
+.tl div{position:relative}
+.tl div:before{content:"";position:absolute;left:-39px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--gold);border:3px solid var(--ink)}
+.tl b{font-family:var(--d);font-size:1.1rem}
+.tl p{color:var(--ink2)}
 /* steps */
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
-.step{text-align:center;padding:10px}
-.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:var(--pink);color:#fff;font:700 1.8rem Fredoka;border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink)}
-.step h3{margin-bottom:4px}
-/* about */
-.about{background:var(--pink2)}
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.van{background:#fff;border:4px solid var(--ink);border-radius:30px;padding:30px;text-align:center;box-shadow:0 10px 0 var(--ink);transform:rotate(2deg)}
-.van .e{font-size:6rem;display:inline-block;animation:drive 3s ease-in-out infinite}
-.van h3{margin-top:6px;color:var(--pink)}
-.about ul{list-style:none;margin:18px 0}
-.about li{padding:6px 0;font-weight:700}
-.about li::before{content:"🐾 "}
-.breeds{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.breeds span{background:#fff;border:3px solid var(--ink);border-radius:50px;padding:10px 20px;font-weight:800;transition:.2s}
-.breeds span:hover{background:var(--pink);color:#fff;transform:scale(1.1) rotate(-4deg)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{counter-increment:s;background:#fff;border-radius:22px;padding:24px;border:2px solid var(--ink)}
+.step:before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;background:var(--gold);border-radius:50%;font:800 1.1rem var(--d);margin-bottom:12px;border:2px solid var(--ink)}
+.step p{font-size:.95rem;color:var(--ink2)}
+/* learn */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+details{background:#fff;border:2px solid var(--ink);border-radius:18px;margin-bottom:12px;overflow:hidden}
+summary{padding:16px 20px;font:700 1.05rem var(--d);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:1.5rem;line-height:1;transition:transform .25s}
+details[open] summary:after{transform:rotate(45deg)}
+details[open] summary{background:var(--gold)}
+details p,details ul{padding:14px 20px 18px;color:var(--ink2);font-size:.98rem}
+details ul{list-style:disc inside}
+.pack{background:#fff;border:2px solid var(--ink);border-radius:24px;padding:26px}
+.pack label{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);cursor:pointer;align-items:center}
+.pack input{width:20px;height:20px;accent-color:var(--ink)}
+.pack input:checked+span{text-decoration:line-through;opacity:.55}
+.bar{height:12px;background:var(--mist);border-radius:99px;overflow:hidden;margin:14px 0 4px;border:2px solid var(--ink)}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+/* quiz */
+.quiz{background:var(--ink);color:#fff;border-radius:30px;padding:36px}
+.quiz .opts{display:grid;gap:10px;margin:18px 0}
+.quiz button.o{background:transparent;color:#fff;border:2px solid #fff6;border-radius:14px;padding:12px 16px;font:500 1rem var(--b);text-align:left;cursor:pointer}
+.quiz button.o:hover{border-color:var(--gold)}
+.quiz button.o.ok{background:#2c8a55;border-color:#2c8a55}
+.quiz button.o.no{background:#b4483a;border-color:#b4483a}
+#qfb{min-height:3.2em;color:var(--gold)}
+/* ig */
+.ig{text-align:center;background:var(--gold);border-radius:34px;padding:50px 24px;border:3px solid var(--ink)}
+footer{background:var(--ink);color:#fff;padding:50px 0 90px}
+footer a{color:var(--gold)}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+.fgrid li{list-style:none;margin:6px 0}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--wa);color:#fff;border-radius:99px;padding:14px 22px;font-weight:600;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25)}
 /* booking */
-.book{background:linear-gradient(135deg,var(--pink),#ff9ac1);color:#fff}
-.book .sub{opacity:1}
-.bgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:start}
-.gates{display:grid;gap:16px}
-.gate{display:flex;align-items:center;gap:14px;background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:22px;padding:16px 20px;box-shadow:0 6px 0 var(--ink);transition:.15s}
-.gate:hover{transform:translateY(3px);box-shadow:0 3px 0 var(--ink)}
-.gate span{font-size:2rem}.gate b{font-family:Fredoka;font-size:1.15rem;display:block}.gate small{opacity:.75}
-form{background:#fff;color:var(--ink);border:4px solid var(--ink);border-radius:var(--r);padding:28px;box-shadow:0 10px 0 var(--ink)}
-form h3{margin-bottom:16px;font-size:1.6rem}
+.bk{display:grid;grid-template-columns:1.4fr .8fr;gap:30px;align-items:start}
+form{background:#fff;border:2px solid var(--ink);border-radius:28px;padding:30px}
+fieldset{border:none;margin-bottom:22px}
+legend{font:700 1.2rem var(--d);margin-bottom:10px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-label{display:block;font-weight:800;font-size:.9rem;margin:12px 0 5px}
-input,select,textarea{width:100%;padding:12px 14px;border:3px solid var(--pink2);border-radius:14px;font:inherit;background:var(--pink3);color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pink)}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips label{margin:0;cursor:pointer}
-.chips input{display:none}
-.chips span{display:block;padding:8px 14px;border-radius:50px;border:3px solid var(--pink2);font-weight:800;font-size:.85rem;transition:.15s}
-.chips input:checked+span{background:var(--pink);color:#fff;border-color:var(--ink);transform:scale(1.05)}
-.err{color:#d6204f;font-weight:800;font-size:.9rem;margin-top:10px;min-height:1.2em}
-form .btn{width:100%;justify-content:center;margin-top:10px}
-/* faq */
-details{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:16px 20px;margin-bottom:14px;max-width:760px;margin-inline:auto}
-summary{font-family:Fredoka;font-weight:600;font-size:1.15rem;cursor:pointer}
-details p{margin-top:8px}
-/* footer */
-footer{background:var(--ink);color:#fff;padding:60px 0 100px}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
-footer h4{font-family:Fredoka;font-size:1.2rem;margin-bottom:12px;color:var(--yellow)}
-footer a,footer p{display:block;opacity:.85;margin-bottom:6px}
-footer a:hover{color:var(--pink2);opacity:1}
-.copy{border-top:2px dashed rgba(255,255,255,.2);margin-top:34px;padding-top:20px;text-align:center;font-size:.9rem;opacity:.8}
-/* floating wa */
-.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;border:3px solid var(--ink);display:grid;place-items:center;box-shadow:0 5px 0 var(--ink);animation:pulse 2s infinite}
-.fab svg{width:34px;height:34px;fill:#fff}
-.fab em{position:absolute;right:74px;background:#fff;border:3px solid var(--ink);border-radius:14px;padding:5px 12px;font:600 .9rem Fredoka;white-space:nowrap;font-style:normal}
-.paw{position:fixed;pointer-events:none;z-index:70;font-size:1.4rem;animation:pawfade 1s forwards}
-.reveal{opacity:0;transform:translateY(30px);transition:.7s}
-.reveal.in{opacity:1;transform:none}
-@keyframes wiggle{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(12deg)}}
-@keyframes float{0%,100%{translate:0 0}50%{translate:0 -16px}}
-@keyframes morph{to{border-radius:40% 60% 42% 58%/58% 42% 58% 42%}}
-@keyframes rise{0%{transform:translateY(40px);opacity:0}30%{opacity:1}100%{transform:translateY(-120px);opacity:0}}
-@keyframes scroll{to{transform:translateX(-50%)}}
-@keyframes drive{0%,100%{transform:translateX(-14px)}50%{transform:translateX(14px)}}
-@keyframes pulse{0%,100%{box-shadow:0 5px 0 var(--ink),0 0 0 0 rgba(37,211,102,.6)}50%{box-shadow:0 5px 0 var(--ink),0 0 0 16px rgba(37,211,102,0)}}
-@keyframes pawfade{to{opacity:0;transform:translateY(-30px) scale(1.5)}}
+label.f{display:block;font-weight:600;font-size:.92rem;margin-bottom:12px}
+input[type=text],input[type=tel],input[type=date],input[type=number],select,textarea{width:100%;margin-top:5px;padding:12px 14px;border:2px solid var(--ink);border-radius:12px;font:400 1rem var(--b);background:var(--paper);color:var(--ink)}
+.chk{display:flex;gap:10px;align-items:center;font-weight:500;padding:6px 0}
+.chk input{width:18px;height:18px;accent-color:var(--ink)}
+.err{color:#b4483a;font-weight:600;min-height:1.4em;margin:6px 0}
+.sum{position:sticky;top:90px;background:var(--mist);border:2px solid var(--ink);border-radius:28px;padding:28px}
+.sum dl{display:grid;grid-template-columns:1fr auto;gap:8px 12px;margin:14px 0}
+.sum dt{color:var(--ink2)}
+.sum dd{font-weight:600;text-align:right}
+.tot{font:800 2rem var(--d);border-top:3px solid var(--ink);padding-top:12px;display:flex;justify-content:space-between}
+.small{font-size:.85rem;color:var(--ink2);margin-top:12px}
+.page{display:none}.page.on{display:block}
 @media(max-width:860px){
-section{padding:60px 0}
-.burger{display:flex}
-.links{position:fixed;top:68px;left:0;right:0;flex-direction:column;background:var(--pink3);padding:24px;gap:18px;border-bottom:4px solid var(--ink);transform:translateY(-130%);transition:.35s;font-size:1.2rem;visibility:hidden}
-.links.open{transform:none;visibility:visible}
-.hero .wrap,.about .wrap,.bgrid,.fgrid{grid-template-columns:1fr}
-.hero{padding-top:100px;text-align:center}.hero p{margin-inline:auto}.cta,.stats{justify-content:center}
-.scene{max-width:320px}
-.fab em{display:none}
-}
-@media(max-width:480px){.row{grid-template-columns:1fr}.btn{padding:12px 22px}form{padding:20px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+.hero .wrap,.cmp,.two,.bk,.fgrid{grid-template-columns:1fr}
+.grid,.steps{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}
+.door{margin:10px auto 0;max-width:300px}.sum{position:static}
+.burger{display:block}
+.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px;border-bottom:2px solid var(--ink);gap:16px}
+.links.open{display:flex}}
+@media(max-width:560px){.grid,.steps,.row{grid-template-columns:1fr}section{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute"><symbol id="paw" viewBox="0 0 24 24"><ellipse cx="6" cy="10" rx="2.3" ry="3"/><ellipse cx="11" cy="6" rx="2.3" ry="3"/><ellipse cx="17" cy="7" rx="2.3" ry="3"/><ellipse cx="21" cy="12" rx="2" ry="2.8"/><path d="M12 12c-4 0-7 4-6 7 1 2 4 1 6 1s5 1 6-1c1-3-2-7-6-7z"/></symbol></svg>
 
-<header>
- <nav class="wrap">
-  <a href="#home" class="logo"><i>🐾</i>Puppy <b>Glow</b></a>
-  <div class="links" id="links">
-   <a href="#services">Services</a><a href="#why">Why Us</a><a href="#how">How It Works</a><a href="#about">About</a><a href="#faq">FAQ</a>
-   <a href="#book" class="btn">Book Now</a>
-  </div>
-  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
- </nav>
-</header>
+<header><div class="wrap"><nav>
+<a class="logo" href="#/" data-top><svg><use href="#paw"/></svg>NOAH's ARF</a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="links">Menu</button>
+<ul class="links" id="links">
+<li><a href="#/about">Why home boarding</a></li>
+<li><a href="#/stay">A day here</a></li>
+<li><a href="#/learn">Dog care guide</a></li>
+<li><a href="#/faq">FAQ</a></li>
+<li><a class="btn gold" href="#/book" style="padding:9px 20px">Book a stay</a></li>
+</ul></nav></div></header>
 
-<section class="hero" id="home">
- <div class="wrap">
-  <div>
-   <span class="tag">🛁 Doorstep Pet Grooming · Bengaluru</span>
-   <h1>Luxury Pet Spa <span>Comes to You!</span></h1>
-   <p>No car rides, no cages, no stress. Our pink-and-white spa van rolls up to your home and your furry baby gets the full glow-up right at your doorstep.</p>
-   <div class="cta">
-    <a href="#book" class="btn">Book a Spa Day 🐶</a>
-    <a href="https://wa.me/919740258702?text=Hi%20Puppy%20Glow!%20I%20want%20to%20book%20a%20grooming." target="_blank" rel="noopener" class="btn wa">Chat on WhatsApp</a>
-   </div>
-   <div class="stats"><div><b>6</b>Spa services</div><div><b>All</b>Breeds welcome</div><div><b>0</b>Travel stress</div></div>
-  </div>
-  <div class="scene">
-   <div class="blob"></div>
-   <div class="bub" style="width:30px;height:30px;left:12%;bottom:20%"></div>
-   <div class="bub" style="width:20px;height:20px;left:78%;bottom:30%;animation-delay:2s"></div>
-   <div class="bub" style="width:36px;height:36px;left:60%;bottom:12%;animation-delay:4s"></div>
-   <div class="pet" id="pet">🐩</div>
-   <div class="sticker s1">Squeaky clean! ✨</div>
-   <div class="sticker s2">Tail wags 💯</div>
-  </div>
- </div>
-</section>
+<!-- HOME PAGE -->
+<main id="page-home" class="page on">
+<div class="hero"><div class="wrap">
+<div>
+<h1>No kennels. Just a home with friends.</h1>
+<p>Noah's Arf is home-based dog boarding in Bangalore. While you travel, your dog lives with us and a small pack of friendly dogs, on sofas, not behind bars.</p>
+<div class="cta"><a class="btn gold" href="#/book">Book a stay</a><a class="btn wa" href="#" data-wa="Hi Noah's Arf! I'd like to know more about dog boarding.">Chat on WhatsApp</a></div>
+<div class="stats">
+<div class="stat"><b>0</b><span>kennels or cages</span></div>
+<div class="stat"><b>24/7</b><span>human company</span></div>
+<div class="stat"><b>Small</b><span>pack, so every dog gets attention</span></div>
+<div class="stat"><b>Daily</b><span>photo and video updates</span></div>
+</div></div>
+<div class="door" aria-hidden="true">
+<svg viewBox="0 0 300 400"><rect y="300" width="300" height="100" fill="#14332C"/>
+<ellipse cx="150" cy="300" rx="110" ry="14" fill="#0e2520"/>
+<g stroke="#14332C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path class="tail" d="M222 300c30-10 38-50 28-70" fill="none" style="transform-origin:222px 300px"/>
+<path d="M95 300v-95c0-40 20-70 58-70h30c18 0 30 12 30 30v135z" fill="#FAFBF6"/>
+<circle cx="172" cy="118" r="52" fill="#FAFBF6"/>
+<path d="M130 88c-30-8-42 25-34 55 14-6 30-25 34-55z" fill="#E8795A"/>
+<path d="M214 88c28-6 38 28 28 52-14-4-26-24-28-52z" fill="#E8795A"/>
+<ellipse cx="196" cy="140" rx="24" ry="18" fill="#FAFBF6"/>
+<ellipse cx="205" cy="132" rx="9" ry="7" fill="#14332C"/>
+<circle cx="160" cy="112" r="5" fill="#14332C"/><circle cx="190" cy="108" r="5" fill="#14332C"/>
+<path d="M196 150c6 8 14 8 18 0" fill="none"/>
+<path d="M205 152c0 14 6 18 12 14" fill="#E8795A"/>
+</g></svg>
+<div class="sign">Welcome home</div></div>
+</div></div>
 
-<div class="marq"><div id="marq"></div></div>
+<section id="about" class="wrap">
+<h2>Why a home beats a kennel</h2>
+<p class="lead">Dogs are social animals. A noisy kennel can bring on stress, skipped meals and barking fits. A calm home is much closer to what your dog knows.</p>
+<div class="cmp">
+<div class="box home"><h3>Boarding at Noah's Arf</h3><ul><li>Lives inside a real home, free to roam</li><li>Plays with a small group of friendly dogs</li><li>Meals, walks and naps follow your dog's routine</li><li>Someone is always around, day and night</li><li>Daily updates so you can enjoy your trip</li></ul></div>
+<div class="box kennel"><h3>Typical kennel boarding</h3><ul><li>Spends many hours alone in a cage or run</li><li>Constant noise from unfamiliar dogs</li><li>One fixed schedule for every dog</li><li>Staff often leave at night</li><li>Little or no news while you are away</li></ul></div>
+</div></section>
 
-<section id="services">
- <div class="wrap">
-  <div class="center"><span class="tag">Our Services</span><h2>Spa day, <span>paws-itively</span> perfect</h2><p class="sub">Pick one or pamper the whole lot. Tap "Add to booking" and we'll pre-fill your request.</p></div>
-  <div class="grid">
-   <div class="card reveal"><div class="ic">🛁</div><h3>Spa Bath & Deep Clean</h3><p>Bubbly, gentle bath with pet-safe shampoo and a fluffy blow-dry finish.</p><button class="btn alt pick" data-s="Spa Bath & Deep Clean">+ Add to booking</button></div>
-   <div class="card reveal"><div class="ic">✂️</div><h3>Haircut & Styling</h3><p>Breed-friendly cuts, styling and hygiene trims that keep them neat and comfy.</p><button class="btn alt pick" data-s="Haircut & Styling / Hygiene Trim">+ Add to booking</button></div>
-   <div class="card reveal"><div class="ic">💅</div><h3>Nail & Paw Care</h3><p>Safe nail trims and soft paw pampering for happy little toe beans.</p><button class="btn alt pick" data-s="Nail & Paw Care">+ Add to booking</button></div>
-   <div class="card reveal"><div class="ic">👂</div><h3>Eye & Ear Cleaning</h3><p>Gentle wipe-downs to keep eyes bright and ears fresh and infection-free.</p><button class="btn alt pick" data-s="Eye & Ear Cleaning">+ Add to booking</button></div>
-   <div class="card reveal"><div class="ic">🦷</div><h3>Teeth Care</h3><p>Fresh breath, happy kisses. Careful teeth cleaning with pet-friendly products.</p><button class="btn alt pick" data-s="Teeth Care / Cleaning">+ Add to booking</button></div>
-   <div class="card reveal"><div class="ic">🐞</div><h3>Anti-Tick Treatment</h3><p>Protective treatment to keep ticks and itchy surprises far away from your pet.</p><button class="btn alt pick" data-s="Anti-Tick Treatment">+ Add to booking</button></div>
-  </div>
- </div>
-</section>
+<section class="alt"><div class="wrap">
+<h2>What every stay includes</h2>
+<p class="lead">Everything is built around comfort, safety and a happy tail.</p>
+<div class="grid">
+<div class="card"><span class="ic">🛋️</span><h3>Cosy indoor living</h3><p>Soft beds, sofa naps and a quiet corner if your dog needs space.</p></div>
+<div class="card"><span class="ic">🦴</span><h3>Meals your way</h3><p>We feed the food you bring, at the times your dog is used to.</p></div>
+<div class="card"><span class="ic">🌳</span><h3>Walks and playtime</h3><p>Regular walks, fetch and group play, matched to energy and age.</p></div>
+<div class="card"><span class="ic">📸</span><h3>Daily updates</h3><p>Photos and videos on WhatsApp so you can see your dog having fun.</p></div>
+<div class="card"><span class="ic">🩺</span><h3>Health watch</h3><p>We track appetite, water and mood, and call you and your vet if anything seems off.</p></div>
+<div class="card"><span class="ic">💊</span><h3>Medication care</h3><p>Medicines and special diets are given exactly as instructed.</p></div>
+</div></div></section>
 
-<section class="why" id="why">
- <div class="wrap">
-  <div class="center"><span class="tag" style="background:#fff">Why Puppy Glow</span><h2>Happy pets, <span>happy homes</span></h2></div>
-  <div class="grid" style="margin-top:34px">
-   <div class="card reveal"><div class="ic">🏠</div><h3>Stress-Free</h3><p>Grooming in their own space. No travel, no strange kennels, no anxiety.</p></div>
-   <div class="card reveal"><div class="ic">🧴</div><h3>Safe & Hygienic</h3><p>Pet-friendly, gentle products and clean, sanitised tools every visit.</p></div>
-   <div class="card reveal"><div class="ic">👩‍⚕️</div><h3>Experienced Groomer</h3><p>Patient, caring hands that know how to keep nervous pets calm.</p></div>
-   <div class="card reveal"><div class="ic">🐱</div><h3>All Breeds Welcome</h3><p>Goldens to Shih Tzus, Pomeranians to even our feline friends.</p></div>
-  </div>
- </div>
-</section>
+<section id="stay" class="wrap">
+<div class="two"><div>
+<h2>A day at Noah's Arf</h2>
+<p class="lead">Dogs feel safest when days are predictable. This is a typical day, adjusted to each guest.</p></div>
+<div class="tl">
+<div><b>Morning</b><p>Potty break, a walk and breakfast.</p></div>
+<div><b>Late morning</b><p>Group play, then a long nap in a cool spot.</p></div>
+<div><b>Afternoon</b><p>Quiet time, cuddles and enrichment toys such as treat puzzles.</p></div>
+<div><b>Evening</b><p>Second walk, dinner and your daily photo update.</p></div>
+<div><b>Night</b><p>Final potty break, then sleep indoors with a human close by.</p></div>
+</div></div></section>
 
-<section id="how">
- <div class="wrap center">
-  <span class="tag">How It Works</span><h2>Three easy <span>wags</span></h2><p class="sub">From booking to blow-dry, we keep it super simple.</p>
-  <div class="steps">
-   <div class="step reveal"><h3>Book Your Slot</h3><p>Fill the form or ping us on WhatsApp with your pet's details.</p></div>
-   <div class="step reveal"><h3>We Come to You</h3><p>Our spa van arrives at your door at the confirmed time.</p></div>
-   <div class="step reveal"><h3>Enjoy the Glow</h3><p>Relax at home while your baby gets pampered and returns fluffy-fresh.</p></div>
-  </div>
- </div>
-</section>
+<section class="alt"><div class="wrap">
+<h2>How booking works</h2>
+<p class="lead">Simple, personal and done on WhatsApp.</p>
+<div class="steps">
+<div class="step"><h3>Send your request</h3><p>Fill the booking page. It opens WhatsApp with everything filled in.</p></div>
+<div class="step"><h3>Meet and greet</h3><p>Your dog meets us and the pack before the stay, so day one feels familiar.</p></div>
+<div class="step"><h3>Drop off</h3><p>Bring food, bedding, a favourite toy and vaccination records.</p></div>
+<div class="step"><h3>Relax and receive updates</h3><p>Enjoy your trip. We send photos each day, then you collect a happy dog.</p></div>
+</div></div></section>
 
-<section class="about" id="about">
- <div class="wrap">
-  <div class="reveal">
-   <span class="tag" style="background:#fff">About Us</span>
-   <h2>More than grooming… it's a <span>care they deserve!</span></h2>
-   <p>Puppy Glow by Pallavi is a doorstep pet grooming service in Bengaluru, built on one simple idea: pets feel best at home. We bring a professional spa to your doorstep, with love, patience and hygiene at the heart of every visit.</p>
-   <ul><li>Healthy Pets ♥️</li><li>Happy Homes ♥️</li><li>Brighter Days ♥️</li></ul>
-   <a href="#book" class="btn">Book a Visit</a>
-  </div>
-  <div class="van reveal"><div class="e">🚐</div><h3>The Glow Van</h3><p>Our white-and-pink van carries the whole spa, straight to your gate.</p></div>
- </div>
-</section>
+<section id="learn" class="wrap">
+<h2>The dog parent guide</h2>
+<p class="lead">Tips that help before any boarding stay, wherever you go.</p>
+<div class="two"><div>
+<details open><summary>Vaccinations to keep current</summary><ul><li>Rabies and the core combination vaccine (DHPP)</li><li>Kennel cough (Bordetella) is a good extra</li><li>Tick and flea prevention up to date</li><li>Carry your vaccination card on drop-off</li></ul></details>
+<details><summary>Easing separation anxiety</summary><p>Keep goodbyes short and calm. Dogs read your mood, so a cheerful exit helps. A short trial stay before a long trip builds confidence. Leave a worn t-shirt that smells like you.</p></details>
+<details><summary>Bangalore weather and your dog</summary><p>Mild weather is easy, but monsoon brings damp coats, ticks and skin infections. Dry your dog well after walks. Avoid walking on hot pavement at midday in summer, and always keep fresh water available.</p></details>
+<details><summary>Signs of a stressed dog</summary><ul><li>Panting or pacing without heat or exercise</li><li>Refusing food for over a day</li><li>Hiding, trembling or excessive licking</li><li>Unusual clinginess or barking</li></ul></details>
+<details><summary>Foods that are dangerous for dogs</summary><p>Chocolate, grapes and raisins, onions, garlic, xylitol sweeteners, macadamia nuts and cooked bones can all cause serious harm. Share this list with anyone who feeds your dog.</p></details>
+</div>
+<div class="pack"><h3>Your packing checklist</h3><p class="small" style="margin:0 0 6px">Tick items off as you pack.</p>
+<div class="bar"><i id="pbar"></i></div><p class="small" id="ptxt" style="margin:0 0 8px">0 of 8 packed</p>
+<label><input type="checkbox"><span>Vaccination records</span></label>
+<label><input type="checkbox"><span>Food for the whole stay, plus an extra day</span></label>
+<label><input type="checkbox"><span>Medications with written dose and timing</span></label>
+<label><input type="checkbox"><span>Bed or blanket that smells like home</span></label>
+<label><input type="checkbox"><span>Favourite toy or chew</span></label>
+<label><input type="checkbox"><span>Collar with ID tag and a leash</span></label>
+<label><input type="checkbox"><span>Vet's name and phone number</span></label>
+<label><input type="checkbox"><span>Notes on habits, fears and routine</span></label>
+</div></div></section>
 
-<section>
- <div class="wrap center">
-  <span class="tag">Every Fur Type</span><h2>All breeds, <span>all love</span></h2><p class="sub">Tap a friend to say hi!</p>
-  <div class="breeds" id="breeds">
-   <span data-e="🐕">Golden Retriever</span><span data-e="🐶">Shih Tzu</span><span data-e="🦊">Pomeranian</span><span data-e="🐩">Poodle</span><span data-e="🐕‍🦺">Labrador</span><span data-e="🐱">Cats too!</span><span data-e="🐾">And more</span>
-  </div>
- </div>
-</section>
+<section class="alt"><div class="wrap">
+<div class="quiz"><h2>Quick quiz: is it safe for dogs?</h2>
+<p id="qn" class="small" style="color:#cfe"></p><h3 id="qq" style="font-size:1.5rem"></h3>
+<div class="opts" id="qo"></div><p id="qfb" aria-live="polite"></p>
+<button class="btn gold" id="qnext" style="display:none">Next question</button></div>
+</div></section>
 
-<section class="book" id="book">
- <div class="wrap">
-  <div class="center"><span class="tag" style="color:var(--ink)">Book Now</span><h2>Let's get your baby <span style="color:var(--yellow)">glowing</span> ✨</h2><p class="sub">Choose the quickest way to reach us.</p></div>
-  <div class="bgrid">
-   <div class="gates">
-    <a class="gate" href="https://wa.me/919740258702?text=Hi%20Puppy%20Glow!%20I%20want%20to%20book%20a%20grooming." target="_blank" rel="noopener"><span>💬</span><div><b>WhatsApp Booking</b><small>Fastest reply · 97402 58702</small></div></a>
-    <a class="gate" href="tel:+919740258702"><span>📞</span><div><b>Call Us</b><small>Tap to call · 97402 58702</small></div></a>
-    <a class="gate" href="#bform"><span>📝</span><div><b>Booking Form</b><small>Fill it here, sent to WhatsApp</small></div></a>
-   </div>
-   <form id="bform" novalidate>
-    <h3>🐾 Book a Spa Day</h3>
-    <div class="row"><div><label for="n">Your name</label><input id="n" placeholder="Pet parent name"></div><div><label for="p">Phone</label><input id="p" type="tel" placeholder="10-digit number" inputmode="numeric"></div></div>
-    <div class="row"><div><label for="pn">Pet's name</label><input id="pn" placeholder="e.g. Coco"></div><div><label for="pt">Pet type</label><select id="pt"><option>Dog</option><option>Cat</option><option>Other</option></select></div></div>
-    <label for="br">Breed</label><input id="br" placeholder="e.g. Shih Tzu">
-    <label>Services</label>
-    <div class="chips" id="chips"></div>
-    <div class="row"><div><label for="d">Preferred date</label><input id="d" type="date"></div><div><label for="t">Time slot</label><select id="t"><option>Morning (9-12)</option><option>Afternoon (12-4)</option><option>Evening (4-7)</option></select></div></div>
-    <label for="a">Area in Bengaluru</label><input id="a" placeholder="e.g. Indiranagar, HSR Layout">
-    <label for="m">Anything we should know?</label><textarea id="m" rows="2" placeholder="Coat condition, temperament, allergies..."></textarea>
-    <div class="err" id="err"></div>
-    <button class="btn wa" type="submit">Send Booking on WhatsApp 🐶</button>
-   </form>
-  </div>
- </div>
-</section>
+<section id="faq" class="wrap">
+<h2>Questions we often hear</h2>
+<div style="max-width:780px">
+<details><summary>Will my dog be in a cage?</summary><p>No. Noah's Arf is kennel-free. Dogs live freely in the home. A crate is only used if your own dog is crate-trained and you ask for it.</p></details>
+<details><summary>How many dogs do you host at once?</summary><p>We keep the pack small on purpose so every guest gets attention. Ask us on WhatsApp for current availability.</p></details>
+<details><summary>Can you board puppies, seniors or dogs on medication?</summary><p>Yes, case by case. Tell us about age and health on the booking page and we will confirm we can care for your dog well.</p></details>
+<details><summary>What if my dog gets ill or hurt?</summary><p>We contact you right away and take your dog to your vet, or the nearest clinic if needed. Please share your vet's details when booking.</p></details>
+<details><summary>Are dogs vaccinated and tested for temperament?</summary><p>All guests need up-to-date vaccinations. A meet and greet checks that your dog gets along with the pack.</p></details>
+<details><summary>Do I need to book in advance?</summary><p>Yes, especially for holidays and long weekends in Bangalore. Book as early as you can.</p></details>
+</div></section>
 
-<section id="faq">
- <div class="wrap">
-  <div class="center"><span class="tag">FAQ</span><h2>Got <span>questions?</span></h2></div>
-  <details><summary>Do you really come to my home?</summary><p>Yes! Our grooming van reaches your doorstep across Bengaluru. Share your area when booking and we'll confirm availability.</p></details>
-  <details><summary>Which pets do you groom?</summary><p>All breeds are welcome, including dogs of every size and cats too.</p></details>
-  <details><summary>Are the products safe?</summary><p>We use safe, hygienic, pet-friendly products and keep our tools clean for every pet.</p></details>
-  <details><summary>How do I confirm a booking?</summary><p>Send the form or message us on WhatsApp at 97402 58702. We'll reply to confirm your slot.</p></details>
- </div>
-</section>
+<section class="wrap"><div class="ig"><h2>Follow the pack</h2><p class="lead" style="margin:0 auto 22px">See our guests at play on Instagram.</p>
+<a class="btn" href="https://instagram.com/noahs_arfblr" target="_blank" rel="noopener">@noahs_arfblr</a></div></section>
+</main>
 
-<footer>
- <div class="wrap">
-  <div class="fgrid">
-   <div><div class="logo" style="margin-bottom:10px">🐾 Puppy <b>Glow</b></div><p>by Pallavi · Luxury pet spa that comes to you.</p><p>More Than Grooming… It's a Care They Deserve!</p><p>Healthy Pets ♥️ Happy Homes ♥️ Brighter Days ♥️</p></div>
-   <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#book">Book Now</a></div>
-   <div><h4>Contact</h4><a href="tel:+919740258702">📞 97402 58702</a><a href="https://wa.me/919740258702" target="_blank" rel="noopener">💬 WhatsApp us</a><p>📍 Doorstep service, Bengaluru</p></div>
-  </div>
-  <div class="copy">© <span id="yr"></span> Puppy Glow by Pallavi. Made with 💗 and lots of tail wags.</div>
- </div>
-</footer>
+<!-- BOOKING PAGE -->
+<main id="page-book" class="page">
+<section class="wrap" style="padding-top:50px">
+<h1 style="font-size:clamp(2.2rem,5vw,3.6rem)">Book your dog's stay</h1>
+<p class="lead" style="margin-top:12px">Fill this in and we will open WhatsApp with your details ready to send. We confirm availability there.</p>
+<div class="bk">
+<form id="bf" novalidate>
+<fieldset><legend>About you</legend><div class="row">
+<label class="f">Your name<input type="text" id="oname" autocomplete="name"></label>
+<label class="f">Phone number<input type="tel" id="ophone" autocomplete="tel"></label></div></fieldset>
+<fieldset><legend>About your dog</legend><div class="row">
+<label class="f">Dog's name<input type="text" id="dname"></label>
+<label class="f">Breed<input type="text" id="dbreed"></label>
+<label class="f">Age (years)<input type="number" id="dage" min="0" step="0.5"></label>
+<label class="f">Size<select id="dsize"><option value="Small">Small (under 10 kg)</option><option value="Medium">Medium (10 to 25 kg)</option><option value="Large">Large (over 25 kg)</option></select></label>
+<label class="f">Gender<select id="dgender"><option>Male</option><option>Female</option></select></label>
+<label class="f">Neutered or spayed?<select id="dneut"><option>Yes</option><option>No</option></select></label></div>
+<label class="chk"><input type="checkbox" id="dvac"> Vaccinations are up to date</label>
+<label class="chk"><input type="checkbox" id="dsocial"> Friendly with other dogs</label></fieldset>
+<fieldset><legend>Dates</legend><div class="row">
+<label class="f">Drop-off<input type="date" id="dfrom"></label>
+<label class="f">Pick-up<input type="date" id="dto"></label></div></fieldset>
+<fieldset><legend>Extras</legend>
+<label class="chk"><input type="checkbox" class="x" data-k="bath"> Bath before pick-up</label>
+<label class="chk"><input type="checkbox" class="x" data-k="pick"> Pick-up and drop service</label>
+<label class="chk"><input type="checkbox" class="x" data-k="med"> Medication handling</label></fieldset>
+<label class="f">Food habits, health, fears or anything we should know<textarea id="dnotes" rows="3"></textarea></label>
+<p class="err" id="err" role="alert"></p>
+<button type="submit" class="btn wa" style="width:100%;justify-content:center">Send booking on WhatsApp</button>
+</form>
+<aside class="sum"><h3>Your estimate</h3>
+<dl><dt>Nights</dt><dd id="sn">0</dd><dt>Stay</dt><dd id="ss">₹0</dd><dt>Extras</dt><dd id="se">₹0</dd></dl>
+<div class="tot"><span>Total</span><span id="st">₹0</span></div>
+<p class="small">This is an estimate. We confirm the final price on WhatsApp.</p></aside>
+</div></section>
+</main>
 
-<a class="fab" href="https://wa.me/919740258702?text=Hi%20Puppy%20Glow!%20I%20want%20to%20book%20a%20grooming." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
- <em>Book on WhatsApp</em>
- <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.800 1.500 5.600 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.900c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10.400 10.400 0 1 1 8.900 5.100zm5.700-7.800c-.3-.2-1.800-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.500 8.500 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.2.200 2.200 3.400 5.400 4.700 2 .8 2.800.9 3.800.7.600-.1 1.800-.7 2-1.400s.3-1.300.2-1.400-.3-.2-.6-.4z"/></svg>
-</a>
+<footer><div class="wrap"><div class="fgrid">
+<div><h3>NOAH's ARF</h3><p>Kennel-free dog boarding and homestay in Bangalore. A home away from home for your best friend.</p></div>
+<ul><li><a href="#/about">Why home boarding</a></li><li><a href="#/learn">Dog care guide</a></li><li><a href="#/faq">FAQ</a></li><li><a href="#/book">Book a stay</a></li></ul>
+<ul><li><a href="https://instagram.com/noahs_arfblr" target="_blank" rel="noopener">Instagram</a></li><li><a href="#" data-wa="Hi Noah's Arf!">WhatsApp</a></li><li>Bangalore, Karnataka</li></ul>
+</div><p class="small" style="color:#9fb5ab;margin-top:30px">© <span id="yr"></span> NOAH's ARF</p></div></footer>
+
+<a class="fab" href="#" data-wa="Hi Noah's Arf! I'd like to know more about dog boarding.">💬 WhatsApp us</a>
 
 <script>
-(function(){
- var $=function(s){return document.querySelector(s)};
- var WA='919740258702';
- // mobile menu
- var burger=$('#burger'),links=$('#links');
- function toggle(open){links.classList.toggle('open',open);burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open)}
- burger.onclick=function(){toggle(!links.classList.contains('open'))};
- links.querySelectorAll('a').forEach(function(a){a.onclick=function(){toggle(false)}});
- document.addEventListener('keydown',function(e){if(e.key==='Escape')toggle(false)});
- // marquee
- var items=['🐶 Doorstep Spa','🛁 Bubble Baths','✂️ Stylish Cuts','💅 Paw Pampering','🦷 Fresh Breath','🐱 Cats Welcome','🐞 Tick-Free'];
- var m=items.concat(items).concat(items).concat(items).map(function(x){return '<span>'+x+'</span>'}).join('');
- $('#marq').innerHTML=m;
- // service chips
- var services=['Spa Bath & Deep Clean','Haircut & Styling / Hygiene Trim','Nail & Paw Care','Eye & Ear Cleaning','Teeth Care / Cleaning','Anti-Tick Treatment'];
- $('#chips').innerHTML=services.map(function(s,i){return '<label><input type="checkbox" value="'+s+'" id="c'+i+'"><span>'+s+'</span></label>'}).join('');
- document.querySelectorAll('.pick').forEach(function(b){b.onclick=function(){
-  var c=[].find.call(document.querySelectorAll('#chips input'),function(i){return i.value===b.dataset.s});
-  if(c){c.checked=true}
-  b.textContent='✓ Added!';
-  $('#book').scrollIntoView({behavior:'smooth'});
- }});
- // date min
- var d=$('#d'),today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());
- d.min=today.toISOString().split('T')[0];
- // booking -> whatsapp
- $('#bform').onsubmit=function(e){
+// ===== EDIT THESE =====
+const WA_NUMBER = "91XXXXXXXXXX"; // country code + number, no + or spaces
+const PRICE = {perNight:{Small:600,Medium:700,Large:800}, bath:400, pick:300, med:100}; // sample rates in ₹
+// ======================
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const waLink = t => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t)}`;
+$$('[data-wa]').forEach(a => { a.href = waLink(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; });
+$('#yr').textContent = new Date().getFullYear();
+
+// router: #/book shows booking page, anything else shows home and scrolls to the section
+function route(){
+  const h = location.hash.replace('#/','');
+  const book = h === 'book';
+  $('#page-home').classList.toggle('on', !book);
+  $('#page-book').classList.toggle('on', book);
+  $('#links').classList.remove('open'); $('#burger').setAttribute('aria-expanded','false');
+  const map = {about:'about', stay:'stay', learn:'learn', faq:'faq'};
+  if(book || !map[h]) window.scrollTo(0,0);
+  else setTimeout(() => $('#'+map[h]).scrollIntoView(), 20);
+  document.title = book ? "Book a stay – NOAH's ARF" : "NOAH's ARF – Kennel-free dog boarding in Bangalore";
+}
+addEventListener('hashchange', route); route();
+$('#burger').onclick = e => { const o = $('#links').classList.toggle('open'); e.target.setAttribute('aria-expanded', o); };
+
+// packing checklist
+const boxes = $$('.pack input');
+boxes.forEach(b => b.onchange = () => {
+  const n = boxes.filter(x => x.checked).length;
+  $('#pbar').style.width = n/boxes.length*100 + '%';
+  $('#ptxt').textContent = n === boxes.length ? 'All packed. Ready for a happy stay!' : `${n} of ${boxes.length} packed`;
+});
+
+// quiz
+const Q = [
+ ["Can dogs safely eat grapes?",["Yes, in small amounts","No, they can harm the kidneys"],1,"Even a few grapes or raisins can be toxic."],
+ ["How often should an adult dog be walked?",["Once a week","At least once or twice a day"],1,"Daily walks keep dogs fit and calm."],
+ ["Does a wagging tail always mean a happy dog?",["Yes, always","No, it means excited, and can be tense too"],1,"Look at the whole body: ears, posture and eyes."],
+ ["Is chocolate safe as an occasional treat?",["No, it is toxic to dogs","Yes, dark chocolate is fine"],0,"Chocolate contains theobromine, which dogs cannot process well."]
+];
+let qi = 0;
+function showQ(){
+  const [q,o] = Q[qi]; $('#qn').textContent = `Question ${qi+1} of ${Q.length}`; $('#qq').textContent = q;
+  $('#qfb').textContent = ''; $('#qnext').style.display = 'none';
+  $('#qo').innerHTML = ''; o.forEach((t,i) => { const b = document.createElement('button'); b.className = 'o'; b.textContent = t; b.onclick = () => answer(i,b); $('#qo').append(b); });
+}
+function answer(i,b){
+  const [,,c,why] = Q[qi]; $$('#qo button').forEach(x => x.disabled = true);
+  b.classList.add(i === c ? 'ok' : 'no'); if(i !== c) $$('#qo button')[c].classList.add('ok');
+  $('#qfb').textContent = (i === c ? 'Correct. ' : 'Not quite. ') + why;
+  $('#qnext').textContent = qi < Q.length-1 ? 'Next question' : 'Play again'; $('#qnext').style.display = 'inline-flex';
+}
+$('#qnext').onclick = () => { qi = (qi+1) % Q.length; showQ(); }; showQ();
+
+// booking
+const today = new Date().toISOString().slice(0,10);
+$('#dfrom').min = $('#dto').min = today;
+const nights = () => { const a = new Date($('#dfrom').value), b = new Date($('#dto').value); const n = Math.round((b-a)/864e5); return isNaN(n) || n < 1 ? 0 : n; };
+const extras = () => $$('.x').filter(x => x.checked).map(x => x.dataset.k);
+const inr = n => '₹' + n.toLocaleString('en-IN');
+function calc(){
+  const n = nights(), s = n * PRICE.perNight[$('#dsize').value];
+  const e = extras().reduce((t,k) => t + PRICE[k], 0);
+  $('#sn').textContent = n; $('#ss').textContent = inr(s); $('#se').textContent = inr(e); $('#st').textContent = inr(s+e);
+}
+$$('#bf input,#bf select').forEach(el => el.addEventListener('input', calc));
+$('#dfrom').addEventListener('change', () => { $('#dto').min = $('#dfrom').value || today; });
+$('#bf').onsubmit = e => {
   e.preventDefault();
-  var v=function(i){return $(i).value.trim()};
-  var sel=[].filter.call(document.querySelectorAll('#chips input'),function(i){return i.checked}).map(function(i){return i.value});
-  var err=$('#err');
-  if(!v('#n')||!v('#pn')){err.textContent='Please add your name and your pet\'s name 🐾';return}
-  if(!/^[6-9]\d{9}$/.test(v('#p').replace(/\D/g,'').slice(-10))){err.textContent='Enter a valid 10-digit phone number 📞';return}
-  if(!sel.length){err.textContent='Pick at least one service 🛁';return}
-  if(!v('#d')||!v('#a')){err.textContent='Please add a date and your area 📍';return}
-  err.textContent='';
-  var msg='Hi Puppy Glow! 🐾 I\'d like to book a grooming.\n\n'+
-   'Name: '+v('#n')+'\nPhone: '+v('#p')+'\nPet: '+v('#pn')+' ('+$('#pt').value+(v('#br')?', '+v('#br'):'')+')\n'+
-   'Services: '+sel.join(', ')+'\nDate: '+v('#d')+'\nSlot: '+$('#t').value+'\nArea: '+v('#a')+
-   (v('#m')?'\nNotes: '+v('#m'):'');
-  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
- };
- // reveal on scroll
- var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
- document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4)*80+'ms';io.observe(el)});
- // playful: tap pet / breeds, paw trail
- var pets=['🐩','🐶','🐕','🐱','🦮','🐕‍🦺'],pi=0;
- $('#pet').style.pointerEvents='auto';$('#pet').style.cursor='pointer';
- $('#pet').onclick=function(){pi=(pi+1)%pets.length;this.textContent=pets[pi]};
- document.querySelectorAll('#breeds span').forEach(function(s){s.onclick=function(){
-  var r=s.getBoundingClientRect(),p=document.createElement('div');
-  p.className='paw';p.textContent=s.dataset.e;p.style.left=r.left+r.width/2+'px';p.style.top=r.top+'px';
-  document.body.appendChild(p);setTimeout(function(){p.remove()},1000)}});
- var last=0;
- document.addEventListener('click',function(e){
-  if(e.target.closest('button,a,input,select,textarea,summary'))return;
-  var p=document.createElement('div');p.className='paw';p.textContent='🐾';p.style.left=e.clientX-10+'px';p.style.top=e.clientY-10+'px';
-  document.body.appendChild(p);setTimeout(function(){p.remove()},1000)});
- $('#yr').textContent=new Date().getFullYear();
-})();
+  const v = id => $('#'+id).value.trim(), err = m => { $('#err').textContent = m; };
+  if(!v('oname') || !v('ophone')) return err('Please add your name and phone number.');
+  if(!v('dname')) return err("Please add your dog's name.");
+  if(!$('#dfrom').value || !$('#dto').value) return err('Please choose drop-off and pick-up dates.');
+  if(!nights()) return err('Pick-up must be at least one day after drop-off.');
+  if(!$('#dvac').checked) return err('Vaccinations must be up to date for boarding. Tick the box to continue, or message us on WhatsApp.');
+  err('');
+  const ex = extras().map(k => ({bath:'Bath',pick:'Pick-up and drop',med:'Medication'}[k])).join(', ') || 'None';
+  const msg = `Hi Noah's Arf! I'd like to book a stay.\n\n*Owner:* ${v('oname')} (${v('ophone')})\n*Dog:* ${v('dname')}, ${v('dbreed') || 'breed not given'}, ${v('dage') || '?'} yrs, ${v('dsize')}, ${v('dgender')}\n*Neutered/spayed:* ${v('dneut')}\n*Vaccinated:* Yes\n*Friendly with dogs:* ${$('#dsocial').checked ? 'Yes' : 'Not sure'}\n*Dates:* ${$('#dfrom').value} to ${$('#dto').value} (${nights()} nights)\n*Extras:* ${ex}\n*Notes:* ${v('dnotes') || 'None'}\n*Estimate:* ${$('#st').textContent}\n\nPlease confirm availability. Thank you!`;
+  open(waLink(msg), '_blank');
+};
+calc();
 </script>
 </body>
 </html>
