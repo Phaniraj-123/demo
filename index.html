@@ -1,37 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nail Fairy by Mii | Nail Extensions at Home in Bangalore</title>
+<meta name="description" content="Soft gel, acrylic and gel extensions with custom nail art, done at your doorstep in Bangalore. Pretty Nails + Happy You.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#F7E1DE; --petal:#EDB9C0; --rose:#B4566B; --cream:#FBF3EA; --sand:#EAD7C3; --cocoa:#43292B; --paper:#FFFaf5;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+  --pad:clamp(1.25rem,5vw,4rem);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;background:var(--cream);color:var(--cocoa);line-height:1.65;font-size:1.02rem;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+h2{font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:1rem}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
 
-    <style>
-        body {
-            font-family:'Times New Roman', Times, serif;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20%;
-        }
-        h1 {
-            font-size: 16px;
-            color: #ff0000;
-        }
-        .simple {
-            font-size: 12px;
-            color: #333333;
-        }
-        .error {
-            font-size: 100px;
-            color: #1a1010;
-            font-weight: 900;
-            margin-bottom: 2px;
-        }
-    </style>
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(251,243,234,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(67,41,43,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--serif);font-size:1.15rem;letter-spacing:.14em;font-weight:600}
+.brand svg{width:30px;height:30px}
+nav ul{display:flex;gap:1.8rem;list-style:none;align-items:center}
+nav a{text-decoration:none;font-size:.92rem}
+nav a:hover{color:var(--rose)}
+.btn{display:inline-block;background:var(--cocoa);color:var(--cream);padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:400;border:0;cursor:pointer;font:inherit;font-weight:400;transition:background .25s,transform .25s}
+.btn:hover{background:var(--rose);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cocoa);border:1px solid var(--cocoa)}
+.btn.ghost:hover{background:var(--cocoa);color:var(--cream)}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px}
+.menu-btn span{display:block;width:24px;height:1.5px;background:var(--cocoa);margin:6px auto;transition:.3s}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav ul{position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--cream);padding:1.5rem;gap:1.2rem;border-bottom:1px solid rgba(67,41,43,.1);transform:translateY(-130%);transition:transform .35s;z-index:-1}
+  nav ul.open{transform:none}
+}
+
+/* hero + designer */
+.hero{padding-top:clamp(2rem,5vw,4rem);background:radial-gradient(900px 500px at 80% 20%,var(--blush),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(3rem,8.4vw,6.4rem);letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p.lead{max-width:34ch;margin:1.4rem 0 2rem;font-size:1.12rem}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.studio{background:var(--paper);border-radius:28px 28px 120px 28px;padding:1.4rem 1.4rem 1.6rem;box-shadow:0 30px 60px -30px rgba(180,86,107,.45);border:1px solid rgba(180,86,107,.15)}
+.studio-title{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--serif);font-size:1.25rem;margin-bottom:.2rem}
+.studio-title small{font-family:var(--sans);font-size:.8rem;opacity:.65}
+#hand{width:100%;height:auto;display:block}
+.nail{transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.nail path{transition:d .45s ease,fill .35s}
+.opts{display:grid;gap:.8rem;margin-top:.4rem}
+.opt-label{font-size:.82rem;opacity:.7;margin-bottom:.35rem}
+.chips{display:flex;gap:.45rem;flex-wrap:wrap}
+.chip{font:inherit;font-size:.88rem;border:1px solid rgba(67,41,43,.3);background:transparent;color:var(--cocoa);padding:.35rem .9rem;border-radius:999px;cursor:pointer;transition:.2s}
+.chip[aria-pressed="true"]{background:var(--cocoa);color:var(--cream);border-color:var(--cocoa)}
+.swatch{width:34px;height:34px;border-radius:50%;border:2px solid var(--paper);box-shadow:0 0 0 1px rgba(67,41,43,.3);cursor:pointer;padding:0}
+.swatch[aria-pressed="true"]{box-shadow:0 0 0 2px var(--cocoa)}
+.send{margin-top:1rem;width:100%;text-align:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.studio{border-radius:24px 24px 80px 24px}}
+
+/* marquee quotes */
+.strip{background:var(--cocoa);color:var(--blush);overflow:hidden;padding:1rem 0;white-space:nowrap}
+.strip div{display:inline-block;font-family:var(--serif);font-style:italic;font-size:1.4rem;animation:slide 38s linear infinite}
+.strip span{margin:0 1.6rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* menu */
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.menu-head p{max-width:36ch}
+.menu{list-style:none;border-top:1px solid rgba(67,41,43,.25)}
+.menu li{display:grid;grid-template-columns:1fr auto;gap:.2rem 1.5rem;padding:1.4rem 0;border-bottom:1px solid rgba(67,41,43,.25);cursor:pointer;transition:padding .3s,background .3s}
+.menu li:hover{padding-left:1rem;background:linear-gradient(90deg,var(--blush),transparent)}
+.menu h3{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.menu .price{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--rose);align-self:center;grid-row:span 2;grid-column:2}
+.menu p{font-size:.92rem;opacity:.75}
+.note{margin-top:1.2rem;font-size:.9rem;opacity:.7}
+
+/* extras */
+.extras{background:var(--blush)}
+.extras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:2rem}
+.extra{background:var(--paper);padding:1.6rem;border-radius:140px 140px 20px 20px;text-align:center;padding-top:3rem}
+.extra h3{font-size:1.5rem;margin-bottom:.4rem}
+.extra p{font-size:.92rem}
+.extra:nth-child(even){border-radius:20px 20px 140px 140px;padding-top:1.6rem;padding-bottom:3rem}
+
+/* promise */
+.promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.promise div{border-left:1px solid var(--rose);padding-left:1.2rem}
+.promise h3{font-size:1.5rem;margin-bottom:.3rem}
+.promise p{font-size:.92rem}
+
+/* booking */
+.book{background:var(--paper)}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+form{display:grid;gap:1rem}
+label{font-size:.85rem;display:block;margin-bottom:.25rem}
+input,select,textarea{width:100%;font:inherit;padding:.8rem 1rem;border:1px solid rgba(67,41,43,.3);background:var(--cream);color:var(--cocoa);border-radius:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.info p{margin-bottom:1rem}
+.info strong{font-weight:500}
+@media(max-width:820px){.book-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+
+footer{background:var(--cocoa);color:var(--blush);padding:3rem 0;text-align:center}
+footer .tag{font-family:var(--serif);font-size:clamp(1.8rem,5vw,3rem);font-style:italic;margin-bottom:.6rem}
+footer a{color:var(--petal)}
+.wa-float{position:fixed;right:1rem;bottom:1rem;z-index:30;background:#25a15a;color:#fff;text-decoration:none;padding:.7rem 1.1rem;border-radius:999px;box-shadow:0 10px 24px rgba(0,0,0,.25);font-weight:400;font-size:.92rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-    <p class="error">404</p>
-    <h1>Page Not Found</h1>
-    <p class="simple">The page you are looking for does not exist.</p>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Nail Fairy by Mii, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 21C14 10 5 8 4 14c-1 6 6 8 12 8-5 1-9 5-6 9 3 3 8-2 10-10Z" fill="#B4566B"/><path d="M20 21c6-11 15-13 16-7 1 6-6 8-12 8 5 1 9 5 6 9-3 3-8-2-10-10Z" fill="#EDB9C0"/><path d="M20 12v20" stroke="#43292B" stroke-width="1.5" stroke-linecap="round"/></svg>
+      NAIL FAIRY
+    </a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav aria-label="Main">
+      <ul id="links">
+        <li><a href="#menu">Price menu</a></li>
+        <li><a href="#extras">Custom work</a></li>
+        <li><a href="#promise">Why Mii</a></li>
+        <li><a class="btn" href="#book">Book a slot</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Pretty nails <em>+</em> happy you.</h1>
+      <p class="lead">Nail extensions and custom nail art, done at your doorstep in Bangalore. No travel, no waiting room.</p>
+      <div class="cta">
+        <a class="btn" href="#book">Book your slot</a>
+        <a class="btn ghost" href="#menu">See prices</a>
+      </div>
+    </div>
+
+    <div class="studio" aria-label="Design your set">
+      <div class="studio-title"><span>Design your set</span><small>Tap to try</small></div>
+      <svg id="hand" viewBox="0 0 400 270" role="img" aria-label="Preview of five nails in your chosen shape, colour and finish">
+        <defs>
+          <pattern id="sparkle" width="14" height="14" patternUnits="userSpaceOnUse">
+            <circle cx="3" cy="4" r="1.3" fill="#fff"/><circle cx="10" cy="10" r="1" fill="#fff" opacity=".8"/><circle cx="11" cy="2" r=".7" fill="#fff" opacity=".7"/>
+          </pattern>
+          <clipPath id="clip"><path id="clipPath" d=""/></clipPath>
+        </defs>
+        <g id="nails"></g>
+      </svg>
+      <div class="opts">
+        <div><div class="opt-label">Shape</div><div class="chips" id="shapes"></div></div>
+        <div><div class="opt-label">Colour</div><div class="chips" id="colors"></div></div>
+        <div><div class="opt-label">Finish</div><div class="chips" id="finishes"></div></div>
+      </div>
+      <a class="btn send" id="sendSet" href="#" target="_blank" rel="noopener">Send this set to Mii on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div id="marq"></div></div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2>The price card</h2>
+      <p>Affordable luxury, brought home. Tap a service to start a booking.</p>
+    </div>
+    <ul class="menu" id="menuList">
+      <li data-s="Gel Extension"><div><h3>Gel Extension</h3><p>Lightweight, glossy length with a natural feel.</p></div><span class="price">₹1,399</span></li>
+      <li data-s="Acrylic Extension"><div><h3>Acrylic Extension</h3><p>Strong, sculpted length that lasts.</p></div><span class="price">₹1,699</span></li>
+      <li data-s="Gel / Acrylic Overlay"><div><h3>Gel / Acrylic Overlay</h3><p>Strength over your natural nails, no added length.</p></div><span class="price">₹1,199</span></li>
+      <li data-s="Gel Polish"><div><h3>Gel Polish</h3><p>Shiny, chip-free colour.</p></div><span class="price">₹599</span></li>
+      <li data-s="Refill"><div><h3>Refill</h3><p>Fresh growth filled in, set looking new again.</p></div><span class="price">₹999</span></li>
+    </ul>
+    <p class="note">Nail art is priced by design. Send a reference photo and Mii will quote it.</p>
+  </div>
+</section>
+
+<section class="extras" id="extras">
+  <div class="wrap">
+    <h2>Made just for you</h2>
+    <p>Soft gel, acrylic or gel extensions, finished with custom art.</p>
+    <div class="extras-grid">
+      <div class="extra"><h3>Custom nail art</h3><p>Trendy and classy designs, drawn from your Pinterest board.</p></div>
+      <div class="extra"><h3>Press-on sets</h3><p>Stiletto press-ons with 3D flowers, charms and rhinestones.</p></div>
+      <div class="extra"><h3>Mani + pedi sets</h3><p>Matching hands and feet, like pink glitter French with a 3D flower.</p></div>
+      <div class="extra"><h3>Toe extensions</h3><p>Sandal-season feet, sorted.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="promise">
+  <div class="wrap">
+    <h2>Your nails deserve a little luxury</h2>
+    <div class="promise" style="margin-top:2rem">
+      <div><h3>Premium products</h3><p>Quality products for a finish that lasts.</p></div>
+      <div><h3>Hygienic and safe</h3><p>Clean tools and a careful routine, every visit.</p></div>
+      <div><h3>At home</h3><p>Mii comes to you anywhere in Bangalore.</p></div>
+      <div><h3>Trendy and custom</h3><p>Designs made for your hands, not copied from a menu.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div class="info">
+      <h2>Book your slot</h2>
+      <p>Appointments are limited. Fill this in and it opens as a WhatsApp message to Mii, who confirms your time.</p>
+      <p><strong>WhatsApp</strong><br><a href="https://wa.me/917019950010">+91 70199 50010</a></p>
+      <p><strong>Instagram</strong><br><a href="https://instagram.com/nail_fairy_by_mii" target="_blank" rel="noopener">@nail_fairy_by_mii</a></p>
+      <p><strong>Where</strong><br>Home studio in BTM 1st Stage, Bangalore. Home service across the city.</p>
+    </div>
+    <form id="bookForm">
+      <div class="row">
+        <div><label for="name">Your name</label><input id="name" required autocomplete="name"></div>
+        <div><label for="area">Your area</label><input id="area" required placeholder="e.g. HSR Layout"></div>
+      </div>
+      <div class="row">
+        <div><label for="service">Service</label>
+          <select id="service"><option>Gel Extension</option><option>Acrylic Extension</option><option>Gel / Acrylic Overlay</option><option>Gel Polish</option><option>Refill</option><option>Custom press-on nails</option><option>Toe nail extensions</option></select></div>
+        <div><label for="date">Preferred date</label><input id="date" type="date"></div>
+      </div>
+      <div><label for="msg">Design ideas</label><textarea id="msg" rows="3" placeholder="Shape, colours, a reference photo you'll send..."></textarea></div>
+      <button class="btn" type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="tag">Girlies, your nail era starts now.</p>
+    <p>Nail Fairy by Mii · Bangalore · <a href="https://instagram.com/nail_fairy_by_mii" target="_blank" rel="noopener">@nail_fairy_by_mii</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/917019950010?text=Hi%20Mii%2C%20I'd%20like%20to%20book%20a%20nail%20appointment" target="_blank" rel="noopener">WhatsApp Mii</a>
+
+<script>
+const PHONE='917019950010';
+const wa=t=>`https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
+
+/* mobile menu */
+const mb=document.querySelector('.menu-btn'),ul=document.getElementById('links');
+mb.onclick=()=>{const o=ul.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+ul.querySelectorAll('a').forEach(a=>a.onclick=()=>{ul.classList.remove('open');mb.setAttribute('aria-expanded',false)});
+
+/* quotes strip */
+const q=['Pretty Nails + Happy You.','Get your dream nails','Your nails deserve little luxury.','Pretty nails without stepping out of your home','Soft Gel • Acrylic • Gel Extensions'];
+const row=q.map(t=>`<span>${t}</span><span>🦋</span>`).join('');
+document.getElementById('marq').innerHTML=row+row;
+
+/* nail designer */
+const shapes={
+  Almond:'M20 2C30 18 35 44 35 70H5C5 44 10 18 20 2Z',
+  Stiletto:'M20 -14C23 14 35 46 35 70H5C5 46 17 14 20 -14Z',
+  Coffin:'M11 6H29L35 70H5Z',
+  Square:'M5 10Q5 4 11 4H29Q35 4 35 10V70H5Z'
+};
+const colors={Blush:'#F3C9CF',Rose:'#C9627A',Nude:'#E3C0A5',Cream:'#FFF1E3',Cherry:'#8E1F3A',Lilac:'#CDB4E3'};
+const finishes=['Gloss','French','Glitter','3D flower'];
+const st={shape:'Almond',color:'Blush',finish:'Gloss'};
+/* x, y, rotation, scale for thumb → pinky */
+const pos=[[62,150,-52,.92],[124,92,-22,1.05],[200,70,0,1.15],[276,92,20,1.05],[336,140,40,.85]];
+const ns='http://www.w3.org/2000/svg';
+const nailsG=document.getElementById('nails');
+const nailEls=pos.map(([x,y,r,s])=>{
+  const g=document.createElementNS(ns,'g');
+  g.setAttribute('class','nail');
+  g.style.transformOrigin='0 0';
+  g.setAttribute('transform',`translate(${x} ${y}) rotate(${r}) scale(${s}) translate(-20 -35)`);
+  g.innerHTML=`<path class="base" stroke="rgba(67,41,43,.25)" stroke-width="1.2"/><g class="decor"></g><path class="shine" fill="#fff" opacity=".45"/>`;
+  nailsG.appendChild(g);return g;
+});
+function render(){
+  const d=shapes[st.shape],c=colors[st.color];
+  nailEls.forEach((g,i)=>{
+    const base=g.querySelector('.base');
+    base.setAttribute('d',d);base.setAttribute('fill',c);
+    const decor=g.querySelector('.decor');decor.innerHTML='';
+    const id='c'+i;
+    let extra='';
+    if(st.finish==='French'){
+      extra=`<clipPath id="${id}"><path d="${d}"/></clipPath><rect x="0" y="-20" width="40" height="30" fill="#FFF8F0" clip-path="url(#${id})"/>`;
+    }else if(st.finish==='Glitter'){
+      extra=`<clipPath id="${id}"><path d="${d}"/></clipPath><rect x="0" y="-20" width="40" height="100" fill="url(#sparkle)" clip-path="url(#${id})"/>`;
+    }else if(st.finish==='3D flower'&&(i===2||i===3)){
+      extra=`<g transform="translate(20 46)">${[0,72,144,216,288].map(a=>`<ellipse cx="0" cy="-5" rx="3.6" ry="5.2" fill="#FFF8F0" stroke="#C9627A" stroke-width=".5" transform="rotate(${a})"/>`).join('')}<circle r="2.6" fill="#E8B23F"/></g>`;
+    }
+    decor.innerHTML=extra;
+    g.querySelector('.shine').setAttribute('d','M12 20Q13 16 15 14L16 54Q13 50 12 40Z');
+  });
+  document.getElementById('sendSet').href=wa(`Hi Mii! I designed a set on your website: ${st.shape} shape, ${st.color} colour, ${st.finish} finish. Can I book a slot?`);
+}
+function chips(id,items,key,swatch){
+  const box=document.getElementById(id);
+  items.forEach(it=>{
+    const b=document.createElement('button');
+    b.type='button';b.setAttribute('aria-pressed',st[key]===it);
+    if(swatch){b.className='swatch';b.style.background=colors[it];b.title=it;b.setAttribute('aria-label',it)}
+    else{b.className='chip';b.textContent=it}
+    b.onclick=()=>{st[key]=it;box.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));render()};
+    box.appendChild(b);
+  });
+}
+chips('shapes',Object.keys(shapes),'shape');
+chips('colors',Object.keys(colors),'color',true);
+chips('finishes',finishes,'finish');
+render();
+
+/* menu click -> prefill booking */
+document.querySelectorAll('#menuList li').forEach(li=>{
+  li.tabIndex=0;
+  const go=()=>{document.getElementById('service').value=li.dataset.s;document.getElementById('book').scrollIntoView({behavior:'smooth'})};
+  li.onclick=go;li.onkeydown=e=>{if(e.key==='Enter')go()};
+});
+
+/* booking form */
+document.getElementById('date').min=new Date().toISOString().split('T')[0];
+document.getElementById('bookForm').onsubmit=e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const t=`Hi Mii! I'm ${v('name')} from ${v('area')}. I'd like to book: ${v('service')}${v('date')?' on '+v('date'):''}.${v('msg')?' Design ideas: '+v('msg'):''}`;
+  window.open(wa(t),'_blank','noopener');
+};
+</script>
 </body>
 </html>
