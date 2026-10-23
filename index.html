@@ -1,272 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Ivory Lane – Nail & Lash Studio, Koramangala, Bangalore</title>
-<meta name="description" content="Custom nail art, press-on nails, lash lifts and lash extensions in Koramangala, Bangalore. Nails that slay. Lashes that stay.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Solmee Candles | Handcrafted soy wax candles</title>
+<meta name="description" content="Handcrafted soy wax candles and thoughtful gifts. Pan-India delivery, same-day in Mumbai.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#f6efe9; --surface:#fcf8f4; --ink:#2e1020; --muted:#74606a; --line:#e3d3c9;
-  --gold:#a8864a; --plum:#4a1b30; --on-plum:#fbf3e6;
-  --disp:"Bodoni Moda","Didot","Times New Roman",serif;
-  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --nail:radial-gradient(120% 80% at 30% 15%,#fff 0,#f1e8ec 35%,#d9c8d0 100%);
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#1a0d14;--surface:#241119;--ink:#f6ece0;--muted:#bda9af;--line:#43262f;--gold:#d2ae6d;--plum:#e9d3b4;--on-plum:#2a1019}
-}
-:root[data-theme="dark"]{--bg:#1a0d14;--surface:#241119;--ink:#f6ece0;--muted:#bda9af;--line:#43262f;--gold:#d2ae6d;--plum:#e9d3b4;--on-plum:#2a1019}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
-body{margin:0;background:radial-gradient(900px 520px at 88% -4%,color-mix(in srgb,var(--gold) 22%,transparent),transparent 62%),radial-gradient(700px 520px at -6% 24%,color-mix(in srgb,var(--plum) 10%,transparent),transparent 62%),var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.strand{height:22px;margin:0 0 -11px;position:relative;z-index:2;background:radial-gradient(circle at 36% 32%,#fff 0,#efe3e8 38%,#c4aab7 68%,transparent 71%) 0 50%/24px 22px repeat-x}
-img,svg{max-width:100%}
+:root{--bg:#fdf8f4;--paper:#fff;--tint:#f2e8f5;--blue:#d3e4f3;--gold:#c9a64e;--ink:#2f2438;--muted:#6f6479;--purple:#6a4c93;--rose:#c2607f;--line:#e6dbe8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1d1523;--paper:#271c2f;--tint:#2f2338;--ink:#f3e9ee;--muted:#bfb0c6;--purple:#b99be0;--rose:#e58aa3;--line:#3e2f49;--blue:#2a3550;--gold:#d4b25e}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1d1523;--paper:#271c2f;--tint:#2f2338;--ink:#f3e9ee;--muted:#bfb0c6;--purple:#b99be0;--rose:#e58aa3;--line:#3e2f49;--blue:#2a3550;--gold:#d4b25e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink);font-family:'Karla',system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
-.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
-h1,h2,h3{font-family:var(--disp);font-weight:500;line-height:1.08;margin:0}
-h2{font-size:clamp(2rem,5vw,3.25rem);letter-spacing:-.01em}
-p{margin:0}
-
-/* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--disp);font-size:1.35rem;text-decoration:none;letter-spacing:.01em}
-.logo i{color:var(--gold)}
-nav{display:flex;gap:1.6rem;align-items:center}
-nav a{text-decoration:none;font-size:.95rem;color:var(--muted)}
-nav a:hover{color:var(--ink)}
-.btn{display:inline-block;border:0;cursor:pointer;font:600 .98rem var(--body);padding:.85rem 1.5rem;border-radius:999px;background:var(--plum);color:var(--on-plum);text-decoration:none;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(74,27,48,.25)}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-.menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:.45rem .7rem;font:inherit;cursor:pointer}
-@media(max-width:760px){
-  .menu{display:block}
-  nav{position:absolute;left:0;right:0;top:64px;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:.5rem 1.25rem 1rem}
-  nav.open{display:flex}
-  nav a{padding:.8rem 0;border-bottom:1px solid var(--line)}
-  nav .btn{margin-top:.8rem;text-align:center}
-}
-
-/* hero */
-.hero{padding:clamp(3rem,8vw,6rem) 0 clamp(3rem,7vw,5rem);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
-.hero h1{font-size:clamp(3rem,9vw,6.4rem);letter-spacing:-.025em}
-.hero h1 em{display:block;color:var(--gold);font-style:italic;font-weight:500}
-.hero p.lead{max-width:34ch;margin:1.6rem 0 2rem;color:var(--muted);font-size:1.15rem}
-.cta{display:flex;gap:.8rem;flex-wrap:wrap}
-.pearls{position:relative;aspect-ratio:.8;max-width:390px;margin-inline:auto;width:100%;border-radius:999px 999px 26px 26px;background:linear-gradient(180deg,color-mix(in srgb,var(--gold) 26%,var(--surface)),var(--surface) 82%);box-shadow:0 30px 60px -30px rgba(74,27,48,.35)}
-.pearls::before{content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:999px 999px 38px 38px;opacity:.55}
-.pearl{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff 0,#f6eef1 28%,#d9c6cf 62%,#b79aa8 100%);box-shadow:inset -6px -10px 18px rgba(74,27,48,.18),0 18px 30px rgba(74,27,48,.18);animation:drift 7s ease-in-out infinite}
-.pearl:nth-child(1){width:54%;left:23%;top:30%}
-.pearl:nth-child(2){width:22%;right:14%;top:14%;animation-delay:-2s}
-.pearl:nth-child(3){width:38%;right:8%;bottom:6%;animation-delay:-4s;background:radial-gradient(circle at 32% 28%,#fff6dc 0,#e9d29b 35%,#a8864a 100%)}
-.pearl:nth-child(4){width:14%;left:14%;bottom:12%;animation-delay:-1s}
-@keyframes drift{50%{transform:translateY(-14px)}}
-@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.pearls{max-width:300px;order:-1}}
-
-section{padding:clamp(3.5rem,8vw,6rem) 0}
-.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.head p{max-width:38ch;color:var(--muted)}
-
-/* services */
-.services{background:var(--surface);border-block:1px solid var(--line)}
-.svc{display:grid;grid-template-columns:repeat(2,1fr);column-gap:3.5rem}
-.svc article{padding:1.5rem 0;border-top:1px solid var(--line)}
-.svc h3{font-size:1.7rem;font-style:italic;margin-bottom:.4rem}
-.svc article{border-top-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
-.svc p{color:var(--muted);max-width:42ch}
-.tag{display:inline-block;margin-left:.5rem;font:600 .75rem var(--body);color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:.1rem .6rem;vertical-align:middle}
-@media(max-width:760px){.svc{grid-template-columns:1fr}}
-
-/* finish picker */
-.picker{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.stage{background:linear-gradient(180deg,color-mix(in srgb,var(--glow,#e8d9e0) 55%,var(--surface)),var(--surface) 85%);border:1px solid var(--line);border-radius:999px 999px 28px 28px;padding:5.5rem 1.5rem 3rem;display:flex;justify-content:center;gap:clamp(.5rem,2vw,1rem);align-items:flex-end;transition:background .5s}
-.n{width:clamp(36px,8vw,56px);aspect-ratio:.62;border-radius:48% 48% 40% 40%/58% 58% 42% 42%;background:var(--nail);box-shadow:inset -4px -8px 12px rgba(0,0,0,.14),inset 3px 4px 8px rgba(255,255,255,.55),0 10px 16px rgba(74,27,48,.15);transition:background .45s}
-.n:nth-child(1){height:auto;transform:scale(.82) rotate(-6deg)}
-.n:nth-child(2){transform:scale(.96) rotate(-3deg)}
-.n:nth-child(3){transform:scale(1.06)}
-.n:nth-child(4){transform:scale(.98) rotate(3deg)}
-.n:nth-child(5){transform:scale(.85) rotate(6deg)}
-.sw{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.5rem 0 1.2rem}
-.sw button{width:46px;height:46px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0;transition:transform .2s,border-color .2s}
-.sw button[aria-pressed="true"]{border-color:var(--ink);transform:scale(1.12)}
-#fname{font-family:var(--disp);font-size:1.7rem;margin-bottom:.3rem}
-#fdesc{color:var(--muted);max-width:36ch;min-height:3.2em}
-@media(max-width:820px){.picker{grid-template-columns:1fr}}
-
-/* visit */
-.visit{background:radial-gradient(700px 420px at 100% 0,rgba(210,174,109,.28),transparent 65%),var(--plum);color:var(--on-plum)}
-.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
-.visit h2{margin-bottom:1.2rem}
-.visit address{font-style:normal;margin:1.4rem 0;line-height:1.8}
-.visit a.link{color:var(--on-plum);text-underline-offset:4px}
-.visit .btn{background:var(--on-plum);color:var(--plum)}
-.visit .btn.ghost{background:transparent;color:var(--on-plum);border-color:var(--on-plum)}
-form{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:1.6rem;display:grid;gap:1rem}
-form h3{font-size:1.6rem}
-label{display:grid;gap:.35rem;font-size:.92rem}
-input,select{font:inherit;color:var(--on-plum);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:.75rem .9rem;width:100%}
-select option{color:#33121f}
-input::placeholder{color:rgba(251,243,230,.55)}
-input[type=date]{color-scheme:dark}
-.err{color:#ffd0c4;font-size:.9rem;min-height:1.2em}
-@media(max-width:820px){.visit .wrap{grid-template-columns:1fr}}
-
-footer{padding:2rem 0 2.5rem;color:var(--muted);font-size:.92rem}
-footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:80px 0}
+.hand{font-family:'Caveat',cursive;color:var(--rose);font-size:1.5rem;line-height:1}
+h2{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--purple);margin:6px 0 14px}
+.btn{display:inline-block;padding:12px 26px;border:1.5px solid var(--purple);background:var(--purple);color:#fff;font:700 .95rem 'Karla',sans-serif;cursor:pointer;border-radius:4px;text-decoration:none}
+:root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{color:#1d1523}
+.btn.alt{background:none;color:var(--purple)}
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;color:var(--purple);text-decoration:none}
+.links{display:flex;gap:28px;align-items:center;font-size:.95rem}
+.links a{text-decoration:none}.links a:hover{color:var(--rose)}
+.ib{background:none;border:0;color:var(--ink);font-size:1.2rem;cursor:pointer}
+.burger{display:none}
+.hero{padding:120px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,4.8rem);color:var(--purple);margin:10px 0 18px}
+.hero p{color:var(--muted);max-width:440px;margin-bottom:26px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero small{display:block;margin-top:26px;color:var(--muted);font-size:.85rem}
+.stage{background:var(--blue);padding:34px 20px 20px;display:flex;justify-content:center;position:relative;border-radius:4px}
+.stage::after{content:"";position:absolute;inset:12px -12px -12px 12px;border:1.5px solid var(--gold);z-index:-1;border-radius:4px}
+.stage svg{width:min(300px,100%)}
+.flame{transform-origin:50% 100%;animation:fl 2.2s ease-in-out infinite}
+@keyframes fl{50%{transform:scale(1.08,.94) rotate(2deg)}}
+.intro{border-block:1px solid var(--gold);padding:26px 0;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:34px 24px;margin-top:38px}
+.ph{aspect-ratio:4/5;background:var(--tint);overflow:hidden;position:relative;border-radius:3px}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.empty{display:flex;align-items:center;justify-content:center}
+.ph.empty svg{width:55%;opacity:.9}
+.ph.empty span{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+.item h3{font-size:1.45rem;margin:14px 0 4px;color:var(--ink)}
+.item p{font-size:.92rem;color:var(--muted)}
+.item .row{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:.9rem}
+.item .pr{color:var(--rose);font-weight:700}
+.item button{background:none;border:0;color:var(--purple);font:700 .9rem 'Karla',sans-serif;cursor:pointer;border-bottom:1.5px solid var(--purple);padding:0 0 1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.two .ph{aspect-ratio:1/1}
+.hamper{background:var(--purple);color:#fff}
+.hamper h2,.hamper .hand{color:#fff}
+.hamper .hand{color:#f3c3d0}
+.hamper li{margin:8px 0 8px 18px;color:#eadff5}
+.hamper .btn{background:#fff;color:var(--purple);border-color:#fff;margin-top:18px}
+.hamper .ph{background:#7d60a6}
+.hamper .ph.empty span{color:#d9c8ec}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:34px}
+.notes b{font-family:'Caveat',cursive;font-size:2rem;color:var(--rose);font-weight:500}
+.notes h3{font-size:1.35rem;margin:2px 0 4px}
+.notes p{color:var(--muted);font-size:.93rem}
+.about p{color:var(--muted);margin:10px 0}
+form{background:var(--paper);border:1px solid var(--line);padding:28px;display:grid;gap:14px;border-radius:4px}
+label{font-size:.82rem;font-weight:700;color:var(--purple)}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;margin-top:4px;border-radius:3px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--purple)}
+.note{font-size:.8rem;color:var(--muted)}
+.info p{margin:10px 0;color:var(--muted)}
+.info a{color:var(--rose)}
+footer{border-top:1px solid var(--line);text-align:center;padding:40px 20px calc(40px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.9rem}
+footer .logo{display:block;margin-bottom:6px}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:11px 20px;transition:.35s;z-index:99;font-size:.9rem;max-width:90%;border-radius:4px}
+.toast.on{transform:translate(-50%,0)}
+@media(max-width:820px){
+.burger{display:block}
+.links{position:absolute;top:calc(64px + env(safe-area-inset-top,0px));left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:20px 22px;gap:16px;border-bottom:1px solid var(--line);display:none}
+.links.open{display:flex}
+.hero{padding-top:100px}
+.hero .wrap,.two{grid-template-columns:1fr;gap:36px}
+.stage{order:-1}.stage svg{width:190px}
+.notes{grid-template-columns:1fr;gap:22px}
+section{padding:56px 0}}
+@media(prefers-reduced-motion:reduce){.flame{animation:none}}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap bar">
-    <a class="logo" href="#top" aria-label="The Ivory Lane home">The Ivory <i>Lane</i></a>
-    <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav id="nav">
-      <a href="#services">Services</a>
-      <a href="#finishes">Finishes</a>
-      <a href="#visit">Visit</a>
-      <a class="btn" href="#book">Book a slot</a>
-    </nav>
-  </div>
-</header>
+<header><div class="wrap nav">
+<a href="#top" class="logo">Solmee Candles</a>
+<nav class="links" id="links"><a href="#shop">Candles</a><a href="#hampers">Hampers</a><a href="#about">About</a><a href="#order">Order</a><button class="ib" id="theme" aria-label="Toggle theme">☾</button></nav>
+<button class="ib burger" id="burger" aria-label="Menu">☰</button>
+</div></header>
 
 <main id="top">
-  <div class="hero">
-    <div class="wrap">
-      <div>
-        <h1>Nails that slay.<em>Lashes that stay.</em></h1>
-        <p class="lead">A small beauty studio in Koramangala for custom nail art, press-ons and lashes that last.</p>
-        <div class="cta">
-          <a class="btn" href="#book">Book an appointment</a>
-          <a class="btn ghost" href="https://instagram.com/_theivorylane.in" target="_blank" rel="noopener">See our work on Instagram</a>
-        </div>
-      </div>
-      <div class="pearls" aria-hidden="true"><span class="pearl"></span><span class="pearl"></span><span class="pearl"></span><span class="pearl"></span></div>
-    </div>
-  </div>
+<section class="hero"><div class="wrap">
+<div>
+<div class="hand">handmade in Mumbai</div>
+<h1>Little lights.<br>Big moments.</h1>
+<p>Soy wax candles, poured and shaped by hand. Roses, daisies, hearts and tiny tins for gifting, for your shelf, or for a quiet evening.</p>
+<div class="cta"><a class="btn" href="#shop">See the candles</a><a class="btn alt" href="#order">DM to order</a></div>
+<small>Pan-India delivery · Same-day delivery in Mumbai</small>
+</div>
+<div class="stage">
+<svg viewBox="0 0 300 340" aria-label="Flower candle illustration">
+<path class="flame" d="M150 30c22 28 26 46 12 62-8 9-24 9-30 0-12-16-4-34 18-62z" fill="#f2b84b"/>
+<path class="flame" d="M150 52c10 14 12 22 5 30-4 4-12 4-14 0-6-8-2-16 9-30z" fill="#fff3c4"/>
+<rect x="147" y="88" width="6" height="22" rx="3" fill="#4b2a75"/>
+<ellipse cx="150" cy="130" rx="95" ry="38" fill="#b95d78"/>
+<ellipse cx="150" cy="122" rx="78" ry="30" fill="#d4809a"/>
+<ellipse cx="150" cy="116" rx="55" ry="22" fill="#eeb2c4"/>
+<ellipse cx="150" cy="112" rx="30" ry="12" fill="#f8dde6"/>
+<path d="M55 130v120c0 24 42 40 95 40s95-16 95-40V130c0 24-42 38-95 38s-95-14-95-38z" fill="#f6e3ea"/>
+<text x="150" y="238" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="22" fill="#5b3a82">Solmee</text>
+</svg>
+</div>
+</div></section>
 
-  <div class="strand" aria-hidden="true"></div>
-  <section class="services" id="services">
-    <div class="wrap">
-      <div class="head">
-        <h2>What we do</h2>
-        <p>Nails and lashes, done by hand. Tell us the look you want and we’ll build it.</p>
-      </div>
-      <div class="svc">
-        <article><h3>Custom nail art</h3><p>Hand-painted designs made around your outfit, your event or a reference photo.</p></article>
-        <article><h3>Nail extensions</h3><p>Length and shape that suit your hands, built to last through the month.</p></article>
-        <article><h3>Press-on nails <span class="tag">Ready to wear</span></h3><p>Detailed sets made in advance. Apply them at home in minutes and reuse them.</p></article>
-        <article><h3>Luxury &amp; festive sets</h3><p>Pearl and gold designs for Diwali, weddings and big nights.</p></article>
-        <article><h3>Pearl-finish manicures</h3><p>A soft, glossy pearl shine for a clean, polished look.</p></article>
-        <article><h3>Lash lift</h3><p>Your own lashes curled and lifted, so they look longer without extensions.</p></article>
-        <article><h3>Lash extensions</h3><p>Fuller, longer lashes in natural to dramatic styles, made to stay put.</p></article>
-        <article><h3>Nail care</h3><p>Clean-up, shaping and care to keep natural nails healthy between sets.</p></article>
-      </div>
-    </div>
-  </section>
+<div class="intro">100% soy wax · natural fragrances · poured in small batches</div>
 
-  <section id="finishes">
-    <div class="wrap picker">
-      <div class="stage" aria-hidden="true"><span class="n"></span><span class="n"></span><span class="n"></span><span class="n"></span><span class="n"></span></div>
-      <div>
-        <h2>Pick a finish</h2>
-        <div class="sw" id="sw" role="group" aria-label="Nail finishes"></div>
-        <h3 id="fname"></h3>
-        <p id="fdesc" aria-live="polite"></p>
-      </div>
-    </div>
-  </section>
+<section id="shop"><div class="wrap">
+<div class="hand">the collection</div>
+<h2>Every bloom, shaped by hand</h2>
+<p style="color:var(--muted);max-width:520px">No two candles come out exactly alike. Colours can be matched to your gift or your room, just ask.</p>
+<div class="grid" id="grid"></div>
+</div></section>
 
-  <section class="visit" id="visit">
-    <div class="wrap">
-      <div>
-        <h2>Find us in Koramangala</h2>
-        <p>Walk-ins depend on the day, so message us first to hold a slot.</p>
-        <address>
-          The Ivory Lane<br>
-          Koramangala 2nd Block, Bangalore<br>
-          <a class="link" href="tel:+917483530308">+91 74835 30308</a><br>
-          <a class="link" href="https://instagram.com/_theivorylane.in" target="_blank" rel="noopener">@_theivorylane.in</a>
-        </address>
-        <a class="btn" href="https://maps.app.goo.gl/XTGm5yyUqYwYFaxg6" target="_blank" rel="noopener">Open in Google Maps</a>
-      </div>
-      <form id="book" novalidate>
-        <h3>Request a slot</h3>
-        <label>Your name<input id="fn" autocomplete="name" placeholder="Priya"></label>
-        <label>Service
-          <select id="fs">
-            <option>Custom nail art</option><option>Nail extensions</option><option>Press-on nails</option>
-            <option>Luxury / festive nail art</option><option>Pearl-finish manicure</option>
-            <option>Lash lift</option><option>Lash extensions</option>
-          </select>
-        </label>
-        <label>Preferred date<input id="fd" type="date"></label>
-        <div class="err" id="err" role="alert"></div>
-        <button class="btn" type="submit">Send on WhatsApp</button>
-      </form>
-    </div>
-  </section>
+<section class="hamper" id="hampers"><div class="wrap two">
+<div id="hamperPh"></div>
+<div>
+<div class="hand">gifting</div>
+<h2>A little box of light, love &amp; sweetness</h2>
+<p style="color:#eadff5">Our Diwali and festive hampers come in a purple box printed with cream lotus flowers, tied with a beige paper band and our round logo seal.</p>
+<ul><li>2 hand-poured floral soy candles</li><li>2 jars of premium dry fruits: Pista 80g and Cashew 80g</li><li>Packed and ready to hand over</li></ul>
+<button class="btn" data-pick="Gift hamper / Diwali box">Order a hamper</button>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="hand">why soy</div>
+<h2>Made slowly, burned gently</h2>
+<div class="notes">
+<div><b>01</b><h3>Pure soy wax</h3><p>A cleaner, slower burn that lasts longer than ordinary wax.</p></div>
+<div><b>02</b><h3>Natural fragrances</h3><p>Soft, calming scents for self-care evenings and home decor.</p></div>
+<div><b>03</b><h3>Made for gifting</h3><p>Birthdays, weddings, festivals or just because. We pack it nicely.</p></div>
+</div></div></section>
+
+<section id="order" style="background:var(--tint)"><div class="wrap two" style="align-items:start">
+<div class="info">
+<div class="hand">ordering</div>
+<h2>Just send us a message</h2>
+<p>There is no checkout. Tell us what you like and we will confirm the final price and shipping with you directly on Instagram.</p>
+<p>Based in Mumbai, with same-day delivery in the city. Pan-India delivery elsewhere, shipping charges shared on DM.</p>
+<p>Videos on <a href="https://www.youtube.com/@Solmeecandles" target="_blank" rel="noopener">YouTube @Solmeecandles</a></p>
+</div>
+<form id="form">
+<div><label for="name">Your name</label><input id="name" required></div>
+<div><label for="item">Product</label><select id="item"></select></div>
+<div><label for="qty">Quantity</label><input id="qty" type="number" min="1" value="1"></div>
+<div><label for="city">City and pincode</label><input id="city" placeholder="Mumbai, 400001"></div>
+<div><label for="msg">Colours or gift note</label><textarea id="msg" rows="3"></textarea></div>
+<button class="btn" type="submit">Copy message &amp; open Instagram</button>
+<p class="note">Your order is copied to the clipboard. Paste it into our DM.</p>
+</form>
+</div></section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>© <span id="yr"></span> The Ivory Lane, Koramangala, Bangalore</span>
-    <span>Nails that slay. Lashes that stay.</span>
-  </div>
+<a href="#top" class="logo">Solmee Candles</a>
+Light up your soul · <a href="https://www.instagram.com/solmeecandles/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@Solmeecandles" target="_blank" rel="noopener">YouTube</a><br>
+© <span id="yr"></span> Solmee Candles
 </footer>
+<div class="toast" id="toast"></div>
 
 <script>
-(function(){
-  var finishes=[
-    {n:"Pearl",d:"A soft, milky shine with a pearly glow. Clean and quietly luxe.",c:"radial-gradient(120% 80% at 30% 15%,#fff 0,#f1e8ec 35%,#d9c8d0 100%)"},
-    {n:"Gold leaf",d:"Warm gold flecks over a glossy base. Made for Diwali and weddings.",c:"radial-gradient(120% 80% at 30% 15%,#fff3cf 0,#e6c982 40%,#a8864a 100%)"},
-    {n:"Mulberry gloss",d:"A deep berry shade with a mirror-like shine.",c:"radial-gradient(120% 80% at 30% 15%,#b0527a 0,#6e2346 45%,#3b1226 100%)"},
-    {n:"Chrome",d:"A cool, reflective metallic finish that catches every light.",c:"linear-gradient(135deg,#f4f6f8 0,#aeb6c0 40%,#eef1f4 55%,#7f8894 100%)"},
-    {n:"Blush French",d:"A sheer pink base with a crisp ivory tip. Easy to wear every day.",c:"linear-gradient(180deg,#f6d9d6 0,#f3cfcc 70%,#fffaf0 71%,#fffaf0 100%)"}
-  ];
-  var root=document.documentElement,sw=document.getElementById("sw"),nm=document.getElementById("fname"),ds=document.getElementById("fdesc");
-  var nails=document.querySelectorAll(".n");
-  function pick(i){
-    nails.forEach(function(el){el.style.background=finishes[i].c});
-    document.querySelector(".stage").style.setProperty("--glow",["#e8d9e0","#e6cf9a","#b8708f","#b9c1cb","#f3cfcc"][i]);
-    nm.textContent=finishes[i].n; ds.textContent=finishes[i].d;
-    sw.querySelectorAll("button").forEach(function(b,j){b.setAttribute("aria-pressed",j===i)});
-  }
-  finishes.forEach(function(f,i){
-    var b=document.createElement("button");b.type="button";b.style.background=f.c;
-    b.setAttribute("aria-label",f.n);b.addEventListener("click",function(){pick(i)});sw.appendChild(b);
-  });
-  pick(0);
-
-  var menu=document.getElementById("menu"),nav=document.getElementById("nav");
-  menu.addEventListener("click",function(){var o=nav.classList.toggle("open");menu.setAttribute("aria-expanded",o)});
-  nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}});
-
-  var d=document.getElementById("fd"),t=new Date();
-  d.min=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");
-  document.getElementById("yr").textContent=t.getFullYear();
-
-  document.getElementById("book").addEventListener("submit",function(e){
-    e.preventDefault();
-    var n=document.getElementById("fn").value.trim(),s=document.getElementById("fs").value,dt=d.value,err=document.getElementById("err");
-    if(!n){err.textContent="Enter your name so we know who to reply to.";return}
-    if(!dt){err.textContent="Choose a preferred date.";return}
-    err.textContent="";
-    var msg="Hi The Ivory Lane, I’m "+n+". I’d like to book: "+s+" on "+dt+". Please confirm availability.";
-    window.open("https://wa.me/917483530308?text="+encodeURIComponent(msg),"_blank","noopener");
-  });
-})();
+/* PHOTOS: set each img to your photo path, e.g. "images/rose-bloom.jpg". Leave "" to show a placeholder. */
+const HAMPER_IMG="";
+const products=[
+ {n:"Flower pillar candles",img:"",c:"#e8b4c4",d:"Large, detailed roses, peonies and lotus in pink, red, magenta, cream and white.",p:"DM for price"},
+ {n:"Rose Bloom candle",img:"",c:"#efb7c0",d:"The newest launch. A single sweet bloom for gifting and home decor.",p:"₹99"},
+ {n:"Daisy tealights",img:"",c:"#f1dc9c",d:"Small flower on top, in white, red, pink, magenta and orange.",p:"DM for price"},
+ {n:"Couple heart candle",img:"",c:"#eab0cb",d:"A pink heart with a sculpted embracing couple.",p:"DM for price"},
+ {n:"Glitter square tealights",img:"",c:"#cdb8e6",d:"Pink, purple and cream squares with gold flecks.",p:"DM for price"},
+ {n:"Rose tin candles",img:"",c:"#f0d29c",d:"Round metal tins topped with tiny yellow wax roses.",p:"DM for price"}
+];
+const $=s=>document.querySelector(s);
+const bloom=c=>{let p="";for(let i=0;i<8;i++)p+=`<ellipse cx="50" cy="28" rx="11" ry="20" transform="rotate(${i*45} 50 50)" fill="${c}" opacity=".85"/>`;return `<svg viewBox="0 0 100 100" aria-hidden="true">${p}<circle cx="50" cy="50" r="9" fill="#f2b84b"/></svg>`};
+const photo=(src,alt,c)=>src?`<div class="ph"><img src="${src}" alt="${alt}" loading="lazy"></div>`:`<div class="ph empty">${bloom(c)}<span>photo coming soon</span></div>`;
+$("#grid").innerHTML=products.map(x=>`<article class="item">${photo(x.img,x.n,x.c)}<h3>${x.n}</h3><p>${x.d}</p><div class="row"><span class="pr">${x.p}</span><button data-pick="${x.n}">Order this</button></div></article>`).join("");
+$("#hamperPh").innerHTML=photo(HAMPER_IMG,"Gift hamper","#e7d3f5");
+$("#item").innerHTML=products.map(x=>`<option>${x.n}</option>`).join("")+"<option>Gift hamper / Diwali box</option><option>Not sure, suggest something</option>";
+const toast=t=>{const e=$("#toast");e.textContent=t;e.classList.add("on");setTimeout(()=>e.classList.remove("on"),3000)};
+document.addEventListener("click",e=>{
+ const b=e.target.closest("[data-pick]");
+ if(b){$("#item").value=b.dataset.pick;$("#order").scrollIntoView({behavior:"smooth"});toast("Added to your order: "+b.dataset.pick)}
+ if(e.target.closest("#links a"))$("#links").classList.remove("open");
+});
+$("#burger").onclick=()=>$("#links").classList.toggle("open");
+$("#form").addEventListener("submit",async e=>{
+ e.preventDefault();
+ const m=`Hi Solmee Candles!\nName: ${$("#name").value}\nProduct: ${$("#item").value}\nQty: ${$("#qty").value}\nCity/Pincode: ${$("#city").value||"-"}\nNote: ${$("#msg").value||"-"}`;
+ try{await navigator.clipboard.writeText(m);toast("Copied. Paste it in our DM.")}catch(_){toast("Please type your details in the DM")}
+ setTimeout(()=>window.open("https://www.instagram.com/solmeecandles/","_blank","noopener"),800);
+});
+const root=document.documentElement;
+try{const t=localStorage.getItem("solmee-theme");if(t)root.dataset.theme=t}catch(_){}
+const dark=()=>root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+const sync=()=>$("#theme").textContent=dark()?"☀":"☾";
+$("#theme").onclick=()=>{root.dataset.theme=dark()?"light":"dark";try{localStorage.setItem("solmee-theme",root.dataset.theme)}catch(_){}sync()};
+sync();$("#yr").textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
