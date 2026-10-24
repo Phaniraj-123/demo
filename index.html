@@ -2,217 +2,479 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Solmee Candles | Handcrafted soy wax candles</title>
-<meta name="description" content="Handcrafted soy wax candles and thoughtful gifts. Pan-India delivery, same-day in Mumbai.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pibu Studio - Korean Glass Skin & PMU Artist in Ramamurthy Nagar, Bangalore</title>
+<meta name="description" content="Pibu Studio in Ramamurthy Nagar, Bangalore: IEB certified cosmetology, certified PMU artist and Korean glass skin treatments. Book lip PMU, microneedling, melasma care and more on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Pibu Studio","description":"IEB Certified Cosmetology, Certified PMU Artist and Korean Treatment Specialist.","telephone":"+918147476918","sameAs":["https://instagram.com/pibustudio9"],"address":{"@type":"PostalAddress","addressLocality":"Ramamurthy Nagar, Bangalore East","addressRegion":"Karnataka","addressCountry":"IN"},"openingHours":"Mo-Sa 10:00-20:00","priceRange":"₹₹"}
+</script>
 <style>
-:root{--bg:#fdf8f4;--paper:#fff;--tint:#f2e8f5;--blue:#d3e4f3;--gold:#c9a64e;--ink:#2f2438;--muted:#6f6479;--purple:#6a4c93;--rose:#c2607f;--line:#e6dbe8;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1d1523;--paper:#271c2f;--tint:#2f2338;--ink:#f3e9ee;--muted:#bfb0c6;--purple:#b99be0;--rose:#e58aa3;--line:#3e2f49;--blue:#2a3550;--gold:#d4b25e}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#1d1523;--paper:#271c2f;--tint:#2f2338;--ink:#f3e9ee;--muted:#bfb0c6;--purple:#b99be0;--rose:#e58aa3;--line:#3e2f49;--blue:#2a3550;--gold:#d4b25e}
+/* ---------- Tokens ---------- */
+:root{--bg:#FFF9F5;--pink:#FF8FA3;--pink-d:#E96F86;--ink:#1A1A1A;--gold:#D4AF37;--soft:#FFEDEF;--mute:#6b6360;--line:#f1ddd8;--r:18px}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
-body{background:var(--bg);color:var(--ink);font-family:'Karla',system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
-a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-section{padding:80px 0}
-.hand{font-family:'Caveat',cursive;color:var(--rose);font-size:1.5rem;line-height:1}
-h2{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--purple);margin:6px 0 14px}
-.btn{display:inline-block;padding:12px 26px;border:1.5px solid var(--purple);background:var(--purple);color:#fff;font:700 .95rem 'Karla',sans-serif;cursor:pointer;border-radius:4px;text-decoration:none}
-:root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{color:#1d1523}
-.btn.alt{background:none;color:var(--purple)}
-header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line)}
-.nav{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;color:var(--purple);text-decoration:none}
-.links{display:flex;gap:28px;align-items:center;font-size:.95rem}
-.links a{text-decoration:none}.links a:hover{color:var(--rose)}
-.ib{background:none;border:0;color:var(--ink);font-size:1.2rem;cursor:pointer}
-.burger{display:none}
-.hero{padding:120px 0 70px}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-.hero h1{font-size:clamp(2.8rem,7vw,4.8rem);color:var(--purple);margin:10px 0 18px}
-.hero p{color:var(--muted);max-width:440px;margin-bottom:26px}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero small{display:block;margin-top:26px;color:var(--muted);font-size:.85rem}
-.stage{background:var(--blue);padding:34px 20px 20px;display:flex;justify-content:center;position:relative;border-radius:4px}
-.stage::after{content:"";position:absolute;inset:12px -12px -12px 12px;border:1.5px solid var(--gold);z-index:-1;border-radius:4px}
-.stage svg{width:min(300px,100%)}
-.flame{transform-origin:50% 100%;animation:fl 2.2s ease-in-out infinite}
-@keyframes fl{50%{transform:scale(1.08,.94) rotate(2deg)}}
-.intro{border-block:1px solid var(--gold);padding:26px 0;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:34px 24px;margin-top:38px}
-.ph{aspect-ratio:4/5;background:var(--tint);overflow:hidden;position:relative;border-radius:3px}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.ph.empty{display:flex;align-items:center;justify-content:center}
-.ph.empty svg{width:55%;opacity:.9}
-.ph.empty span{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
-.item h3{font-size:1.45rem;margin:14px 0 4px;color:var(--ink)}
-.item p{font-size:.92rem;color:var(--muted)}
-.item .row{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:.9rem}
-.item .pr{color:var(--rose);font-weight:700}
-.item button{background:none;border:0;color:var(--purple);font:700 .9rem 'Karla',sans-serif;cursor:pointer;border-bottom:1.5px solid var(--purple);padding:0 0 1px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.two .ph{aspect-ratio:1/1}
-.hamper{background:var(--purple);color:#fff}
-.hamper h2,.hamper .hand{color:#fff}
-.hamper .hand{color:#f3c3d0}
-.hamper li{margin:8px 0 8px 18px;color:#eadff5}
-.hamper .btn{background:#fff;color:var(--purple);border-color:#fff;margin-top:18px}
-.hamper .ph{background:#7d60a6}
-.hamper .ph.empty span{color:#d9c8ec}
-.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:34px}
-.notes b{font-family:'Caveat',cursive;font-size:2rem;color:var(--rose);font-weight:500}
-.notes h3{font-size:1.35rem;margin:2px 0 4px}
-.notes p{color:var(--muted);font-size:.93rem}
-.about p{color:var(--muted);margin:10px 0}
-form{background:var(--paper);border:1px solid var(--line);padding:28px;display:grid;gap:14px;border-radius:4px}
-label{font-size:.82rem;font-weight:700;color:var(--purple)}
-input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;margin-top:4px;border-radius:3px}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--purple)}
-.note{font-size:.8rem;color:var(--muted)}
-.info p{margin:10px 0;color:var(--muted)}
-.info a{color:var(--rose)}
-footer{border-top:1px solid var(--line);text-align:center;padding:40px 20px calc(40px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.9rem}
-footer .logo{display:block;margin-bottom:6px}
-.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:11px 20px;transition:.35s;z-index:99;font-size:.9rem;max-width:90%;border-radius:4px}
-.toast.on{transform:translate(-50%,0)}
-@media(max-width:820px){
-.burger{display:block}
-.links{position:absolute;top:calc(64px + env(safe-area-inset-top,0px));left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:20px 22px;gap:16px;border-bottom:1px solid var(--line);display:none}
-.links.open{display:flex}
-.hero{padding-top:100px}
-.hero .wrap,.two{grid-template-columns:1fr;gap:36px}
-.stage{order:-1}.stage svg{width:190px}
-.notes{grid-template-columns:1fr;gap:22px}
-section{padding:56px 0}}
-@media(prefers-reduced-motion:reduce){.flame{animation:none}}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Poppins','Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+section{padding:84px 0}
+h1,h2,h3{line-height:1.2;font-weight:600;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.4vw,2.35rem);margin-bottom:12px}
+.lead{color:var(--mute);max-width:56ch;margin-bottom:40px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font:500 .95rem 'Poppins',sans-serif;border:1.5px solid var(--ink);background:transparent;cursor:pointer;transition:.25s}
+.btn.primary{background:var(--pink);border-color:var(--pink);color:#fff}
+.btn.primary:hover{background:var(--pink-d);border-color:var(--pink-d)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.wa{background:#25D366;border-color:#25D366;color:#fff}
+
+/* ---------- Announcement + header ---------- */
+.announce{background:var(--ink);color:#fff;text-align:center;font-size:.8rem;padding:9px 12px}
+.announce b{color:var(--gold);font-weight:500}
+header{position:sticky;top:0;z-index:50;background:rgba(255,249,245,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:700;letter-spacing:.14em;font-size:1.15rem}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav a{font-size:.92rem;font-weight:500}
+nav a:hover{color:var(--pink-d)}
+.nav-book{background:var(--pink);color:#fff;padding:9px 20px;border-radius:999px}
+.nav-book:hover{background:var(--pink-d);color:#fff}
+.ig{display:flex;width:38px;height:38px;border:1.5px solid var(--ink);border-radius:50%;align-items:center;justify-content:center}
+.ig:hover{background:var(--ink);color:#fff}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 8px;transition:.25s}
+
+/* ---------- Hero ---------- */
+.hero{padding:70px 0 90px;background:radial-gradient(900px 480px at 85% 10%,var(--soft),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin-bottom:20px}
+.hero p{color:var(--mute);max-width:50ch;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badge{border:1px solid var(--gold);color:#8a6d12;background:#fffdf4;border-radius:999px;padding:6px 16px;font-size:.82rem;font-weight:500}
+/* Glass-skin droplet: the hero's one memorable element */
+.glass{position:relative;aspect-ratio:1;max-width:400px;margin-inline:auto;width:100%}
+.drop{position:absolute;inset:8%;border-radius:62% 38% 55% 45%/48% 58% 42% 52%;background:linear-gradient(145deg,#fff 0%,#ffd9e0 45%,var(--pink) 100%);box-shadow:inset -18px -26px 50px rgba(233,111,134,.35),inset 16px 18px 40px rgba(255,255,255,.9),0 30px 60px rgba(255,143,163,.35);animation:morph 9s ease-in-out infinite alternate}
+.drop::after{content:"";position:absolute;top:14%;left:18%;width:30%;height:16%;border-radius:50%;background:rgba(255,255,255,.85);filter:blur(3px);transform:rotate(-30deg)}
+.glass .tag{position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-size:.8rem;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.07)}
+.glass .t1{top:6%;right:-2%}.glass .t2{bottom:10%;left:-4%}
+.glass .tag i{color:var(--gold);font-style:normal}
+@keyframes morph{to{border-radius:42% 58% 40% 60%/58% 42% 58% 42%;transform:rotate(6deg)}}
+
+/* ---------- Services ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--pink)}
+.card .ico{width:50px;height:50px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:1.5rem}
+.card h3{font-size:1.02rem}
+.card p{font-size:.88rem;color:var(--mute);flex:1}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:var(--mute);border-top:1px dashed var(--line);padding-top:12px}
+.price{font-weight:600;color:var(--ink);font-size:1rem}
+.price em{font-style:normal;color:var(--gold)}
+.card .pick{align-self:flex-start;background:none;border:0;color:var(--pink-d);font:500 .85rem 'Poppins',sans-serif;cursor:pointer;padding:0}
+.card .pick:hover{text-decoration:underline}
+
+/* ---------- Before / After ---------- */
+.ba-sec{background:#fff;border-block:1px solid var(--line)}
+.ba{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ba figure{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg)}
+.pair{display:grid;grid-template-columns:1fr 1fr}
+.pair div{aspect-ratio:3/4;display:grid;place-items:center;font-size:.8rem;font-weight:500;color:var(--mute);background:repeating-linear-gradient(135deg,#f6ebe6 0 12px,#fbf2ee 12px 24px)}
+.pair div+div{background:repeating-linear-gradient(135deg,#ffe2e8 0 12px,#ffeef1 12px 24px);color:var(--pink-d)}
+.ba figcaption{padding:14px 18px;font-weight:500;font-size:.92rem}
+.ba small{display:block;text-align:center;color:var(--mute);margin-top:18px}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r);background:linear-gradient(160deg,var(--soft),var(--pink));display:grid;place-items:center;font-size:.85rem;color:#fff;font-weight:500;border:6px solid #fff;box-shadow:0 20px 50px rgba(255,143,163,.25)}
+.about p{color:var(--mute);margin-bottom:16px}
+.certs{display:grid;gap:12px;margin:22px 0 0}
+.cert{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.cert b{display:block;font-weight:600;font-size:.95rem}
+.cert span{font-size:.85rem;color:var(--mute)}
+.cert::before{content:"✓";color:var(--gold);font-weight:700}
+
+/* ---------- Booking ---------- */
+.book-sec{background:linear-gradient(180deg,var(--soft),var(--bg))}
+.book-box{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,44px);box-shadow:0 24px 60px rgba(255,143,163,.15);max-width:820px;margin-inline:auto}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.full{grid-column:1/-1}
+label{display:block;font-size:.85rem;font-weight:500;margin-bottom:6px}
+label sup{color:var(--pink-d)}
+input,select,textarea{width:100%;font:400 .95rem 'Poppins',sans-serif;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);transition:.2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pink);background:#fff}
+textarea{min-height:90px;resize:vertical}
+.err{display:none;color:#c8324f;font-size:.78rem;margin-top:5px}
+.field.bad input,.field.bad select,.field.bad textarea{border-color:#c8324f}
+.field.bad .err{display:block}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.slot{padding:12px 6px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font:500 .88rem 'Poppins',sans-serif;cursor:pointer;transition:.2s}
+.slot:hover:not(:disabled){border-color:var(--pink)}
+.slot.on{background:var(--pink);border-color:var(--pink);color:#fff}
+.slot:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.hint{font-size:.82rem;color:var(--mute);padding:14px;background:var(--bg);border-radius:12px;text-align:center}
+.submit{width:100%;justify-content:center;margin-top:8px;font-size:1rem}
+
+/* ---------- Testimonials ---------- */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.stars{color:var(--gold);letter-spacing:3px;margin-bottom:10px}
+.rev p{font-size:.92rem;color:var(--mute);margin-bottom:16px}
+.rev b{font-size:.9rem;font-weight:600}
+.rev small{display:block;color:var(--mute);font-size:.78rem}
+
+/* ---------- Location ---------- */
+.loc{display:grid;grid-template-columns:1fr 1.2fr;gap:32px}
+.info{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.info h3{margin-bottom:6px}
+.info p{color:var(--mute);margin-bottom:18px;font-size:.95rem}
+.hours{list-style:none;margin-bottom:22px;font-size:.92rem}
+.hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)}
+.info .cta{margin:0}
+.map{min-height:320px;border-radius:var(--r);background:linear-gradient(135deg,#f6ebe6,#ffe2e8);border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:24px}
+.map b{display:block;font-size:2rem}
+.map a{display:inline-block;margin-top:12px;color:var(--pink-d);font-weight:500;text-decoration:underline}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#d9d2cf;padding:44px 0 26px;font-size:.88rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:26px}
+footer .logo{color:#fff;margin-bottom:6px}
+footer a:hover{color:var(--pink)}
+footer .cp{border-top:1px solid #333;padding-top:18px;text-align:center;font-size:.8rem;color:#948b87}
+
+/* ---------- Modal ---------- */
+.modal{position:fixed;inset:0;background:rgba(26,26,26,.55);display:none;place-items:center;z-index:100;padding:18px}
+.modal.open{display:grid}
+.dialog{background:#fff;border-radius:26px;padding:38px 30px;max-width:460px;width:100%;text-align:center;animation:pop .45s cubic-bezier(.2,1.3,.4,1)}
+.dialog h3{font-size:1.35rem;margin:14px 0 8px}
+.dialog p{color:var(--mute);font-size:.92rem;margin-bottom:22px}
+.dialog .row{display:flex;flex-direction:column;gap:10px}
+.tick{width:76px;height:76px;margin-inline:auto}
+.tick circle{fill:none;stroke:var(--pink);stroke-width:4;stroke-dasharray:226;stroke-dashoffset:226;animation:draw .7s .1s forwards}
+.tick path{fill:none;stroke:var(--gold);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50;animation:draw .5s .7s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero .wrap,.about,.loc{grid-template-columns:1fr}
+  .ba,.reviews{grid-template-columns:1fr}
+  .glass{max-width:300px}
+  .burger{display:block}
+  nav{position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:14px 4%}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:flex-start;gap:16px}
+  .portrait{max-width:300px}
+}
+@media(max-width:560px){section{padding:60px 0}.form-grid{grid-template-columns:1fr}.slots{grid-template-columns:repeat(2,1fr)}.announce{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.tick circle,.tick path{stroke-dashoffset:0}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-<a href="#top" class="logo">Solmee Candles</a>
-<nav class="links" id="links"><a href="#shop">Candles</a><a href="#hampers">Hampers</a><a href="#about">About</a><a href="#order">Order</a><button class="ib" id="theme" aria-label="Toggle theme">☾</button></nav>
-<button class="ib burger" id="burger" aria-label="Menu">☰</button>
-</div></header>
+
+<div class="announce">Certified PMU Artist | Korean Glass Treatment - <b>WhatsApp 8147476918</b></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">PIBU <span>STUDIO</span></a>
+    <nav id="menu" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#results">Before/After</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#book" class="nav-book">Book Now</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="ig" href="https://instagram.com/pibustudio9" target="_blank" rel="noopener" aria-label="Pibu Studio on Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
 
 <main id="top">
-<section class="hero"><div class="wrap">
-<div>
-<div class="hand">handmade in Mumbai</div>
-<h1>Little lights.<br>Big moments.</h1>
-<p>Soy wax candles, poured and shaped by hand. Roses, daisies, hearts and tiny tins for gifting, for your shelf, or for a quiet evening.</p>
-<div class="cta"><a class="btn" href="#shop">See the candles</a><a class="btn alt" href="#order">DM to order</a></div>
-<small>Pan-India delivery · Same-day delivery in Mumbai</small>
-</div>
-<div class="stage">
-<svg viewBox="0 0 300 340" aria-label="Flower candle illustration">
-<path class="flame" d="M150 30c22 28 26 46 12 62-8 9-24 9-30 0-12-16-4-34 18-62z" fill="#f2b84b"/>
-<path class="flame" d="M150 52c10 14 12 22 5 30-4 4-12 4-14 0-6-8-2-16 9-30z" fill="#fff3c4"/>
-<rect x="147" y="88" width="6" height="22" rx="3" fill="#4b2a75"/>
-<ellipse cx="150" cy="130" rx="95" ry="38" fill="#b95d78"/>
-<ellipse cx="150" cy="122" rx="78" ry="30" fill="#d4809a"/>
-<ellipse cx="150" cy="116" rx="55" ry="22" fill="#eeb2c4"/>
-<ellipse cx="150" cy="112" rx="30" ry="12" fill="#f8dde6"/>
-<path d="M55 130v120c0 24 42 40 95 40s95-16 95-40V130c0 24-42 38-95 38s-95-14-95-38z" fill="#f6e3ea"/>
-<text x="150" y="238" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="22" fill="#5b3a82">Solmee</text>
-</svg>
-</div>
-</div></section>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Get Korean Glass Skin &amp; Perfect Lips, Everyday</h1>
+      <p>IEB certified cosmetology, certified PMU artistry and Korean skin treatments, all in one calm studio in Ramamurthy Nagar. Clear, glowing skin and naturally defined lips, done with care.</p>
+      <div class="cta">
+        <a class="btn wa" href="https://wa.me/918147476918?text=Hi%20Pibu%20Studio%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn ghost" href="#services">View Services</a>
+      </div>
+      <div class="badges"><span class="badge">IEB Certified</span><span class="badge">PMU Certified</span><span class="badge">Korean Treatment</span></div>
+    </div>
+    <div class="glass" aria-hidden="true">
+      <div class="drop"></div>
+      <div class="tag t1"><i>★</i> Glass Skin Glow</div>
+      <div class="tag t2"><i>★</i> Lip Blush PMU</div>
+    </div>
+  </div>
+</section>
 
-<div class="intro">100% soy wax · natural fragrances · poured in small batches</div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <h2>Treatments at Pibu Studio</h2>
+    <p class="lead">Every session starts with a skin and lip consultation, so the treatment fits you.</p>
+    <div class="grid" id="serviceGrid"></div>
+  </div>
+</section>
 
-<section id="shop"><div class="wrap">
-<div class="hand">the collection</div>
-<h2>Every bloom, shaped by hand</h2>
-<p style="color:var(--muted);max-width:520px">No two candles come out exactly alike. Colours can be matched to your gift or your room, just ask.</p>
-<div class="grid" id="grid"></div>
-</div></section>
+<!-- BEFORE / AFTER -->
+<section id="results" class="ba-sec">
+  <div class="wrap">
+    <h2>Real results, real clients</h2>
+    <p class="lead">A look at what our treatments can do. Photos are shared with client consent.</p>
+    <div class="ba">
+      <figure><div class="pair"><div>Before</div><div>After</div></div><figcaption>Glass Skin</figcaption></figure>
+      <figure><div class="pair"><div>Before</div><div>After</div></div><figcaption>Lip PMU</figcaption></figure>
+      <figure><div class="pair"><div>Before</div><div>After</div></div><figcaption>Mole Removal</figcaption></figure>
+    </div>
+    <small style="display:block;text-align:center;color:var(--mute);margin-top:18px">Replace the placeholders with your photos. More on <a href="https://instagram.com/pibustudio9" target="_blank" rel="noopener" style="text-decoration:underline">@pibustudio9</a>.</small>
+  </div>
+</section>
 
-<section class="hamper" id="hampers"><div class="wrap two">
-<div id="hamperPh"></div>
-<div>
-<div class="hand">gifting</div>
-<h2>A little box of light, love &amp; sweetness</h2>
-<p style="color:#eadff5">Our Diwali and festive hampers come in a purple box printed with cream lotus flowers, tied with a beige paper band and our round logo seal.</p>
-<ul><li>2 hand-poured floral soy candles</li><li>2 jars of premium dry fruits: Pista 80g and Cashew 80g</li><li>Packed and ready to hand over</li></ul>
-<button class="btn" data-pick="Gift hamper / Diwali box">Order a hamper</button>
-</div>
-</div></section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about">
+    <div class="portrait" role="img" aria-label="Portrait placeholder">Your photo here</div>
+    <div>
+      <h2>Qualified, careful, and gentle</h2>
+      <p>Pibu Studio is a beauty clinic and PMU studio in Ramamurthy Nagar, Bangalore East. Treatments are done by a trained cosmetologist who combines Korean skin techniques with permanent makeup artistry, with hygiene and natural-looking results as the priority.</p>
+      <p>Over 250 people already follow our work on Instagram, and many come back for their next session.</p>
+      <div class="certs">
+        <div class="cert"><div><b>IEB certified cosmetology</b><span>Professional training in skin, hair and beauty care</span></div></div>
+        <div class="cert"><div><b>Certified PMU artist</b><span>Lip blush, neutralization and tint</span></div></div>
+        <div class="cert"><div><b>Certified Korean treatment specialist</b><span>Glass skin, microneedling and melasma care</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section id="about"><div class="wrap">
-<div class="hand">why soy</div>
-<h2>Made slowly, burned gently</h2>
-<div class="notes">
-<div><b>01</b><h3>Pure soy wax</h3><p>A cleaner, slower burn that lasts longer than ordinary wax.</p></div>
-<div><b>02</b><h3>Natural fragrances</h3><p>Soft, calming scents for self-care evenings and home decor.</p></div>
-<div><b>03</b><h3>Made for gifting</h3><p>Birthdays, weddings, festivals or just because. We pack it nicely.</p></div>
-</div></div></section>
+<!-- BOOKING ENGINE -->
+<section id="book" class="book-sec">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:34px">
+      <h2>Book your appointment</h2>
+      <p class="lead" style="margin-inline:auto">Pick a service, date and time. We will confirm on WhatsApp and Instagram.</p>
+    </div>
+    <div class="book-box">
+      <form id="bookForm" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="name">Name <sup>*</sup></label><input id="name" autocomplete="name" placeholder="Your full name"><div class="err">Enter your name.</div></div>
+          <div class="field"><label for="phone">Phone <sup>*</sup></label><input id="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number"><div class="err">Enter a valid 10-digit mobile number.</div></div>
+          <div class="field"><label for="insta">Instagram handle</label><input id="insta" placeholder="@yourhandle"></div>
+          <div class="field"><label for="service">Service <sup>*</sup></label><select id="service"><option value="">Choose a service</option></select><div class="err">Choose a service.</div></div>
+          <div class="field full"><label for="date">Date <sup>*</sup></label><input id="date" type="date"><div class="err" id="dateErr">Choose a date.</div></div>
+          <div class="field full" id="slotField">
+            <label>Time slot <sup>*</sup></label>
+            <div class="slots" id="slots"><div class="hint" style="grid-column:1/-1">Choose a date to see available times.</div></div>
+            <div class="err" id="slotErr">Choose a time slot.</div>
+          </div>
+          <div class="field full"><label for="msg">Concern or message</label><textarea id="msg" placeholder="Tell us about your skin or lip concern (optional)"></textarea></div>
+        </div>
+        <button type="submit" class="btn primary submit">Request appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
 
-<section id="order" style="background:var(--tint)"><div class="wrap two" style="align-items:start">
-<div class="info">
-<div class="hand">ordering</div>
-<h2>Just send us a message</h2>
-<p>There is no checkout. Tell us what you like and we will confirm the final price and shipping with you directly on Instagram.</p>
-<p>Based in Mumbai, with same-day delivery in the city. Pan-India delivery elsewhere, shipping charges shared on DM.</p>
-<p>Videos on <a href="https://www.youtube.com/@Solmeecandles" target="_blank" rel="noopener">YouTube @Solmeecandles</a></p>
-</div>
-<form id="form">
-<div><label for="name">Your name</label><input id="name" required></div>
-<div><label for="item">Product</label><select id="item"></select></div>
-<div><label for="qty">Quantity</label><input id="qty" type="number" min="1" value="1"></div>
-<div><label for="city">City and pincode</label><input id="city" placeholder="Mumbai, 400001"></div>
-<div><label for="msg">Colours or gift note</label><textarea id="msg" rows="3"></textarea></div>
-<button class="btn" type="submit">Copy message &amp; open Instagram</button>
-<p class="note">Your order is copied to the clipboard. Paste it into our DM.</p>
-</form>
-</div></section>
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <h2>What clients say</h2>
+    <p class="lead">Sample reviews. Replace with real client feedback.</p>
+    <div class="reviews">
+      <div class="rev"><div class="stars">★★★★★</div><p>My skin looks brighter and smoother after the glass skin session. The studio is clean and she explains every step.</p><b>Ananya R.</b><small>Glass Skin Treatment</small></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>The lip blush came out so natural. Healed beautifully and I no longer need lipstick to feel put together.</p><b>Sneha K.</b><small>Lip PMU</small></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>Got my melasma facial and the pigmentation is visibly lighter. Gentle, painless and honest advice.</p><b>Divya M.</b><small>Melasma Facial</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <h2>Visit the studio</h2>
+    <p class="lead">Appointments are recommended so we can give you our full attention.</p>
+    <div class="loc">
+      <div class="info">
+        <h3>Pibu Studio</h3>
+        <p>Ramamurthy Nagar, Bangalore East, India</p>
+        <ul class="hours">
+          <li><span>Monday to Saturday</span><span>10 AM - 8 PM</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <div class="cta">
+          <a class="btn wa" href="https://wa.me/918147476918" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn ghost" href="https://instagram.com/pibustudio9" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="map"><div><b aria-hidden="true">📍</b>Google Map placeholder<br><small>Paste your Google Maps embed here</small><br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Ramamurthy+Nagar+Bangalore" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
-<a href="#top" class="logo">Solmee Candles</a>
-Light up your soul · <a href="https://www.instagram.com/solmeecandles/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@Solmeecandles" target="_blank" rel="noopener">YouTube</a><br>
-© <span id="yr"></span> Solmee Candles
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="logo">PIBU STUDIO</div>IEB Certified Cosmetology | Certified PMU Artist | Korean Treatment Specialist</div>
+      <div>See our latest work<br><a href="https://instagram.com/pibustudio9" target="_blank" rel="noopener">instagram.com/pibustudio9</a><br>WhatsApp <a href="https://wa.me/918147476918">8147476918</a></div>
+    </div>
+    <div class="cp">&copy; <span id="yr"></span> Pibu Studio. All rights reserved.</div>
+  </div>
 </footer>
-<div class="toast" id="toast"></div>
+
+<!-- CONFIRMATION MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="dialog">
+    <svg class="tick" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36"/><path d="M25 41l11 11 20-23"/></svg>
+    <h3 id="mTitle"></h3>
+    <p id="mText"></p>
+    <div class="row">
+      <a class="btn wa" id="waLink" target="_blank" rel="noopener" style="justify-content:center">Send on WhatsApp</a>
+      <button class="btn ghost" id="icsBtn" style="justify-content:center">Add to Calendar</button>
+      <button class="btn" id="closeBtn" style="justify-content:center;border-color:transparent;color:var(--mute)">Close</button>
+    </div>
+  </div>
+</div>
 
 <script>
-/* PHOTOS: set each img to your photo path, e.g. "images/rose-bloom.jpg". Leave "" to show a placeholder. */
-const HAMPER_IMG="";
-const products=[
- {n:"Flower pillar candles",img:"",c:"#e8b4c4",d:"Large, detailed roses, peonies and lotus in pink, red, magenta, cream and white.",p:"DM for price"},
- {n:"Rose Bloom candle",img:"",c:"#efb7c0",d:"The newest launch. A single sweet bloom for gifting and home decor.",p:"₹99"},
- {n:"Daisy tealights",img:"",c:"#f1dc9c",d:"Small flower on top, in white, red, pink, magenta and orange.",p:"DM for price"},
- {n:"Couple heart candle",img:"",c:"#eab0cb",d:"A pink heart with a sculpted embracing couple.",p:"DM for price"},
- {n:"Glitter square tealights",img:"",c:"#cdb8e6",d:"Pink, purple and cream squares with gold flecks.",p:"DM for price"},
- {n:"Rose tin candles",img:"",c:"#f0d29c",d:"Round metal tins topped with tiny yellow wax roses.",p:"DM for price"}
+/* ===== Data ===== */
+const WA = '918147476918';
+const SERVICES = [
+  {n:'Advanced Korean Glass Skin Treatment', i:'✨', p:'₹2,500', s:'/session', d:'60-90 min', t:'A multi-step Korean routine of deep cleanse, exfoliation, hydration and glow serums for clear, dewy skin.'},
+  {n:'Lip PMU - Lip Blush / Lip Neutralization / Lip Tint', i:'💋', p:'₹4,000', s:'', d:'90-120 min', t:'Semi-permanent lip colour that softens dark tones, defines the shape and gives a natural tinted look.'},
+  {n:'Mole & Wart Removal', i:'🌸', p:'₹1,500', s:' onwards', d:'30-45 min', t:'Quick, precise removal of moles and warts with careful aftercare guidance. Price depends on size and number.'},
+  {n:'Microneedling for Anti-wrinkles & Hydration', i:'💧', p:'₹2,000', s:'', d:'60 min', t:'Boosts collagen to soften fine lines and texture while delivering deep hydration into the skin.'},
+  {n:'Melasma Facial Treatment', i:'🌿', p:'₹1,800', s:'', d:'60 min', t:'A targeted facial to lighten pigmentation and even out tone, using gentle actives suited to melasma-prone skin.'},
+  {n:'Eyelash Extensions', i:'👁️', p:'₹1,500', s:'', d:'60-90 min', t:'Lightweight, natural-looking lash extensions applied one by one for a fuller, lifted eye.'},
+  {n:'Beauty Spot Creation', i:'⭐', p:'₹1,000', s:'', d:'20-30 min', t:'A small, natural-looking beauty mark placed where it flatters your face best.'},
+  {n:'Full-body Peel & Whitening (Bridal Special)', i:'👰', p:'₹6,500', s:' onwards', d:'90-120 min', t:'A full-body peel and brightening session for even, radiant skin before the wedding. Packages on request.'}
 ];
-const $=s=>document.querySelector(s);
-const bloom=c=>{let p="";for(let i=0;i<8;i++)p+=`<ellipse cx="50" cy="28" rx="11" ry="20" transform="rotate(${i*45} 50 50)" fill="${c}" opacity=".85"/>`;return `<svg viewBox="0 0 100 100" aria-hidden="true">${p}<circle cx="50" cy="50" r="9" fill="#f2b84b"/></svg>`};
-const photo=(src,alt,c)=>src?`<div class="ph"><img src="${src}" alt="${alt}" loading="lazy"></div>`:`<div class="ph empty">${bloom(c)}<span>photo coming soon</span></div>`;
-$("#grid").innerHTML=products.map(x=>`<article class="item">${photo(x.img,x.n,x.c)}<h3>${x.n}</h3><p>${x.d}</p><div class="row"><span class="pr">${x.p}</span><button data-pick="${x.n}">Order this</button></div></article>`).join("");
-$("#hamperPh").innerHTML=photo(HAMPER_IMG,"Gift hamper","#e7d3f5");
-$("#item").innerHTML=products.map(x=>`<option>${x.n}</option>`).join("")+"<option>Gift hamper / Diwali box</option><option>Not sure, suggest something</option>";
-const toast=t=>{const e=$("#toast");e.textContent=t;e.classList.add("on");setTimeout(()=>e.classList.remove("on"),3000)};
-document.addEventListener("click",e=>{
- const b=e.target.closest("[data-pick]");
- if(b){$("#item").value=b.dataset.pick;$("#order").scrollIntoView({behavior:"smooth"});toast("Added to your order: "+b.dataset.pick)}
- if(e.target.closest("#links a"))$("#links").classList.remove("open");
+const SLOTS = [['10:00','10:00 AM'],['11:30','11:30 AM'],['13:00','1:00 PM'],['14:30','2:30 PM'],['16:00','4:00 PM'],['17:30','5:30 PM']];
+const KEY = 'pibu_bookings';
+const $ = id => document.getElementById(id);
+let chosenTime = '', last = null;
+
+/* ===== Render services + dropdown ===== */
+SERVICES.forEach((s, k) => {
+  const c = document.createElement('article');
+  c.className = 'card';
+  c.innerHTML = `<div class="ico" aria-hidden="true">${s.i}</div><h3>${s.n}</h3><p>${s.t}</p>
+    <div class="meta"><span class="price">${s.p}<em>${s.s}</em></span><span>${s.d}</span></div>
+    <button class="pick" data-k="${k}">Book this service</button>`;
+  $('serviceGrid').appendChild(c);
+  $('service').add(new Option(s.n + ' (' + s.p + s.s + ')', s.n));
 });
-$("#burger").onclick=()=>$("#links").classList.toggle("open");
-$("#form").addEventListener("submit",async e=>{
- e.preventDefault();
- const m=`Hi Solmee Candles!\nName: ${$("#name").value}\nProduct: ${$("#item").value}\nQty: ${$("#qty").value}\nCity/Pincode: ${$("#city").value||"-"}\nNote: ${$("#msg").value||"-"}`;
- try{await navigator.clipboard.writeText(m);toast("Copied. Paste it in our DM.")}catch(_){toast("Please type your details in the DM")}
- setTimeout(()=>window.open("https://www.instagram.com/solmeecandles/","_blank","noopener"),800);
+$('serviceGrid').addEventListener('click', e => {
+  const b = e.target.closest('.pick'); if (!b) return;
+  $('service').value = SERVICES[b.dataset.k].n;
+  $('book').scrollIntoView();
+  setTimeout(() => $('name').focus({preventScroll:true}), 400);
 });
-const root=document.documentElement;
-try{const t=localStorage.getItem("solmee-theme");if(t)root.dataset.theme=t}catch(_){}
-const dark=()=>root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
-const sync=()=>$("#theme").textContent=dark()?"☀":"☾";
-$("#theme").onclick=()=>{root.dataset.theme=dark()?"light":"dark";try{localStorage.setItem("solmee-theme",root.dataset.theme)}catch(_){}sync()};
-sync();$("#yr").textContent=new Date().getFullYear();
+
+/* ===== Helpers ===== */
+const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } };
+const save = a => { try { localStorage.setItem(KEY, JSON.stringify(a)); } catch (e) {} };
+const iso = d => d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+const pretty = v => new Date(v + 'T00:00').toLocaleDateString('en-IN', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+const setBad = (id, bad) => { const f = $(id).closest('.field'); f.classList.toggle('bad', bad); return bad; };
+
+/* Date: min = today; max = 90 days out */
+const today = new Date();
+$('date').min = iso(today);
+const mx = new Date(today); mx.setDate(mx.getDate() + 90); $('date').max = iso(mx);
+$('yr').textContent = today.getFullYear();
+
+/* ===== Slots: built on date change; booked and past slots disabled ===== */
+function buildSlots() {
+  const v = $('date').value; chosenTime = '';
+  const box = $('slots'); box.innerHTML = '';
+  $('slotField').classList.remove('bad');
+  if (!v) { box.innerHTML = '<div class="hint" style="grid-column:1/-1">Choose a date to see available times.</div>'; return; }
+  const dt = new Date(v + 'T00:00');
+  if (dt.getDay() === 0) {
+    $('dateErr').textContent = 'We are closed on Sundays. Please choose another day.';
+    setBad('date', true); box.innerHTML = '<div class="hint" style="grid-column:1/-1">Closed on Sundays.</div>'; return;
+  }
+  $('dateErr').textContent = 'Choose a date.'; setBad('date', false);
+  const taken = load().filter(b => b.date === v).map(b => b.time);
+  const now = new Date(), isToday = v === iso(now);
+  SLOTS.forEach(([val, label]) => {
+    const [h, m] = val.split(':').map(Number);
+    const past = isToday && (h * 60 + m) <= now.getHours() * 60 + now.getMinutes();
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'slot'; b.textContent = label; b.dataset.v = val;
+    b.disabled = taken.includes(val) || past;
+    b.onclick = () => { chosenTime = val; box.querySelectorAll('.slot').forEach(x => x.classList.toggle('on', x === b)); $('slotField').classList.remove('bad'); };
+    box.appendChild(b);
+  });
+  if (box.querySelectorAll('.slot:not(:disabled)').length === 0) box.insertAdjacentHTML('beforeend', '<div class="hint" style="grid-column:1/-1">No slots left on this day. Try another date.</div>');
+}
+$('date').addEventListener('change', buildSlots);
+
+/* ===== Submit ===== */
+$('bookForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('name').value.trim(), phone = $('phone').value.replace(/[\s+-]/g, '').replace(/^91(?=\d{10}$)/, '');
+  const service = $('service').value, date = $('date').value;
+  let bad = false;
+  bad = setBad('name', name.length < 2) || bad;
+  bad = setBad('phone', !/^[6-9]\d{9}$/.test(phone)) || bad;
+  bad = setBad('service', !service) || bad;
+  if (!date) { $('dateErr').textContent = 'Choose a date.'; bad = setBad('date', true) || bad; }
+  else if (new Date(date + 'T00:00').getDay() === 0) bad = true;
+  else setBad('date', false);
+  $('slotField').classList.toggle('bad', !chosenTime); bad = !chosenTime || bad;
+  if (bad) { const f = document.querySelector('.field.bad'); if (f) f.scrollIntoView({block:'center'}); return; }
+
+  const label = SLOTS.find(s => s[0] === chosenTime)[1];
+  const booking = {id: Date.now(), name, phone, instagram: $('insta').value.trim(), service, date, time: chosenTime, timeLabel: label, message: $('msg').value.trim(), createdAt: new Date().toISOString()};
+  const all = load(); all.push(booking); save(all);
+  last = booking;
+
+  $('mTitle').textContent = 'Thank you ' + name + '!';
+  $('mText').textContent = 'Your appointment for ' + service + ' on ' + pretty(date) + ' at ' + label + ' is requested. We will confirm on WhatsApp 8147476918 and Instagram @pibustudio9.';
+  const txt = 'Hi Pibu Studio, I want to book ' + service + ' on ' + pretty(date) + ' at ' + label + '. Name: ' + name + ', Phone: ' + phone + (booking.instagram ? ', Instagram: ' + booking.instagram : '') + (booking.message ? '. Concern: ' + booking.message : '');
+  $('waLink').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(txt);
+  $('modal').classList.add('open'); $('closeBtn').focus();
+  $('bookForm').reset(); chosenTime = ''; buildSlots();
+});
+
+/* ===== Modal + calendar (.ics) ===== */
+const closeModal = () => $('modal').classList.remove('open');
+$('closeBtn').onclick = closeModal;
+$('modal').addEventListener('click', e => { if (e.target === $('modal')) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+$('icsBtn').onclick = () => {
+  if (!last) return;
+  const [h, m] = last.time.split(':').map(Number), d = last.date.replace(/-/g, '');
+  const f = (hh, mm) => d + 'T' + String(hh).padStart(2,'0') + String(mm).padStart(2,'0') + '00';
+  const end = h * 60 + m + 90;
+  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Pibu Studio//Booking//EN','BEGIN:VEVENT',
+    'UID:' + last.id + '@pibustudio','DTSTAMP:' + new Date().toISOString().replace(/[-:]|\.\d{3}/g, ''),
+    'DTSTART:' + f(h, m), 'DTEND:' + f(Math.floor(end / 60), end % 60),
+    'SUMMARY:Pibu Studio: ' + last.service.replace(/,/g, ' '), 'LOCATION:Pibu Studio\\, Ramamurthy Nagar\\, Bangalore',
+    'DESCRIPTION:Appointment request. We will confirm on WhatsApp 8147476918.', 'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([ics], {type: 'text/calendar'}));
+  a.download = 'pibu-studio-appointment.ics'; document.body.appendChild(a); a.click(); a.remove();
+};
+
+/* ===== Mobile menu ===== */
+$('burger').onclick = () => { const o = $('menu').classList.toggle('open'); $('burger').setAttribute('aria-expanded', o); };
+$('menu').addEventListener('click', e => { if (e.target.tagName === 'A') { $('menu').classList.remove('open'); $('burger').setAttribute('aria-expanded', false); } });
 </script>
 </body>
 </html>
