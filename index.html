@@ -1,480 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pibu Studio - Korean Glass Skin & PMU Artist in Ramamurthy Nagar, Bangalore</title>
-<meta name="description" content="Pibu Studio in Ramamurthy Nagar, Bangalore: IEB certified cosmetology, certified PMU artist and Korean glass skin treatments. Book lip PMU, microneedling, melasma care and more on WhatsApp.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veronica's Nail Studio | Acrylics, Gel-X & Nail Art in Indiranagar, Bangalore</title>
+<meta name="description" content="Private luxury nail studio in Indiranagar, Bangalore. Acrylics, Gel-X, Builder Gel (BIAB), chrome, French, bridal nail art and lash extensions. Book your appointment.">
+<meta name="theme-color" content="#FF4F8B">
+<meta property="og:title" content="Veronica's Nail Studio – Your Nails, Your Canvas">
+<meta property="og:description" content="Private luxury nail studio. Acrylics, Gel-X, BIAB, chrome, French & custom nail art.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BeautySalon","name":"Pibu Studio","description":"IEB Certified Cosmetology, Certified PMU Artist and Korean Treatment Specialist.","telephone":"+918147476918","sameAs":["https://instagram.com/pibustudio9"],"address":{"@type":"PostalAddress","addressLocality":"Ramamurthy Nagar, Bangalore East","addressRegion":"Karnataka","addressCountry":"IN"},"openingHours":"Mo-Sa 10:00-20:00","priceRange":"₹₹"}
+{"@context":"https://schema.org","@type":"NailSalon","name":"Veronica's Nail Studio","description":"Private luxury nail studio: acrylics, Gel-X, builder gel, BIAB, chrome, French, nail art and lashes.","address":{"@type":"PostalAddress","addressLocality":"Bangalore","addressRegion":"Karnataka","addressCountry":"IN"},"telephone":"+91XXXXXXXXXX","sameAs":["https://instagram.com/veronicas_nailstudio"],"openingHours":["Mo-Sa 10:00-21:30","Su 11:00-18:00"]}
 </script>
 <style>
-/* ---------- Tokens ---------- */
-:root{--bg:#FFF9F5;--pink:#FF8FA3;--pink-d:#E96F86;--ink:#1A1A1A;--gold:#D4AF37;--soft:#FFEDEF;--mute:#6b6360;--line:#f1ddd8;--r:18px}
+:root{--pink:#FF4F8B;--ink:#111111;--blush:#FFF9F9;--gold:#D4AF37;--nude:#E8D5C4;
+--serif:'Cormorant Garamond',Georgia,serif;--script:'Great Vibes',cursive;--sans:'Poppins',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:'Poppins','Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--blush);line-height:1.7;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-img,svg{max-width:100%}
-.wrap{width:min(1120px,92%);margin-inline:auto}
-section{padding:84px 0}
-h1,h2,h3{line-height:1.2;font-weight:600;letter-spacing:-.01em}
-h2{font-size:clamp(1.7rem,3.4vw,2.35rem);margin-bottom:12px}
-.lead{color:var(--mute);max-width:56ch;margin-bottom:40px}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font:500 .95rem 'Poppins',sans-serif;border:1.5px solid var(--ink);background:transparent;cursor:pointer;transition:.25s}
-.btn.primary{background:var(--pink);border-color:var(--pink);color:#fff}
-.btn.primary:hover{background:var(--pink-d);border-color:var(--pink-d)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-.btn.wa{background:#25D366;border-color:#25D366;color:#fff}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.6rem}
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.25rem}
+section{padding:5rem 0}
+.lead{max-width:34rem;margin-bottom:2.5rem;opacity:.8}
+.btn{display:inline-block;font:500 .95rem var(--sans);padding:.9rem 1.8rem;border-radius:999px;border:1.5px solid var(--pink);background:var(--pink);color:#fff;cursor:pointer;transition:transform .25s,background .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border-color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:var(--ink)}
+.btn.dark{background:var(--ink);border-color:var(--ink)}
 
-/* ---------- Announcement + header ---------- */
-.announce{background:var(--ink);color:#fff;text-align:center;font-size:.8rem;padding:9px 12px}
-.announce b{color:var(--gold);font-weight:500}
-header{position:sticky;top:0;z-index:50;background:rgba(255,249,245,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-weight:700;letter-spacing:.14em;font-size:1.15rem}
-.logo span{color:var(--gold)}
-nav ul{display:flex;gap:30px;list-style:none;align-items:center}
-nav a{font-size:.92rem;font-weight:500}
-nav a:hover{color:var(--pink-d)}
-.nav-book{background:var(--pink);color:#fff;padding:9px 20px;border-radius:999px}
-.nav-book:hover{background:var(--pink-d);color:#fff}
-.ig{display:flex;width:38px;height:38px;border:1.5px solid var(--ink);border-radius:50%;align-items:center;justify-content:center}
-.ig:hover{background:var(--ink);color:#fff}
-.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
-.burger span{display:block;height:2px;background:var(--ink);margin:6px 8px;transition:.25s}
+/* header + logo */
+header{position:sticky;top:0;z-index:50;background:rgba(255,249,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--nude)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;line-height:1}
+.logo .txt{display:flex;flex-direction:column;align-items:center}
+.logo .script{font:2.1rem var(--script);background:linear-gradient(110deg,var(--gold) 30%,#fff 48%,var(--gold) 66%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 4.5s ease-in-out infinite}
+.logo .sub{font:500 .55rem var(--sans);letter-spacing:.5em;text-transform:uppercase;margin-top:2px;padding-left:.5em}
+#logo-upload{height:48px;width:auto;display:none}
+@keyframes foil{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+nav ul{display:flex;gap:1.8rem;list-style:none;align-items:center;font-size:.9rem}
+nav a:not(.btn):hover{color:var(--pink)}
+nav .btn{padding:.55rem 1.3rem;font-size:.85rem}
+.burger{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer}
 
-/* ---------- Hero ---------- */
-.hero{padding:70px 0 90px;background:radial-gradient(900px 480px at 85% 10%,var(--soft),transparent 70%)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin-bottom:20px}
-.hero p{color:var(--mute);max-width:50ch;margin-bottom:30px}
-.cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
-.badges{display:flex;flex-wrap:wrap;gap:10px}
-.badge{border:1px solid var(--gold);color:#8a6d12;background:#fffdf4;border-radius:999px;padding:6px 16px;font-size:.82rem;font-weight:500}
-/* Glass-skin droplet: the hero's one memorable element */
-.glass{position:relative;aspect-ratio:1;max-width:400px;margin-inline:auto;width:100%}
-.drop{position:absolute;inset:8%;border-radius:62% 38% 55% 45%/48% 58% 42% 52%;background:linear-gradient(145deg,#fff 0%,#ffd9e0 45%,var(--pink) 100%);box-shadow:inset -18px -26px 50px rgba(233,111,134,.35),inset 16px 18px 40px rgba(255,255,255,.9),0 30px 60px rgba(255,143,163,.35);animation:morph 9s ease-in-out infinite alternate}
-.drop::after{content:"";position:absolute;top:14%;left:18%;width:30%;height:16%;border-radius:50%;background:rgba(255,255,255,.85);filter:blur(3px);transform:rotate(-30deg)}
-.glass .tag{position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-size:.8rem;font-weight:500;box-shadow:0 10px 30px rgba(0,0,0,.07)}
-.glass .t1{top:6%;right:-2%}.glass .t2{bottom:10%;left:-4%}
-.glass .tag i{color:var(--gold);font-style:normal}
-@keyframes morph{to{border-radius:42% 58% 40% 60%/58% 42% 58% 42%;transform:rotate(6deg)}}
+/* hero */
+.hero{min-height:calc(100svh - 72px);display:grid;align-items:center;color:#fff;text-align:center;padding:4rem 0;
+background:linear-gradient(rgba(17,17,17,.62),rgba(17,17,17,.82)),url(https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1800&q=80) center/cover var(--ink)}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem);margin-bottom:1rem}
+.hero p{max-width:34rem;margin:0 auto 2rem;font-size:1.05rem;opacity:.9}
+.hero .tag{font-family:var(--script);font-size:1.8rem;color:var(--gold);margin-bottom:.5rem}
+.cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-/* ---------- Services ---------- */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px;transition:.25s}
-.card:hover{transform:translateY(-4px);border-color:var(--pink)}
-.card .ico{width:50px;height:50px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:1.5rem}
-.card h3{font-size:1.02rem}
-.card p{font-size:.88rem;color:var(--mute);flex:1}
-.meta{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:var(--mute);border-top:1px dashed var(--line);padding-top:12px}
-.price{font-weight:600;color:var(--ink);font-size:1rem}
-.price em{font-style:normal;color:var(--gold)}
-.card .pick{align-self:flex-start;background:none;border:0;color:var(--pink-d);font:500 .85rem 'Poppins',sans-serif;cursor:pointer;padding:0}
-.card .pick:hover{text-decoration:underline}
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+.card{background:var(--nude);padding:2rem 1.6rem;border-radius:4px}
+.card .ic{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font-size:1.5rem;margin-bottom:1rem;background:var(--blush)}
+.card h3{font-size:1.6rem;margin-bottom:.4rem}
+.card p{font-size:.92rem}
 
-/* ---------- Before / After ---------- */
-.ba-sec{background:#fff;border-block:1px solid var(--line)}
-.ba{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.ba figure{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg)}
-.pair{display:grid;grid-template-columns:1fr 1fr}
-.pair div{aspect-ratio:3/4;display:grid;place-items:center;font-size:.8rem;font-weight:500;color:var(--mute);background:repeating-linear-gradient(135deg,#f6ebe6 0 12px,#fbf2ee 12px 24px)}
-.pair div+div{background:repeating-linear-gradient(135deg,#ffe2e8 0 12px,#ffeef1 12px 24px);color:var(--pink-d)}
-.ba figcaption{padding:14px 18px;font-weight:500;font-size:.92rem}
-.ba small{display:block;text-align:center;color:var(--mute);margin-top:18px}
+/* gallery */
+.gallery{background:var(--ink);color:var(--blush)}
+.masonry{columns:4 200px;column-gap:.8rem}
+.tile{position:relative;margin-bottom:.8rem;break-inside:avoid;overflow:hidden;cursor:zoom-in;background:var(--nude);border:0;display:block;width:100%;padding:0}
+.tile img{width:100%;transition:transform .6s}
+.tile:hover img{transform:scale(1.06)}
+.tile::after{content:"Veronica Nails";position:absolute;inset:0;display:grid;place-items:center;font:1.7rem var(--script);color:var(--gold);background:rgba(17,17,17,.5);opacity:0;transition:opacity .3s}
+.tile:hover::after,.tile:focus-visible::after{opacity:1}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(17,17,17,.95);display:none;place-items:center;padding:1rem}
+.lb.on{display:grid}
+.lb img{max-height:88vh;border:2px solid var(--gold)}
+.lb button{position:absolute;top:1rem;right:1.2rem;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer}
 
-/* ---------- About ---------- */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
-.portrait{aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r);background:linear-gradient(160deg,var(--soft),var(--pink));display:grid;place-items:center;font-size:.85rem;color:#fff;font-weight:500;border:6px solid #fff;box-shadow:0 20px 50px rgba(255,143,163,.25)}
-.about p{color:var(--mute);margin-bottom:16px}
-.certs{display:grid;gap:12px;margin:22px 0 0}
-.cert{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px}
-.cert b{display:block;font-weight:600;font-size:.95rem}
-.cert span{font-size:.85rem;color:var(--mute)}
-.cert::before{content:"✓";color:var(--gold);font-weight:700}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center}
+.about img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;border:1px solid var(--gold);padding:8px;background:var(--blush)}
+.about blockquote{font:600 1.8rem/1.3 var(--serif);margin:1.2rem 0;color:var(--pink)}
+.keys{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.keys span{border:1px solid var(--gold);border-radius:999px;padding:.2rem .9rem;font-size:.8rem}
 
-/* ---------- Booking ---------- */
-.book-sec{background:linear-gradient(180deg,var(--soft),var(--bg))}
-.book-box{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(22px,4vw,44px);box-shadow:0 24px 60px rgba(255,143,163,.15);max-width:820px;margin-inline:auto}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.full{grid-column:1/-1}
-label{display:block;font-size:.85rem;font-weight:500;margin-bottom:6px}
-label sup{color:var(--pink-d)}
-input,select,textarea{width:100%;font:400 .95rem 'Poppins',sans-serif;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);transition:.2s}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pink);background:#fff}
-textarea{min-height:90px;resize:vertical}
-.err{display:none;color:#c8324f;font-size:.78rem;margin-top:5px}
-.field.bad input,.field.bad select,.field.bad textarea{border-color:#c8324f}
-.field.bad .err{display:block}
-.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.slot{padding:12px 6px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font:500 .88rem 'Poppins',sans-serif;cursor:pointer;transition:.2s}
-.slot:hover:not(:disabled){border-color:var(--pink)}
-.slot.on{background:var(--pink);border-color:var(--pink);color:#fff}
-.slot:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
-.hint{font-size:.82rem;color:var(--mute);padding:14px;background:var(--bg);border-radius:12px;text-align:center}
-.submit{width:100%;justify-content:center;margin-top:8px;font-size:1rem}
+/* testimonials */
+.t{background:var(--blush);border:1px solid var(--nude);padding:1.8rem;border-radius:4px}
+.stars{color:var(--gold);letter-spacing:.2em;margin-bottom:.6rem}
+.t p{font:500 1.25rem/1.45 var(--serif);margin-bottom:.8rem}
+.t small{font-size:.8rem;opacity:.7}
+.tsec{background:var(--nude)}
 
-/* ---------- Testimonials ---------- */
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.rev{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
-.stars{color:var(--gold);letter-spacing:3px;margin-bottom:10px}
-.rev p{font-size:.92rem;color:var(--mute);margin-bottom:16px}
-.rev b{font-size:.9rem;font-weight:600}
-.rev small{display:block;color:var(--mute);font-size:.78rem}
+/* booking */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.panel{background:var(--nude);padding:2rem;border-radius:4px}
+.panel .btn{display:block;text-align:center;margin-top:.8rem}
+.cal{border:1.5px dashed var(--gold);padding:1.2rem;text-align:center;font-size:.9rem;margin-bottom:.8rem;background:var(--blush)}
+form{display:grid;gap:.9rem}
+label{font-size:.85rem;font-weight:400}
+input,select{width:100%;font:300 1rem var(--sans);padding:.8rem 1rem;border:1px solid var(--nude);border-radius:4px;background:var(--blush);color:var(--ink)}
+form button{border:0}
 
-/* ---------- Location ---------- */
-.loc{display:grid;grid-template-columns:1fr 1.2fr;gap:32px}
-.info{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px}
-.info h3{margin-bottom:6px}
-.info p{color:var(--mute);margin-bottom:18px;font-size:.95rem}
-.hours{list-style:none;margin-bottom:22px;font-size:.92rem}
-.hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)}
-.info .cta{margin:0}
-.map{min-height:320px;border-radius:var(--r);background:linear-gradient(135deg,#f6ebe6,#ffe2e8);border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:24px}
-.map b{display:block;font-size:2rem}
-.map a{display:inline-block;margin-top:12px;color:var(--pink-d);font-weight:500;text-decoration:underline}
+/* footer */
+footer{background:var(--ink);color:var(--blush);padding:4rem 0 6rem}
+.fgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem}
+footer iframe{width:100%;height:280px;border:0;border-radius:4px;filter:grayscale(.3)}
+footer h3{font-size:1.7rem;color:var(--gold);margin-bottom:.5rem}
+footer p{font-size:.92rem;margin-bottom:.8rem}
+.soc{display:flex;gap:.8rem;margin:1rem 0}
+.soc a{border:1px solid var(--gold);border-radius:999px;padding:.35rem 1.1rem;font-size:.85rem}
+.soc a:hover{background:var(--gold);color:var(--ink)}
+.copy{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid rgba(212,175,55,.35);font-size:.8rem;opacity:.7}
 
-/* ---------- Footer ---------- */
-footer{background:var(--ink);color:#d9d2cf;padding:44px 0 26px;font-size:.88rem}
-.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:26px}
-footer .logo{color:#fff;margin-bottom:6px}
-footer a:hover{color:var(--pink)}
-footer .cp{border-top:1px solid #333;padding-top:18px;text-align:center;font-size:.8rem;color:#948b87}
+/* floating + sticky mobile */
+.wa{position:fixed;right:1.2rem;bottom:1.2rem;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 6px 20px rgba(17,17,17,.3)}
+.sticky{display:none}
 
-/* ---------- Modal ---------- */
-.modal{position:fixed;inset:0;background:rgba(26,26,26,.55);display:none;place-items:center;z-index:100;padding:18px}
-.modal.open{display:grid}
-.dialog{background:#fff;border-radius:26px;padding:38px 30px;max-width:460px;width:100%;text-align:center;animation:pop .45s cubic-bezier(.2,1.3,.4,1)}
-.dialog h3{font-size:1.35rem;margin:14px 0 8px}
-.dialog p{color:var(--mute);font-size:.92rem;margin-bottom:22px}
-.dialog .row{display:flex;flex-direction:column;gap:10px}
-.tick{width:76px;height:76px;margin-inline:auto}
-.tick circle{fill:none;stroke:var(--pink);stroke-width:4;stroke-dasharray:226;stroke-dashoffset:226;animation:draw .7s .1s forwards}
-.tick path{fill:none;stroke:var(--gold);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50;animation:draw .5s .7s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes pop{from{transform:scale(.85);opacity:0}}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 
-/* ---------- Responsive ---------- */
-@media(max-width:900px){
-  .hero .wrap,.about,.loc{grid-template-columns:1fr}
-  .ba,.reviews{grid-template-columns:1fr}
-  .glass{max-width:300px}
-  .burger{display:block}
-  nav{position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:14px 4%}
-  nav.open{display:block}
-  nav ul{flex-direction:column;align-items:flex-start;gap:16px}
-  .portrait{max-width:300px}
+@media(max-width:820px){
+section{padding:3.5rem 0}
+.burger{display:block}
+nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--blush);padding:1.4rem;border-bottom:1px solid var(--nude)}
+nav ul.open{display:flex}
+.about,.book,.fgrid{grid-template-columns:1fr}
+.wa{display:none}
+.sticky{display:flex;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:rgba(17,17,17,.96)}
+.sticky a{flex:1;text-align:center;padding:.8rem;font-size:.88rem}
 }
-@media(max-width:560px){section{padding:60px 0}.form-grid{grid-template-columns:1fr}.slots{grid-template-columns:repeat(2,1fr)}.announce{font-size:.72rem}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.tick circle,.tick path{stroke-dashoffset:0}}
 </style>
 </head>
 <body>
 
-<div class="announce">Certified PMU Artist | Korean Glass Treatment - <b>WhatsApp 8147476918</b></div>
-
 <header>
-  <div class="wrap nav">
-    <a href="#top" class="logo">PIBU <span>STUDIO</span></a>
-    <nav id="menu" aria-label="Main">
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#results">Before/After</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#book" class="nav-book">Book Now</a></li>
-      </ul>
-    </nav>
-    <div style="display:flex;gap:10px;align-items:center">
-      <a class="ig" href="https://instagram.com/pibustudio9" target="_blank" rel="noopener" aria-label="Pibu Studio on Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-      </a>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </div>
+<div class="wrap nav">
+  <a href="#home" class="logo" aria-label="Veronica's Nail Studio">
+    <!-- Client: drop a file named logo.png next to index.html and it replaces the text logo automatically -->
+    <img id="logo-upload" src="logo.png" alt="Veronica's Nail Studio logo">
+    <span class="txt"><span class="script">Veronica's</span><span class="sub">Nail Studio</span></span>
+  </a>
+  <nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="btn" href="#book">Book Now</a></li>
+    </ul>
+  </nav>
+</div>
 </header>
 
-<main id="top">
-<!-- HERO -->
-<section class="hero">
+<main>
+<section class="hero" id="home">
   <div class="wrap">
-    <div>
-      <h1>Get Korean Glass Skin &amp; Perfect Lips, Everyday</h1>
-      <p>IEB certified cosmetology, certified PMU artistry and Korean skin treatments, all in one calm studio in Ramamurthy Nagar. Clear, glowing skin and naturally defined lips, done with care.</p>
-      <div class="cta">
-        <a class="btn wa" href="https://wa.me/918147476918?text=Hi%20Pibu%20Studio%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
-        <a class="btn ghost" href="#services">View Services</a>
-      </div>
-      <div class="badges"><span class="badge">IEB Certified</span><span class="badge">PMU Certified</span><span class="badge">Korean Treatment</span></div>
-    </div>
-    <div class="glass" aria-hidden="true">
-      <div class="drop"></div>
-      <div class="tag t1"><i>★</i> Glass Skin Glow</div>
-      <div class="tag t2"><i>★</i> Lip Blush PMU</div>
+    <p class="tag">Eat. Sleep. Nails. Repeat.</p>
+    <h1>Your Nails,<br>Your Canvas.</h1>
+    <p>Private luxury nail studio specializing in acrylics, Gel-X &amp; custom nail art in Indiranagar, Bangalore.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Book Your Appointment 💅</a>
+      <a class="btn ghost" href="#gallery">View Gallery</a>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="wrap">
-    <h2>Treatments at Pibu Studio</h2>
-    <p class="lead">Every session starts with a skin and lip consultation, so the treatment fits you.</p>
-    <div class="grid" id="serviceGrid"></div>
+    <h2 class="rv">Services</h2>
+    <p class="lead rv">Acrylics, Gel-X, Builder Gel, BIAB, chrome, French and lashes. Every set is made for you.</p>
+    <div class="grid3" id="svc"></div>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section id="results" class="ba-sec">
+<section class="gallery" id="gallery">
   <div class="wrap">
-    <h2>Real results, real clients</h2>
-    <p class="lead">A look at what our treatments can do. Photos are shared with client consent.</p>
-    <div class="ba">
-      <figure><div class="pair"><div>Before</div><div>After</div></div><figcaption>Glass Skin</figcaption></figure>
-      <figure><div class="pair"><div>Before</div><div>After</div></div><figcaption>Lip PMU</figcaption></figure>
-      <figure><div class="pair"><div>Before</div><div>After</div></div><figcaption>Mole Removal</figcaption></figure>
-    </div>
-    <small style="display:block;text-align:center;color:var(--mute);margin-top:18px">Replace the placeholders with your photos. More on <a href="https://instagram.com/pibustudio9" target="_blank" rel="noopener" style="text-decoration:underline">@pibustudio9</a>.</small>
+    <h2 class="rv">Gallery</h2>
+    <p class="lead rv">Fresh sets from the studio. Tap any photo to see it bigger.</p>
+    <div class="masonry" id="mas"></div>
+    <p style="margin-top:1.5rem"><a class="btn ghost" href="https://instagram.com/veronicas_nailstudio" target="_blank" rel="noopener">See more on Instagram</a></p>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="wrap about">
-    <div class="portrait" role="img" aria-label="Portrait placeholder">Your photo here</div>
-    <div>
-      <h2>Qualified, careful, and gentle</h2>
-      <p>Pibu Studio is a beauty clinic and PMU studio in Ramamurthy Nagar, Bangalore East. Treatments are done by a trained cosmetologist who combines Korean skin techniques with permanent makeup artistry, with hygiene and natural-looking results as the priority.</p>
-      <p>Over 250 people already follow our work on Instagram, and many come back for their next session.</p>
-      <div class="certs">
-        <div class="cert"><div><b>IEB certified cosmetology</b><span>Professional training in skin, hair and beauty care</span></div></div>
-        <div class="cert"><div><b>Certified PMU artist</b><span>Lip blush, neutralization and tint</span></div></div>
-        <div class="cert"><div><b>Certified Korean treatment specialist</b><span>Glass skin, microneedling and melasma care</span></div></div>
-      </div>
+    <img class="rv" id="vphoto" src="images/veronica.jpg" alt="Veronica, nail technician and owner" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=900&q=80'">
+    <div class="rv">
+      <h2>Hi, I'm Veronica.</h2>
+      <blockquote>Self-Care is Not Selfish.</blockquote>
+      <p>Licensed nail tech since 2022, passionate about making women feel confident. Private, hygienic, one-client-at-a-time experience. You get my full attention, from the first sketch to the final top coat.</p>
+      <div class="keys"><span>Acrylics</span><span>Gel-X</span><span>Builder Gel</span><span>BIAB</span><span>Chrome</span><span>French</span><span>Nail Art</span><span>Lashes</span></div>
     </div>
   </div>
 </section>
 
-<!-- BOOKING ENGINE -->
-<section id="book" class="book-sec">
+<section class="tsec">
   <div class="wrap">
-    <div style="text-align:center;margin-bottom:34px">
-      <h2>Book your appointment</h2>
-      <p class="lead" style="margin-inline:auto">Pick a service, date and time. We will confirm on WhatsApp and Instagram.</p>
+    <h2 class="rv">Kind words</h2>
+    <p class="lead rv">Support Your Local Nail Tech. Here's why clients keep coming back.</p>
+    <div class="grid3">
+      <div class="t rv"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Best Gel-X I've ever had. Zero lifting after four weeks."</p><small>Ananya R. · Indiranagar</small></div>
+      <div class="t rv"><div class="stars" aria-label="5 stars">★★★★★</div><p>"So calm and private. My bridal set was exactly what I pictured."</p><small>Meghna S. · Bride</small></div>
+      <div class="t rv"><div class="stars" aria-label="5 stars">★★★★★</div><p>"Chrome French with lashes in one visit. I felt brand new."</p><small>Priya K. · Koramangala</small></div>
     </div>
-    <div class="book-box">
-      <form id="bookForm" novalidate>
-        <div class="form-grid">
-          <div class="field"><label for="name">Name <sup>*</sup></label><input id="name" autocomplete="name" placeholder="Your full name"><div class="err">Enter your name.</div></div>
-          <div class="field"><label for="phone">Phone <sup>*</sup></label><input id="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number"><div class="err">Enter a valid 10-digit mobile number.</div></div>
-          <div class="field"><label for="insta">Instagram handle</label><input id="insta" placeholder="@yourhandle"></div>
-          <div class="field"><label for="service">Service <sup>*</sup></label><select id="service"><option value="">Choose a service</option></select><div class="err">Choose a service.</div></div>
-          <div class="field full"><label for="date">Date <sup>*</sup></label><input id="date" type="date"><div class="err" id="dateErr">Choose a date.</div></div>
-          <div class="field full" id="slotField">
-            <label>Time slot <sup>*</sup></label>
-            <div class="slots" id="slots"><div class="hint" style="grid-column:1/-1">Choose a date to see available times.</div></div>
-            <div class="err" id="slotErr">Choose a time slot.</div>
-          </div>
-          <div class="field full"><label for="msg">Concern or message</label><textarea id="msg" placeholder="Tell us about your skin or lip concern (optional)"></textarea></div>
-        </div>
-        <button type="submit" class="btn primary submit">Request appointment</button>
+    <p style="font-size:.75rem;margin-top:1rem;opacity:.6">Sample reviews. Replace with your real client feedback.</p>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2 class="rv">Book Your Appointment 💅</h2>
+    <p class="lead rv">For reservations DM or contact. One client at a time, so slots fill fast.</p>
+    <div class="book">
+      <div class="panel rv">
+        <div class="cal">Calendly widget goes here.<br><small>Replace this box with your Calendly inline embed code.</small></div>
+        <a class="btn" id="wa1" target="_blank" rel="noopener" href="#">Book on WhatsApp</a>
+        <a class="btn dark" href="https://ig.me/m/veronicas_nailstudio" target="_blank" rel="noopener">DM on Instagram</a>
+      </div>
+      <form class="panel rv" id="bf">
+        <div><label for="n">Name</label><input id="n" required autocomplete="name"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" required autocomplete="tel" placeholder="+91"></div>
+        <div><label for="s">Service</label>
+          <select id="s"><option>Acrylic Extensions</option><option>Gel-X &amp; Builder Gel (BIAB)</option><option>Chrome &amp; French Art</option><option>Bridal Nail Art</option><option>Pedicure &amp; Gel Polish</option><option>Eyelash Extensions</option></select></div>
+        <div><label for="d">Preferred date</label><input id="d" type="date" required></div>
+        <button class="btn" type="submit">Send request on WhatsApp</button>
       </form>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section>
-  <div class="wrap">
-    <h2>What clients say</h2>
-    <p class="lead">Sample reviews. Replace with real client feedback.</p>
-    <div class="reviews">
-      <div class="rev"><div class="stars">★★★★★</div><p>My skin looks brighter and smoother after the glass skin session. The studio is clean and she explains every step.</p><b>Ananya R.</b><small>Glass Skin Treatment</small></div>
-      <div class="rev"><div class="stars">★★★★★</div><p>The lip blush came out so natural. Healed beautifully and I no longer need lipstick to feel put together.</p><b>Sneha K.</b><small>Lip PMU</small></div>
-      <div class="rev"><div class="stars">★★★★★</div><p>Got my melasma facial and the pigmentation is visibly lighter. Gentle, painless and honest advice.</p><b>Divya M.</b><small>Melasma Facial</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- LOCATION -->
-<section id="visit" style="padding-top:0">
-  <div class="wrap">
-    <h2>Visit the studio</h2>
-    <p class="lead">Appointments are recommended so we can give you our full attention.</p>
-    <div class="loc">
-      <div class="info">
-        <h3>Pibu Studio</h3>
-        <p>Ramamurthy Nagar, Bangalore East, India</p>
-        <ul class="hours">
-          <li><span>Monday to Saturday</span><span>10 AM - 8 PM</span></li>
-          <li><span>Sunday</span><span>Closed</span></li>
-        </ul>
-        <div class="cta">
-          <a class="btn wa" href="https://wa.me/918147476918" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn ghost" href="https://instagram.com/pibustudio9" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-      <div class="map"><div><b aria-hidden="true">📍</b>Google Map placeholder<br><small>Paste your Google Maps embed here</small><br>
-        <a href="https://www.google.com/maps/search/?api=1&query=Ramamurthy+Nagar+Bangalore" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="foot">
-      <div><div class="logo">PIBU STUDIO</div>IEB Certified Cosmetology | Certified PMU Artist | Korean Treatment Specialist</div>
-      <div>See our latest work<br><a href="https://instagram.com/pibustudio9" target="_blank" rel="noopener">instagram.com/pibustudio9</a><br>WhatsApp <a href="https://wa.me/918147476918">8147476918</a></div>
+  <div class="wrap fgrid">
+    <div>
+      <h3>Visit the studio</h3>
+      <p>Indiranagar, Bangalore, Karnataka<br><small>[Add your full address]</small></p>
+      <p>Mon–Sat 10AM–9:30PM<br>Sun 11AM–6PM</p>
+      <p>Phone: <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+      <div class="soc">
+        <a href="https://instagram.com/veronicas_nailstudio" target="_blank" rel="noopener">Instagram</a>
+        <a id="wa2" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p class="copy">© <span id="yr"></span> Veronica's Nail Studio. Eat. Sleep. Nails. Repeat.</p>
+      <p>built by phaniraj aka phariea</p>
     </div>
-    <div class="cp">&copy; <span id="yr"></span> Pibu Studio. All rights reserved.</div>
+    <iframe title="Studio location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Indiranagar,Bangalore&output=embed"></iframe>
   </div>
 </footer>
 
-<!-- CONFIRMATION MODAL -->
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-  <div class="dialog">
-    <svg class="tick" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36"/><path d="M25 41l11 11 20-23"/></svg>
-    <h3 id="mTitle"></h3>
-    <p id="mText"></p>
-    <div class="row">
-      <a class="btn wa" id="waLink" target="_blank" rel="noopener" style="justify-content:center">Send on WhatsApp</a>
-      <button class="btn ghost" id="icsBtn" style="justify-content:center">Add to Calendar</button>
-      <button class="btn" id="closeBtn" style="justify-content:center;border-color:transparent;color:var(--mute)">Close</button>
-    </div>
-  </div>
+<a class="wa" id="wa3" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+<div class="sticky">
+  <a class="btn" href="#book">Book Your Appointment 💅</a>
+  <a class="btn ghost" id="wa4" href="#" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
+<div class="lb" id="lb" role="dialog" aria-label="Photo viewer"><button aria-label="Close">×</button><img alt=""></div>
+
 <script>
-/* ===== Data ===== */
-const WA = '918147476918';
-const SERVICES = [
-  {n:'Advanced Korean Glass Skin Treatment', i:'✨', p:'₹2,500', s:'/session', d:'60-90 min', t:'A multi-step Korean routine of deep cleanse, exfoliation, hydration and glow serums for clear, dewy skin.'},
-  {n:'Lip PMU - Lip Blush / Lip Neutralization / Lip Tint', i:'💋', p:'₹4,000', s:'', d:'90-120 min', t:'Semi-permanent lip colour that softens dark tones, defines the shape and gives a natural tinted look.'},
-  {n:'Mole & Wart Removal', i:'🌸', p:'₹1,500', s:' onwards', d:'30-45 min', t:'Quick, precise removal of moles and warts with careful aftercare guidance. Price depends on size and number.'},
-  {n:'Microneedling for Anti-wrinkles & Hydration', i:'💧', p:'₹2,000', s:'', d:'60 min', t:'Boosts collagen to soften fine lines and texture while delivering deep hydration into the skin.'},
-  {n:'Melasma Facial Treatment', i:'🌿', p:'₹1,800', s:'', d:'60 min', t:'A targeted facial to lighten pigmentation and even out tone, using gentle actives suited to melasma-prone skin.'},
-  {n:'Eyelash Extensions', i:'👁️', p:'₹1,500', s:'', d:'60-90 min', t:'Lightweight, natural-looking lash extensions applied one by one for a fuller, lifted eye.'},
-  {n:'Beauty Spot Creation', i:'⭐', p:'₹1,000', s:'', d:'20-30 min', t:'A small, natural-looking beauty mark placed where it flatters your face best.'},
-  {n:'Full-body Peel & Whitening (Bridal Special)', i:'👰', p:'₹6,500', s:' onwards', d:'90-120 min', t:'A full-body peel and brightening session for even, radiant skin before the wedding. Packages on request.'}
-];
-const SLOTS = [['10:00','10:00 AM'],['11:30','11:30 AM'],['13:00','1:00 PM'],['14:30','2:30 PM'],['16:00','4:00 PM'],['17:30','5:30 PM']];
-const KEY = 'pibu_bookings';
-const $ = id => document.getElementById(id);
-let chosenTime = '', last = null;
+const PHONE="91XXXXXXXXXX"; // client WhatsApp number, country code first, no + or spaces
+const wa=t=>`https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
+["wa1","wa2","wa3","wa4"].forEach(i=>document.getElementById(i).href=wa("Hi Veronica! I'd like to book an appointment 💅"));
+document.getElementById("yr").textContent=new Date().getFullYear();
 
-/* ===== Render services + dropdown ===== */
-SERVICES.forEach((s, k) => {
-  const c = document.createElement('article');
-  c.className = 'card';
-  c.innerHTML = `<div class="ico" aria-hidden="true">${s.i}</div><h3>${s.n}</h3><p>${s.t}</p>
-    <div class="meta"><span class="price">${s.p}<em>${s.s}</em></span><span>${s.d}</span></div>
-    <button class="pick" data-k="${k}">Book this service</button>`;
-  $('serviceGrid').appendChild(c);
-  $('service').add(new Option(s.n + ' (' + s.p + s.s + ')', s.n));
-});
-$('serviceGrid').addEventListener('click', e => {
-  const b = e.target.closest('.pick'); if (!b) return;
-  $('service').value = SERVICES[b.dataset.k].n;
-  $('book').scrollIntoView();
-  setTimeout(() => $('name').focus({preventScroll:true}), 400);
-});
+// logo auto-replace
+const lg=document.getElementById("logo-upload");
+lg.onload=()=>{lg.style.display="block";document.querySelector(".logo .txt").style.display="none"};
 
-/* ===== Helpers ===== */
-const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } };
-const save = a => { try { localStorage.setItem(KEY, JSON.stringify(a)); } catch (e) {} };
-const iso = d => d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
-const pretty = v => new Date(v + 'T00:00').toLocaleDateString('en-IN', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
-const setBad = (id, bad) => { const f = $(id).closest('.field'); f.classList.toggle('bad', bad); return bad; };
+// services
+const S=[["💅","Acrylic Extensions","Sculpted length and shape that lasts. Natural to bold, your call."],
+["✨","Gel-X & Builder Gel (BIAB)","Light, strong and flexible. Great for growing out your natural nails."],
+["🪞","Chrome & French Art","Mirror chrome, glazed finishes and modern French twists."],
+["👰","Bridal Nail Art","Delicate details for your big day. Trials available."],
+["🌸","Pedicure & Gel Polish","Soft feet, clean lines and shine that holds."],
+["👁️","Eyelash Extensions","Pelo a pelo lashes for a soft, defined look."]];
+svc.innerHTML=S.map(s=>`<article class="card rv"><div class="ic" aria-hidden="true">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></article>`).join("");
 
-/* Date: min = today; max = 90 days out */
-const today = new Date();
-$('date').min = iso(today);
-const mx = new Date(today); mx.setDate(mx.getDate() + 90); $('date').max = iso(mx);
-$('yr').textContent = today.getFullYear();
+// gallery: uses /images/g1.jpg … g12.jpg when present, falls back to Unsplash
+const U=["photo-1604654894610-df63bc536371","photo-1519014816548-bf5fe059798b","photo-1632345031435-8727f6897d53","photo-1604902396830-aca29e19b067","photo-1522337360788-8b13dee7a37e","photo-1610992015732-2449b76344bc","photo-1599948128020-9a44505b0d1b","photo-1607779097040-26e80aa78e66","photo-1515688594390-b649af70d282","photo-1560869713-7d0a29430803","photo-1604654894610-df63bc536371","photo-1519014816548-bf5fe059798b"];
+const H=[320,420,360,460,340,400,440,330,420,350,400,380];
+mas.innerHTML=U.map((u,i)=>{const f=`https://images.unsplash.com/${u}?w=700&q=75`;
+return `<button class="tile" aria-label="Open nail photo ${i+1}"><img loading="lazy" src="images/g${i+1}.jpg" alt="Nail art by Veronica, set ${i+1}" style="aspect-ratio:700/${H[i]};object-fit:cover" onerror="this.onerror=null;this.src='${f}'"></button>`}).join("");
+const lb=document.getElementById("lb"),li=lb.querySelector("img");
+mas.addEventListener("click",e=>{const t=e.target.closest(".tile");if(!t)return;li.src=t.querySelector("img").src;li.alt=t.querySelector("img").alt;lb.classList.add("on")});
+lb.onclick=()=>lb.classList.remove("on");
+addEventListener("keydown",e=>e.key==="Escape"&&lb.classList.remove("on"));
 
-/* ===== Slots: built on date change; booked and past slots disabled ===== */
-function buildSlots() {
-  const v = $('date').value; chosenTime = '';
-  const box = $('slots'); box.innerHTML = '';
-  $('slotField').classList.remove('bad');
-  if (!v) { box.innerHTML = '<div class="hint" style="grid-column:1/-1">Choose a date to see available times.</div>'; return; }
-  const dt = new Date(v + 'T00:00');
-  if (dt.getDay() === 0) {
-    $('dateErr').textContent = 'We are closed on Sundays. Please choose another day.';
-    setBad('date', true); box.innerHTML = '<div class="hint" style="grid-column:1/-1">Closed on Sundays.</div>'; return;
-  }
-  $('dateErr').textContent = 'Choose a date.'; setBad('date', false);
-  const taken = load().filter(b => b.date === v).map(b => b.time);
-  const now = new Date(), isToday = v === iso(now);
-  SLOTS.forEach(([val, label]) => {
-    const [h, m] = val.split(':').map(Number);
-    const past = isToday && (h * 60 + m) <= now.getHours() * 60 + now.getMinutes();
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = 'slot'; b.textContent = label; b.dataset.v = val;
-    b.disabled = taken.includes(val) || past;
-    b.onclick = () => { chosenTime = val; box.querySelectorAll('.slot').forEach(x => x.classList.toggle('on', x === b)); $('slotField').classList.remove('bad'); };
-    box.appendChild(b);
-  });
-  if (box.querySelectorAll('.slot:not(:disabled)').length === 0) box.insertAdjacentHTML('beforeend', '<div class="hint" style="grid-column:1/-1">No slots left on this day. Try another date.</div>');
-}
-$('date').addEventListener('change', buildSlots);
+// booking form -> WhatsApp
+bf.onsubmit=e=>{e.preventDefault();
+open(wa(`Hi Veronica! I'm ${n.value}. I'd like to book ${s.value} on ${d.value}. My number: ${p.value}`),"_blank")};
+d.min=new Date().toISOString().split("T")[0];
 
-/* ===== Submit ===== */
-$('bookForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const name = $('name').value.trim(), phone = $('phone').value.replace(/[\s+-]/g, '').replace(/^91(?=\d{10}$)/, '');
-  const service = $('service').value, date = $('date').value;
-  let bad = false;
-  bad = setBad('name', name.length < 2) || bad;
-  bad = setBad('phone', !/^[6-9]\d{9}$/.test(phone)) || bad;
-  bad = setBad('service', !service) || bad;
-  if (!date) { $('dateErr').textContent = 'Choose a date.'; bad = setBad('date', true) || bad; }
-  else if (new Date(date + 'T00:00').getDay() === 0) bad = true;
-  else setBad('date', false);
-  $('slotField').classList.toggle('bad', !chosenTime); bad = !chosenTime || bad;
-  if (bad) { const f = document.querySelector('.field.bad'); if (f) f.scrollIntoView({block:'center'}); return; }
+// mobile menu
+const b=document.querySelector(".burger"),m=document.getElementById("menu");
+b.onclick=()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",o)};
+m.onclick=e=>e.target.tagName==="A"&&m.classList.remove("open");
 
-  const label = SLOTS.find(s => s[0] === chosenTime)[1];
-  const booking = {id: Date.now(), name, phone, instagram: $('insta').value.trim(), service, date, time: chosenTime, timeLabel: label, message: $('msg').value.trim(), createdAt: new Date().toISOString()};
-  const all = load(); all.push(booking); save(all);
-  last = booking;
-
-  $('mTitle').textContent = 'Thank you ' + name + '!';
-  $('mText').textContent = 'Your appointment for ' + service + ' on ' + pretty(date) + ' at ' + label + ' is requested. We will confirm on WhatsApp 8147476918 and Instagram @pibustudio9.';
-  const txt = 'Hi Pibu Studio, I want to book ' + service + ' on ' + pretty(date) + ' at ' + label + '. Name: ' + name + ', Phone: ' + phone + (booking.instagram ? ', Instagram: ' + booking.instagram : '') + (booking.message ? '. Concern: ' + booking.message : '');
-  $('waLink').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(txt);
-  $('modal').classList.add('open'); $('closeBtn').focus();
-  $('bookForm').reset(); chosenTime = ''; buildSlots();
-});
-
-/* ===== Modal + calendar (.ics) ===== */
-const closeModal = () => $('modal').classList.remove('open');
-$('closeBtn').onclick = closeModal;
-$('modal').addEventListener('click', e => { if (e.target === $('modal')) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-$('icsBtn').onclick = () => {
-  if (!last) return;
-  const [h, m] = last.time.split(':').map(Number), d = last.date.replace(/-/g, '');
-  const f = (hh, mm) => d + 'T' + String(hh).padStart(2,'0') + String(mm).padStart(2,'0') + '00';
-  const end = h * 60 + m + 90;
-  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Pibu Studio//Booking//EN','BEGIN:VEVENT',
-    'UID:' + last.id + '@pibustudio','DTSTAMP:' + new Date().toISOString().replace(/[-:]|\.\d{3}/g, ''),
-    'DTSTART:' + f(h, m), 'DTEND:' + f(Math.floor(end / 60), end % 60),
-    'SUMMARY:Pibu Studio: ' + last.service.replace(/,/g, ' '), 'LOCATION:Pibu Studio\\, Ramamurthy Nagar\\, Bangalore',
-    'DESCRIPTION:Appointment request. We will confirm on WhatsApp 8147476918.', 'END:VEVENT','END:VCALENDAR'].join('\r\n');
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([ics], {type: 'text/calendar'}));
-  a.download = 'pibu-studio-appointment.ics'; document.body.appendChild(a); a.click(); a.remove();
-};
-
-/* ===== Mobile menu ===== */
-$('burger').onclick = () => { const o = $('menu').classList.toggle('open'); $('burger').setAttribute('aria-expanded', o); };
-$('menu').addEventListener('click', e => { if (e.target.tagName === 'A') { $('menu').classList.remove('open'); $('burger').setAttribute('aria-expanded', false); } });
+// fade in on scroll
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
