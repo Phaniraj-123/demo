@@ -1,231 +1,523 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Little Cakehouse by Pavni | 100% Eggless Custom Cakes, Kanpur</title>
-<meta name="description" content="100% eggless custom cakes and desserts in Kanpur. Pre-order on WhatsApp 8429950357.">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tito's Breads & Brownies | Bharuch's Premium French-style Bakery</title>
+<meta name="description" content="Burnt Basque cheesecake, brownies, macarons and custom cakes in Bharuch. First order gets a free pastry.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#FFF8F2;--pink:#E8A1B0;--pink-d:#C9738A;--blush:#FBE3E8;--brown:#4A2C20;--gold:#C9A25B;--r:18px}
-*{box-sizing:border-box;margin:0}
-body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--brown);line-height:1.6}
-h1,h2,h3,.script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--pink-d)}
-h2{font-size:clamp(2.2rem,6vw,3.2rem);text-align:center}
-h3{font-size:1.6rem;color:var(--brown)}
-img{max-width:100%}a{color:inherit}
-.wrap{max-width:1150px;margin:auto;padding:0 18px}
-section{padding:64px 0}
-.div{width:90px;height:2px;background:var(--gold);margin:6px auto 30px;border-radius:2px}
-.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem 'Nunito';padding:14px 26px;border-radius:50px;background:var(--pink-d);color:#fff;text-decoration:none;min-height:48px}
-.btn.alt{background:#fff;color:var(--brown);border:1.5px solid var(--gold)}
-.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-.note{background:var(--blush);text-align:center;font-size:.85rem;padding:8px 12px;border-bottom:1px solid var(--gold)}
-header{position:sticky;top:0;z-index:50;background:rgba(255,248,242,.96);border-bottom:1px solid var(--gold);backdrop-filter:blur(6px)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:'Great Vibes';font-size:1.7rem;color:var(--pink-d);text-decoration:none}
-nav a{margin:0 12px;text-decoration:none;font-weight:600}nav a:hover{color:var(--pink-d)}
-.cartbtn{background:#fff;border:1.5px solid var(--gold);border-radius:50px;padding:8px 16px;cursor:pointer;font:700 1rem Nunito;color:var(--brown)}
-#burger{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer;color:var(--brown)}
-.right{display:flex;gap:10px;align-items:center}
-@media(max-width:820px){#burger{display:block}nav{position:absolute;top:64px;left:0;right:0;background:var(--cream);display:none;flex-direction:column;padding:10px 18px;border-bottom:1px solid var(--gold)}nav.open{display:flex}nav a{padding:12px 0;margin:0}}
-.hero{display:grid;gap:30px;align-items:center;padding:40px 0}
-@media(min-width:820px){.hero{grid-template-columns:1.1fr 1fr}}
-.hero h1{font-size:clamp(3rem,10vw,5.2rem);line-height:1.05}
-.hero p{margin:12px 0 22px;font-size:1.1rem}
-.hero .btns{display:flex;flex-wrap:wrap;gap:12px}
-.heroimg{position:relative}
-.heroimg .ph{aspect-ratio:1/1;border-radius:50% 50% var(--r) var(--r);border:2px solid var(--gold);overflow:hidden}
-.badge{position:absolute;background:#fff;border:1px solid var(--gold);border-radius:50px;padding:6px 14px;font-weight:700;font-size:.85rem;box-shadow:0 6px 18px rgba(74,44,32,.12)}
-.b1{top:8%;left:-2%}.b2{top:45%;right:-2%}.b3{bottom:8%;left:4%}
-.ph{background:linear-gradient(135deg,var(--blush),#fff);display:flex;align-items:center;justify-content:center;font-size:3rem}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.trust{background:#fff;border-block:1px solid var(--gold)}
-.trust .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding-block:18px;text-align:center;font-weight:700}
-@media(min-width:700px){.trust .wrap{grid-template-columns:repeat(4,1fr)}}
-.grid{display:grid;gap:22px;grid-template-columns:1fr}
-@media(min-width:600px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:1180px){.grid.g4{grid-template-columns:repeat(4,1fr)}}
-.card{background:#fff;border:1px solid #efd9b8;border-radius:var(--r);box-shadow:0 8px 24px rgba(74,44,32,.07);overflow:hidden;display:flex;flex-direction:column}
-.card .ph{aspect-ratio:4/3;border-radius:0}
-.card .body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
-.card .body p{font-size:.92rem}
-.meta{font-size:.82rem;color:var(--pink-d);font-weight:700}
-.veg{display:inline-block;font-size:.72rem;font-weight:700;border:1px solid #3a9a4f;color:#2d7a3e;border-radius:6px;padding:0 6px;width:max-content}
-.price{font-size:1.3rem;font-weight:700}
-.row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px}
-.row .btn{padding:10px 18px;min-height:44px}
-.box{background:#fff;border:1px solid var(--gold);border-radius:var(--r);padding:24px;max-width:640px;margin:auto;box-shadow:0 8px 24px rgba(74,44,32,.07)}
-label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 4px}
-input,select,textarea{width:100%;font:1rem Nunito;padding:12px;border:1.5px solid #e6d3bd;border-radius:12px;background:var(--cream);color:var(--brown)}
-.steps{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));text-align:center}
-.step{background:#fff;border:1px solid #efd9b8;border-radius:var(--r);padding:22px}
-.step b{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 8px;border-radius:50%;background:var(--blush);border:1px solid var(--gold)}
-.stars{color:var(--gold);letter-spacing:2px}
-.about{display:grid;gap:26px;align-items:center}
-@media(min-width:820px){.about{grid-template-columns:1fr 1fr}}
-.about .ph{aspect-ratio:1/1;border-radius:var(--r);border:2px solid var(--gold);overflow:hidden}
-footer{background:var(--brown);color:#f6e8d8;text-align:center;padding:40px 18px}
-footer .script{color:var(--pink);font-size:2.2rem}footer a{color:var(--gold)}
-#overlay{position:fixed;inset:0;background:rgba(74,44,32,.4);opacity:0;pointer-events:none;transition:.25s;z-index:80}
-#overlay.show{opacity:1;pointer-events:auto}
-#drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:var(--cream);z-index:90;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;border-left:1px solid var(--gold)}
-#drawer.open{transform:none}
-.dh{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid var(--gold)}
-.dh button{background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--brown)}
-#items{flex:1;overflow:auto;padding:14px 18px}
-.it{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed #e6d3bd}
-.it .n{flex:1;font-weight:700;font-size:.92rem}
-.qty button{width:30px;height:30px;border-radius:50%;border:1px solid var(--gold);background:#fff;cursor:pointer;font-size:1rem}
-.rm{background:none;border:0;cursor:pointer;color:var(--pink-d);font-size:1.1rem}
-.tot{padding:16px 18px;border-top:1px solid var(--gold);background:#fff}
-.tot div{display:flex;justify-content:space-between;margin-bottom:4px}
-.tot .btn{width:100%;margin-top:10px}
-#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--brown);color:#fff;padding:12px 22px;border-radius:50px;z-index:100;transition:.3s}
-#toast.show{transform:translate(-50%,0)}
+/* ===== Tokens ===== */
+:root{--cream:#FFF8F0;--cream2:#FDF3E7;--dark:#2B150C;--brown:#3B1F14;--gold:#C68A3D;--pink:#E8A0B4;--card:#fff;--shadow:0 10px 30px rgba(59,31,20,.09);--r:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--brown);line-height:1.6;overflow-x:hidden;padding-bottom:70px}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.alt{background:var(--cream2)}
+.dark{background:var(--dark);color:var(--cream)}
+.sh{text-align:center;margin-bottom:36px}
+.sh h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+.sh p{opacity:.75;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 24px;border-radius:999px;border:2px solid var(--brown);background:transparent;font-weight:600;cursor:pointer;position:relative;overflow:hidden;z-index:0;transition:color .35s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--brown);transform:translateX(-101%);transition:transform .35s;z-index:-1}
+.btn:hover::before{transform:none}.btn:hover{color:var(--cream)}
+.btn.solid{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.solid::before{background:var(--brown)}
+.dark .btn{border-color:var(--gold);color:var(--cream)}.dark .btn::before{background:var(--gold)}
 .hide{display:none!important}
-.sum .l{display:flex;justify-content:space-between;font-size:.92rem;padding:3px 0}
-.ok{text-align:center}.ok .id{font-size:1.5rem;font-weight:700;color:var(--pink-d)}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body>
-<div class="note">100% Eggless | Kindly pre-order for custom cakes | Made fresh on order</div>
-<header><div class="wrap nav">
-<a class="logo" href="#home" onclick="showShop()">Little Cakehouse</a>
-<nav id="menu"><a href="#home" onclick="showShop()">Home</a><a href="#cakes" onclick="showShop()">Cakes</a><a href="#bestsellers" onclick="showShop()">Bestsellers</a><a href="#custom" onclick="showShop()">Custom Order</a><a href="#reviews" onclick="showShop()">Reviews</a><a href="#contact" onclick="showShop()">Contact</a></nav>
-<div class="right"><button class="cartbtn" onclick="openCart()" aria-label="Open cart">🛒 <span id="count">0</span></button><button id="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button></div>
-</div></header>
+/* ===== Navbar ===== */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,248,240,.85);transition:box-shadow .3s,backdrop-filter .3s}
+nav.scrolled{box-shadow:0 6px 24px rgba(59,31,20,.12);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700}
+.links{display:flex;gap:28px;font-weight:500}
+.links a:hover{color:var(--gold)}
+.icons{display:flex;gap:6px;align-items:center}
+.ib{min-width:44px;min-height:44px;border:0;background:none;border-radius:50%;cursor:pointer;font-size:1.2rem;position:relative}
+.badge{position:absolute;top:2px;right:0;background:var(--pink);color:var(--brown);font-size:.7rem;font-weight:700;min-width:20px;height:20px;border-radius:10px;display:grid;place-items:center}
+.burger{display:none}
+@media(max-width:767px){.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--cream);padding:12px 20px 20px;gap:0;box-shadow:var(--shadow)}.links.open{display:flex}.links a{padding:12px 0;min-height:44px}.burger{display:inline-block}}
+/* ===== Hero ===== */
+.hero{padding:48px 0 72px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:40px;align-items:center;position:relative;z-index:1}
+.blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.45;animation:float 9s ease-in-out infinite}
+.b1{width:280px;height:280px;background:var(--pink);top:-60px;right:-40px}
+.b2{width:240px;height:240px;background:var(--gold);bottom:-50px;left:-60px;animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-26px) scale(1.06)}}
+.eyebrow{display:inline-block;background:var(--pink);padding:4px 14px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:14px}
+.script{font-family:'Great Vibes',cursive;font-size:2rem;color:var(--gold);margin-bottom:10px}
+.hero p.sub{max-width:480px;opacity:.85;margin-bottom:24px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.trust{display:flex;gap:18px;flex-wrap:wrap;font-weight:500;font-size:.92rem}
+.arch{position:relative;max-width:420px;margin:0 auto}
+.arch .frame{border-radius:999px 999px 24px 24px;overflow:hidden;aspect-ratio:3/4;box-shadow:var(--shadow);background:var(--cream2)}
+.arch img{width:100%;height:115%;object-fit:cover}
+.float-b{position:absolute;background:#fff;border-radius:16px;padding:10px 16px;box-shadow:var(--shadow);font-weight:600;animation:float 6s ease-in-out infinite}
+.fb1{left:-14px;bottom:18%}.fb2{right:-10px;top:14%;background:var(--pink);animation-delay:-2s}
+.in{animation:pop .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(16px)}}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr}}
+/* ===== Marquee ===== */
+.marq{background:var(--brown);color:var(--cream);overflow:hidden;padding:14px 0;white-space:nowrap}
+.marq div{display:inline-block;animation:scroll 28s linear infinite;font-family:'Playfair Display',serif;font-size:1.2rem}
+.marq span{padding:0 22px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* ===== Product cards ===== */
+.grid{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}.grid.four{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(59,31,20,.16)}
+.pimg{aspect-ratio:4/3;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--cream2),var(--pink))}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .pimg img{transform:scale(1.08)}
+.tag{position:absolute;top:12px;left:12px;background:var(--pink);font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:999px}
+.veg{position:absolute;top:12px;right:12px;width:20px;height:20px;border:2px solid #2e8b3d;background:#fff;border-radius:4px;display:grid;place-items:center}
+.veg::after{content:"";width:9px;height:9px;border-radius:50%;background:#2e8b3d}
+.pbody{padding:18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pbody h3{font-size:1.2rem}
+.pbody p{font-size:.9rem;opacity:.75;flex:1}
+.meta{display:flex;justify-content:space-between;align-items:center;font-weight:600}
+.meta .rt{color:var(--gold);font-size:.9rem}
+.price{font-size:1.2rem}
+.prow{display:flex;gap:10px;align-items:center;margin-top:8px}
+.prow .btn{flex:1;min-height:44px}
+.step{display:inline-flex;align-items:center;border:2px solid var(--brown);border-radius:999px}
+.step button{width:44px;height:40px;border:0;background:none;font-size:1.2rem;cursor:pointer;border-radius:999px}
+.step button:hover{background:var(--cream2)}
+.step span{min-width:24px;text-align:center;font-weight:600}
+/* ===== Shop controls ===== */
+.ctl{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;margin-bottom:26px}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--brown);background:none;cursor:pointer;font-weight:500;transition:.25s}
+.pill.on,.pill:hover{background:var(--brown);color:var(--cream)}
+.fields{display:flex;gap:10px;flex-wrap:wrap}
+.fields input,.fields select,.f input,.f select,.f textarea{min-height:44px;padding:0 16px;border:2px solid #e6d5c1;border-radius:14px;background:#fff;width:100%}
+.fields input,.fields select{width:auto}
+.empty{text-align:center;padding:40px;opacity:.7;grid-column:1/-1}
+/* ===== Story / custom / visit ===== */
+.story{display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.story{grid-template-columns:1fr 1fr}}
+.story img{border-radius:var(--r);aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--brown)}
+.story h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:14px}
+.story p{opacity:.85;margin-bottom:22px;max-width:520px}
+.box{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:28px;max-width:760px;margin:0 auto}
+.f{display:grid;gap:14px}
+.f label{font-weight:500;font-size:.9rem;display:grid;gap:6px}
+.f textarea{padding:12px 16px;min-height:80px}
+.two{display:grid;gap:14px}
+@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.visit{display:grid;gap:24px}
+@media(min-width:900px){.visit{grid-template-columns:1fr 1fr}}
+.map{border-radius:var(--r);min-height:260px;background:repeating-linear-gradient(45deg,var(--cream2),var(--cream2) 14px,#f6e6d3 14px,#f6e6d3 28px);display:grid;place-items:center;text-align:center;padding:20px;font-weight:600}
+.info p{margin-bottom:12px}
+.rev{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:24px}
+.rev .st{color:var(--gold)}.rev p{margin:10px 0;font-style:italic}.rev b{font-size:.9rem}
+footer{background:var(--dark);color:var(--cream);padding:48px 0 24px}
+.fg{display:grid;gap:28px}
+@media(min-width:768px){.fg{grid-template-columns:2fr 1fr 1fr 1fr}}
+footer h4{font-family:'Playfair Display',serif;margin-bottom:10px;color:var(--gold)}
+footer a,footer p{display:block;opacity:.85;margin-bottom:6px;font-size:.92rem}
+footer a:hover{color:var(--gold)}
+.copy{margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;opacity:.7}
+.copy1{display:flex;font-size:.85rem;opacity:.7}
+/* ===== Reveal (scroll) ===== */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s;transition-delay:var(--d,0s)}
+.rv.show{opacity:1;transform:none}
+/* ===== Cart drawer ===== */
+.back{position:fixed;inset:0;background:rgba(43,21,12,.45);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:.3s;z-index:90}
+.back.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--cream);z-index:100;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #e6d5c1}
+.items{flex:1;overflow:auto;padding:16px 20px}
+.it{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #eedfcc}
+.it img{width:62px;height:62px;border-radius:12px;object-fit:cover;background:var(--cream2)}
+.it .n{flex:1;font-weight:600;font-size:.95rem}
+.it small{display:block;font-weight:400;opacity:.7}
+.rm{border:0;background:none;cursor:pointer;min-width:44px;min-height:44px;font-size:1.1rem}
+.df{padding:16px 20px;border-top:1px solid #e6d5c1;background:#fff}
+.ln{display:flex;justify-content:space-between;margin-bottom:6px}
+.ln.t{font-weight:700;font-size:1.1rem;margin-top:8px}
+.df .btn{width:100%;margin-top:10px}
+/* ===== Toast, bottom bar ===== */
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,30px);background:var(--brown);color:var(--cream);padding:12px 22px;border-radius:999px;opacity:0;transition:.35s;z-index:120;pointer-events:none;max-width:90%;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--brown);color:var(--cream);z-index:60;display:none;justify-content:space-between;align-items:center;padding:10px 20px;min-height:58px;cursor:pointer;border:0;width:100%}
+@media(max-width:767px){.bar.show{display:flex}}
+/* ===== Checkout ===== */
+.co{padding:40px 0 80px}
+.prog{display:flex;gap:8px;margin:24px 0}
+.prog div{flex:1;text-align:center;font-size:.85rem;font-weight:600;padding-top:10px;border-top:4px solid #e6d5c1;opacity:.6}
+.prog .on{border-color:var(--gold);opacity:1}
+.cog{display:grid;gap:24px}
+@media(min-width:900px){.cog{grid-template-columns:1.4fr 1fr;align-items:start}}
+.pane{display:none}.pane.on{display:grid;gap:14px}
+.err{color:#b3261e;font-size:.8rem;min-height:1em}
+.tog{display:flex;gap:10px}
+.tog button{flex:1;min-height:44px;border:2px solid #e6d5c1;border-radius:14px;background:#fff;cursor:pointer;font-weight:600}
+.tog .on{border-color:var(--gold);background:var(--cream2)}
+.pay{display:flex;gap:10px;align-items:center;border:2px solid #e6d5c1;border-radius:14px;padding:12px 16px;background:#fff;min-height:44px;cursor:pointer;flex-direction:row!important}
+.pay input{width:auto;min-height:0}
+.nav2{display:flex;justify-content:space-between;gap:10px;margin-top:10px}
+.sum{position:sticky;top:90px}
+.sum .it{padding:8px 0}
+.dc{display:flex;gap:8px;margin:12px 0}.dc input{flex:1;min-height:44px;padding:0 14px;border:2px solid #e6d5c1;border-radius:14px}
+.ok{text-align:center;padding:60px 20px}
+.ok .tick{width:80px;height:80px;border-radius:50%;background:var(--gold);color:#fff;font-size:2.4rem;display:grid;place-items:center;margin:0 auto 18px;animation:pop .6s both}
+.ok .oid{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);margin:8px 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
 
-<main id="shop">
-<section id="home" style="padding-top:20px"><div class="wrap hero">
-<div><h1>Little Cakehouse by Pavni</h1><p class="script" style="font-size:1.8rem">Soft swirls, sweet moments</p>
-<p>100% Eggless Custom Cakes &amp; Desserts · Kanpur<br>Made fresh with love for your special people</p>
-<div class="btns"><a class="btn" href="#cakes">Shop Cakes</a><a class="btn alt" id="heroWa" href="#" target="_blank" rel="noopener">Custom Order on WhatsApp</a></div></div>
-<div class="heroimg"><div class="ph"><img id="heroImg" alt="Eggless celebration cake" onerror="this.remove()">🎂</div>
-<span class="badge b1">100% Eggless</span><span class="badge b2">Pre-order Only</span><span class="badge b3">Made With Love 🤍</span></div>
+<!-- ========== SHOP VIEW ========== -->
+<div id="shop">
+<nav id="nav"><div class="wrap nav">
+  <a href="#top" class="logo">Tito's</a>
+  <div class="links" id="links">
+    <a href="#shop-sec">Shop</a><a href="#best">Bestsellers</a><a href="#custom">Custom Cakes</a><a href="#visit">Visit Us</a>
+  </div>
+  <div class="icons">
+    <button class="ib" aria-label="Search products" id="sbtn">&#128269;</button>
+    <button class="ib" aria-label="Open cart" id="cbtn">&#128717;<span class="badge" id="cnt">0</span></button>
+    <button class="ib burger" aria-label="Menu" aria-expanded="false" id="bg">&#9776;</button>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div class="in">
+      <span class="eyebrow">Bharuch's Premium French Bakery</span>
+      <p class="script">Cravings? We'll satisfy ;)</p>
+      <h1>Cravings? We'll satisfy.</h1>
+      <p class="sub">Burnt Basque cheesecake, fudgy brownies, delicate macarons and custom cakes, baked fresh every morning near RK Cinema. Your first order comes with a free pastry.</p>
+      <div class="ctas">
+        <a href="#best" class="btn solid">Shop Bestsellers</a>
+        <a href="#" class="btn" id="heroWa">Custom Cake on WhatsApp</a>
+      </div>
+      <div class="trust"><span>&#9733; 4.9</span><span>Fresh Daily</span><span>Eggless Options</span></div>
+    </div>
+    <div class="arch in" style="animation-delay:.2s">
+      <div class="frame"><img id="heroImg" alt="Burnt Basque cheesecake slice on a plate" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=900&q=80" onerror="this.style.display='none'"></div>
+      <div class="float-b fb1">Basque Cheesecake<br>Rs. 349</div>
+      <div class="float-b fb2">Free Pastry on first order</div>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="best"><div class="wrap">
+  <div class="sh rv"><h2>Bestsellers</h2><p>The ones everyone comes back for.</p></div>
+  <div class="grid four" id="bestGrid"></div>
 </div></section>
 
-<div class="trust"><div class="wrap"><span>🌱 Eggless</span><span>🧁 Freshly Baked</span><span>🎀 Custom Designs</span><span>🚚 Kanpur Delivery</span></div></div>
+<section class="alt" id="shop-sec"><div class="wrap">
+  <div class="sh rv"><h2>Shop the Bakery</h2><p>12 fresh bakes, ready to order.</p></div>
+  <div class="ctl">
+    <div class="pills" id="pills" role="group" aria-label="Categories"></div>
+    <div class="fields">
+      <input type="search" id="q" placeholder="Search bakes" aria-label="Search bakes">
+      <select id="sort" aria-label="Sort products"><option value="pop">Popular</option><option value="lo">Price: Low to High</option><option value="hi">Price: High to Low</option></select>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></section>
 
-<section id="cakes"><div class="wrap"><h2>Our Cakes &amp; Desserts</h2><div class="div"></div><div class="grid g4" id="products"></div></div></section>
+<section class="dark"><div class="wrap story">
+  <div class="rv"><h2>The Burnt Basque Cheesecake</h2>
+    <p>Baked at a fierce heat until the top turns deep, caramelised and almost bitter, then left soft and creamy in the middle. No crust, no fuss. It is the one bake we are known for in Bharuch.</p>
+    <button class="btn" data-add="1">Add to Cart, Rs. 349</button></div>
+  <img class="rv" alt="Burnt Basque cheesecake with a caramelised top" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=900&q=80" onerror="this.style.opacity=.2">
+</div></section>
 
-<section id="bestsellers" style="background:#fff"><div class="wrap"><h2>Bestsellers</h2><div class="div"></div><div class="grid" id="best"></div></div></section>
+<section id="custom"><div class="wrap">
+  <div class="sh rv"><h2>Custom Celebration Cakes</h2><p>From Rs. 999. Tell us the details and we'll confirm on WhatsApp.</p></div>
+  <div class="box rv"><form class="f" id="cf">
+    <div class="two">
+      <label>Occasion<select id="cOcc"><option>Birthday</option><option>Anniversary</option><option>Wedding</option><option>Baby shower</option><option>Other</option></select></label>
+      <label>Flavour<select id="cFl"><option>Orange Chocolate Marble</option><option>Chocolate Truffle</option><option>Butterscotch</option><option>Dutch Chocolate Macaron</option><option>Other (tell us)</option></select></label>
+    </div>
+    <div class="two">
+      <label>Weight<select id="cWt"><option>500 g</option><option>1 kg</option><option>1.5 kg</option><option>2 kg or more</option></select></label>
+      <label>Date needed<input type="date" id="cDt"></label>
+    </div>
+    <button type="submit" class="btn solid">Send on WhatsApp</button>
+  </form></div>
+</div></section>
 
-<section id="custom"><div class="wrap"><h2>Custom Cake Builder</h2><div class="div"></div>
-<div class="box"><p style="text-align:center">Tell us your dream cake. We reply on WhatsApp to confirm design and price.</p>
-<label>Occasion</label><select id="c_occ"><option>Birthday</option><option>Anniversary</option><option>Baby Shower</option><option>Wedding</option><option>Other</option></select>
-<label>Flavour</label><input id="c_fl" placeholder="e.g. Chocolate truffle, Pineapple, Butterscotch">
-<label>Weight</label><select id="c_wt"><option>500g</option><option selected>1kg</option><option>2kg</option><option>3kg</option></select>
-<label>Message on cake</label><input id="c_msg" placeholder="Happy Birthday Riya!">
-<label>Date needed</label><input type="date" id="c_dt">
-<label>Your name</label><input id="c_nm"><label>Phone</label><input id="c_ph" type="tel" inputmode="tel">
-<button class="btn" style="width:100%;margin-top:18px" onclick="sendCustom()">Send Custom Order on WhatsApp</button></div></div></section>
+<section class="alt" id="visit"><div class="wrap">
+  <div class="sh rv"><h2>Visit Us</h2></div>
+  <div class="visit rv">
+    <div class="info box" style="margin:0;max-width:none">
+      <p><b>Address</b><br>Near RK Cinema, Jyoti Nagar, Bharuch, Gujarat</p>
+      <p><b>Timings</b><br>10 AM to 9 PM, every day</p>
+      <p><b>Order on WhatsApp</b><br><a href="https://wa.me/917861830939" target="_blank" rel="noopener">7861830939</a></p>
+    </div>
+    <div class="map">Map coming soon<br>Near RK Cinema, Jyoti Nagar</div>
+  </div>
+</div></section>
 
-<section style="background:#fff"><div class="wrap"><h2>How It Works</h2><div class="div"></div><div class="steps">
-<div class="step"><b>1</b><h3>Choose / Customise</h3><p>Pick a cake or design your own.</p></div>
-<div class="step"><b>2</b><h3>Pre-order on WhatsApp</h3><p>Share date, flavour and message.</p></div>
-<div class="step"><b>3</b><h3>We bake fresh</h3><p>Baked on order, never stored.</p></div>
-<div class="step"><b>4</b><h3>Pickup / Delivery</h3><p>Anywhere in Kanpur.</p></div></div></div></section>
+<section><div class="wrap">
+  <div class="sh rv"><h2>What Bharuch Says</h2></div>
+  <div class="grid">
+    <div class="rev rv"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"The Basque cheesecake is unreal. Creamy inside, perfectly burnt on top. Nothing like it in Bharuch."</p><b>Hetal S.</b></div>
+    <div class="rev rv" style="--d:.12s"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Ordered a custom orange chocolate cake for my sister's birthday. Beautiful and not too sweet."</p><b>Rohan P.</b></div>
+    <div class="rev rv" style="--d:.24s"><div class="st">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p>"Fudgy brownies and fresh macarons, delivered on time. The free first-order pastry was a lovely surprise."</p><b>Aisha M.</b></div>
+  </div>
+</div></section>
 
-<section id="reviews"><div class="wrap"><h2>Sweet Words</h2><div class="div"></div><div class="grid" id="revs"></div></div></section>
+<footer><div class="wrap">
+  <div class="fg">
+    <div><h4>Tito's Breads &amp; Brownies</h4><p>Bharuch's Premium French-style Bakery.</p></div>
+    <div><h4>Explore</h4><a href="#shop-sec">Shop</a><a href="#best">Bestsellers</a><a href="#custom">Custom Cakes</a><a href="#visit">Visit Us</a></div>
+    <div><h4>Hours</h4><p>10 AM to 9 PM<br>Every day</p></div>
+    <div><h4>Contact</h4><a href="https://wa.me/917861830939" target="_blank" rel="noopener">WhatsApp 7861830939</a><a href="https://instagram.com/titos_breadsandbrownies" target="_blank" rel="noopener">@titos_breadsandbrownies</a></div>
+  </div>
+  <div class="copy">&copy; 2026 Tito's Breads &amp; Brownies, Jyoti Nagar, Bharuch.</div>
+  <div class="copy1">Built by- <a href="https://phanirajbnportfolio.vercel.app" target="_blank"> Phaniraj</a></div>
+</div></footer>
+</div>
 
-<section style="background:#fff"><div class="wrap about"><div class="ph"><img id="aboutImg" alt="Home-baked cake being decorated" onerror="this.remove()">👩‍🍳</div>
-<div><h2 style="text-align:left">Hi, I'm Pavni</h2><div class="div" style="margin-left:0"></div>
-<p>I bake from my home kitchen in Kanpur. Every cake starts with a soft eggless sponge, a careful crumb coat and a lot of patient piping.</p><br>
-<p>I love cakes that are soft, simple and beautiful, made for the people who matter to you. Each order is baked fresh, which is why custom cakes need a pre-order.</p></div></div></section>
-</main>
+<!-- ========== CHECKOUT VIEW ========== -->
+<div id="checkout" class="hide"><div class="wrap co">
+  <button class="btn" id="backShop">&larr; Back to Shop</button>
+  <div id="coMain">
+    <h2 style="margin-top:20px">Checkout</h2>
+    <div class="prog" id="prog"><div class="on">1. Details</div><div>2. Delivery</div><div>3. Payment</div></div>
+    <div class="cog">
+      <div class="box" style="margin:0;max-width:none"><form class="f" id="coForm" novalidate>
+        <div class="pane on" data-p="0">
+          <label>Full name<input id="nm" autocomplete="name"><span class="err" id="e-nm"></span></label>
+          <label>Phone (10 digits)<input id="ph" inputmode="numeric" maxlength="10" autocomplete="tel"><span class="err" id="e-ph"></span></label>
+          <label>Email<input id="em" type="email" autocomplete="email"><span class="err" id="e-em"></span></label>
+        </div>
+        <div class="pane" data-p="1">
+          <div class="tog" role="group" aria-label="Delivery type"><button type="button" class="on" data-mode="Delivery">Delivery</button><button type="button" data-mode="Pickup">Pickup</button></div>
+          <label id="adrL">Address<textarea id="ad"></textarea><span class="err" id="e-ad"></span></label>
+          <label id="lmL">Landmark<input id="lm"></label>
+          <div class="two">
+            <label>Date<input type="date" id="dd"><span class="err" id="e-dd"></span></label>
+            <label>Time slot<select id="ts"><option>10 AM - 12 PM</option><option>12 PM - 3 PM</option><option>3 PM - 6 PM</option><option>6 PM - 9 PM</option></select></label>
+          </div>
+        </div>
+        <div class="pane" data-p="2">
+          <label class="pay"><input type="radio" name="pm" value="UPI" checked> UPI</label>
+          <label class="pay"><input type="radio" name="pm" value="Cash on Delivery"> Cash on Delivery</label>
+          <label class="pay"><input type="radio" name="pm" value="Card"> Card</label>
+        </div>
+        <div class="nav2"><button type="button" class="btn" id="prev">Back</button><button type="submit" class="btn solid" id="next">Continue</button></div>
+      </form></div>
+      <aside class="box sum" style="margin:0;max-width:none" aria-label="Order summary">
+        <h3 style="margin-bottom:10px">Order Summary</h3>
+        <div id="sumItems"></div>
+        <div class="dc"><input id="dcode" placeholder="Discount code" aria-label="Discount code"><button type="button" class="btn" id="dapply">Apply</button></div>
+        <div class="err" id="dmsg" style="margin-bottom:8px"></div>
+        <div id="sumTot"></div>
+      </aside>
+    </div>
+  </div>
+  <div id="success" class="ok hide"></div>
+</div></div>
 
-<main id="checkout" class="hide"><section><div class="wrap"><h2>Checkout</h2><div class="div"></div>
-<div class="box"><label>Name</label><input id="k_nm"><label>Phone</label><input id="k_ph" type="tel" inputmode="tel">
-<label>Delivery address (Kanpur)</label><textarea id="k_ad" rows="3"></textarea>
-<label>Delivery date</label><input type="date" id="k_dt">
-<label>Time slot</label><select id="k_ts"><option>10 AM - 1 PM</option><option>1 PM - 4 PM</option><option>4 PM - 7 PM</option><option>7 PM - 9 PM</option></select>
-<label>Message on cake</label><input id="k_msg">
-<label>Payment method</label><select id="k_pay"><option>UPI</option><option>Cash on Delivery</option><option>WhatsApp Pay</option></select>
-<h3 style="margin-top:20px">Order summary</h3><div class="sum" id="k_sum"></div>
-<button class="btn" style="width:100%;margin-top:16px" onclick="placeOrder()">Place Order</button>
-<button class="btn alt" style="width:100%;margin-top:10px" onclick="showShop()">Back to Shop</button></div></div></section></main>
-
-<main id="success" class="hide"><section><div class="wrap"><div class="box ok"><h2>Thank you! 🤍</h2><div class="div"></div>
-<p>Your order is placed. Please confirm it on WhatsApp so Pavni can start baking.</p><br>
-<p>Order ID</p><p class="id" id="s_id"></p><p>Total: <b id="s_tot"></b></p><br>
-<a class="btn" id="s_wa" href="#" target="_blank" rel="noopener" style="width:100%">Confirm on WhatsApp</a>
-<button class="btn alt" style="width:100%;margin-top:10px" onclick="finish()">Back to Shop</button></div></div></section></main>
-
-<footer id="contact"><div class="script">Little Cakehouse by Pavni</div>
-<p>Instagram: <a href="https://instagram.com/littlecakehouse.pavni" target="_blank" rel="noopener">@littlecakehouse.pavni</a> · DM to Book</p>
-<p>Phone / WhatsApp: <a id="fPh" href="#"></a> · Kanpur, India</p>
-<p>Order timings: 10 AM - 8 PM, all days (pre-order required)</p>
-<p style="margin-top:12px;font-size:.85rem">100% Eggless | Kindly pre-order for custom cakes | Made fresh on order</p></footer>
-
-<div id="overlay" onclick="closeCart()"></div>
-<aside id="drawer" aria-label="Cart"><div class="dh"><h3>Your Cart</h3><button onclick="closeCart()" aria-label="Close cart">×</button></div>
-<div id="items"></div>
-<div class="tot"><div><span>Subtotal</span><span id="d_sub"></span></div><div><span>Delivery</span><span id="d_del"></span></div><div><b>Total</b><b id="d_tot"></b></div>
-<small id="d_hint"></small><button class="btn" onclick="goCheckout()">Checkout</button></div></aside>
-<div id="toast" role="status"></div>
+<!-- ========== CART DRAWER ========== -->
+<div class="back" id="back"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+  <div class="dh"><h3>Your Cart</h3><button class="ib" id="cclose" aria-label="Close cart">&times;</button></div>
+  <div class="items" id="citems"></div>
+  <div class="df" id="cfoot"></div>
+</aside>
+<button class="bar" id="bar" aria-label="View cart"><span id="barN">0 items</span><b id="barT">Rs. 0</b></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-/* ===== EDIT HERE: phone, delivery rules, products, images ===== */
-const WA_NUMBER="918429950357";            // WhatsApp number with country code
-const PHONE_SHOW="8429950357";
-const FREE_ABOVE=999, DELIVERY_FEE=49;     // free delivery above ₹999 else ₹49
-const IMG=id=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=800&q=70`;
-const PRODUCTS=[ // price = placeholder, change freely. best:true shows in Bestsellers
-{id:1,name:"Classic White & Gold Birthday Cake",desc:"Soft sponge with smooth white buttercream and gold accents.",flavour:"Vanilla / Chocolate Truffle",weight:"1kg",price:999,best:true,img:"photo-1535141192574-5d4897c12636",e:"🎂"},
-{id:2,name:"Teddy Bear 2-Tier Birthday Cake",desc:"Two tiers with a hand-finished teddy, perfect for first birthdays.",flavour:"White Chocolate Ganache + Pineapple",weight:"3kg",price:2999,best:true,img:"photo-1464349095431-e9a21285b5f3",e:"🧸"},
-{id:3,name:"Car Theme Birthday Cake",desc:"A rich chocolate cake styled for little racers.",flavour:"Chocolate",weight:"1kg",price:1199,img:"photo-1578985545062-69928b1d9587",e:"🚗"},
-{id:4,name:"Strawberry Bento Cake",desc:"A mini heart-friendly cake with strawberry cream.",flavour:"Strawberry",weight:"250g",price:499,best:true,img:"photo-1621303837174-89787a7d4729",e:"🍓"},
-{id:5,name:"Chocolate + Strawberry Bento Cake",desc:"Two flavours in one cute mini cake.",flavour:"Chocolate + Strawberry",weight:"250g",price:549,img:"photo-1588195538326-c5b1e9f80a1b",e:"🍫"},
-{id:6,name:"Brownie Box (9 pcs)",desc:"Fudgy brownies with chocolate drizzle and KitKat.",flavour:"Chocolate",weight:"9 pieces",price:699,img:"photo-1606313564200-e75d5e30476c",e:"🍫"},
-{id:7,name:"Cookie Dip Cup",desc:"Mini choc-chip cookies with a warm chocolate dip.",flavour:"Choc-chip + Chocolate dip",weight:"1 cup",price:299,img:"photo-1499636136210-6f4ee915583e",e:"🍪"},
-{id:8,name:"Anniversary Cake",desc:"White and gold finish with red roses.",flavour:"Vanilla / Red Velvet",weight:"1kg",price:1299,img:"photo-1558636508-e0db3814bd1d",e:"🌹"},
-{id:9,name:"Bento Hamper",desc:"A bento cake with a roses gift box, ready to gift.",flavour:"Chocolate / Strawberry",weight:"Bento + Box",price:899,img:"photo-1535141192574-5d4897c12636",e:"🎁"}];
-const REVIEWS=[["Riya S.","The teddy cake looked adorable and tasted even better. Everyone asked who baked it!"],["Ankit M.","Soft, not too sweet, and delivered on time in Kanpur. Our anniversary cake was perfect."],["Neha G.","Pavni understood exactly what I wanted for my daughter's birthday. Will order again."],["Shweta K.","The brownie box vanished in minutes. Fudgy and fresh."]];
-const WA=t=>`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t)}`;
-const $=id=>document.getElementById(id), rs=n=>"₹"+n.toLocaleString("en-IN");
-let cart=JSON.parse(localStorage.getItem("lch_cart")||"[]");
-let lastOrder=null;
+/* ===== Data ===== */
+const U=id=>`https://images.unsplash.com/${id}?w=700&q=75`;
+const P=[
+{id:1,n:"Burnt Basque Cheesecake",c:"Cheesecakes",p:349,d:"Caramelised top, creamy centre. Our signature.",t:"Bestseller",r:4.9,i:"photo-1533134242443-d4fd215305ad",b:1},
+{id:2,n:"Classic Fudge Brownie",c:"Brownies & Cookies",p:129,d:"Dense, fudgy and deeply chocolatey.",r:4.8,i:"photo-1606313564200-e75d5e30476c",b:1},
+{id:3,n:"Chocolate Chip Cookie",c:"Brownies & Cookies",p:99,d:"Crisp edges, soft centre, big chocolate chunks.",r:4.7,i:"photo-1499636136210-6f4ee915583e"},
+{id:4,n:"Assorted Macarons (Box of 6)",c:"Macarons",p:399,d:"Six delicate French shells in assorted flavours.",r:4.8,i:"photo-1569864358642-9d1684040f43",b:1},
+{id:5,n:"Vegetable Focaccia",c:"Breads",p:249,d:"Olive oil focaccia topped with fresh vegetables.",r:4.6,i:"photo-1509440159596-0249088772ff"},
+{id:6,n:"Butterscotch Bliss Cake (500g)",c:"Cakes",p:549,d:"Light sponge, butterscotch cream and crunchy praline.",r:4.7,i:"photo-1578985545062-69928b1d9587"},
+{id:7,n:"Plum Cake (Seasonal)",c:"Cakes",p:299,d:"Fruit-rich, spiced and soaked the traditional way.",t:"Seasonal",r:4.6,i:"photo-1464349095431-e9a21285b5f3"},
+{id:8,n:"Blueberry Cheesecake",c:"Cheesecakes",p:329,d:"Buttery base, silky filling, blueberry compote.",r:4.8,i:"photo-1567327613485-fbc7bf196198",b:1},
+{id:9,n:"Domed Chocolate Muffin",c:"Brownies & Cookies",p:119,d:"Tall, moist chocolate muffin with a molten feel.",r:4.6,i:"photo-1607958996333-41aef7caefaa"},
+{id:10,n:"Dutch Chocolate Macaron Cake",c:"Cakes",p:699,d:"Dutch cocoa layers crowned with macarons.",r:4.9,i:"photo-1571115177098-24ec42ed204d"},
+{id:11,n:"Custom Celebration Cake",c:"Cakes",p:999,d:"Rs. 999 onwards. Orange Chocolate Marble and more.",r:4.9,i:"photo-1558636508-e0db3814bd1d",from:1},
+{id:12,n:"Doughnuts (Box of 4)",c:"Brownies & Cookies",p:279,d:"Soft, glazed and filled. Four to a box.",r:4.5,i:"photo-1551024601-bec78aea704b"}
+];
+const CATS=["All","Cheesecakes","Brownies & Cookies","Cakes","Breads","Macarons"];
+const WA="917861830939";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const rs=n=>"Rs. "+n.toLocaleString("en-IN");
+let cart=[]; try{cart=JSON.parse(localStorage.getItem("titos-cart"))||[]}catch(e){}
+let SH=false,cat="All", disc=null, mode="Delivery", step=0;
+const save=()=>{try{localStorage.setItem("titos-cart",JSON.stringify(cart))}catch(e){}};
+const qty=id=>(cart.find(x=>x.id===id)||{}).q||0;
 
-/* render products */
-const card=p=>`<article class="card"><div class="ph"><img src="${IMG(p.img)}" alt="${p.name}" loading="lazy" onerror="this.remove()">${p.e}</div>
-<div class="body"><span class="veg">● 100% Eggless</span><h3>${p.name}</h3><p>${p.desc}</p><span class="meta">${p.flavour} · ${p.weight}</span>
-<div class="row"><span class="price">${rs(p.price)}</span><button class="btn" onclick="add(${p.id})">Add to Cart</button></div></div></article>`;
-$("products").innerHTML=PRODUCTS.map(card).join("");
-$("best").innerHTML=PRODUCTS.filter(p=>p.best).map(card).join("");
-$("revs").innerHTML=REVIEWS.map(r=>`<div class="card"><div class="body"><span class="stars">★★★★★</span><p>“${r[1]}”</p><b>${r[0]}</b></div></div>`).join("");
-$("heroImg").src=IMG("photo-1535141192574-5d4897c12636");$("aboutImg").src=IMG("photo-1558636508-e0db3814bd1d");
-$("heroWa").href=WA("Hi Pavni! I'd like to place a custom cake order.");
-$("fPh").textContent=PHONE_SHOW;$("fPh").href="https://wa.me/"+WA_NUMBER;
+/* ===== Render products ===== */
+function card(p,i){
+  const q=qty(p.id);
+  return `<article class="card rv ${SH?"show":""}" style="--d:${(i%4)*.08}s">
+  <div class="pimg"><img loading="lazy" alt="${p.n}" src="${U(p.i)}" onerror="this.style.display='none'">${p.t?`<span class="tag">${p.t}</span>`:""}<span class="veg" title="Vegetarian"></span></div>
+  <div class="pbody"><h3>${p.n}</h3><p>${p.d}</p>
+  <div class="meta"><span class="price">${p.from?"From ":""}${rs(p.p)}</span><span class="rt">&#9733; ${p.r}</span></div>
+  <div class="prow">${q?`<div class="step"><button aria-label="Decrease ${p.n}" data-dec="${p.id}">&minus;</button><span>${q}</span><button aria-label="Increase ${p.n}" data-add="${p.id}">+</button></div><span style="font-size:.85rem">in cart</span>`
+  :`<button class="btn" data-add="${p.id}">Add to Cart</button>`}</div></div></article>`;
+}
+function renderShop(){
+  $("#bestGrid").innerHTML=P.filter(p=>p.b).slice(0,4).map(card).join("");
+  let l=P.filter(p=>(cat==="All"||p.c===cat)&&p.n.toLowerCase().includes($("#q").value.trim().toLowerCase()));
+  const s=$("#sort").value;
+  if(s==="lo")l.sort((a,b)=>a.p-b.p);else if(s==="hi")l.sort((a,b)=>b.p-a.p);else l.sort((a,b)=>b.r-a.r);
+  $("#grid").innerHTML=l.length?l.map(card).join(""):`<div class="empty">No bakes match your search. Try another word or category.</div>`;
+  $("#pills").innerHTML=CATS.map(c=>`<button class="pill ${c===cat?"on":""}" data-cat="${c}" aria-pressed="${c===cat}">${c}</button>`).join("");
+  observe();SH=true;
+}
 
-/* cart */
-const save=()=>localStorage.setItem("lch_cart",JSON.stringify(cart));
-function totals(){const sub=cart.reduce((s,i)=>s+i.price*i.q,0);const del=sub===0?0:(sub>=FREE_ABOVE?0:DELIVERY_FEE);return{sub,del,tot:sub+del}}
-function add(id){const p=PRODUCTS.find(x=>x.id===id),f=cart.find(x=>x.id===id);f?f.q++:cart.push({id,name:p.name,price:p.price,weight:p.weight,q:1});save();draw();toast("Added to cart")}
-function chg(id,d){const i=cart.find(x=>x.id===id);i.q+=d;if(i.q<1)cart=cart.filter(x=>x.id!==id);save();draw()}
-function rem(id){cart=cart.filter(x=>x.id!==id);save();draw()}
-function draw(){const t=totals();$("count").textContent=cart.reduce((s,i)=>s+i.q,0);
-$("items").innerHTML=cart.length?cart.map(i=>`<div class="it"><div class="n">${i.name}<br><small>${rs(i.price)} · ${i.weight}</small></div><div class="qty"><button onclick="chg(${i.id},-1)" aria-label="Less">−</button> ${i.q} <button onclick="chg(${i.id},1)" aria-label="More">+</button></div><button class="rm" onclick="rem(${i.id})" aria-label="Remove">🗑</button></div>`).join(""):"<p style='text-align:center;margin-top:40px'>Your cart is empty. Add a cake to get started.</p>";
-$("d_sub").textContent=rs(t.sub);$("d_del").textContent=t.del?rs(t.del):"Free";$("d_tot").textContent=rs(t.tot);
-$("d_hint").textContent=t.sub&&t.sub<FREE_ABOVE?`Add ${rs(FREE_ABOVE-t.sub)} more for free delivery`:""}
-function openCart(){$("drawer").classList.add("open");$("overlay").classList.add("show")}
-function closeCart(){$("drawer").classList.remove("open");$("overlay").classList.remove("show")}
-let tt;function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),1600)}
+/* ===== Cart ===== */
+function totals(){
+  const sub=cart.reduce((s,x)=>s+x.q*x.p,0);
+  const dc=disc==="TITOSFREE"?Math.round(sub*.1):0;
+  const fee=(!sub||mode==="Pickup"||sub>=999)?0:49;
+  return{sub,dc,fee,tot:sub-dc+fee};
+}
+function renderCart(){
+  const n=cart.reduce((s,x)=>s+x.q,0), t=totals();
+  $("#cnt").textContent=n; $("#barN").textContent=n+(n===1?" item":" items"); $("#barT").textContent=rs(t.sub);
+  $("#bar").classList.toggle("show",n>0);
+  $("#citems").innerHTML=cart.length?cart.map(x=>`<div class="it"><img alt="${x.n}" src="${U(x.i)}" onerror="this.style.visibility='hidden'">
+   <div class="n">${x.n}<small>${rs(x.p)} each</small></div>
+   <div class="step"><button aria-label="Decrease ${x.n}" data-dec="${x.id}">&minus;</button><span>${x.q}</span><button aria-label="Increase ${x.n}" data-add="${x.id}">+</button></div>
+   <button class="rm" aria-label="Remove ${x.n}" data-rm="${x.id}">&times;</button></div>`).join("")
+   :`<div class="empty">Your cart is empty.<br><br><button class="btn solid" id="goShop">Browse the Bakery</button></div>`;
+  $("#cfoot").classList.toggle("hide",!cart.length);
+  $("#cfoot").innerHTML=`<div class="ln"><span>Subtotal</span><span>${rs(t.sub)}</span></div>
+   <div class="ln"><span>Delivery</span><span>${t.fee?rs(t.fee):"Free"}</span></div>
+   <div class="ln" style="font-size:.8rem;opacity:.7"><span>Free delivery above Rs. 999</span></div>
+   <div class="ln t"><span>Total</span><span>${rs(t.sub+t.fee)}</span></div>
+   <button class="btn solid" id="toCo">Proceed to Checkout</button>`;
+  save(); renderShopQty(); if(!$("#checkout").classList.contains("hide"))renderSum();
+}
+function renderShopQty(){ if(window._rendering)return; renderShop(); }
+function add(id){
+  const p=P.find(x=>x.id===id), e=cart.find(x=>x.id===id);
+  e?e.q++:cart.push({id,n:p.n,p:p.p,i:p.i,q:1});
+  renderCart(); toast(`Added ${p.n.replace("Burnt ","")} to cart`);
+}
+function dec(id){const e=cart.find(x=>x.id===id); if(!e)return; e.q--; if(e.q<1)cart=cart.filter(x=>x.id!==id); renderCart();}
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),2000);}
+function drawer(open){
+  $("#drawer").classList.toggle("open",open);$("#back").classList.toggle("open",open);
+  $("#drawer").setAttribute("aria-hidden",!open); if(open)$("#cclose").focus();
+}
 
-/* views */
-function view(v){["shop","checkout","success"].forEach(x=>$(x).classList.toggle("hide",x!==v));$("menu").classList.remove("open");if(v!=="shop")scrollTo(0,0)}
-function showShop(){view("shop")}
-function goCheckout(){if(!cart.length){toast("Your cart is empty");return}closeCart();
-const t=totals();$("k_sum").innerHTML=cart.map(i=>`<div class="l"><span>${i.name} × ${i.q}</span><span>${rs(i.price*i.q)}</span></div>`).join("")+`<div class="l"><span>Delivery</span><span>${t.del?rs(t.del):"Free"}</span></div><div class="l"><b>Total</b><b>${rs(t.tot)}</b></div>`;
-const d=new Date();d.setDate(d.getDate()+1);$("k_dt").min=d.toISOString().slice(0,10);view("checkout")}
-function placeOrder(){const v=id=>$(id).value.trim();
-if(!v("k_nm")||!/^\d{10}$/.test(v("k_ph").replace(/\D/g,"").slice(-10))||!v("k_ad")||!v("k_dt")){toast("Please fill name, 10-digit phone, address and date");return}
-const t=totals(),id="LCH-"+Math.floor(1000+Math.random()*9000);
-const lines=cart.map(i=>`• ${i.name} (${i.weight}) × ${i.q} = ${rs(i.price*i.q)}`).join("\n");
-const msg=`Hi Pavni! New order ${id}\n\n${lines}\n\nDelivery: ${t.del?rs(t.del):"Free"}\nTotal: ${rs(t.tot)}\n\nName: ${v("k_nm")}\nPhone: ${v("k_ph")}\nAddress: ${v("k_ad")}\nDate: ${v("k_dt")}, ${$("k_ts").value}\nCake message: ${v("k_msg")||"-"}\nPayment: ${$("k_pay").value}`;
-$("s_id").textContent=id;$("s_tot").textContent=rs(t.tot);$("s_wa").href=WA(msg);view("success")}
-function finish(){cart=[];save();draw();view("shop")}
-function sendCustom(){const v=id=>$(id).value.trim();
-if(!v("c_nm")||!v("c_ph")){toast("Please add your name and phone");return}
-window.open(WA(`Hi Pavni! Custom cake order:\nOccasion: ${v("c_occ")}\nFlavour: ${v("c_fl")||"-"}\nWeight: ${v("c_wt")}\nMessage on cake: ${v("c_msg")||"-"}\nDate needed: ${v("c_dt")||"-"}\nName: ${v("c_nm")}\nPhone: ${v("c_ph")}`),"_blank")}
-draw();
-</script></body></html>
+/* ===== Checkout ===== */
+function renderSum(){
+  const t=totals();
+  $("#sumItems").innerHTML=cart.map(x=>`<div class="it"><div class="n">${x.n}<small>Qty ${x.q}</small></div><b>${rs(x.q*x.p)}</b></div>`).join("")||"<p>Your cart is empty.</p>";
+  $("#sumTot").innerHTML=`<div class="ln"><span>Subtotal</span><span>${rs(t.sub)}</span></div>
+   ${t.dc?`<div class="ln"><span>Discount (10%)</span><span>&minus; ${rs(t.dc)}</span></div><div class="ln"><span>Free pastry</span><span>Included</span></div>`:""}
+   <div class="ln"><span>Delivery</span><span>${t.fee?rs(t.fee):"Free"}</span></div>
+   <div class="ln t"><span>Grand Total</span><span>${rs(t.tot)}</span></div>`;
+}
+function showView(v){
+  $("#shop").classList.toggle("hide",v!=="shop");$("#checkout").classList.toggle("hide",v!=="checkout");
+  window.scrollTo({top:0}); if(v==="checkout"){goStep(0);renderSum();}
+}
+function goStep(n){
+  step=n;$$(".pane").forEach((p,i)=>p.classList.toggle("on",i===n));
+  $$("#prog div").forEach((d,i)=>d.classList.toggle("on",i<=n));
+  $("#prev").style.visibility=n?"visible":"hidden";
+  $("#next").textContent=n===2?"Place Order":"Continue";
+}
+const setErr=(k,m)=>{$("#e-"+k).textContent=m;return !m;};
+function validate(n){
+  if(n===0){
+    let ok=setErr("nm",$("#nm").value.trim()?"":"Enter your name.");
+    ok=setErr("ph",/^\d{10}$/.test($("#ph").value.trim())?"":"Enter a 10-digit phone number.")&&ok;
+    ok=setErr("em",/^\S+@\S+\.\S+$/.test($("#em").value.trim())?"":"Enter a valid email address.")&&ok;
+    return ok;
+  }
+  if(n===1){
+    let ok=setErr("ad",mode==="Pickup"||$("#ad").value.trim()?"":"Enter your delivery address.");
+    ok=setErr("dd",$("#dd").value?"":"Choose a date.")&&ok; return ok;
+  }
+  return true;
+}
+function placeOrder(){
+  const t=totals(), id="TITO-"+Math.floor(1000+Math.random()*9000), pm=document.querySelector('input[name=pm]:checked').value;
+  const lines=cart.map(x=>`- ${x.n} x${x.q} = ${rs(x.p*x.q)}`).join("\n");
+  const msg=`Hi Tito's! New order ${id}\n\nName: ${$("#nm").value}\nPhone: ${$("#ph").value}\nEmail: ${$("#em").value}\n${mode}: ${mode==="Pickup"?"Store pickup":$("#ad").value+($("#lm").value?" (Landmark: "+$("#lm").value+")":"")}\nSlot: ${$("#dd").value}, ${$("#ts").value}\nPayment: ${pm}\n\nItems:\n${lines}\n\nSubtotal: ${rs(t.sub)}${t.dc?"\nDiscount: -"+rs(t.dc)+" (TITOSFREE)":""}\nDelivery: ${t.fee?rs(t.fee):"Free"}\nTotal: ${rs(t.tot)}${disc?"\nFree pastry requested: Yes":""}`;
+  $("#coMain").classList.add("hide");
+  const s=$("#success");s.classList.remove("hide");
+  s.innerHTML=`<div class="tick">&#10003;</div><h2>Order placed!</h2><div class="oid">${id}</div>
+   <p>Thank you, ${$("#nm").value.split(" ")[0]}. Estimated ${mode==="Pickup"?"pickup":"delivery"} time: 45 to 60 minutes after confirmation.<br>Send the details on WhatsApp so we can confirm your order.</p><br>
+   <a class="btn solid" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent(msg)}">Order on WhatsApp</a>
+   <button class="btn" id="done" style="margin-left:8px">Back to Shop</button>`;
+  $("#backShop").classList.add("hide"); window.scrollTo({top:0});
+}
+
+/* ===== Events ===== */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-add],[data-dec],[data-rm],[data-cat],[data-mode],#toCo,#goShop,#done");if(!t)return;
+  if(t.dataset.add)add(+t.dataset.add);
+  else if(t.dataset.dec)dec(+t.dataset.dec);
+  else if(t.dataset.rm){cart=cart.filter(x=>x.id!==+t.dataset.rm);renderCart();}
+  else if(t.dataset.cat){cat=t.dataset.cat;renderShop();}
+  else if(t.dataset.mode){mode=t.dataset.mode;$$(".tog button").forEach(b=>b.classList.toggle("on",b===t));
+    $("#adrL").classList.toggle("hide",mode==="Pickup");$("#lmL").classList.toggle("hide",mode==="Pickup");renderSum();}
+  else if(t.id==="toCo"){if(!cart.length)return;drawer(false);showView("checkout");}
+  else if(t.id==="goShop"){drawer(false);location.hash="#shop-sec";}
+  else if(t.id==="done"){cart=[];disc=null;save();$("#success").classList.add("hide");$("#coMain").classList.remove("hide");$("#backShop").classList.remove("hide");$("#coForm").reset();renderCart();showView("shop");}
+});
+$("#cbtn").onclick=()=>drawer(true);$("#bar").onclick=()=>drawer(true);
+$("#cclose").onclick=$("#back").onclick=()=>drawer(false);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")drawer(false)});
+$("#backShop").onclick=()=>showView("shop");
+$("#bg").onclick=()=>{const o=$("#links").classList.toggle("open");$("#bg").setAttribute("aria-expanded",o)};
+$$("#links a").forEach(a=>a.onclick=()=>$("#links").classList.remove("open"));
+$("#sbtn").onclick=()=>{location.hash="#shop-sec";setTimeout(()=>$("#q").focus(),500)};
+$("#q").oninput=renderShop;$("#sort").onchange=renderShop;
+$("#coForm").onsubmit=e=>{e.preventDefault();if(!validate(step))return;
+  if(step<2){goStep(step+1);window.scrollTo({top:0})}else if(cart.length)placeOrder();else toast("Your cart is empty.");};
+$("#prev").onclick=()=>goStep(step-1);
+$("#dapply").onclick=()=>{
+  const c=$("#dcode").value.trim().toUpperCase();
+  if(c==="TITOSFREE"){disc=c;$("#dmsg").style.color="#2e7d32";$("#dmsg").textContent="TITOSFREE applied: 10% off and a free pastry.";}
+  else{disc=null;$("#dmsg").style.color="#b3261e";$("#dmsg").textContent="That code isn't valid. Try TITOSFREE.";}
+  renderSum();
+};
+/* Custom cake -> WhatsApp */
+function cakeMsg(){return `Hi Tito's! I'd like a custom cake.\nOccasion: ${$("#cOcc").value}\nFlavour: ${$("#cFl").value}\nWeight: ${$("#cWt").value}\nDate needed: ${$("#cDt").value||"Not decided"}`}
+$("#cf").onsubmit=e=>{e.preventDefault();window.open(`https://wa.me/${WA}?text=${encodeURIComponent(cakeMsg())}`,"_blank")};
+$("#heroWa").href=`https://wa.me/${WA}?text=${encodeURIComponent("Hi Tito's! I'd like to order a custom cake.")}`;
+$("#heroWa").target="_blank";$("#heroWa").rel="noopener";
+$("#cDt").min=$("#dd").min=new Date().toISOString().split("T")[0];
+
+/* ===== Scroll effects ===== */
+window.addEventListener("scroll",()=>{
+  $("#nav").classList.toggle("scrolled",scrollY>10);
+  const h=$("#heroImg"); if(h&&scrollY<900)h.style.transform=`translateY(${scrollY*.06}px)`;
+},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("show");io.unobserve(x.target)}}),{threshold:.12});
+function observe(){$$(".rv:not(.show)").forEach(el=>io.observe(el))}
+const M="Freshly Baked • Basque Cheesecake • Brownies • Macarons • Focaccia • ";
+$("#mq").innerHTML=(`<span>${M}</span>`).repeat(8);
+
+renderCart();
+</script>
+</body>
+</html>
